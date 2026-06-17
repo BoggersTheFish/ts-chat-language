@@ -1,0 +1,39 @@
+{
+  "version": "0.1.0",
+  "name": "TS-Chat v0.1 compiled-language chatbot",
+  "tests_passed": true,
+  "acts_supported": [
+    "ask_question",
+    "answer_simple",
+    "correct_assistant",
+    "reject_framing",
+    "request_plan",
+    "continue_topic",
+    "express_frustration",
+    "confirm_direction",
+    "ask_for_definition",
+    "ask_for_next_step",
+    "strategic_redirect"
+  ],
+  "golden_traces": [
+    {
+      "input": "nah bro we just want the same usability",
+      "dialogue_act": "correct_assistant",
+      "response": "Right. The target is usability parity, not architecture parity. The system should feel like a normal chatbot while compiling language into TS state underneath.",
+      "template_id": "ack_correction_reframe_usability"
+    },
+    {
+      "input": "nah, im pretty sure we now have the reasoning engine pretty solid",
+      "dialogue_act": "strategic_redirect",
+      "response": "Yes. Focus shifts to chatbot language layer; reasoning engine is not the current priority. Next we can design chatbot language layer.",
+      "template_id": "confirm_and_advance"
+    },
+    {
+      "input": "what is next",
+      "dialogue_act": "ask_for_next_step",
+      "response": "Here's the plan for reasoning engine (deprioritized): normalizer, dialogue act compiler, semantic frame compiler, conversation state, response planner, renderer",
+      "template_id": "provide_plan_sections"
+    }
+  ],
+  "boundary": "No transformer, no external LLM, no reasoning engine integration."
+}

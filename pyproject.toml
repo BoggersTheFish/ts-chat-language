@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ts-chat-language"
+version = "0.1.0"
+description = "TSLC: Thinking System Language Compiler — pattern-backed conversational language machine for TS-Chat."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "BoggersTheFish" }
+]
+keywords = [
+  "thinking-system",
+  "language-compiler",
+  "dialogue",
+  "chatbot",
+  "verifier-first"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://boggersthefish.com"
+Repository = "https://github.com/BoggersTheFish/ts-chat-language"
+
+[project.scripts]
+ts-chat = "chat.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ts_lang*", "ts_state*", "ts_render*", "chat*"]

@@ -1,0 +1,83 @@
+{
+  "phrases": [
+    {
+      "phrase": "fuck off",
+      "pattern": "\\bfuck(?:ing)?\\s+off\\b",
+      "meaning": {
+        "act": "reject_framing",
+        "intensity": 0.9,
+        "tone": "hostile/frustrated",
+        "literal_intent": false
+      }
+    },
+    {
+      "phrase": "you aren't getting what I'm saying",
+      "pattern": "\\byou(?:'re| are) not getting (?:what i(?:'m| am) saying|it)\\b",
+      "meaning": {
+        "act": "correct_assistant",
+        "target": "assistant_understanding",
+        "requires_reframe": true
+      }
+    },
+    {
+      "phrase": "nah bro",
+      "pattern": "\\bnah\\s+bro\\b",
+      "meaning": {
+        "act": "correct_assistant",
+        "tone": "informal",
+        "stance": "rejection"
+      }
+    },
+    {
+      "phrase": "same usability",
+      "pattern": "\\b(?:same|normal)\\s+usability\\b",
+      "meaning": {
+        "act": "correct_assistant",
+        "claim": "usability_parity_target",
+        "rejects": ["architecture_parity"]
+      }
+    },
+    {
+      "phrase": "don't need to train",
+      "pattern": "\\b(?:don'?t|do not)\\s+need\\s+to\\s+train\\b",
+      "meaning": {
+        "act": "strategic_redirect",
+        "claim": "no_exposure_training_required",
+        "prefer": ["language_compilation"]
+      }
+    },
+    {
+      "phrase": "reasoning engine solid",
+      "pattern": "\\b(?:reasoning engine|reasoner).*(?:solid|done|good enough)\\b",
+      "meaning": {
+        "act": "strategic_redirect",
+        "deprioritize": ["reasoning_engine"],
+        "new_focus": "chatbot_language_layer"
+      }
+    },
+    {
+      "phrase": "want the chatbot",
+      "pattern": "\\b(?:want|need)\\s+(?:the\\s+)?chatbot\\b",
+      "meaning": {
+        "act": "correct_assistant",
+        "desired_focus": "chatbot",
+        "scope_expansion": true
+      }
+    },
+    {
+      "phrase": "what is next",
+      "pattern": "\\bwhat(?:'s| is) next\\b",
+      "meaning": {
+        "act": "ask_for_next_step"
+      }
+    },
+    {
+      "phrase": "build the language",
+      "pattern": "\\bbuild\\s+(?:the\\s+)?(?:language|chatbot|compiler)\\b",
+      "meaning": {
+        "act": "confirm_direction",
+        "desired_focus": "language_compiler"
+      }
+    }
+  ]
+}

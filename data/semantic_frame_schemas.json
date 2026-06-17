@@ -1,0 +1,28 @@
+{
+  "schemas": {
+    "claim": {
+      "fields": ["subject", "predicate", "reason"],
+      "description": "A structured claim extracted from user speech"
+    },
+    "architecture_preference": {
+      "fields": ["avoid", "prefer"],
+      "description": "Architectural preferences expressed by the user"
+    },
+    "scope_correction": {
+      "fields": ["rejects", "accepts", "desired_focus"],
+      "description": "User corrects the scope of discussion"
+    },
+    "usability_target": {
+      "fields": ["target", "parity_with", "not_required"],
+      "description": "User specifies usability goals"
+    },
+    "focus_shift": {
+      "fields": ["deprioritize", "new_focus", "reason"],
+      "description": "User redirects conversation priority"
+    },
+    "emotion_frame": {
+      "fields": ["affect", "intensity", "tone"],
+      "description": "Emotional state detected in utterance"
+    }
+  }
+}

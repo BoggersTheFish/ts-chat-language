@@ -1,0 +1,26 @@
+{
+  "topics": {
+    "chatbot": ["chatbot", "chat bot", "conversational", "chat surface"],
+    "language_compiler": ["language compiler", "tslc", "language machine", "compile language", "language layer"],
+    "usability": ["usability", "same usability", "normal chatbot", "chatgpt-style", "feels like"],
+    "transformer": ["transformer", "token prediction", "neural", "llm", "exposure training", "train on data"],
+    "reasoning_engine": ["reasoning engine", "reasoner", "ts-reasoner", "verifier", "proof"],
+    "ts_native": ["ts-native", "ts state", "meaning graph", "semantic state", "compiled meaning"]
+  },
+  "reject_signals": [
+    "transformer",
+    "external llm",
+    "training",
+    "exposure",
+    "token prediction",
+    "normal transformer"
+  ],
+  "accept_signals": [
+    "chatbot",
+    "usability",
+    "language compiler",
+    "ts-native",
+    "compiled language",
+    "dialogue state"
+  ]
+}
