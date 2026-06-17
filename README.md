@@ -1,4 +1,4 @@
-# TS-Chat Language / TSLC v0.4
+# TS-Chat Language / TSLC v0.5
 
 **TSLC** — Thinking System Language Compiler.
 
@@ -24,6 +24,15 @@ python3 -m unittest discover -v
 python3 -m chat.cli --demo
 python3 -m chat.cli
 ```
+
+## v0.5: graph-diff memory receipts
+
+Each `TurnReceipt` now includes a `graph_diff` against the previous turn's meaning graph:
+
+- Added/removed semantic nodes (stable keys, not frame index)
+- Focus, topic, and dialogue-act transitions
+- Constraint deltas: rejects, accepts, prefers, avoids
+- Serialized into turn history for multi-turn memory inspection
 
 ## v0.4: graph-driven state and planning
 

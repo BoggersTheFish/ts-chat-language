@@ -15,6 +15,7 @@ class TurnRecord:
     topic: str
     compiled_turn: dict[str, Any] = field(default_factory=dict)
     response_plan: dict[str, Any] = field(default_factory=dict)
+    graph_diff: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -27,6 +28,7 @@ class StateUpdateReceipt:
     current_topic: str
     rejected_frames: list[str]
     accepted_frames: list[dict[str, Any]]
+    graph_diff: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

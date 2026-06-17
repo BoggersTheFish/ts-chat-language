@@ -154,8 +154,14 @@ class TurnReceipt:
     response_plan: ResponsePlan
     rendered_reply: RenderedReply
     state_snapshot: dict[str, Any]
+    graph_diff: Any = None  # GraphDiff
 
     def to_dict(self) -> dict[str, Any]:
+        graph_diff_dict = (
+            self.graph_diff.to_dict()
+            if self.graph_diff is not None and hasattr(self.graph_diff, "to_dict")
+            else self.graph_diff
+        )
         return {
             "turn_id": self.turn_id,
             "user_text": self.user_text,
@@ -163,4 +169,5 @@ class TurnReceipt:
             "response_plan": self.response_plan.to_dict(),
             "rendered_reply": self.rendered_reply.to_dict(),
             "state_snapshot": self.state_snapshot,
+            "graph_diff": graph_diff_dict,
         }

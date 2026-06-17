@@ -45,9 +45,17 @@ def accepted_scopes(graph: MeaningGraph) -> list[str]:
 
 
 def preferred_constraints(graph: MeaningGraph) -> list[str]:
+    return _constraint_values(graph, polarity="prefer")
+
+
+def avoided_constraints(graph: MeaningGraph) -> list[str]:
+    return _constraint_values(graph, polarity="avoid")
+
+
+def _constraint_values(graph: MeaningGraph, *, polarity: str) -> list[str]:
     values: list[str] = []
     for node in nodes_of_kind(graph, "constraint"):
-        if node.slots.get("polarity") != "prefer":
+        if node.slots.get("polarity") != polarity:
             continue
         value = str(node.slots.get("value", node.label))
         if value not in values:

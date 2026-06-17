@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from ts_lang.graph_queries import acceptable_frame_nodes, emotion_affect, rejected_scopes
+from ts_lang.meaning_graph import MeaningGraph
 from ts_lang.types import CompiledTurn
 from ts_state.memory import trim_history
 from ts_state.topic import normalize_topic
@@ -22,6 +23,7 @@ class ConversationState:
     turn_history: list[TurnRecord] = field(default_factory=list)
     affect_flag: str | None = None
     turn_counter: int = 0
+    last_meaning_graph: MeaningGraph | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -32,9 +34,15 @@ class ConversationState:
             "next_expected_action": self.next_expected_action,
             "affect_flag": self.affect_flag,
             "turn_count": len(self.turn_history),
+            "has_prior_graph": self.last_meaning_graph is not None,
         }
 
-    def apply_compiled_turn(self, turn: CompiledTurn) -> StateUpdateReceipt:
+    def apply_compiled_turn(
+        self,
+        turn: CompiledTurn,
+        *,
+        graph_diff: dict[str, Any] | None = None,
+    ) -> StateUpdateReceipt:
         self.turn_counter += 1
         updates: list[str] = []
 
@@ -77,12 +85,15 @@ class ConversationState:
         if act == "ask_question":
             self.next_expected_action = "answer or clarify"
 
+        self.last_meaning_graph = graph
+
         return StateUpdateReceipt(
             turn_id=self.turn_counter,
             updates=updates,
             current_topic=self.current_topic,
             rejected_frames=list(self.rejected_frames),
             accepted_frames=list(self.accepted_frames),
+            graph_diff=graph_diff or {},
         )
 
     def record_turn(
@@ -92,6 +103,7 @@ class ConversationState:
         bot_text: str,
         compiled_turn: CompiledTurn,
         response_plan: dict[str, Any],
+        graph_diff: dict[str, Any] | None = None,
     ) -> TurnRecord:
         record = TurnRecord(
             turn_id=self.turn_counter,
@@ -101,6 +113,7 @@ class ConversationState:
             topic=self.current_topic,
             compiled_turn=compiled_turn.to_dict(),
             response_plan=response_plan,
+            graph_diff=graph_diff or {},
         )
         self.turn_history.append(record)
         self.turn_history = trim_history(self.turn_history)

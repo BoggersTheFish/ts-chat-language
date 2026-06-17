@@ -1,0 +1,536 @@
+{
+  "version": "0.5.0",
+  "name": "TS-Chat v0.5 graph-diff memory receipts",
+  "tests_passed": true,
+  "graph_diff_traces": [
+    {
+      "previous_turn_id": null,
+      "current_turn_id": 1,
+      "dialogue_act_change": {
+        "previous": null,
+        "current": "correct_assistant"
+      },
+      "topic_change": {
+        "previous": null,
+        "current": "usability"
+      },
+      "focus_change": {
+        "previous": null,
+        "current": "chatbot_usability"
+      },
+      "added_nodes": [
+        {
+          "semantic_key": "constraint:prefer:chatbot_usability_surface",
+          "node_id": "node_constraint_prefer_chatbot_usability_surface",
+          "kind": "constraint",
+          "label": "chatbot_usability_surface",
+          "value": "chatbot_usability_surface"
+        },
+        {
+          "semantic_key": "frame:architecture_preference:node_frame_architecture_preference_architecture_frame",
+          "node_id": "node_frame_architecture_preference_architecture_frame",
+          "kind": "architecture_preference",
+          "label": "architecture preference",
+          "value": null
+        },
+        {
+          "semantic_key": "frame:claim:node_frame_claim_claim_frame",
+          "node_id": "node_frame_claim_claim_frame",
+          "kind": "claim",
+          "label": "claim",
+          "value": null
+        },
+        {
+          "semantic_key": "frame:emotion_frame:node_frame_emotion_frame_emotion_frame",
+          "node_id": "node_frame_emotion_frame_emotion_frame",
+          "kind": "emotion_frame",
+          "label": "emotion frame",
+          "value": null
+        },
+        {
+          "semantic_key": "frame:scope_correction:node_frame_scope_correction_scope_frame",
+          "node_id": "node_frame_scope_correction_scope_frame",
+          "kind": "scope_correction",
+          "label": "scope correction",
+          "value": null
+        },
+        {
+          "semantic_key": "frame:usability_target:node_frame_usability_target_usability_frame",
+          "node_id": "node_frame_usability_target_usability_frame",
+          "kind": "usability_target",
+          "label": "usability target",
+          "value": null
+        },
+        {
+          "semantic_key": "rejected_scope::architecture_parity",
+          "node_id": "node_rejected_scope_architecture_parity",
+          "kind": "rejected_scope",
+          "label": "architecture_parity",
+          "value": "architecture_parity"
+        }
+      ],
+      "removed_nodes": [],
+      "rejects_added": [
+        "architecture_parity"
+      ],
+      "rejects_removed": [],
+      "accepts_added": [],
+      "accepts_removed": [],
+      "prefers_added": [
+        "chatbot_usability_surface"
+      ],
+      "prefers_removed": [],
+      "avoids_added": [],
+      "avoids_removed": [],
+      "summary": "turn 1; act none -> correct_assistant; topic none -> usability; focus none -> chatbot_usability; +rejects:architecture_parity; +nodes:architecture_preference,claim,constraint,emotion_frame,rejected_scope,scope_correction,usability_target"
+    },
+    {
+      "previous_turn_id": 1,
+      "current_turn_id": 2,
+      "dialogue_act_change": {
+        "previous": "correct_assistant",
+        "current": "strategic_redirect"
+      },
+      "topic_change": {
+        "previous": "usability",
+        "current": "reasoning engine"
+      },
+      "focus_change": {
+        "previous": "chatbot_usability",
+        "current": "chatbot_language_layer"
+      },
+      "added_nodes": [
+        {
+          "semantic_key": "accepted_scope::chatbot_language_layer",
+          "node_id": "node_accepted_scope_chatbot_language_layer",
+          "kind": "accepted_scope",
+          "label": "chatbot_language_layer",
+          "value": "chatbot_language_layer"
+        },
+        {
+          "semantic_key": "focus_target::chatbot_language_layer",
+          "node_id": "node_focus_target_chatbot_language_layer",
+          "kind": "focus_target",
+          "label": "chatbot_language_layer",
+          "value": "chatbot_language_layer"
+        },
+        {
+          "semantic_key": "frame:focus_shift:node_frame_focus_shift_focus_frame",
+          "node_id": "node_frame_focus_shift_focus_frame",
+          "kind": "focus_shift",
+          "label": "focus shift",
+          "value": null
+        },
+        {
+          "semantic_key": "rejected_scope::reasoning_engine",
+          "node_id": "node_rejected_scope_reasoning_engine",
+          "kind": "rejected_scope",
+          "label": "reasoning_engine",
+          "value": "reasoning_engine"
+        }
+      ],
+      "removed_nodes": [
+        {
+          "semantic_key": "constraint:prefer:chatbot_usability_surface",
+          "node_id": "node_constraint_prefer_chatbot_usability_surface",
+          "kind": "constraint",
+          "label": "chatbot_usability_surface",
+          "value": "chatbot_usability_surface"
+        },
+        {
+          "semantic_key": "frame:architecture_preference:node_frame_architecture_preference_architecture_frame",
+          "node_id": "node_frame_architecture_preference_architecture_frame",
+          "kind": "architecture_preference",
+          "label": "architecture preference",
+          "value": null
+        },
+        {
+          "semantic_key": "frame:claim:node_frame_claim_claim_frame",
+          "node_id": "node_frame_claim_claim_frame",
+          "kind": "claim",
+          "label": "claim",
+          "value": null
+        },
+        {
+          "semantic_key": "frame:usability_target:node_frame_usability_target_usability_frame",
+          "node_id": "node_frame_usability_target_usability_frame",
+          "kind": "usability_target",
+          "label": "usability target",
+          "value": null
+        }
+      ],
+      "rejects_added": [
+        "reasoning_engine"
+      ],
+      "rejects_removed": [],
+      "accepts_added": [
+        "chatbot_language_layer"
+      ],
+      "accepts_removed": [],
+      "prefers_added": [],
+      "prefers_removed": [
+        "chatbot_usability_surface"
+      ],
+      "avoids_added": [],
+      "avoids_removed": [],
+      "summary": "turn 2; act correct_assistant -> strategic_redirect; topic usability -> reasoning engine; focus chatbot_usability -> chatbot_language_layer; +rejects:reasoning_engine; +accepts:chatbot_language_layer; +nodes:accepted_scope,focus_shift,focus_target,rejected_scope; -nodes:architecture_preference,claim,constraint,usability_target"
+    },
+    {
+      "previous_turn_id": 2,
+      "current_turn_id": 3,
+      "dialogue_act_change": {
+        "previous": "strategic_redirect",
+        "current": "ask_for_next_step"
+      },
+      "topic_change": {
+        "previous": "reasoning engine",
+        "current": "reasoning engine (deprioritized)"
+      },
+      "focus_change": {
+        "previous": "chatbot_language_layer",
+        "current": null
+      },
+      "added_nodes": [],
+      "removed_nodes": [
+        {
+          "semantic_key": "accepted_scope::chatbot_language_layer",
+          "node_id": "node_accepted_scope_chatbot_language_layer",
+          "kind": "accepted_scope",
+          "label": "chatbot_language_layer",
+          "value": "chatbot_language_layer"
+        },
+        {
+          "semantic_key": "focus_target::chatbot_language_layer",
+          "node_id": "node_focus_target_chatbot_language_layer",
+          "kind": "focus_target",
+          "label": "chatbot_language_layer",
+          "value": "chatbot_language_layer"
+        },
+        {
+          "semantic_key": "frame:emotion_frame:node_frame_emotion_frame_emotion_frame",
+          "node_id": "node_frame_emotion_frame_emotion_frame",
+          "kind": "emotion_frame",
+          "label": "emotion frame",
+          "value": null
+        },
+        {
+          "semantic_key": "frame:focus_shift:node_frame_focus_shift_focus_frame",
+          "node_id": "node_frame_focus_shift_focus_frame",
+          "kind": "focus_shift",
+          "label": "focus shift",
+          "value": null
+        },
+        {
+          "semantic_key": "frame:scope_correction:node_frame_scope_correction_scope_frame",
+          "node_id": "node_frame_scope_correction_scope_frame",
+          "kind": "scope_correction",
+          "label": "scope correction",
+          "value": null
+        },
+        {
+          "semantic_key": "rejected_scope::architecture_parity",
+          "node_id": "node_rejected_scope_architecture_parity",
+          "kind": "rejected_scope",
+          "label": "architecture_parity",
+          "value": "architecture_parity"
+        },
+        {
+          "semantic_key": "rejected_scope::reasoning_engine",
+          "node_id": "node_rejected_scope_reasoning_engine",
+          "kind": "rejected_scope",
+          "label": "reasoning_engine",
+          "value": "reasoning_engine"
+        }
+      ],
+      "rejects_added": [],
+      "rejects_removed": [
+        "reasoning_engine",
+        "architecture_parity"
+      ],
+      "accepts_added": [],
+      "accepts_removed": [
+        "chatbot_language_layer"
+      ],
+      "prefers_added": [],
+      "prefers_removed": [],
+      "avoids_added": [],
+      "avoids_removed": [],
+      "summary": "turn 3; act strategic_redirect -> ask_for_next_step; topic reasoning engine -> reasoning engine (deprioritized); -nodes:accepted_scope,emotion_frame,focus_shift,focus_target,rejected_scope,scope_correction"
+    }
+  ],
+  "golden_traces": [
+    {
+      "input": "nah bro we just want the same usability",
+      "dialogue_act": "correct_assistant",
+      "response": "Right. The target is usability parity, not architecture parity. The system should feel like a normal chatbot while compiling language into TS state underneath.",
+      "template_id": "ack_correction_reframe_usability",
+      "graph_diff": {
+        "previous_turn_id": null,
+        "current_turn_id": 1,
+        "dialogue_act_change": {
+          "previous": null,
+          "current": "correct_assistant"
+        },
+        "topic_change": {
+          "previous": null,
+          "current": "usability"
+        },
+        "focus_change": {
+          "previous": null,
+          "current": "chatbot_usability"
+        },
+        "added_nodes": [
+          {
+            "semantic_key": "constraint:prefer:chatbot_usability_surface",
+            "node_id": "node_constraint_prefer_chatbot_usability_surface",
+            "kind": "constraint",
+            "label": "chatbot_usability_surface",
+            "value": "chatbot_usability_surface"
+          },
+          {
+            "semantic_key": "frame:architecture_preference:node_frame_architecture_preference_architecture_frame",
+            "node_id": "node_frame_architecture_preference_architecture_frame",
+            "kind": "architecture_preference",
+            "label": "architecture preference",
+            "value": null
+          },
+          {
+            "semantic_key": "frame:claim:node_frame_claim_claim_frame",
+            "node_id": "node_frame_claim_claim_frame",
+            "kind": "claim",
+            "label": "claim",
+            "value": null
+          },
+          {
+            "semantic_key": "frame:emotion_frame:node_frame_emotion_frame_emotion_frame",
+            "node_id": "node_frame_emotion_frame_emotion_frame",
+            "kind": "emotion_frame",
+            "label": "emotion frame",
+            "value": null
+          },
+          {
+            "semantic_key": "frame:scope_correction:node_frame_scope_correction_scope_frame",
+            "node_id": "node_frame_scope_correction_scope_frame",
+            "kind": "scope_correction",
+            "label": "scope correction",
+            "value": null
+          },
+          {
+            "semantic_key": "frame:usability_target:node_frame_usability_target_usability_frame",
+            "node_id": "node_frame_usability_target_usability_frame",
+            "kind": "usability_target",
+            "label": "usability target",
+            "value": null
+          },
+          {
+            "semantic_key": "rejected_scope::architecture_parity",
+            "node_id": "node_rejected_scope_architecture_parity",
+            "kind": "rejected_scope",
+            "label": "architecture_parity",
+            "value": "architecture_parity"
+          }
+        ],
+        "removed_nodes": [],
+        "rejects_added": [
+          "architecture_parity"
+        ],
+        "rejects_removed": [],
+        "accepts_added": [],
+        "accepts_removed": [],
+        "prefers_added": [
+          "chatbot_usability_surface"
+        ],
+        "prefers_removed": [],
+        "avoids_added": [],
+        "avoids_removed": [],
+        "summary": "turn 1; act none -> correct_assistant; topic none -> usability; focus none -> chatbot_usability; +rejects:architecture_parity; +nodes:architecture_preference,claim,constraint,emotion_frame,rejected_scope,scope_correction,usability_target"
+      }
+    },
+    {
+      "input": "nah, im pretty sure we now have the reasoning engine pretty solid",
+      "dialogue_act": "strategic_redirect",
+      "response": "Yes. Reframing around chatbot language layer, rejecting reasoning engine, architecture parity. Next we can design chatbot language layer.",
+      "template_id": "confirm_and_advance",
+      "graph_diff": {
+        "previous_turn_id": 1,
+        "current_turn_id": 2,
+        "dialogue_act_change": {
+          "previous": "correct_assistant",
+          "current": "strategic_redirect"
+        },
+        "topic_change": {
+          "previous": "usability",
+          "current": "reasoning engine"
+        },
+        "focus_change": {
+          "previous": "chatbot_usability",
+          "current": "chatbot_language_layer"
+        },
+        "added_nodes": [
+          {
+            "semantic_key": "accepted_scope::chatbot_language_layer",
+            "node_id": "node_accepted_scope_chatbot_language_layer",
+            "kind": "accepted_scope",
+            "label": "chatbot_language_layer",
+            "value": "chatbot_language_layer"
+          },
+          {
+            "semantic_key": "focus_target::chatbot_language_layer",
+            "node_id": "node_focus_target_chatbot_language_layer",
+            "kind": "focus_target",
+            "label": "chatbot_language_layer",
+            "value": "chatbot_language_layer"
+          },
+          {
+            "semantic_key": "frame:focus_shift:node_frame_focus_shift_focus_frame",
+            "node_id": "node_frame_focus_shift_focus_frame",
+            "kind": "focus_shift",
+            "label": "focus shift",
+            "value": null
+          },
+          {
+            "semantic_key": "rejected_scope::reasoning_engine",
+            "node_id": "node_rejected_scope_reasoning_engine",
+            "kind": "rejected_scope",
+            "label": "reasoning_engine",
+            "value": "reasoning_engine"
+          }
+        ],
+        "removed_nodes": [
+          {
+            "semantic_key": "constraint:prefer:chatbot_usability_surface",
+            "node_id": "node_constraint_prefer_chatbot_usability_surface",
+            "kind": "constraint",
+            "label": "chatbot_usability_surface",
+            "value": "chatbot_usability_surface"
+          },
+          {
+            "semantic_key": "frame:architecture_preference:node_frame_architecture_preference_architecture_frame",
+            "node_id": "node_frame_architecture_preference_architecture_frame",
+            "kind": "architecture_preference",
+            "label": "architecture preference",
+            "value": null
+          },
+          {
+            "semantic_key": "frame:claim:node_frame_claim_claim_frame",
+            "node_id": "node_frame_claim_claim_frame",
+            "kind": "claim",
+            "label": "claim",
+            "value": null
+          },
+          {
+            "semantic_key": "frame:usability_target:node_frame_usability_target_usability_frame",
+            "node_id": "node_frame_usability_target_usability_frame",
+            "kind": "usability_target",
+            "label": "usability target",
+            "value": null
+          }
+        ],
+        "rejects_added": [
+          "reasoning_engine"
+        ],
+        "rejects_removed": [],
+        "accepts_added": [
+          "chatbot_language_layer"
+        ],
+        "accepts_removed": [],
+        "prefers_added": [],
+        "prefers_removed": [
+          "chatbot_usability_surface"
+        ],
+        "avoids_added": [],
+        "avoids_removed": [],
+        "summary": "turn 2; act correct_assistant -> strategic_redirect; topic usability -> reasoning engine; focus chatbot_usability -> chatbot_language_layer; +rejects:reasoning_engine; +accepts:chatbot_language_layer; +nodes:accepted_scope,focus_shift,focus_target,rejected_scope; -nodes:architecture_preference,claim,constraint,usability_target"
+      }
+    },
+    {
+      "input": "what is next",
+      "dialogue_act": "ask_for_next_step",
+      "response": "Here's the plan for reasoning engine (deprioritized): normalizer, dialogue act compiler, semantic frame compiler, conversation state, response planner, renderer",
+      "template_id": "provide_plan_sections",
+      "graph_diff": {
+        "previous_turn_id": 2,
+        "current_turn_id": 3,
+        "dialogue_act_change": {
+          "previous": "strategic_redirect",
+          "current": "ask_for_next_step"
+        },
+        "topic_change": {
+          "previous": "reasoning engine",
+          "current": "reasoning engine (deprioritized)"
+        },
+        "focus_change": {
+          "previous": "chatbot_language_layer",
+          "current": null
+        },
+        "added_nodes": [],
+        "removed_nodes": [
+          {
+            "semantic_key": "accepted_scope::chatbot_language_layer",
+            "node_id": "node_accepted_scope_chatbot_language_layer",
+            "kind": "accepted_scope",
+            "label": "chatbot_language_layer",
+            "value": "chatbot_language_layer"
+          },
+          {
+            "semantic_key": "focus_target::chatbot_language_layer",
+            "node_id": "node_focus_target_chatbot_language_layer",
+            "kind": "focus_target",
+            "label": "chatbot_language_layer",
+            "value": "chatbot_language_layer"
+          },
+          {
+            "semantic_key": "frame:emotion_frame:node_frame_emotion_frame_emotion_frame",
+            "node_id": "node_frame_emotion_frame_emotion_frame",
+            "kind": "emotion_frame",
+            "label": "emotion frame",
+            "value": null
+          },
+          {
+            "semantic_key": "frame:focus_shift:node_frame_focus_shift_focus_frame",
+            "node_id": "node_frame_focus_shift_focus_frame",
+            "kind": "focus_shift",
+            "label": "focus shift",
+            "value": null
+          },
+          {
+            "semantic_key": "frame:scope_correction:node_frame_scope_correction_scope_frame",
+            "node_id": "node_frame_scope_correction_scope_frame",
+            "kind": "scope_correction",
+            "label": "scope correction",
+            "value": null
+          },
+          {
+            "semantic_key": "rejected_scope::architecture_parity",
+            "node_id": "node_rejected_scope_architecture_parity",
+            "kind": "rejected_scope",
+            "label": "architecture_parity",
+            "value": "architecture_parity"
+          },
+          {
+            "semantic_key": "rejected_scope::reasoning_engine",
+            "node_id": "node_rejected_scope_reasoning_engine",
+            "kind": "rejected_scope",
+            "label": "reasoning_engine",
+            "value": "reasoning_engine"
+          }
+        ],
+        "rejects_added": [],
+        "rejects_removed": [
+          "reasoning_engine",
+          "architecture_parity"
+        ],
+        "accepts_added": [],
+        "accepts_removed": [
+          "chatbot_language_layer"
+        ],
+        "prefers_added": [],
+        "prefers_removed": [],
+        "avoids_added": [],
+        "avoids_removed": [],
+        "summary": "turn 3; act strategic_redirect -> ask_for_next_step; topic reasoning engine -> reasoning engine (deprioritized); -nodes:accepted_scope,emotion_frame,focus_shift,focus_target,rejected_scope,scope_correction"
+      }
+    }
+  ],
+  "boundary": "No transformer, no external LLM, no reasoning engine integration."
+}
