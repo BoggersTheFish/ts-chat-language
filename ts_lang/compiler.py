@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from ts_lang.dialogue_act import compile_dialogue_act
+from ts_lang.meaning_graph import build_meaning_graph
 from ts_lang.normalize import normalize_utterance
 from ts_lang.semantic_frame import compile_semantic_frames, infer_topic
 from ts_lang.types import CompiledTurn
@@ -39,12 +40,21 @@ def compile_utterance(raw: str, state: ConversationState | None = None) -> Compi
         if unknown:
             ambiguities.extend(unknown)
 
+    meaning_graph = build_meaning_graph(
+        dialogue_act=act.act,
+        subact=act.subact,
+        act_result=act,
+        frames=frames,
+        topic=topic,
+    )
+
     return CompiledTurn(
         raw=raw,
         normalized=utterance.clean,
         dialogue_act=act.act,
         subact=act.subact,
         semantic_frames=frames,
+        meaning_graph=meaning_graph,
         emotion=dict(act.emotion),
         topic=topic,
         confidence=confidence,

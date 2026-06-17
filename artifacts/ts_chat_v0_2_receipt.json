@@ -1,0 +1,523 @@
+{
+  "version": "0.2.0",
+  "name": "TS-Chat v0.2 explicit meaning graph",
+  "tests_passed": true,
+  "acts_supported": [
+    "ask_question",
+    "answer_simple",
+    "correct_assistant",
+    "reject_framing",
+    "request_plan",
+    "continue_topic",
+    "express_frustration",
+    "confirm_direction",
+    "ask_for_definition",
+    "ask_for_next_step",
+    "strategic_redirect"
+  ],
+  "golden_traces": [
+    {
+      "input": "nah bro we just want the same usability",
+      "dialogue_act": "correct_assistant",
+      "response": "Right. The target is usability parity, not architecture parity. The system should feel like a normal chatbot while compiling language into TS state underneath.",
+      "template_id": "ack_correction_reframe_usability",
+      "meaning_graph": {
+        "root_node_id": "node_act_root",
+        "summary": "correct_assistant over usability with 5 frame(s) and 7 derived node(s)",
+        "nodes": [
+          {
+            "node_id": "node_act_root",
+            "kind": "dialogue_act",
+            "label": "correct_assistant",
+            "slots": {
+              "subact": "scope_correction",
+              "topic": "usability",
+              "meaning": {
+                "description": "User corrects assistant understanding or framing",
+                "tone": "informal",
+                "stance": "rejection",
+                "claim": "usability_parity_target",
+                "rejects": [
+                  "architecture_parity"
+                ],
+                "matched_phrases": [
+                  "nah bro",
+                  "same usability"
+                ],
+                "topic": "general conversation"
+              }
+            },
+            "provenance": {
+              "source_type": "dialogue_act",
+              "source_id": "correct_assistant",
+              "subact": "scope_correction",
+              "matched_phrases": [
+                "nah bro",
+                "same usability"
+              ],
+              "confidence": 0.95
+            }
+          },
+          {
+            "node_id": "node_frame_00_emotion_frame",
+            "kind": "emotion_frame",
+            "label": "emotion frame",
+            "slots": {
+              "affect": "corrective",
+              "intensity": 0.35,
+              "tone": "informal"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "emotion_frame"
+            }
+          },
+          {
+            "node_id": "node_frame_01_claim",
+            "kind": "claim",
+            "label": "claim",
+            "slots": {
+              "subject": "conversation",
+              "predicate": "usability_parity_target",
+              "reason": ""
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "claim_frame",
+              "pattern": "phrase_meaning.claim"
+            }
+          },
+          {
+            "node_id": "node_frame_02_architecture_preference",
+            "kind": "architecture_preference",
+            "label": "architecture preference",
+            "slots": {
+              "avoid": [],
+              "prefer": [
+                "chatbot_usability_surface"
+              ]
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "architecture_frame"
+            }
+          },
+          {
+            "node_id": "node_prefer_2_chatbot_usability_surface",
+            "kind": "constraint",
+            "label": "chatbot_usability_surface",
+            "slots": {
+              "polarity": "prefer",
+              "value": "chatbot_usability_surface"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "architecture_frame",
+              "derived_from": "architecture_preference.prefer"
+            }
+          },
+          {
+            "node_id": "node_frame_03_scope_correction",
+            "kind": "scope_correction",
+            "label": "scope correction",
+            "slots": {
+              "rejects": [
+                "['architecture_parity']"
+              ],
+              "accepts": [],
+              "desired_focus": null
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "scope_frame",
+              "pattern": "phrase_meaning.scope"
+            }
+          },
+          {
+            "node_id": "node_reject_3_['architecture_parity']",
+            "kind": "rejected_scope",
+            "label": "['architecture_parity']",
+            "slots": {
+              "value": "['architecture_parity']"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "scope_frame",
+              "pattern": "phrase_meaning.scope",
+              "derived_from": "scope_correction.rejects"
+            }
+          },
+          {
+            "node_id": "node_frame_04_usability_target",
+            "kind": "usability_target",
+            "label": "usability target",
+            "slots": {
+              "target": "usability_parity",
+              "parity_with": "normal_chatbot",
+              "not_required": [
+                "architecture_parity",
+                "transformer_internals"
+              ],
+              "desired_focus": "chatbot_usability"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "usability_frame",
+              "pattern": "same_usability"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "edge_001",
+            "source_id": "node_act_root",
+            "target_id": "node_frame_00_emotion_frame",
+            "relation": "expresses",
+            "provenance": {
+              "source_type": "frame_link",
+              "source_id": "emotion_frame",
+              "schema": "emotion_frame"
+            }
+          },
+          {
+            "edge_id": "edge_002",
+            "source_id": "node_act_root",
+            "target_id": "node_frame_01_claim",
+            "relation": "expresses",
+            "provenance": {
+              "source_type": "frame_link",
+              "source_id": "claim_frame",
+              "schema": "claim"
+            }
+          },
+          {
+            "edge_id": "edge_003",
+            "source_id": "node_act_root",
+            "target_id": "node_frame_02_architecture_preference",
+            "relation": "expresses",
+            "provenance": {
+              "source_type": "frame_link",
+              "source_id": "architecture_frame",
+              "schema": "architecture_preference"
+            }
+          },
+          {
+            "edge_id": "edge_004",
+            "source_id": "node_frame_02_architecture_preference",
+            "target_id": "node_prefer_2_chatbot_usability_surface",
+            "relation": "prefers",
+            "provenance": {
+              "source_type": "architecture_preference",
+              "slot": "prefer"
+            }
+          },
+          {
+            "edge_id": "edge_005",
+            "source_id": "node_act_root",
+            "target_id": "node_frame_03_scope_correction",
+            "relation": "expresses",
+            "provenance": {
+              "source_type": "frame_link",
+              "source_id": "scope_frame",
+              "schema": "scope_correction"
+            }
+          },
+          {
+            "edge_id": "edge_006",
+            "source_id": "node_frame_03_scope_correction",
+            "target_id": "node_reject_3_['architecture_parity']",
+            "relation": "rejects",
+            "provenance": {
+              "source_type": "scope_correction",
+              "slot": "rejects"
+            }
+          },
+          {
+            "edge_id": "edge_007",
+            "source_id": "node_act_root",
+            "target_id": "node_frame_04_usability_target",
+            "relation": "expresses",
+            "provenance": {
+              "source_type": "frame_link",
+              "source_id": "usability_frame",
+              "schema": "usability_target"
+            }
+          }
+        ],
+        "node_count": 8,
+        "edge_count": 7
+      }
+    },
+    {
+      "input": "nah, im pretty sure we now have the reasoning engine pretty solid",
+      "dialogue_act": "strategic_redirect",
+      "response": "Yes. Reframing around chatbot language layer, rejecting reasoning engine, ['architecture parity']. Next we can design chatbot language layer.",
+      "template_id": "confirm_and_advance",
+      "meaning_graph": {
+        "root_node_id": "node_act_root",
+        "summary": "strategic_redirect over reasoning engine with 3 frame(s) and 7 derived node(s)",
+        "nodes": [
+          {
+            "node_id": "node_act_root",
+            "kind": "dialogue_act",
+            "label": "strategic_redirect",
+            "slots": {
+              "subact": "priority_shift",
+              "topic": "reasoning engine",
+              "meaning": {
+                "description": "User redirects focus to a new priority",
+                "deprioritize": [
+                  "reasoning_engine"
+                ],
+                "new_focus": "chatbot_language_layer",
+                "matched_phrases": [
+                  "reasoning engine solid"
+                ],
+                "rejected_context": [
+                  "['architecture_parity']"
+                ]
+              }
+            },
+            "provenance": {
+              "source_type": "dialogue_act",
+              "source_id": "strategic_redirect",
+              "subact": "priority_shift",
+              "matched_phrases": [
+                "reasoning engine solid"
+              ],
+              "confidence": 0.95
+            }
+          },
+          {
+            "node_id": "node_frame_00_emotion_frame",
+            "kind": "emotion_frame",
+            "label": "emotion frame",
+            "slots": {
+              "affect": "corrective",
+              "intensity": 0.35,
+              "tone": "neutral"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "emotion_frame"
+            }
+          },
+          {
+            "node_id": "node_frame_01_scope_correction",
+            "kind": "scope_correction",
+            "label": "scope correction",
+            "slots": {
+              "rejects": [
+                "reasoning_engine",
+                "['architecture_parity']"
+              ],
+              "accepts": [
+                "chatbot_language_layer"
+              ],
+              "desired_focus": "chatbot_language_layer"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "scope_frame",
+              "pattern": "phrase_meaning.scope"
+            }
+          },
+          {
+            "node_id": "node_reject_1_reasoning_engine",
+            "kind": "rejected_scope",
+            "label": "reasoning_engine",
+            "slots": {
+              "value": "reasoning_engine"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "scope_frame",
+              "pattern": "phrase_meaning.scope",
+              "derived_from": "scope_correction.rejects"
+            }
+          },
+          {
+            "node_id": "node_reject_1_['architecture_parity']",
+            "kind": "rejected_scope",
+            "label": "['architecture_parity']",
+            "slots": {
+              "value": "['architecture_parity']"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "scope_frame",
+              "pattern": "phrase_meaning.scope",
+              "derived_from": "scope_correction.rejects"
+            }
+          },
+          {
+            "node_id": "node_accept_1_chatbot_language_layer",
+            "kind": "accepted_scope",
+            "label": "chatbot_language_layer",
+            "slots": {
+              "value": "chatbot_language_layer"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "scope_frame",
+              "pattern": "phrase_meaning.scope",
+              "derived_from": "scope_correction.accepts"
+            }
+          },
+          {
+            "node_id": "node_frame_02_focus_shift",
+            "kind": "focus_shift",
+            "label": "focus shift",
+            "slots": {
+              "deprioritize": [
+                "reasoning_engine"
+              ],
+              "new_focus": "chatbot_language_layer",
+              "reason": "user_priority_shift",
+              "desired_focus": "chatbot_language_layer"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "focus_frame",
+              "pattern": "reasoning_engine_solid"
+            }
+          },
+          {
+            "node_id": "node_focus_2_chatbot_language_layer",
+            "kind": "focus_target",
+            "label": "chatbot_language_layer",
+            "slots": {
+              "new_focus": "chatbot_language_layer"
+            },
+            "provenance": {
+              "source_type": "frame_builder",
+              "source_id": "focus_frame",
+              "pattern": "reasoning_engine_solid",
+              "derived_from": "focus_shift.new_focus"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "edge_001",
+            "source_id": "node_act_root",
+            "target_id": "node_frame_00_emotion_frame",
+            "relation": "expresses",
+            "provenance": {
+              "source_type": "frame_link",
+              "source_id": "emotion_frame",
+              "schema": "emotion_frame"
+            }
+          },
+          {
+            "edge_id": "edge_002",
+            "source_id": "node_act_root",
+            "target_id": "node_frame_01_scope_correction",
+            "relation": "expresses",
+            "provenance": {
+              "source_type": "frame_link",
+              "source_id": "scope_frame",
+              "schema": "scope_correction"
+            }
+          },
+          {
+            "edge_id": "edge_003",
+            "source_id": "node_frame_01_scope_correction",
+            "target_id": "node_reject_1_reasoning_engine",
+            "relation": "rejects",
+            "provenance": {
+              "source_type": "scope_correction",
+              "slot": "rejects"
+            }
+          },
+          {
+            "edge_id": "edge_004",
+            "source_id": "node_frame_01_scope_correction",
+            "target_id": "node_reject_1_['architecture_parity']",
+            "relation": "rejects",
+            "provenance": {
+              "source_type": "scope_correction",
+              "slot": "rejects"
+            }
+          },
+          {
+            "edge_id": "edge_005",
+            "source_id": "node_frame_01_scope_correction",
+            "target_id": "node_accept_1_chatbot_language_layer",
+            "relation": "accepts",
+            "provenance": {
+              "source_type": "scope_correction",
+              "slot": "accepts"
+            }
+          },
+          {
+            "edge_id": "edge_006",
+            "source_id": "node_act_root",
+            "target_id": "node_frame_02_focus_shift",
+            "relation": "expresses",
+            "provenance": {
+              "source_type": "frame_link",
+              "source_id": "focus_frame",
+              "schema": "focus_shift"
+            }
+          },
+          {
+            "edge_id": "edge_007",
+            "source_id": "node_frame_02_focus_shift",
+            "target_id": "node_focus_2_chatbot_language_layer",
+            "relation": "shifts_to",
+            "provenance": {
+              "source_type": "focus_shift",
+              "slot": "new_focus"
+            }
+          }
+        ],
+        "node_count": 8,
+        "edge_count": 7
+      }
+    },
+    {
+      "input": "what is next",
+      "dialogue_act": "ask_for_next_step",
+      "response": "Here's the plan for reasoning engine (deprioritized): normalizer, dialogue act compiler, semantic frame compiler, conversation state, response planner, renderer",
+      "template_id": "provide_plan_sections",
+      "meaning_graph": {
+        "root_node_id": "node_act_root",
+        "summary": "ask_for_next_step over reasoning engine (deprioritized) with 0 frame(s) and 0 derived node(s)",
+        "nodes": [
+          {
+            "node_id": "node_act_root",
+            "kind": "dialogue_act",
+            "label": "ask_for_next_step",
+            "slots": {
+              "subact": "immediate_next",
+              "topic": "reasoning engine (deprioritized)",
+              "meaning": {
+                "description": "User asks what to do next",
+                "matched_phrases": [
+                  "what is next"
+                ],
+                "rejected_context": [
+                  "['architecture_parity']"
+                ]
+              }
+            },
+            "provenance": {
+              "source_type": "dialogue_act",
+              "source_id": "ask_for_next_step",
+              "subact": "immediate_next",
+              "matched_phrases": [
+                "what is next"
+              ],
+              "confidence": 0.95
+            }
+          }
+        ],
+        "edges": [],
+        "node_count": 1,
+        "edge_count": 0
+      }
+    }
+  ],
+  "boundary": "No transformer, no external LLM, no reasoning engine integration."
+}

@@ -7,16 +7,23 @@ class EndToEndTests(unittest.TestCase):
     def test_correction_reframe_flow(self) -> None:
         session = TSChatSession()
         receipt = session.handle("nah bro we just want the same usability")
-        self.assertEqual(receipt.compiled_turn.dialogue_act, "correct_assistant")
+        turn = receipt.compiled_turn
+        self.assertEqual(turn.dialogue_act, "correct_assistant")
         self.assertIn("usability parity", receipt.rendered_reply.text.lower())
+        graph = turn.meaning_graph
+        self.assertTrue(hasattr(graph, "nodes"))
+        self.assertTrue(any(n.kind == "usability_target" for n in graph.nodes))
+        self.assertEqual(graph.desired_focus(), "chatbot_usability")
 
     def test_strategic_redirect_flow(self) -> None:
         session = TSChatSession()
         receipt = session.handle(
             "nah, im pretty sure we now have the reasoning engine pretty solid"
         )
-        self.assertEqual(receipt.compiled_turn.dialogue_act, "strategic_redirect")
+        turn = receipt.compiled_turn
+        self.assertEqual(turn.dialogue_act, "strategic_redirect")
         self.assertIn("language", receipt.rendered_reply.text.lower())
+        self.assertEqual(turn.meaning_graph.desired_focus(), "chatbot_language_layer")
 
     def test_frustration_flow(self) -> None:
         session = TSChatSession()
@@ -27,8 +34,11 @@ class EndToEndTests(unittest.TestCase):
     def test_next_step_plan_flow(self) -> None:
         session = TSChatSession()
         receipt = session.handle("what is next")
-        self.assertEqual(receipt.compiled_turn.dialogue_act, "ask_for_next_step")
+        turn = receipt.compiled_turn
+        self.assertEqual(turn.dialogue_act, "ask_for_next_step")
         self.assertIn("normalizer", receipt.rendered_reply.text.lower())
+        root = next(n for n in turn.meaning_graph.nodes if n.kind == "dialogue_act")
+        self.assertIn("what is next", root.provenance.get("matched_phrases", []))
 
     def test_continue_topic_across_turns(self) -> None:
         session = TSChatSession()

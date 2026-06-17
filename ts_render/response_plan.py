@@ -21,6 +21,19 @@ ACT_TO_RESPONSE = {
 }
 
 
+def _desired_focus(turn: CompiledTurn) -> str | None:
+    if turn.meaning_graph and hasattr(turn.meaning_graph, "desired_focus"):
+        focus = turn.meaning_graph.desired_focus()
+        if focus:
+            return str(focus).replace("_", " ")
+    for frame in turn.semantic_frames:
+        if frame.schema in {"scope_correction", "focus_shift", "usability_target"}:
+            focus = frame.slots.get("desired_focus") or frame.slots.get("new_focus")
+            if focus:
+                return str(focus).replace("_", " ")
+    return None
+
+
 def _main_point(turn: CompiledTurn, state: ConversationState) -> str:
     if turn.status == "partial_parse":
         known = ", ".join(turn.known_terms) or turn.topic
@@ -33,6 +46,18 @@ def _main_point(turn: CompiledTurn, state: ConversationState) -> str:
                 "The system should feel like a normal chatbot while compiling "
                 "language into TS state underneath."
             )
+        if frame.schema == "scope_correction":
+            focus = frame.slots.get("desired_focus")
+            if not focus and frame.slots.get("accepts"):
+                focus = frame.slots["accepts"][0]
+            rejects = frame.slots.get("rejects", [])
+            if focus:
+                reject_part = (
+                    f", rejecting {', '.join(str(r).replace('_', ' ') for r in rejects)}"
+                    if rejects
+                    else ""
+                )
+                return f"Reframing around {str(focus).replace('_', ' ')}{reject_part}."
         if frame.schema == "focus_shift":
             new_focus = frame.slots.get("new_focus", "chatbot language layer")
             return f"Focus shifts to {new_focus.replace('_', ' ')}; reasoning engine is not the current priority."
@@ -50,7 +75,7 @@ def _main_point(turn: CompiledTurn, state: ConversationState) -> str:
         return "Dropping the previous framing and refocusing on the chatbot language layer."
 
     if turn.dialogue_act == "correct_assistant":
-        focus = turn.emotion.get("desired_focus") or state.current_topic
+        focus = _desired_focus(turn) or state.current_topic
         return f"Reframing around {focus}."
 
     if turn.dialogue_act in {"ask_for_next_step", "request_plan"}:

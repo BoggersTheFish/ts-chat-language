@@ -18,14 +18,15 @@ def _score_act(act: dict, text: str) -> tuple[float, str | None]:
     return best, subact
 
 
-def _phrase_boosts(text: str) -> list[tuple[str, float, dict[str, Any]]]:
-    hits: list[tuple[str, float, dict[str, Any]]] = []
+def _phrase_boosts(text: str) -> list[tuple[str, float, dict[str, Any], str]]:
+    hits: list[tuple[str, float, dict[str, Any], str]] = []
     for entry in phrase_patterns():
         pattern = entry.get("pattern") or entry.get("phrase", "")
         if pattern and re.search(pattern, text, re.IGNORECASE):
             meaning = dict(entry.get("meaning", {}))
             act = meaning.pop("act", "continue_topic")
-            hits.append((act, 0.95, meaning))
+            phrase_id = str(entry.get("phrase") or pattern)
+            hits.append((act, 0.95, meaning, phrase_id))
     return hits
 
 
@@ -61,9 +62,11 @@ def compile_dialogue_act(
             subacts[act["id"]] = subact
             meanings[act["id"]] = {"description": act.get("description", "")}
 
-    for act_id, boost, meaning in _phrase_boosts(text):
+    matched_phrases: list[str] = []
+    for act_id, boost, meaning, phrase_id in _phrase_boosts(text):
         scores[act_id] = max(scores.get(act_id, 0.0), boost)
         meanings[act_id] = {**meanings.get(act_id, {}), **meaning}
+        matched_phrases.append(phrase_id)
         if meaning.get("requires_reframe"):
             subacts[act_id] = "understanding_correction"
 
@@ -83,6 +86,8 @@ def compile_dialogue_act(
         ambiguities.append(f"tie_between_{top_act}_and_{ranked[1][0]}")
 
     meaning = dict(meanings.get(top_act, {}))
+    if matched_phrases:
+        meaning["matched_phrases"] = matched_phrases
     if current_topic and top_act in {"continue_topic", "correct_assistant"}:
         meaning.setdefault("topic", current_topic)
     if rejected_frames:

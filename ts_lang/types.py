@@ -1,4 +1,4 @@
-"""Core IR types for TSLC / TS-Chat v0.1."""
+"""Core IR types for TSLC / TS-Chat."""
 
 from __future__ import annotations
 
@@ -59,9 +59,14 @@ class DialogueActResult:
 class SemanticFrame:
     schema: str
     slots: dict[str, Any]
+    provenance: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        return {"schema": self.schema, "slots": self.slots}
+        return {
+            "schema": self.schema,
+            "slots": self.slots,
+            "provenance": self.provenance,
+        }
 
 
 @dataclass(frozen=True)
@@ -71,6 +76,7 @@ class CompiledTurn:
     dialogue_act: str
     subact: str | None
     semantic_frames: list[SemanticFrame]
+    meaning_graph: Any  # MeaningGraph — Any avoids circular import in types module
     emotion: dict[str, Any]
     topic: str
     confidence: float
@@ -81,12 +87,18 @@ class CompiledTurn:
     unknown_terms: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
+        graph_dict = (
+            self.meaning_graph.to_dict()
+            if hasattr(self.meaning_graph, "to_dict")
+            else self.meaning_graph
+        )
         return {
             "raw": self.raw,
             "normalized": self.normalized,
             "dialogue_act": self.dialogue_act,
             "subact": self.subact,
             "semantic_frames": [f.to_dict() for f in self.semantic_frames],
+            "meaning_graph": graph_dict,
             "emotion": self.emotion,
             "topic": self.topic,
             "confidence": self.confidence,

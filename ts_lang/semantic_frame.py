@@ -23,6 +23,13 @@ def _topic_hits(text: str) -> tuple[list[str], list[str]]:
     return known, unknown
 
 
+def _provenance(builder: str, *, pattern: str | None = None) -> dict[str, Any]:
+    prov: dict[str, Any] = {"source_type": "frame_builder", "source_id": builder}
+    if pattern:
+        prov["pattern"] = pattern
+    return prov
+
+
 def _emotion_frame(utterance: NormalizedUtterance, act: DialogueActResult) -> SemanticFrame | None:
     if not act.emotion:
         return None
@@ -33,6 +40,7 @@ def _emotion_frame(utterance: NormalizedUtterance, act: DialogueActResult) -> Se
             "intensity": act.emotion.get("intensity", utterance.markers.intensity),
             "tone": act.emotion.get("tone", "neutral"),
         },
+        provenance=_provenance("emotion_frame"),
     )
 
 
@@ -45,6 +53,7 @@ def _claim_frame(text: str, act: DialogueActResult) -> SemanticFrame | None:
                 "predicate": "does_not_require_training_for_language",
                 "reason": "language_can_be_compiled_into_TS",
             },
+            provenance=_provenance("claim_frame", pattern="dont_need_to_train"),
         )
     if act.meaning.get("claim"):
         return SemanticFrame(
@@ -54,6 +63,7 @@ def _claim_frame(text: str, act: DialogueActResult) -> SemanticFrame | None:
                 "predicate": act.meaning["claim"],
                 "reason": act.meaning.get("reason", ""),
             },
+            provenance=_provenance("claim_frame", pattern="phrase_meaning.claim"),
         )
     return None
 
@@ -69,7 +79,11 @@ def _architecture_frame(text: str) -> SemanticFrame | None:
         prefer.append("chatbot_usability_surface")
     if not avoid and not prefer:
         return None
-    return SemanticFrame(schema="architecture_preference", slots={"avoid": avoid, "prefer": prefer})
+    return SemanticFrame(
+        schema="architecture_preference",
+        slots={"avoid": avoid, "prefer": prefer},
+        provenance=_provenance("architecture_frame"),
+    )
 
 
 def _scope_frame(act: DialogueActResult) -> SemanticFrame | None:
@@ -101,6 +115,7 @@ def _scope_frame(act: DialogueActResult) -> SemanticFrame | None:
             "accepts": accepts,
             "desired_focus": meaning.get("desired_focus") or meaning.get("new_focus"),
         },
+        provenance=_provenance("scope_frame", pattern="phrase_meaning.scope"),
     )
 
 
@@ -113,7 +128,9 @@ def _usability_frame(text: str) -> SemanticFrame | None:
             "target": "usability_parity",
             "parity_with": "normal_chatbot",
             "not_required": ["architecture_parity", "transformer_internals"],
+            "desired_focus": "chatbot_usability",
         },
+        provenance=_provenance("usability_frame", pattern="same_usability"),
     )
 
 
@@ -130,7 +147,9 @@ def _focus_frame(act: DialogueActResult) -> SemanticFrame | None:
             "deprioritize": deprioritize,
             "new_focus": meaning.get("new_focus", "chatbot_language_layer"),
             "reason": meaning.get("reason", "user_priority_shift"),
+            "desired_focus": meaning.get("new_focus", "chatbot_language_layer"),
         },
+        provenance=_provenance("focus_frame", pattern="reasoning_engine_solid"),
     )
 
 

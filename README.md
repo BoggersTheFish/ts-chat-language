@@ -1,4 +1,4 @@
-# TS-Chat Language / TSLC v0.1
+# TS-Chat Language / TSLC v0.2
 
 **TSLC** — Thinking System Language Compiler.
 
@@ -9,7 +9,7 @@ USER TEXT
   → Normalizer
   → Dialogue Act Compiler
   → Semantic Frame Compiler
-  → TS Meaning Graph (CompiledTurn)
+  → TS Meaning Graph (`MeaningGraph` on `CompiledTurn`)
   → Conversation State Update
   → Response Planner
   → Surface Renderer
@@ -25,7 +25,17 @@ python3 -m chat.cli --demo
 python3 -m chat.cli
 ```
 
-## v0.1 boundary
+## v0.2: explicit meaning graph
+
+Every compiled turn now carries an explicit `MeaningGraph`:
+
+- `MeaningNode` — dialogue act root, semantic frames, and derived scope/constraint/focus nodes
+- `MeaningEdge` — `expresses`, `rejects`, `accepts`, `avoids`, `prefers`, `shifts_to`
+- **Provenance** on every node and edge — which phrase pattern or frame builder created it
+
+`TurnReceipt.compiled_turn.meaning_graph` is fully serializable via `to_dict()`.
+
+## v0.1 boundary (still holds)
 
 This is a conversational language compiler shell.
 
