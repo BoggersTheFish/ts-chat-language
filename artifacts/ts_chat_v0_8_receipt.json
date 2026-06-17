@@ -1,0 +1,93 @@
+{
+  "version": "0.8.0",
+  "name": "TS-Chat v0.8 declarative graph and topic rules",
+  "tests_passed": true,
+  "active_packs": [
+    "base_dialogue",
+    "ts_architecture"
+  ],
+  "pack_info": {
+    "active_packs": [
+      "base_dialogue",
+      "ts_architecture"
+    ],
+    "manifests": [
+      {
+        "id": "base_dialogue",
+        "version": "0.1.0",
+        "priority": 10,
+        "description": "General conversational dialogue acts, emotion, and render templates"
+      },
+      {
+        "id": "ts_architecture",
+        "version": "0.1.0",
+        "priority": 20,
+        "description": "TS-Chat architecture, usability, and language-compiler domain patterns"
+      }
+    ],
+    "dialogue_act_count": 11,
+    "phrase_pattern_count": 9,
+    "semantic_rule_count": 9,
+    "graph_rule_count": 3,
+    "topic_rule_count": 4,
+    "template_count": 13
+  },
+  "graph_rule_ids": [
+    "scope_correction_derivations",
+    "architecture_preference_derivations",
+    "focus_shift_derivations"
+  ],
+  "topic_rule_ids": [
+    "topic_priority",
+    "meaning_new_focus",
+    "meaning_desired_focus",
+    "fallback"
+  ],
+  "golden_traces": [
+    {
+      "input": "nah bro we just want the same usability",
+      "dialogue_act": "correct_assistant",
+      "response": "Right. The target is usability parity, not architecture parity. The system should feel like a normal chatbot while compiling language into TS state underneath.",
+      "template_id": "ack_correction_reframe_usability",
+      "rule_ids_fired": [
+        "emotion_frame",
+        "usability_target",
+        "claim_from_phrase_meaning",
+        "scope_from_phrase_meaning",
+        "architecture_prefer_usability"
+      ],
+      "frame_schemas": [
+        "emotion_frame",
+        "usability_target",
+        "claim",
+        "scope_correction",
+        "architecture_preference"
+      ]
+    },
+    {
+      "input": "nah, im pretty sure we now have the reasoning engine pretty solid",
+      "dialogue_act": "strategic_redirect",
+      "response": "Yes. You already ruled out architecture parity; shifting focus from chatbot usability to chatbot language layer. You already ruled out architecture parity; shifting focus from chatbot usability to chatbot language layer. Reframing around chatbot language layer, rejecting reasoning engine, architecture parity. Next we can design chatbot language layer.",
+      "template_id": "confirm_shift_with_memory",
+      "rule_ids_fired": [
+        "emotion_frame",
+        "focus_shift",
+        "scope_from_phrase_meaning"
+      ],
+      "frame_schemas": [
+        "emotion_frame",
+        "focus_shift",
+        "scope_correction"
+      ]
+    },
+    {
+      "input": "what is next",
+      "dialogue_act": "ask_for_next_step",
+      "response": "Given You already ruled out architecture parity, reasoning engine; focus moved from chatbot usability to chatbot language layer. Here's the plan for reasoning engine (deprioritized): normalizer, dialogue act compiler, semantic frame compiler, conversation state, response planner, renderer",
+      "template_id": "provide_plan_with_memory",
+      "rule_ids_fired": [],
+      "frame_schemas": []
+    }
+  ],
+  "boundary": "No transformer, no external LLM, no reasoning engine integration."
+}

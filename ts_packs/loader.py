@@ -42,6 +42,8 @@ class PackRegistry:
     dialogue_acts: list[dict[str, Any]] = field(default_factory=list)
     phrase_patterns: list[dict[str, Any]] = field(default_factory=list)
     semantic_rules: list[dict[str, Any]] = field(default_factory=list)
+    graph_rules: list[dict[str, Any]] = field(default_factory=list)
+    topic_rules: list[dict[str, Any]] = field(default_factory=list)
     frame_schemas: dict[str, Any] = field(default_factory=dict)
     templates: list[dict[str, Any]] = field(default_factory=list)
     lexicon: dict[str, Any] = field(default_factory=dict)
@@ -61,6 +63,8 @@ class PackRegistry:
             "dialogue_act_count": len(self.dialogue_acts),
             "phrase_pattern_count": len(self.phrase_patterns),
             "semantic_rule_count": len(self.semantic_rules),
+            "graph_rule_count": len(self.graph_rules),
+            "topic_rule_count": len(self.topic_rules),
             "template_count": len(self.templates),
         }
 
@@ -94,6 +98,8 @@ def _validate_pack_dir(pack_dir: Path) -> PackManifest:
         ("dialogue_acts.json", "acts"),
         ("phrase_patterns.json", "phrases"),
         ("semantic_rules.json", "rules"),
+        ("graph_rules.json", "rules"),
+        ("topic_rules.json", "rules"),
         ("templates.json", "templates"),
     ):
         path = pack_dir / name
@@ -103,8 +109,10 @@ def _validate_pack_dir(pack_dir: Path) -> PackManifest:
         if key not in data:
             raise ValueError(f"{path}: missing '{key}' array")
 
-    rules_path = pack_dir / "semantic_rules.json"
-    if rules_path.exists():
+    for rules_name in ("semantic_rules.json", "graph_rules.json", "topic_rules.json"):
+        rules_path = pack_dir / rules_name
+        if not rules_path.exists():
+            continue
         rules = _load_json(rules_path).get("rules", [])
         seen: set[str] = set()
         for rule in rules:
@@ -176,6 +184,8 @@ def _load_pack_contents(pack_dir: Path) -> dict[str, Any]:
         "dialogue_acts.json": ("dialogue_acts", "acts"),
         "phrase_patterns.json": ("phrase_patterns", "phrases"),
         "semantic_rules.json": ("semantic_rules", "rules"),
+        "graph_rules.json": ("graph_rules", "rules"),
+        "topic_rules.json": ("topic_rules", "rules"),
         "templates.json": ("templates", "templates"),
         "frame_schemas.json": ("frame_schemas", "schemas"),
         "lexicon.json": ("lexicon", None),
@@ -221,6 +231,16 @@ def load_packs(pack_names: tuple[str, ...] | None = None) -> PackRegistry:
         registry.semantic_rules = _merge_list_by_id(
             registry.semantic_rules,
             contents.get("semantic_rules", []),
+            "id",
+        )
+        registry.graph_rules = _merge_list_by_id(
+            registry.graph_rules,
+            contents.get("graph_rules", []),
+            "id",
+        )
+        registry.topic_rules = _merge_list_by_id(
+            registry.topic_rules,
+            contents.get("topic_rules", []),
             "id",
         )
         registry.templates = _merge_list_by_id(

@@ -2,7 +2,15 @@ import os
 import unittest
 
 from ts_packs.loader import load_packs, reset_registry_cache
-from ts_lang.resources import active_packs, dialogue_acts, phrase_patterns, reload_resources, semantic_rules
+from ts_lang.resources import (
+    active_packs,
+    dialogue_acts,
+    graph_rules,
+    phrase_patterns,
+    reload_resources,
+    semantic_rules,
+    topic_rules,
+)
 
 
 class PackLoaderTests(unittest.TestCase):
@@ -21,6 +29,8 @@ class PackLoaderTests(unittest.TestCase):
         self.assertGreater(len(registry.dialogue_acts), 0)
         self.assertGreater(len(registry.phrase_patterns), 0)
         self.assertGreater(len(registry.semantic_rules), 0)
+        self.assertGreater(len(registry.graph_rules), 0)
+        self.assertGreater(len(registry.topic_rules), 0)
         self.assertGreater(len(registry.templates), 0)
         self.assertIn("chatbot", registry.lexicon.get("topics", {}))
 
@@ -74,6 +84,14 @@ class PackLoaderTests(unittest.TestCase):
     def test_active_registry_matches_dialogue_act_count(self) -> None:
         acts = dialogue_acts()
         self.assertEqual(len(acts), 11)
+
+    def test_graph_and_topic_rules_loaded_from_base_pack(self) -> None:
+        graph_rule_ids = {rule["id"] for rule in graph_rules()}
+        topic_rule_ids = {rule["id"] for rule in topic_rules()}
+        self.assertIn("scope_correction_derivations", graph_rule_ids)
+        self.assertIn("focus_shift_derivations", graph_rule_ids)
+        self.assertIn("topic_priority", topic_rule_ids)
+        self.assertIn("fallback", topic_rule_ids)
 
 
 if __name__ == "__main__":

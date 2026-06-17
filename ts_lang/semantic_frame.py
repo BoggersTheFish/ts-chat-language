@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 from ts_lang.frame_rules import evaluate_frame_rules
-from ts_lang.resources import lexicon, semantic_rules
+from ts_lang.resources import lexicon, semantic_rules, topic_rules
+from ts_lang.topic_rules import infer_topic_from_rules
 from ts_lang.types import DialogueActResult, NormalizedUtterance, SemanticFrame
 
 
@@ -40,13 +41,5 @@ def last_fired_rule_ids(
 
 
 def infer_topic(known_topics: list[str], act: DialogueActResult, fallback: str) -> str:
-    priority = lexicon().get("topic_priority", [])
-    if known_topics and priority:
-        for topic in priority:
-            if topic in known_topics:
-                return topic.replace("_", " ")
-    if act.meaning.get("new_focus"):
-        return str(act.meaning["new_focus"]).replace("_", " ")
-    if act.meaning.get("desired_focus"):
-        return str(act.meaning["desired_focus"])
-    return fallback
+    topic, _fired = infer_topic_from_rules(known_topics, act, fallback, topic_rules())
+    return topic

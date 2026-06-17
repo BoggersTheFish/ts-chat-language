@@ -7,6 +7,8 @@ import re
 from dataclasses import dataclass
 from typing import Any
 
+from ts_lang.graph_rules import apply_graph_derivations
+from ts_lang.resources import graph_rules
 from ts_lang.types import DialogueActResult, SemanticFrame
 
 _DERIVED_NODE_KINDS = frozenset(
@@ -294,77 +296,13 @@ def build_meaning_graph(
             },
         )
 
-        if frame.schema == "scope_correction":
-            for reject in frame.slots.get("rejects", []):
-                reject_id = builder.add_derived_node(
-                    kind="rejected_scope",
-                    value=reject,
-                    provenance={**prov, "derived_from": "scope_correction.rejects"},
-                )
-                builder.add_edge(
-                    source_id=frame_node_id,
-                    target_id=reject_id,
-                    relation="rejects",
-                    provenance={"source_type": "scope_correction", "slot": "rejects"},
-                )
-            for accept in frame.slots.get("accepts", []):
-                accept_id = builder.add_derived_node(
-                    kind="accepted_scope",
-                    value=accept,
-                    provenance={**prov, "derived_from": "scope_correction.accepts"},
-                )
-                builder.add_edge(
-                    source_id=frame_node_id,
-                    target_id=accept_id,
-                    relation="accepts",
-                    provenance={"source_type": "scope_correction", "slot": "accepts"},
-                )
-
-        if frame.schema == "architecture_preference":
-            for avoid in frame.slots.get("avoid", []):
-                avoid_id = builder.add_derived_node(
-                    kind="constraint",
-                    value=avoid,
-                    slots={"polarity": "avoid", "value": avoid},
-                    provenance={**prov, "derived_from": "architecture_preference.avoid"},
-                    polarity="avoid",
-                )
-                builder.add_edge(
-                    source_id=frame_node_id,
-                    target_id=avoid_id,
-                    relation="avoids",
-                    provenance={"source_type": "architecture_preference", "slot": "avoid"},
-                )
-            for prefer in frame.slots.get("prefer", []):
-                prefer_id = builder.add_derived_node(
-                    kind="constraint",
-                    value=prefer,
-                    slots={"polarity": "prefer", "value": prefer},
-                    provenance={**prov, "derived_from": "architecture_preference.prefer"},
-                    polarity="prefer",
-                )
-                builder.add_edge(
-                    source_id=frame_node_id,
-                    target_id=prefer_id,
-                    relation="prefers",
-                    provenance={"source_type": "architecture_preference", "slot": "prefer"},
-                )
-
-        if frame.schema == "focus_shift":
-            new_focus = frame.slots.get("new_focus")
-            if new_focus:
-                focus_id = builder.add_derived_node(
-                    kind="focus_target",
-                    value=new_focus,
-                    slots={"new_focus": new_focus},
-                    provenance={**prov, "derived_from": "focus_shift.new_focus"},
-                )
-                builder.add_edge(
-                    source_id=frame_node_id,
-                    target_id=focus_id,
-                    relation="shifts_to",
-                    provenance={"source_type": "focus_shift", "slot": "new_focus"},
-                )
+        apply_graph_derivations(
+            builder,
+            frame=frame,
+            frame_node_id=frame_node_id,
+            frame_provenance=prov,
+            rules=graph_rules(),
+        )
 
     derived_count = sum(1 for node in builder.nodes if node.kind in _DERIVED_NODE_KINDS)
     summary = (

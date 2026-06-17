@@ -7,6 +7,8 @@
     "dialogue_acts",
     "phrase_patterns",
     "semantic_rules",
+    "graph_rules",
+    "topic_rules",
     "frame_schemas",
     "templates",
     "lexicon"

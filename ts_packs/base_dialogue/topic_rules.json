@@ -1,0 +1,31 @@
+{
+  "rules": [
+    {
+      "id": "topic_priority",
+      "priority": 100,
+      "when": { "known_topics_nonempty": true },
+      "resolve": { "strategy": "topic_priority" }
+    },
+    {
+      "id": "meaning_new_focus",
+      "priority": 90,
+      "when": { "act_meaning_has": "new_focus" },
+      "resolve": {
+        "strategy": "act_meaning",
+        "key": "new_focus",
+        "transform": "underscore_to_space"
+      }
+    },
+    {
+      "id": "meaning_desired_focus",
+      "priority": 80,
+      "when": { "act_meaning_has": "desired_focus" },
+      "resolve": { "strategy": "act_meaning", "key": "desired_focus" }
+    },
+    {
+      "id": "fallback",
+      "priority": 0,
+      "resolve": { "strategy": "fallback" }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# TS-Chat Language / TSLC v0.7
+# TS-Chat Language / TSLC v0.8
 
 **TSLC** — Thinking System Language Compiler (language compiler core).
 
@@ -28,6 +28,22 @@ python3 -m unittest discover -v
 python3 -m chat.cli --demo
 python3 -m chat.cli --packs base_dialogue,ts_architecture
 ```
+
+## v0.8: declarative graph and topic rules
+
+Derived meaning-graph nodes and topic resolution now load from pack JSON — no hard-coded branches in `meaning_graph.py` or `infer_topic()`.
+
+```text
+semantic frames → graph_rules.json derivations → derived nodes/edges
+known topics + act meaning → topic_rules.json → resolved topic
+```
+
+Pack files in `base_dialogue`:
+
+- `graph_rules.json` — scope rejects/accepts, architecture constraints, focus shifts
+- `topic_rules.json` — topic priority, act-meaning focus, fallback
+
+Adding a domain can extend graph/topic behavior by shipping new rule files in a pack.
 
 ## v0.7: language pack system
 

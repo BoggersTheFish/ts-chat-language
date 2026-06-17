@@ -31,6 +31,14 @@ def semantic_rules() -> list[dict]:
     return list(_registry().semantic_rules)
 
 
+def graph_rules() -> list[dict]:
+    return list(_registry().graph_rules)
+
+
+def topic_rules() -> list[dict]:
+    return list(_registry().topic_rules)
+
+
 def frame_schemas() -> dict:
     return dict(_registry().frame_schemas)
 

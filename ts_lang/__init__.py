@@ -2,7 +2,14 @@
 
 from ts_lang.compiler import compile_utterance
 from ts_lang.frame_rules import evaluate_frame_rules
-from ts_lang.resources import active_packs, pack_info, reload_resources, semantic_rules
+from ts_lang.resources import (
+    active_packs,
+    graph_rules,
+    pack_info,
+    reload_resources,
+    semantic_rules,
+    topic_rules,
+)
 from ts_lang.graph_diff import GraphDiff, diff_meaning_graphs
 from ts_lang.graph_queries import acceptable_frame_nodes, rejected_scopes
 from ts_lang.meaning_graph import (
@@ -32,10 +39,12 @@ __all__ = [
     "build_meaning_graph",
     "compile_utterance",
     "evaluate_frame_rules",
+    "graph_rules",
     "normalize_frame_slots",
     "pack_info",
     "reload_resources",
     "semantic_rules",
+    "topic_rules",
     "rejected_scopes",
     "validate_meaning_graph",
 ]

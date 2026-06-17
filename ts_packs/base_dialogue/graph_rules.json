@@ -1,0 +1,73 @@
+{
+  "rules": [
+    {
+      "id": "scope_correction_derivations",
+      "priority": 100,
+      "when": { "frame_schema": "scope_correction" },
+      "derivations": [
+        {
+          "from_slot": "rejects",
+          "iterate": true,
+          "node_kind": "rejected_scope",
+          "relation": "rejects",
+          "node_slots": { "value": "$item" },
+          "provenance": { "derived_from": "scope_correction.rejects" },
+          "edge_provenance": { "source_type": "scope_correction", "slot": "rejects" }
+        },
+        {
+          "from_slot": "accepts",
+          "iterate": true,
+          "node_kind": "accepted_scope",
+          "relation": "accepts",
+          "node_slots": { "value": "$item" },
+          "provenance": { "derived_from": "scope_correction.accepts" },
+          "edge_provenance": { "source_type": "scope_correction", "slot": "accepts" }
+        }
+      ]
+    },
+    {
+      "id": "architecture_preference_derivations",
+      "priority": 90,
+      "when": { "frame_schema": "architecture_preference" },
+      "derivations": [
+        {
+          "from_slot": "avoid",
+          "iterate": true,
+          "node_kind": "constraint",
+          "relation": "avoids",
+          "polarity": "avoid",
+          "node_slots": { "polarity": "avoid", "value": "$item" },
+          "provenance": { "derived_from": "architecture_preference.avoid" },
+          "edge_provenance": { "source_type": "architecture_preference", "slot": "avoid" }
+        },
+        {
+          "from_slot": "prefer",
+          "iterate": true,
+          "node_kind": "constraint",
+          "relation": "prefers",
+          "polarity": "prefer",
+          "node_slots": { "polarity": "prefer", "value": "$item" },
+          "provenance": { "derived_from": "architecture_preference.prefer" },
+          "edge_provenance": { "source_type": "architecture_preference", "slot": "prefer" }
+        }
+      ]
+    },
+    {
+      "id": "focus_shift_derivations",
+      "priority": 80,
+      "when": { "frame_schema": "focus_shift" },
+      "derivations": [
+        {
+          "from_slot": "new_focus",
+          "iterate": false,
+          "skip_empty": true,
+          "node_kind": "focus_target",
+          "relation": "shifts_to",
+          "node_slots": { "new_focus": "$value", "value": "$value" },
+          "provenance": { "derived_from": "focus_shift.new_focus" },
+          "edge_provenance": { "source_type": "focus_shift", "slot": "new_focus" }
+        }
+      ]
+    }
+  ]
+}
