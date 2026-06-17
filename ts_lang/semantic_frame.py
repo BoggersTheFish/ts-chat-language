@@ -6,6 +6,7 @@ import re
 from typing import Any
 
 from ts_lang.resources import lexicon
+from ts_lang.slot_normalize import extend_slot_values, normalize_frame_slots
 from ts_lang.types import DialogueActResult, NormalizedUtterance, SemanticFrame
 
 
@@ -90,26 +91,13 @@ def _scope_frame(act: DialogueActResult) -> SemanticFrame | None:
     meaning = act.meaning
     if act.act not in {"correct_assistant", "reject_framing", "strategic_redirect"}:
         return None
-    rejects = []
-    if meaning.get("rejects"):
-        rej = meaning["rejects"]
-        if isinstance(rej, list):
-            rejects.extend(rej)
-        else:
-            rejects.append(rej)
-    if meaning.get("deprioritize"):
-        dep = meaning["deprioritize"]
-        if isinstance(dep, list):
-            rejects.extend(dep)
-        else:
-            rejects.append(dep)
-    if meaning.get("rejected_context"):
-        rejects.extend(meaning["rejected_context"])
-    accepts = []
-    if meaning.get("desired_focus"):
-        accepts.append(meaning["desired_focus"])
-    if meaning.get("new_focus"):
-        accepts.append(meaning["new_focus"])
+    rejects: list[str] = []
+    extend_slot_values(rejects, meaning.get("rejects"))
+    extend_slot_values(rejects, meaning.get("deprioritize"))
+    extend_slot_values(rejects, meaning.get("rejected_context"))
+    accepts: list[str] = []
+    extend_slot_values(accepts, meaning.get("desired_focus"))
+    extend_slot_values(accepts, meaning.get("new_focus"))
     if not rejects and not accepts:
         return None
     return SemanticFrame(
@@ -142,9 +130,8 @@ def _focus_frame(act: DialogueActResult) -> SemanticFrame | None:
     meaning = act.meaning
     if act.act != "strategic_redirect" and not meaning.get("new_focus"):
         return None
-    deprioritize = meaning.get("deprioritize", [])
-    if isinstance(deprioritize, str):
-        deprioritize = [deprioritize]
+    deprioritize = []
+    extend_slot_values(deprioritize, meaning.get("deprioritize"))
     return SemanticFrame(
         schema="focus_shift",
         slots={
@@ -175,7 +162,7 @@ def compile_semantic_frames(
     ):
         frame = builder()
         if frame is not None:
-            frames.append(frame)
+            frames.append(normalize_frame_slots(frame))
 
     return frames, known_topics, unknown
 

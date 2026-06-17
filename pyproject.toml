@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ts-chat-language"
-version = "0.2.1"
+version = "0.3.0"
 description = "TSLC: Thinking System Language Compiler — pattern-backed conversational language machine for TS-Chat."
 readme = "README.md"
 requires-python = ">=3.10"

@@ -1,4 +1,4 @@
-# TS-Chat Language / TSLC v0.2
+# TS-Chat Language / TSLC v0.3
 
 **TSLC** — Thinking System Language Compiler.
 
@@ -25,15 +25,22 @@ python3 -m chat.cli --demo
 python3 -m chat.cli
 ```
 
+## v0.3: graph-normalized constraints + stable node identity
+
+- **Normalized list slots** at frame-build time (`rejects`, `accepts`, `avoid`, `prefer`, `deprioritize`, `not_required`)
+- **Deterministic node IDs** from semantic values and frame builder identity — not frame index
+- **Deduped derived nodes** — same semantic constraint maps to one node
+- **`validate_meaning_graph()`** — checks provenance, edge integrity, no Python repr strings, no duplicate semantic nodes
+
 ## v0.2: explicit meaning graph
 
-Every compiled turn now carries an explicit `MeaningGraph`:
+Every compiled turn carries an explicit `MeaningGraph`:
 
 - `MeaningNode` — dialogue act root, semantic frames, and derived scope/constraint/focus nodes
 - `MeaningEdge` — `expresses`, `rejects`, `accepts`, `avoids`, `prefers`, `shifts_to`
 - **Provenance** on every node and edge — which phrase pattern or frame builder created it
 
-`TurnReceipt.compiled_turn.meaning_graph` is fully serializable via `to_dict()`.
+`TurnReceipt.compiled_turn.meaning_graph` is fully serializable via `to_dict()` (includes validation report).
 
 ## v0.1 boundary (still holds)
 

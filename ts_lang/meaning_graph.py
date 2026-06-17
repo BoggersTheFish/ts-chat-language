@@ -2,10 +2,16 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+import ast
+import re
+from dataclasses import dataclass
 from typing import Any
 
 from ts_lang.types import DialogueActResult, SemanticFrame
+
+_DERIVED_NODE_KINDS = frozenset(
+    {"rejected_scope", "accepted_scope", "constraint", "focus_target"}
+)
 
 
 @dataclass(frozen=True)
@@ -45,6 +51,15 @@ class MeaningEdge:
 
 
 @dataclass(frozen=True)
+class GraphValidationReport:
+    valid: bool
+    errors: tuple[str, ...]
+
+    def to_dict(self) -> dict[str, Any]:
+        return {"valid": self.valid, "errors": list(self.errors)}
+
+
+@dataclass(frozen=True)
 class MeaningGraph:
     nodes: list[MeaningNode]
     edges: list[MeaningEdge]
@@ -59,6 +74,7 @@ class MeaningGraph:
             "edges": [e.to_dict() for e in self.edges],
             "node_count": len(self.nodes),
             "edge_count": len(self.edges),
+            "validation": validate_meaning_graph(self).to_dict(),
         }
 
     def desired_focus(self) -> str | None:
@@ -74,12 +90,159 @@ class MeaningGraph:
         return None
 
 
-def _frame_provenance(frame: SemanticFrame, index: int) -> dict[str, Any]:
+def semantic_slug(value: Any) -> str:
+    text = str(value).strip().lower()
+    text = re.sub(r"[^\w]+", "_", text)
+    text = re.sub(r"_+", "_", text).strip("_")
+    return text or "unknown"
+
+
+def is_python_repr_string(value: str) -> bool:
+    text = value.strip()
+    if not text:
+        return False
+    if not ((text.startswith("[") and text.endswith("]")) or (text.startswith("(") and text.endswith(")"))):
+        return False
+    try:
+        ast.literal_eval(text)
+    except (SyntaxError, ValueError):
+        return False
+    return True
+
+
+def _frame_provenance(frame: SemanticFrame) -> dict[str, Any]:
     return frame.provenance or {
         "source_type": "semantic_frame",
-        "source_id": f"frame_{index:02d}",
+        "source_id": frame.schema,
         "schema": frame.schema,
     }
+
+
+def _frame_node_id(frame: SemanticFrame) -> str:
+    prov = _frame_provenance(frame)
+    builder = prov.get("source_id", frame.schema)
+    return f"node_frame_{semantic_slug(frame.schema)}_{semantic_slug(builder)}"
+
+
+def _derived_node_id(kind: str, value: Any, *, polarity: str | None = None) -> str:
+    if polarity:
+        return f"node_{semantic_slug(kind)}_{semantic_slug(polarity)}_{semantic_slug(value)}"
+    return f"node_{semantic_slug(kind)}_{semantic_slug(value)}"
+
+
+def _edge_id(source_id: str, relation: str, target_id: str) -> str:
+    return f"edge_{semantic_slug(source_id)}_{semantic_slug(relation)}_{semantic_slug(target_id)}"
+
+
+def validate_meaning_graph(graph: MeaningGraph) -> GraphValidationReport:
+    errors: list[str] = []
+    node_ids = {node.node_id for node in graph.nodes}
+
+    semantic_keys: dict[tuple[str, str], str] = {}
+    for node in graph.nodes:
+        if not node.provenance:
+            errors.append(f"node_missing_provenance:{node.node_id}")
+
+        for field_name in ("label",):
+            if is_python_repr_string(str(node.label)):
+                errors.append(f"python_repr_label:{node.node_id}:{node.label}")
+
+        for slot_key, slot_value in node.slots.items():
+            if isinstance(slot_value, str) and is_python_repr_string(slot_value):
+                errors.append(f"python_repr_slot:{node.node_id}:{slot_key}:{slot_value}")
+            if isinstance(slot_value, list):
+                for item in slot_value:
+                    if isinstance(item, str) and is_python_repr_string(item):
+                        errors.append(f"python_repr_slot_item:{node.node_id}:{slot_key}:{item}")
+
+        if node.kind in _DERIVED_NODE_KINDS:
+            semantic_value = str(node.slots.get("value", node.label))
+            polarity = node.slots.get("polarity")
+            semantic_key = (
+                node.kind,
+                str(polarity) if polarity is not None else "",
+                semantic_slug(semantic_value),
+            )
+            if semantic_key in semantic_keys and semantic_keys[semantic_key] != node.node_id:
+                errors.append(
+                    f"duplicate_semantic_node:{node.kind}:{semantic_value}:"
+                    f"{semantic_keys[semantic_key]} vs {node.node_id}"
+                )
+            else:
+                semantic_keys[semantic_key] = node.node_id
+
+    for edge in graph.edges:
+        if not edge.provenance:
+            errors.append(f"edge_missing_provenance:{edge.edge_id}")
+        if edge.source_id not in node_ids:
+            errors.append(f"edge_missing_source:{edge.edge_id}:{edge.source_id}")
+        if edge.target_id not in node_ids:
+            errors.append(f"edge_missing_target:{edge.edge_id}:{edge.target_id}")
+
+    return GraphValidationReport(valid=not errors, errors=tuple(errors))
+
+
+class _GraphBuilder:
+    def __init__(self) -> None:
+        self.nodes: list[MeaningNode] = []
+        self.edges: list[MeaningEdge] = []
+        self._node_ids: set[str] = set()
+        self._semantic_nodes: dict[tuple[str, str], str] = {}
+        self._edge_ids: set[str] = set()
+
+    def add_node(self, node: MeaningNode) -> str:
+        if node.node_id not in self._node_ids:
+            self.nodes.append(node)
+            self._node_ids.add(node.node_id)
+        return node.node_id
+
+    def add_derived_node(
+        self,
+        *,
+        kind: str,
+        value: Any,
+        label: str | None = None,
+        slots: dict[str, Any] | None = None,
+        provenance: dict[str, Any],
+        polarity: str | None = None,
+    ) -> str:
+        semantic_value = str(value)
+        semantic_key = (kind, polarity or "", semantic_slug(semantic_value))
+        if semantic_key in self._semantic_nodes:
+            return self._semantic_nodes[semantic_key]
+
+        node_id = _derived_node_id(kind, semantic_value, polarity=polarity)
+        node = MeaningNode(
+            node_id=node_id,
+            kind=kind,
+            label=label or semantic_value,
+            slots=slots or {"value": semantic_value},
+            provenance=provenance,
+        )
+        self._semantic_nodes[semantic_key] = node_id
+        return self.add_node(node)
+
+    def add_edge(
+        self,
+        *,
+        source_id: str,
+        target_id: str,
+        relation: str,
+        provenance: dict[str, Any],
+    ) -> None:
+        edge_id = _edge_id(source_id, relation, target_id)
+        if edge_id in self._edge_ids:
+            return
+        self.edges.append(
+            MeaningEdge(
+                edge_id=edge_id,
+                source_id=source_id,
+                target_id=target_id,
+                relation=relation,
+                provenance=provenance,
+            )
+        )
+        self._edge_ids.add(edge_id)
 
 
 def build_meaning_graph(
@@ -90,9 +253,7 @@ def build_meaning_graph(
     frames: list[SemanticFrame],
     topic: str,
 ) -> MeaningGraph:
-    nodes: list[MeaningNode] = []
-    edges: list[MeaningEdge] = []
-    edge_counter = 0
+    builder = _GraphBuilder()
 
     act_provenance = {
         "source_type": "dialogue_act",
@@ -101,157 +262,122 @@ def build_meaning_graph(
         "matched_phrases": act_result.meaning.get("matched_phrases", []),
         "confidence": act_result.confidence,
     }
-    root = MeaningNode(
-        node_id="node_act_root",
-        kind="dialogue_act",
-        label=dialogue_act,
-        slots={"subact": subact, "topic": topic, "meaning": act_result.meaning},
-        provenance=act_provenance,
-    )
-    nodes.append(root)
-
-    for index, frame in enumerate(frames):
-        prov = _frame_provenance(frame, index)
-        node_id = f"node_frame_{index:02d}_{frame.schema}"
-        node = MeaningNode(
-            node_id=node_id,
-            kind=frame.schema,
-            label=frame.schema.replace("_", " "),
-            slots=dict(frame.slots),
-            provenance=prov,
+    root_id = builder.add_node(
+        MeaningNode(
+            node_id="node_act_root",
+            kind="dialogue_act",
+            label=dialogue_act,
+            slots={"subact": subact, "topic": topic, "meaning": act_result.meaning},
+            provenance=act_provenance,
         )
-        nodes.append(node)
-        edge_counter += 1
-        edges.append(
-            MeaningEdge(
-                edge_id=f"edge_{edge_counter:03d}",
-                source_id=root.node_id,
-                target_id=node_id,
-                relation="expresses",
-                provenance={
-                    "source_type": "frame_link",
-                    "source_id": prov["source_id"],
-                    "schema": frame.schema,
-                },
+    )
+
+    for frame in frames:
+        prov = _frame_provenance(frame)
+        frame_node_id = builder.add_node(
+            MeaningNode(
+                node_id=_frame_node_id(frame),
+                kind=frame.schema,
+                label=frame.schema.replace("_", " "),
+                slots=dict(frame.slots),
+                provenance=prov,
             )
+        )
+        builder.add_edge(
+            source_id=root_id,
+            target_id=frame_node_id,
+            relation="expresses",
+            provenance={
+                "source_type": "frame_link",
+                "source_id": prov["source_id"],
+                "schema": frame.schema,
+            },
         )
 
         if frame.schema == "scope_correction":
             for reject in frame.slots.get("rejects", []):
-                reject_id = f"node_reject_{index}_{reject}"
-                nodes.append(
-                    MeaningNode(
-                        node_id=reject_id,
-                        kind="rejected_scope",
-                        label=str(reject),
-                        slots={"value": reject},
-                        provenance={**prov, "derived_from": "scope_correction.rejects"},
-                    )
+                reject_id = builder.add_derived_node(
+                    kind="rejected_scope",
+                    value=reject,
+                    provenance={**prov, "derived_from": "scope_correction.rejects"},
                 )
-                edge_counter += 1
-                edges.append(
-                    MeaningEdge(
-                        edge_id=f"edge_{edge_counter:03d}",
-                        source_id=node_id,
-                        target_id=reject_id,
-                        relation="rejects",
-                        provenance={"source_type": "scope_correction", "slot": "rejects"},
-                    )
+                builder.add_edge(
+                    source_id=frame_node_id,
+                    target_id=reject_id,
+                    relation="rejects",
+                    provenance={"source_type": "scope_correction", "slot": "rejects"},
                 )
             for accept in frame.slots.get("accepts", []):
-                accept_id = f"node_accept_{index}_{accept}"
-                nodes.append(
-                    MeaningNode(
-                        node_id=accept_id,
-                        kind="accepted_scope",
-                        label=str(accept),
-                        slots={"value": accept},
-                        provenance={**prov, "derived_from": "scope_correction.accepts"},
-                    )
+                accept_id = builder.add_derived_node(
+                    kind="accepted_scope",
+                    value=accept,
+                    provenance={**prov, "derived_from": "scope_correction.accepts"},
                 )
-                edge_counter += 1
-                edges.append(
-                    MeaningEdge(
-                        edge_id=f"edge_{edge_counter:03d}",
-                        source_id=node_id,
-                        target_id=accept_id,
-                        relation="accepts",
-                        provenance={"source_type": "scope_correction", "slot": "accepts"},
-                    )
+                builder.add_edge(
+                    source_id=frame_node_id,
+                    target_id=accept_id,
+                    relation="accepts",
+                    provenance={"source_type": "scope_correction", "slot": "accepts"},
                 )
 
         if frame.schema == "architecture_preference":
             for avoid in frame.slots.get("avoid", []):
-                avoid_id = f"node_avoid_{index}_{avoid}"
-                nodes.append(
-                    MeaningNode(
-                        node_id=avoid_id,
-                        kind="constraint",
-                        label=str(avoid),
-                        slots={"polarity": "avoid", "value": avoid},
-                        provenance={**prov, "derived_from": "architecture_preference.avoid"},
-                    )
+                avoid_id = builder.add_derived_node(
+                    kind="constraint",
+                    value=avoid,
+                    slots={"polarity": "avoid", "value": avoid},
+                    provenance={**prov, "derived_from": "architecture_preference.avoid"},
+                    polarity="avoid",
                 )
-                edge_counter += 1
-                edges.append(
-                    MeaningEdge(
-                        edge_id=f"edge_{edge_counter:03d}",
-                        source_id=node_id,
-                        target_id=avoid_id,
-                        relation="avoids",
-                        provenance={"source_type": "architecture_preference", "slot": "avoid"},
-                    )
+                builder.add_edge(
+                    source_id=frame_node_id,
+                    target_id=avoid_id,
+                    relation="avoids",
+                    provenance={"source_type": "architecture_preference", "slot": "avoid"},
                 )
             for prefer in frame.slots.get("prefer", []):
-                prefer_id = f"node_prefer_{index}_{prefer}"
-                nodes.append(
-                    MeaningNode(
-                        node_id=prefer_id,
-                        kind="constraint",
-                        label=str(prefer),
-                        slots={"polarity": "prefer", "value": prefer},
-                        provenance={**prov, "derived_from": "architecture_preference.prefer"},
-                    )
+                prefer_id = builder.add_derived_node(
+                    kind="constraint",
+                    value=prefer,
+                    slots={"polarity": "prefer", "value": prefer},
+                    provenance={**prov, "derived_from": "architecture_preference.prefer"},
+                    polarity="prefer",
                 )
-                edge_counter += 1
-                edges.append(
-                    MeaningEdge(
-                        edge_id=f"edge_{edge_counter:03d}",
-                        source_id=node_id,
-                        target_id=prefer_id,
-                        relation="prefers",
-                        provenance={"source_type": "architecture_preference", "slot": "prefer"},
-                    )
+                builder.add_edge(
+                    source_id=frame_node_id,
+                    target_id=prefer_id,
+                    relation="prefers",
+                    provenance={"source_type": "architecture_preference", "slot": "prefer"},
                 )
 
         if frame.schema == "focus_shift":
             new_focus = frame.slots.get("new_focus")
             if new_focus:
-                focus_id = f"node_focus_{index}_{new_focus}"
-                nodes.append(
-                    MeaningNode(
-                        node_id=focus_id,
-                        kind="focus_target",
-                        label=str(new_focus),
-                        slots={"new_focus": new_focus},
-                        provenance={**prov, "derived_from": "focus_shift.new_focus"},
-                    )
+                focus_id = builder.add_derived_node(
+                    kind="focus_target",
+                    value=new_focus,
+                    slots={"new_focus": new_focus},
+                    provenance={**prov, "derived_from": "focus_shift.new_focus"},
                 )
-                edge_counter += 1
-                edges.append(
-                    MeaningEdge(
-                        edge_id=f"edge_{edge_counter:03d}",
-                        source_id=node_id,
-                        target_id=focus_id,
-                        relation="shifts_to",
-                        provenance={"source_type": "focus_shift", "slot": "new_focus"},
-                    )
+                builder.add_edge(
+                    source_id=frame_node_id,
+                    target_id=focus_id,
+                    relation="shifts_to",
+                    provenance={"source_type": "focus_shift", "slot": "new_focus"},
                 )
 
-    summary = f"{dialogue_act} over {topic} with {len(frames)} frame(s) and {len(nodes) - 1} derived node(s)"
-    return MeaningGraph(
-        nodes=nodes,
-        edges=edges,
-        root_node_id=root.node_id,
+    derived_count = sum(1 for node in builder.nodes if node.kind in _DERIVED_NODE_KINDS)
+    summary = (
+        f"{dialogue_act} over {topic} with {len(frames)} frame(s) "
+        f"and {derived_count} derived node(s)"
+    )
+    graph = MeaningGraph(
+        nodes=builder.nodes,
+        edges=builder.edges,
+        root_node_id=root_id,
         summary=summary,
     )
+    report = validate_meaning_graph(graph)
+    if not report.valid:
+        raise ValueError(f"Invalid meaning graph: {', '.join(report.errors)}")
+    return graph

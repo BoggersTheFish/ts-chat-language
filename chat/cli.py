@@ -17,7 +17,7 @@ DEMO_SCRIPT = [
 
 def run_demo() -> None:
     session = TSChatSession()
-    print("TS-Chat v0.1 demo\n")
+    print("TS-Chat v0.3 demo\n")
     for text in DEMO_SCRIPT:
         receipt = session.handle(text)
         print(f"User: {text}")
@@ -26,7 +26,7 @@ def run_demo() -> None:
 
 def run_repl() -> None:
     session = TSChatSession()
-    print("TS-Chat v0.1 (TSLC). Type 'quit' to exit, 'state' for JSON state, 'trace' for last receipt.\n")
+    print("TS-Chat v0.3 (TSLC). Type 'quit' to exit, 'state' for JSON state, 'trace' for last receipt.\n")
     while True:
         try:
             line = input("You> ").strip()
@@ -52,7 +52,7 @@ def run_repl() -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="TS-Chat v0.1 — TSLC conversational shell")
+    parser = argparse.ArgumentParser(description="TS-Chat v0.3 — TSLC conversational shell")
     parser.add_argument("--demo", action="store_true", help="Run scripted demo conversation")
     args = parser.parse_args(argv)
 
