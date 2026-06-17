@@ -24,6 +24,7 @@ class ConversationState:
     affect_flag: str | None = None
     turn_counter: int = 0
     last_meaning_graph: MeaningGraph | None = None
+    last_graph_diff: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -86,6 +87,7 @@ class ConversationState:
             self.next_expected_action = "answer or clarify"
 
         self.last_meaning_graph = graph
+        self.last_graph_diff = graph_diff or {}
 
         return StateUpdateReceipt(
             turn_id=self.turn_counter,

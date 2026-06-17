@@ -1,4 +1,4 @@
-# TS-Chat Language / TSLC v0.5
+# TS-Chat Language / TSLC v0.6
 
 **TSLC** — Thinking System Language Compiler.
 
@@ -24,6 +24,14 @@ python3 -m unittest discover -v
 python3 -m chat.cli --demo
 python3 -m chat.cli
 ```
+
+## v0.6: diff-memory-driven planning
+
+Accumulated `graph_diff` history now drives response planning:
+
+- `build_diff_memory()` aggregates prior rejects, accepts, and focus trajectory
+- `memory_context` enriches `main_point` (e.g. "You already ruled out architecture parity; shifting focus...")
+- Memory-aware templates: `confirm_shift_with_memory`, `provide_plan_with_memory`, `ack_correction_with_memory`
 
 ## v0.5: graph-diff memory receipts
 

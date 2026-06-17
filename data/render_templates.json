@@ -59,6 +59,24 @@
       "response_act": "acknowledge_and_reframe",
       "text": "Understood. Dropping that framing. {main_point}",
       "style": { "directness": "high", "warmth": "low" }
+    },
+    {
+      "template_id": "confirm_shift_with_memory",
+      "response_act": "confirm_and_advance",
+      "text": "Yes. {memory_context} {main_point} Next we can {next_action}.",
+      "style": { "directness": "high", "warmth": "medium", "technical_density": "medium" }
+    },
+    {
+      "template_id": "provide_plan_with_memory",
+      "response_act": "provide_plan_sections",
+      "text": "Given {memory_context} Here's the plan for {topic}: {sections}",
+      "style": { "directness": "high", "warmth": "medium", "technical_density": "high" }
+    },
+    {
+      "template_id": "ack_correction_with_memory",
+      "response_act": "acknowledge_and_reframe",
+      "text": "Right. {memory_context} {main_point}",
+      "style": { "directness": "high", "warmth": "medium" }
     }
   ]
 }

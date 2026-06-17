@@ -1,0 +1,90 @@
+{
+  "version": "0.6.0",
+  "name": "TS-Chat v0.6 diff-memory-driven planning",
+  "tests_passed": true,
+  "memory_traces": [
+    {
+      "prior_turn_count": 1,
+      "prior_rejects": [
+        "architecture_parity"
+      ],
+      "prior_accepts": [],
+      "focus_trajectory": [
+        "chatbot_usability"
+      ],
+      "current_focus_shift": {
+        "previous": null,
+        "current": "chatbot_usability"
+      },
+      "memory_context": "You already ruled out architecture parity.",
+      "summary": "prior_turns=1; prior_rejects=architecture_parity; focus=chatbot_usability; memory_context=set"
+    },
+    {
+      "prior_turn_count": 2,
+      "prior_rejects": [
+        "architecture_parity",
+        "reasoning_engine"
+      ],
+      "prior_accepts": [
+        "chatbot_language_layer"
+      ],
+      "focus_trajectory": [
+        "chatbot_usability",
+        "chatbot_language_layer"
+      ],
+      "current_focus_shift": {
+        "previous": "chatbot_usability",
+        "current": "chatbot_language_layer"
+      },
+      "memory_context": "You already ruled out architecture parity, reasoning engine; shifting focus from chatbot usability to chatbot language layer.",
+      "summary": "prior_turns=2; prior_rejects=architecture_parity,reasoning_engine; focus=chatbot_language_layer; memory_context=set"
+    },
+    {
+      "prior_turn_count": 3,
+      "prior_rejects": [
+        "architecture_parity",
+        "reasoning_engine"
+      ],
+      "prior_accepts": [
+        "chatbot_language_layer"
+      ],
+      "focus_trajectory": [
+        "chatbot_usability",
+        "chatbot_language_layer"
+      ],
+      "current_focus_shift": {
+        "previous": "chatbot_language_layer",
+        "current": null
+      },
+      "memory_context": "You already ruled out architecture parity, reasoning engine; focus moved from chatbot usability to chatbot language layer.",
+      "summary": "prior_turns=3; prior_rejects=architecture_parity,reasoning_engine; memory_context=set"
+    }
+  ],
+  "golden_traces": [
+    {
+      "input": "nah bro we just want the same usability",
+      "dialogue_act": "correct_assistant",
+      "response": "Right. The target is usability parity, not architecture parity. The system should feel like a normal chatbot while compiling language into TS state underneath.",
+      "template_id": "ack_correction_reframe_usability",
+      "memory_context": "",
+      "diff_memory_summary": "prior_turns=0; focus=chatbot_usability"
+    },
+    {
+      "input": "nah, im pretty sure we now have the reasoning engine pretty solid",
+      "dialogue_act": "strategic_redirect",
+      "response": "Yes. You already ruled out architecture parity; shifting focus from chatbot usability to chatbot language layer. You already ruled out architecture parity; shifting focus from chatbot usability to chatbot language layer. Reframing around chatbot language layer, rejecting reasoning engine, architecture parity. Next we can design chatbot language layer.",
+      "template_id": "confirm_shift_with_memory",
+      "memory_context": "You already ruled out architecture parity; shifting focus from chatbot usability to chatbot language layer.",
+      "diff_memory_summary": "prior_turns=1; prior_rejects=architecture_parity; focus=chatbot_language_layer; memory_context=set"
+    },
+    {
+      "input": "what is next",
+      "dialogue_act": "ask_for_next_step",
+      "response": "Given You already ruled out architecture parity, reasoning engine; focus moved from chatbot usability to chatbot language layer. Here's the plan for reasoning engine (deprioritized): normalizer, dialogue act compiler, semantic frame compiler, conversation state, response planner, renderer",
+      "template_id": "provide_plan_with_memory",
+      "memory_context": "You already ruled out architecture parity, reasoning engine; focus moved from chatbot usability to chatbot language layer.",
+      "diff_memory_summary": "prior_turns=2; prior_rejects=architecture_parity,reasoning_engine; memory_context=set"
+    }
+  ],
+  "boundary": "No transformer, no external LLM, no reasoning engine integration."
+}

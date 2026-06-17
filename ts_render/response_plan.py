@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from ts_state.diff_memory import build_diff_memory
 from ts_lang.graph_queries import (
     has_frame_kind,
     main_point_frame_node,
@@ -83,37 +84,60 @@ def _main_point_from_graph(turn: CompiledTurn) -> str | None:
     return None
 
 
-def _main_point(turn: CompiledTurn, state: ConversationState) -> str:
+def _apply_diff_memory(main_point: str, memory_context: str) -> str:
+    if not memory_context:
+        return main_point
+    return f"{memory_context} {main_point}"
+
+
+def _main_point(turn: CompiledTurn, state: ConversationState, memory_context: str) -> str:
     if turn.status == "partial_parse":
         known = ", ".join(turn.known_terms) or turn.topic
         return f"partial understanding around {known}"
 
     graph_point = _main_point_from_graph(turn)
     if graph_point:
-        return graph_point
+        return _apply_diff_memory(graph_point, memory_context)
 
     if turn.dialogue_act == "reject_framing":
-        return "Dropping the previous framing and refocusing on the chatbot language layer."
+        return _apply_diff_memory(
+            "Dropping the previous framing and refocusing on the chatbot language layer.",
+            memory_context,
+        )
 
     if turn.dialogue_act == "correct_assistant":
         focus = _desired_focus(turn) or state.current_topic
-        return f"Reframing around {focus}."
+        return _apply_diff_memory(f"Reframing around {focus}.", memory_context)
 
     if turn.dialogue_act in {"ask_for_next_step", "request_plan"}:
-        return (
+        base = (
             "Build the language interface now: normalizer, dialogue act compiler, "
             "semantic frames, conversation state, and renderer."
         )
+        return _apply_diff_memory(base, memory_context)
 
-    return f"Continuing on {state.current_topic}."
+    return _apply_diff_memory(f"Continuing on {state.current_topic}.", memory_context)
 
 
-def _template_id(turn: CompiledTurn, response_act: str) -> str:
+def _template_id(
+    turn: CompiledTurn,
+    response_act: str,
+    *,
+    memory_context: str,
+) -> str:
     if turn.status == "partial_parse":
         return "ask_targeted_question"
 
-    if has_frame_kind(turn.meaning_graph, "usability_target"):
+    if has_frame_kind(turn.meaning_graph, "usability_target") and not memory_context:
         return "ack_correction_reframe_usability"
+
+    if memory_context:
+        if turn.dialogue_act in {"strategic_redirect", "confirm_direction"}:
+            return "confirm_shift_with_memory"
+        if turn.dialogue_act in {"ask_for_next_step", "request_plan"}:
+            return "provide_plan_with_memory"
+        if turn.dialogue_act == "correct_assistant":
+            return "ack_correction_with_memory"
 
     mapping = {
         "acknowledge_and_reframe": "ack_correction_reframe",
@@ -129,11 +153,20 @@ def _template_id(turn: CompiledTurn, response_act: str) -> str:
     return mapping.get(response_act, "continue_thread")
 
 
-def _plan_slots(turn: CompiledTurn, state: ConversationState, main_point: str) -> dict:
+def _plan_slots(
+    turn: CompiledTurn,
+    state: ConversationState,
+    main_point: str,
+    *,
+    memory_context: str,
+    diff_memory_summary: str,
+) -> dict:
     slots = {
         "main_point": main_point,
         "topic": state.current_topic,
         "next_action": state.next_expected_action or "continue the chatbot language layer",
+        "memory_context": memory_context,
+        "diff_memory_summary": diff_memory_summary,
     }
     if turn.status == "partial_parse":
         slots["partial_meaning"] = turn.topic or "the chatbot layer"
@@ -152,13 +185,18 @@ def plan_response(turn: CompiledTurn, state: ConversationState) -> ResponsePlan:
     else:
         response_act = ACT_TO_RESPONSE.get(turn.dialogue_act, "continue_thread")
 
-    main_point = _main_point(turn, state)
-    template_id = _template_id(turn, response_act)
+    diff_memory = build_diff_memory(state, dialogue_act=turn.dialogue_act)
+    memory_context = diff_memory.memory_context
+
+    main_point = _main_point(turn, state, memory_context)
+    template_id = _template_id(turn, response_act, memory_context=memory_context)
     style = merge_style(base_style(state.affect_flag), {"directness": "high"})
 
     confidence = turn.confidence
     if turn.ambiguities:
         confidence = max(0.3, confidence - 0.1 * len(turn.ambiguities))
+    if memory_context:
+        confidence = min(1.0, round(confidence + 0.05, 2))
 
     return ResponsePlan(
         response_act=response_act,
@@ -166,5 +204,11 @@ def plan_response(turn: CompiledTurn, state: ConversationState) -> ResponsePlan:
         style=style,
         template_id=template_id,
         confidence=round(confidence, 2),
-        slots=_plan_slots(turn, state, main_point),
+        slots=_plan_slots(
+            turn,
+            state,
+            main_point,
+            memory_context=memory_context,
+            diff_memory_summary=diff_memory.summary,
+        ),
     )
