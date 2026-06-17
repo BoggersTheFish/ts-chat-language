@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
+from ts_lang.graph_queries import acceptable_frame_nodes, emotion_affect, rejected_scopes
 from ts_lang.types import CompiledTurn
 from ts_state.memory import trim_history
 from ts_state.topic import normalize_topic
@@ -44,23 +45,22 @@ class ConversationState:
                 self.current_topic = new_topic
 
         act = turn.dialogue_act
+        graph = turn.meaning_graph
 
         if act in {"correct_assistant", "reject_framing"}:
-            for frame in turn.semantic_frames:
-                if frame.schema == "scope_correction":
-                    for item in frame.slots.get("rejects", []):
-                        if item not in self.rejected_frames:
-                            self.rejected_frames.append(str(item))
-                            updates.append(f"reject:{item}")
-            if turn.emotion.get("affect") == "frustrated":
+            for item in rejected_scopes(graph):
+                if item not in self.rejected_frames:
+                    self.rejected_frames.append(item)
+                    updates.append(f"reject:{item}")
+            affect = emotion_affect(graph) or turn.emotion.get("affect")
+            if affect == "frustrated":
                 self.affect_flag = "frustrated"
                 updates.append("affect:frustrated")
 
         if act in {"confirm_direction", "strategic_redirect", "correct_assistant"}:
-            for frame in turn.semantic_frames:
-                if frame.schema in {"scope_correction", "focus_shift", "usability_target", "claim"}:
-                    self.accepted_frames.append(frame.to_dict())
-                    updates.append(f"accept_frame:{frame.schema}")
+            for node in acceptable_frame_nodes(graph):
+                self.accepted_frames.append(node.to_dict())
+                updates.append(f"accept_graph_node:{node.kind}")
             if act == "strategic_redirect":
                 self.user_position = "reasoning engine already solid; focus language layer"
                 updates.append("position:language_layer_priority")

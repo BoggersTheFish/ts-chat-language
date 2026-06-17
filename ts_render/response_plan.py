@@ -2,6 +2,13 @@
 
 from __future__ import annotations
 
+from ts_lang.graph_queries import (
+    has_frame_kind,
+    main_point_frame_node,
+    preferred_constraints,
+    scope_correction_focus,
+    scope_correction_rejects,
+)
 from ts_lang.types import CompiledTurn, ResponsePlan
 from ts_render.style import base_style, merge_style
 from ts_state.conversation import ConversationState
@@ -22,15 +29,57 @@ ACT_TO_RESPONSE = {
 
 
 def _desired_focus(turn: CompiledTurn) -> str | None:
-    if turn.meaning_graph and hasattr(turn.meaning_graph, "desired_focus"):
-        focus = turn.meaning_graph.desired_focus()
+    graph = turn.meaning_graph
+    if graph and hasattr(graph, "desired_focus"):
+        focus = graph.desired_focus()
         if focus:
             return str(focus).replace("_", " ")
-    for frame in turn.semantic_frames:
-        if frame.schema in {"scope_correction", "focus_shift", "usability_target"}:
-            focus = frame.slots.get("desired_focus") or frame.slots.get("new_focus")
-            if focus:
-                return str(focus).replace("_", " ")
+    focus = scope_correction_focus(graph)
+    return focus.replace("_", " ") if focus else None
+
+
+def _main_point_from_graph(turn: CompiledTurn) -> str | None:
+    graph = turn.meaning_graph
+    node = main_point_frame_node(graph)
+    if node is None:
+        return None
+
+    if node.kind == "usability_target":
+        return (
+            "The target is usability parity, not architecture parity. "
+            "The system should feel like a normal chatbot while compiling "
+            "language into TS state underneath."
+        )
+
+    if node.kind == "scope_correction":
+        focus = scope_correction_focus(graph)
+        if focus:
+            rejects = scope_correction_rejects(graph)
+            reject_part = (
+                f", rejecting {', '.join(r.replace('_', ' ') for r in rejects)}"
+                if rejects
+                else ""
+            )
+            return f"Reframing around {focus.replace('_', ' ')}{reject_part}."
+
+    if node.kind == "focus_shift":
+        new_focus = node.slots.get("new_focus", "chatbot language layer")
+        return (
+            f"Focus shifts to {str(new_focus).replace('_', ' ')}; "
+            "reasoning engine is not the current priority."
+        )
+
+    if node.kind == "claim":
+        return (
+            f"{node.slots.get('subject', 'The system')} "
+            f"{node.slots.get('predicate', 'has a stated claim').replace('_', ' ')}."
+        )
+
+    if node.kind == "architecture_preference":
+        prefer = preferred_constraints(graph) or node.slots.get("prefer", [])
+        if prefer:
+            return f"Prefer {', '.join(str(p).replace('_', ' ') for p in prefer)} over exposure training."
+
     return None
 
 
@@ -39,37 +88,9 @@ def _main_point(turn: CompiledTurn, state: ConversationState) -> str:
         known = ", ".join(turn.known_terms) or turn.topic
         return f"partial understanding around {known}"
 
-    for frame in turn.semantic_frames:
-        if frame.schema == "usability_target":
-            return (
-                "The target is usability parity, not architecture parity. "
-                "The system should feel like a normal chatbot while compiling "
-                "language into TS state underneath."
-            )
-        if frame.schema == "scope_correction":
-            focus = frame.slots.get("desired_focus")
-            if not focus and frame.slots.get("accepts"):
-                focus = frame.slots["accepts"][0]
-            rejects = frame.slots.get("rejects", [])
-            if focus:
-                reject_part = (
-                    f", rejecting {', '.join(str(r).replace('_', ' ') for r in rejects)}"
-                    if rejects
-                    else ""
-                )
-                return f"Reframing around {str(focus).replace('_', ' ')}{reject_part}."
-        if frame.schema == "focus_shift":
-            new_focus = frame.slots.get("new_focus", "chatbot language layer")
-            return f"Focus shifts to {new_focus.replace('_', ' ')}; reasoning engine is not the current priority."
-        if frame.schema == "claim":
-            return (
-                f"{frame.slots.get('subject', 'The system')} "
-                f"{frame.slots.get('predicate', 'has a stated claim').replace('_', ' ')}."
-            )
-        if frame.schema == "architecture_preference":
-            prefer = frame.slots.get("prefer", [])
-            if prefer:
-                return f"Prefer {', '.join(p.replace('_', ' ') for p in prefer)} over exposure training."
+    graph_point = _main_point_from_graph(turn)
+    if graph_point:
+        return graph_point
 
     if turn.dialogue_act == "reject_framing":
         return "Dropping the previous framing and refocusing on the chatbot language layer."
@@ -91,9 +112,8 @@ def _template_id(turn: CompiledTurn, response_act: str) -> str:
     if turn.status == "partial_parse":
         return "ask_targeted_question"
 
-    for frame in turn.semantic_frames:
-        if frame.schema == "usability_target":
-            return "ack_correction_reframe_usability"
+    if has_frame_kind(turn.meaning_graph, "usability_target"):
+        return "ack_correction_reframe_usability"
 
     mapping = {
         "acknowledge_and_reframe": "ack_correction_reframe",

@@ -1,4 +1,4 @@
-# TS-Chat Language / TSLC v0.3
+# TS-Chat Language / TSLC v0.4
 
 **TSLC** — Thinking System Language Compiler.
 
@@ -24,6 +24,14 @@ python3 -m unittest discover -v
 python3 -m chat.cli --demo
 python3 -m chat.cli
 ```
+
+## v0.4: graph-driven state and planning
+
+`ConversationState` and the response planner now read **`meaning_graph` nodes and edges** — not parallel `semantic_frames` iteration.
+
+- State rejects come from `rejected_scope` graph nodes
+- Accepted constraints are graph frame nodes (`node_id`, `kind`, `slots`, `provenance`)
+- Response `main_point` and template selection query the graph via `ts_lang/graph_queries.py`
 
 ## v0.3: graph-normalized constraints + stable node identity
 
