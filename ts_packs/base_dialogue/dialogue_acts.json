@@ -1,0 +1,147 @@
+{
+  "acts": [
+    {
+      "id": "ask_question",
+      "description": "User asks for information or clarification",
+      "subacts": ["open_question", "yes_no_question", "how_question"],
+      "patterns": [
+        "\\?",
+        "\\bwhat\\s+(?:is|are|do|does|should)\\b",
+        "\\bhow\\s+(?:do|does|should|can)\\b",
+        "\\bwhy\\s+(?:do|does|is|are)\\b",
+        "\\bcan\\s+you\\s+(?:explain|tell|show)\\b"
+      ],
+      "weight": 0.7
+    },
+    {
+      "id": "answer_simple",
+      "description": "User provides a direct answer or statement",
+      "subacts": ["affirmation", "statement"],
+      "patterns": [
+        "\\byes\\b",
+        "\\bthat(?:'s| is) (?:right|correct|it)\\b",
+        "\\bi think so\\b"
+      ],
+      "weight": 0.5
+    },
+    {
+      "id": "correct_assistant",
+      "description": "User corrects assistant understanding or framing",
+      "subacts": ["scope_correction", "understanding_correction", "reframe"],
+      "patterns": [
+        "\\b(?:nah|no)\\b.*\\b(?:bro|man|dude)\\b",
+        "\\byou(?:'re| are) not getting\\b",
+        "\\bthat(?:'s| is) not (?:what|right)\\b",
+        "\\bi (?:mean|meant)\\b",
+        "\\bactually\\b",
+        "\\bcorrection\\b",
+        "\\byou(?:'re| are) missing\\b"
+      ],
+      "weight": 0.85
+    },
+    {
+      "id": "reject_framing",
+      "description": "User rejects assistant's proposed direction",
+      "subacts": ["hard_rejection", "scope_rejection"],
+      "patterns": [
+        "\\bfuck(?:ing)?\\s+off\\b",
+        "\\bstop\\b",
+        "\\bno\\s+fuck\\b",
+        "\\bdon'?t\\s+(?:want|need)\\b.*\\b(?:that|this)\\b",
+        "\\breject\\b"
+      ],
+      "weight": 0.9
+    },
+    {
+      "id": "request_plan",
+      "description": "User asks for a plan or structured breakdown",
+      "subacts": ["roadmap", "steps", "architecture"],
+      "patterns": [
+        "\\b(?:give|show)\\s+(?:me\\s+)?(?:a\\s+)?plan\\b",
+        "\\bwhat(?:'s| is) the plan\\b",
+        "\\bbreak (?:it|this) down\\b",
+        "\\broadmap\\b",
+        "\\barchitecture\\b"
+      ],
+      "weight": 0.8
+    },
+    {
+      "id": "continue_topic",
+      "description": "User continues the current thread without changing direction",
+      "subacts": ["elaboration", "addition"],
+      "patterns": [
+        "\\balso\\b",
+        "\\band\\s+(?:then|also)\\b",
+        "\\bcontinuing\\b",
+        "\\bmore on\\b",
+        "\\bgo on\\b"
+      ],
+      "weight": 0.55
+    },
+    {
+      "id": "express_frustration",
+      "description": "User vents frustration without a clear informational ask",
+      "subacts": ["venting", "intensity_spike"],
+      "patterns": [
+        "\\bfuck(?:ing)?\\b",
+        "\\bstop\\b",
+        "\\bFFS\\b",
+        "\\bfor fuck'?s sake\\b",
+        "\\bi'?m (?:so\\s+)?(?:done|sick|tired)\\b"
+      ],
+      "weight": 0.75
+    },
+    {
+      "id": "confirm_direction",
+      "description": "User confirms the current direction is correct",
+      "subacts": ["agreement", "alignment"],
+      "patterns": [
+        "\\byes\\b.*\\b(?:that(?:'s| is)|correct|right)\\b",
+        "\\bexactly\\b",
+        "\\bthat(?:'s| is) (?:the|what i)\\b",
+        "\\bspot on\\b",
+        "\\blet(?:'s| us) do (?:that|this)\\b"
+      ],
+      "weight": 0.8
+    },
+    {
+      "id": "ask_for_definition",
+      "description": "User asks what something means",
+      "subacts": ["term_definition", "concept_definition"],
+      "patterns": [
+        "\\bwhat (?:is|does)\\s+\\w+\\s+mean\\b",
+        "\\bdefine\\b",
+        "\\bwhat do you mean by\\b",
+        "\\bexplain\\s+(?:what|how)\\b"
+      ],
+      "weight": 0.75
+    },
+    {
+      "id": "ask_for_next_step",
+      "description": "User asks what to do next",
+      "subacts": ["immediate_next", "milestone"],
+      "patterns": [
+        "\\bwhat(?:'s| is) next\\b",
+        "\\bnext step\\b",
+        "\\bwhat do we do (?:now|next)\\b",
+        "\\bwhere do we (?:start|go)\\b",
+        "\\bwhat should (?:i|we) build\\b"
+      ],
+      "weight": 0.85
+    },
+    {
+      "id": "strategic_redirect",
+      "description": "User redirects focus to a new priority",
+      "subacts": ["priority_shift", "deprioritize"],
+      "patterns": [
+        "\\b(?:nah|no),?\\s+i(?:'m| am) (?:pretty )?sure\\b",
+        "\\bwe (?:already|now) have\\b",
+        "\\bdon'?t focus on\\b",
+        "\\bnot (?:the|a) priority\\b",
+        "\\bthe (?:real|actual) target\\b",
+        "\\bwe (?:should|need to) (?:focus|build)\\b"
+      ],
+      "weight": 0.85
+    }
+  ]
+}

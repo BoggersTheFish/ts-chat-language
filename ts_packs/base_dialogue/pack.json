@@ -1,0 +1,14 @@
+{
+  "id": "base_dialogue",
+  "version": "0.1.0",
+  "priority": 10,
+  "description": "General conversational dialogue acts, emotion, and render templates",
+  "provides": [
+    "dialogue_acts",
+    "phrase_patterns",
+    "semantic_rules",
+    "frame_schemas",
+    "templates",
+    "lexicon"
+  ]
+}

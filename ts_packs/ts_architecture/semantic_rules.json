@@ -1,0 +1,108 @@
+{
+  "rules": [
+    {
+      "id": "no_training_required",
+      "priority": 100,
+      "when": {
+        "all": [
+          { "text_regex": "train" },
+          { "text_regex": "(don't|do not|dont)" }
+        ]
+      },
+      "emit": {
+        "schema": "claim",
+        "slots": {
+          "subject": "TS chatbot",
+          "predicate": "does_not_require_training_for_language",
+          "reason": "language_can_be_compiled_into_TS"
+        },
+        "provenance": { "pattern": "dont_need_to_train" }
+      }
+    },
+    {
+      "id": "architecture_avoid_exposure",
+      "priority": 70,
+      "when": {
+        "text_regex": "\\b(?:transformer|token prediction|train(?:ing)?(?:\\s+it)?\\s+on\\s+data|exposure|dont need to train)\\b"
+      },
+      "emit": {
+        "schema": "architecture_preference",
+        "slot_append": {
+          "avoid": ["exposure_training", "normal_transformer"]
+        },
+        "provenance": { "pattern": "architecture_avoid_exposure" }
+      }
+    },
+    {
+      "id": "architecture_prefer_compilation",
+      "priority": 69,
+      "when": {
+        "text_regex": "\\b(?:compile|compiler|ts state|meaning graph|language machine)\\b"
+      },
+      "emit": {
+        "schema": "architecture_preference",
+        "slot_append": {
+          "prefer": ["language_to_TS_compilation"]
+        },
+        "provenance": { "pattern": "architecture_prefer_compilation" }
+      }
+    },
+    {
+      "id": "architecture_prefer_usability",
+      "priority": 68,
+      "when": {
+        "text_regex": "\\b(?:chatbot|usability|normal chat)\\b"
+      },
+      "emit": {
+        "schema": "architecture_preference",
+        "slot_append": {
+          "prefer": ["chatbot_usability_surface"]
+        },
+        "provenance": { "pattern": "architecture_prefer_usability" }
+      }
+    },
+    {
+      "id": "usability_target",
+      "priority": 95,
+      "when": {
+        "text_regex": "\\b(?:same|normal)\\s+usability\\b"
+      },
+      "emit": {
+        "schema": "usability_target",
+        "slots": {
+          "target": "usability_parity",
+          "parity_with": "normal_chatbot",
+          "not_required": ["architecture_parity", "transformer_internals"],
+          "desired_focus": "chatbot_usability"
+        },
+        "provenance": { "pattern": "same_usability" }
+      }
+    },
+    {
+      "id": "focus_shift",
+      "priority": 85,
+      "when": {
+        "any": [
+          { "act_in": ["strategic_redirect"] },
+          { "act_meaning_has": "new_focus" }
+        ]
+      },
+      "emit": {
+        "schema": "focus_shift",
+        "slots": {
+          "new_focus": "chatbot_language_layer",
+          "reason": "user_priority_shift"
+        },
+        "slots_from_meaning": {
+          "new_focus": "new_focus",
+          "reason": "reason"
+        },
+        "slots_merge_from_meaning": {
+          "deprioritize": ["deprioritize"]
+        },
+        "desired_focus_from_meaning": ["new_focus"],
+        "provenance": { "pattern": "reasoning_engine_solid" }
+      }
+    }
+  ]
+}

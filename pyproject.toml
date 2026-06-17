@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ts-chat-language"
-version = "0.6.0"
+version = "0.7.0"
 description = "TSLC: Thinking System Language Compiler — pattern-backed conversational language machine for TS-Chat."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -37,4 +37,4 @@ Repository = "https://github.com/BoggersTheFish/ts-chat-language"
 ts-chat = "chat.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["ts_lang*", "ts_state*", "ts_render*", "chat*"]
+include = ["ts_lang*", "ts_state*", "ts_render*", "ts_packs*", "chat*"]

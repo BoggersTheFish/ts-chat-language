@@ -4,9 +4,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 
 from chat.session import TSChatSession
+from ts_lang.resources import active_packs, reload_resources
 
 DEMO_SCRIPT = [
     "nah bro we just want the same usability",
@@ -15,9 +17,15 @@ DEMO_SCRIPT = [
 ]
 
 
+def _configure_packs(packs: str | None) -> None:
+    if packs:
+        os.environ["TSLC_PACKS"] = packs
+    reload_resources()
+
+
 def run_demo() -> None:
     session = TSChatSession()
-    print("TS-Chat v0.6 demo\n")
+    print(f"TS-Chat v0.7 demo (packs: {', '.join(active_packs())})\n")
     for text in DEMO_SCRIPT:
         receipt = session.handle(text)
         print(f"User: {text}")
@@ -26,7 +34,10 @@ def run_demo() -> None:
 
 def run_repl() -> None:
     session = TSChatSession()
-    print("TS-Chat v0.6 (TSLC). Type 'quit' to exit, 'state' for JSON state, 'trace' for last receipt.\n")
+    print(
+        f"TS-Chat v0.7 (TSLC). Packs: {', '.join(active_packs())}. "
+        "Type 'quit' to exit, 'state' for JSON state, 'trace' for last receipt.\n"
+    )
     while True:
         try:
             line = input("You> ").strip()
@@ -52,9 +63,15 @@ def run_repl() -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="TS-Chat v0.6 — TSLC conversational shell")
+    parser = argparse.ArgumentParser(description="TS-Chat v0.7 — TSLC conversational shell")
     parser.add_argument("--demo", action="store_true", help="Run scripted demo conversation")
+    parser.add_argument(
+        "--packs",
+        default=None,
+        help="Comma-separated pack list (default: base_dialogue,ts_architecture)",
+    )
     args = parser.parse_args(argv)
+    _configure_packs(args.packs)
 
     if args.demo:
         run_demo()

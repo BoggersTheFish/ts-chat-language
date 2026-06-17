@@ -1,0 +1,70 @@
+{
+  "rules": [
+    {
+      "id": "emotion_frame",
+      "priority": 200,
+      "when": { "emotion_present": true },
+      "emit": {
+        "schema": "emotion_frame",
+        "slots_from_emotion": {
+          "affect": "affect",
+          "intensity": "intensity",
+          "tone": "tone"
+        },
+        "slots_from_markers": {
+          "intensity": "intensity"
+        },
+        "slot_defaults": {
+          "affect": "neutral",
+          "tone": "neutral"
+        },
+        "provenance": { "pattern": "emotion_frame" }
+      }
+    },
+    {
+      "id": "claim_from_phrase_meaning",
+      "priority": 90,
+      "when": { "act_meaning_has": "claim" },
+      "emit": {
+        "schema": "claim",
+        "slots": {
+          "subject": "conversation",
+          "reason": ""
+        },
+        "slots_from_meaning": {
+          "predicate": "claim",
+          "reason": "reason",
+          "subject": "desired_focus"
+        },
+        "provenance": { "pattern": "phrase_meaning.claim" }
+      }
+    },
+    {
+      "id": "scope_from_phrase_meaning",
+      "priority": 80,
+      "when": {
+        "all": [
+          { "act_in": ["correct_assistant", "reject_framing", "strategic_redirect"] },
+          {
+            "any": [
+              { "act_meaning_has": "rejects" },
+              { "act_meaning_has": "deprioritize" },
+              { "act_meaning_has": "rejected_context" },
+              { "act_meaning_has": "desired_focus" },
+              { "act_meaning_has": "new_focus" }
+            ]
+          }
+        ]
+      },
+      "emit": {
+        "schema": "scope_correction",
+        "slots_merge_from_meaning": {
+          "rejects": ["rejects", "deprioritize", "rejected_context"],
+          "accepts": ["desired_focus", "new_focus"]
+        },
+        "desired_focus_from_meaning": ["desired_focus", "new_focus"],
+        "provenance": { "pattern": "phrase_meaning.scope" }
+      }
+    }
+  ]
+}

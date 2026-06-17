@@ -1,6 +1,10 @@
-# TS-Chat Language / TSLC v0.6
+# TS-Chat Language / TSLC v0.7
 
-**TSLC** — Thinking System Language Compiler.
+**TSLC** — Thinking System Language Compiler (language compiler core).
+
+**DDS** — Deterministic Dialogue Substrate (in progress): language compiled into inspectable TS state.
+
+**TS-Chat** — one application running on DDS.
 
 A TS-native conversational language machine. Not token prediction. Not exposure training.
 
@@ -22,8 +26,30 @@ USER TEXT
 cd ts-chat-language
 python3 -m unittest discover -v
 python3 -m chat.cli --demo
-python3 -m chat.cli
+python3 -m chat.cli --packs base_dialogue,ts_architecture
 ```
+
+## v0.7: language pack system
+
+Patterns, dialogue acts, semantic rules, lexicon, schemas, and templates load from **`ts_packs/`** — not hard-coded Python branches.
+
+```text
+load active packs → match dialogue acts → evaluate semantic_rules → emit frames → validate graph
+```
+
+Default packs: `base_dialogue` + `ts_architecture`. Override with `TSLC_PACKS` env or `--packs` CLI flag.
+
+### Adding a domain (no compiler edits)
+
+```text
+ts_packs/my_domain/
+├── pack.json
+├── phrase_patterns.json
+├── semantic_rules.json
+└── templates.json
+```
+
+Activate: `TSLC_PACKS=base_dialogue,my_domain python3 -m chat.cli`
 
 ## v0.6: diff-memory-driven planning
 
@@ -94,8 +120,9 @@ Right. The target is usability parity, not architecture parity. The system shoul
 
 ## Layout
 
-- `ts_lang/` — input compiler
-- `ts_state/` — conversation state machine
+- `ts_packs/` — loadable language packs (dialogue acts, rules, templates)
+- `ts_lang/` — input compiler + declarative `frame_rules` engine
+- `ts_state/` — conversation state machine + diff memory
 - `ts_render/` — response planner + renderer
 - `chat/` — CLI session loop
-- `data/` — compiled language resources (not training data)
+- `data/` — legacy resources (superseded by packs; kept for reference)

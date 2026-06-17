@@ -1,36 +1,47 @@
-"""Load compiled language resources from data/*.json."""
+"""Load compiled language resources from active packs."""
 
 from __future__ import annotations
 
-import json
-from functools import lru_cache
-from pathlib import Path
+from typing import Any
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+from ts_packs.loader import active_registry, reset_registry_cache
 
 
-@lru_cache(maxsize=8)
-def load_json(name: str) -> dict:
-    path = DATA_DIR / name
-    with path.open(encoding="utf-8") as handle:
-        return json.load(handle)
+def _registry():
+    return active_registry()
+
+
+def active_packs() -> list[str]:
+    return list(_registry().active_packs)
+
+
+def pack_info() -> dict[str, Any]:
+    return _registry().to_dict()
 
 
 def dialogue_acts() -> list[dict]:
-    return load_json("dialogue_acts.json")["acts"]
+    return list(_registry().dialogue_acts)
 
 
 def phrase_patterns() -> list[dict]:
-    return load_json("phrase_patterns.json")["phrases"]
+    return list(_registry().phrase_patterns)
+
+
+def semantic_rules() -> list[dict]:
+    return list(_registry().semantic_rules)
 
 
 def frame_schemas() -> dict:
-    return load_json("semantic_frame_schemas.json")["schemas"]
+    return dict(_registry().frame_schemas)
 
 
 def render_templates() -> list[dict]:
-    return load_json("render_templates.json")["templates"]
+    return list(_registry().templates)
 
 
 def lexicon() -> dict:
-    return load_json("lexicon.json")
+    return dict(_registry().lexicon)
+
+
+def reload_resources() -> None:
+    reset_registry_cache()

@@ -1,0 +1,12 @@
+{
+  "id": "ts_architecture",
+  "version": "0.1.0",
+  "priority": 20,
+  "description": "TS-Chat architecture, usability, and language-compiler domain patterns",
+  "provides": [
+    "phrase_patterns",
+    "semantic_rules",
+    "lexicon",
+    "templates"
+  ]
+}

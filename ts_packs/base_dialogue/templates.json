@@ -1,0 +1,58 @@
+{
+  "templates": [
+    {
+      "template_id": "ack_correction_reframe",
+      "response_act": "acknowledge_and_reframe",
+      "text": "Right. {main_point}",
+      "style": { "directness": "high", "warmth": "medium" }
+    },
+    {
+      "template_id": "confirm_and_advance",
+      "response_act": "confirm_and_advance",
+      "text": "Yes. {main_point} Next we can {next_action}.",
+      "style": { "directness": "high", "warmth": "medium", "technical_density": "medium" }
+    },
+    {
+      "template_id": "de_escalate_clarify",
+      "response_act": "de_escalate_and_clarify",
+      "text": "Got it. I hear the frustration. Let me focus on what you actually want: {main_point}. What should I tackle first?",
+      "style": { "directness": "high", "warmth": "low" }
+    },
+    {
+      "template_id": "ask_targeted_question",
+      "response_act": "ask_targeted_question",
+      "text": "I can tell you mean {partial_meaning}, but I'm missing what you want changed first: {options}?",
+      "style": { "directness": "medium", "warmth": "medium" }
+    },
+    {
+      "template_id": "provide_plan_sections",
+      "response_act": "provide_plan_sections",
+      "text": "Here's the plan for {topic}: {sections}",
+      "style": { "directness": "high", "warmth": "medium", "technical_density": "high" }
+    },
+    {
+      "template_id": "continue_thread",
+      "response_act": "continue_thread",
+      "text": "Continuing on {topic}: {main_point}",
+      "style": { "directness": "medium", "warmth": "medium" }
+    },
+    {
+      "template_id": "answer_or_clarify",
+      "response_act": "answer_or_ask_clarifier",
+      "text": "{main_point} If you want more detail on a specific part, say which one.",
+      "style": { "directness": "medium", "warmth": "medium" }
+    },
+    {
+      "template_id": "confirm_direction_simple",
+      "response_act": "confirm_and_advance",
+      "text": "Yes. {main_point}",
+      "style": { "directness": "high", "warmth": "medium" }
+    },
+    {
+      "template_id": "reject_acknowledge",
+      "response_act": "acknowledge_and_reframe",
+      "text": "Understood. Dropping that framing. {main_point}",
+      "style": { "directness": "high", "warmth": "low" }
+    }
+  ]
+}

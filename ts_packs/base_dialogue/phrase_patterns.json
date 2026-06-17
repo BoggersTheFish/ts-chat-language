@@ -1,0 +1,32 @@
+{
+  "phrases": [
+    {
+      "phrase": "fuck off",
+      "pattern": "\\bfuck(?:ing)?\\s+off\\b",
+      "meaning": {
+        "act": "reject_framing",
+        "intensity": 0.9,
+        "tone": "hostile/frustrated",
+        "literal_intent": false
+      }
+    },
+    {
+      "phrase": "you aren't getting what I'm saying",
+      "pattern": "\\byou(?:'re| are) not getting (?:what i(?:'m| am) saying|it)\\b",
+      "meaning": {
+        "act": "correct_assistant",
+        "target": "assistant_understanding",
+        "requires_reframe": true
+      }
+    },
+    {
+      "phrase": "nah bro",
+      "pattern": "\\bnah\\s+bro\\b",
+      "meaning": {
+        "act": "correct_assistant",
+        "tone": "informal",
+        "stance": "rejection"
+      }
+    }
+  ]
+}

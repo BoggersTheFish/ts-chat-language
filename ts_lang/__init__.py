@@ -1,6 +1,8 @@
 """TSLC input compiler: normalize, dialogue acts, semantic frames, meaning graph."""
 
 from ts_lang.compiler import compile_utterance
+from ts_lang.frame_rules import evaluate_frame_rules
+from ts_lang.resources import active_packs, pack_info, reload_resources, semantic_rules
 from ts_lang.graph_diff import GraphDiff, diff_meaning_graphs
 from ts_lang.graph_queries import acceptable_frame_nodes, rejected_scopes
 from ts_lang.meaning_graph import (
@@ -16,6 +18,7 @@ from ts_lang.types import CompiledTurn, DialogueActResult, NormalizedUtterance, 
 
 __all__ = [
     "acceptable_frame_nodes",
+    "active_packs",
     "CompiledTurn",
     "diff_meaning_graphs",
     "GraphDiff",
@@ -28,7 +31,11 @@ __all__ = [
     "SemanticFrame",
     "build_meaning_graph",
     "compile_utterance",
+    "evaluate_frame_rules",
     "normalize_frame_slots",
+    "pack_info",
+    "reload_resources",
+    "semantic_rules",
     "rejected_scopes",
     "validate_meaning_graph",
 ]

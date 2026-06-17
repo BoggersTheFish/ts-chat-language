@@ -1,0 +1,13 @@
+{
+  "topics": {},
+  "topic_priority": [
+    "language_compiler",
+    "chatbot",
+    "usability",
+    "reasoning_engine",
+    "transformer",
+    "ts_native"
+  ],
+  "reject_signals": [],
+  "accept_signals": []
+}
