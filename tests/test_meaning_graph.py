@@ -90,6 +90,11 @@ class MeaningGraphTests(unittest.TestCase):
         root = next(n for n in graph.nodes if n.kind == "dialogue_act")
         self.assertIn("same usability", root.provenance.get("matched_phrases", []))
 
+        reject_nodes = [n for n in graph.nodes if n.kind == "rejected_scope"]
+        self.assertTrue(reject_nodes)
+        self.assertEqual(reject_nodes[0].label, "architecture_parity")
+        self.assertEqual(reject_nodes[0].slots["value"], "architecture_parity")
+
     def test_golden_strategic_redirect_graph(self) -> None:
         turn = compile_utterance(
             "nah, im pretty sure we now have the reasoning engine pretty solid"

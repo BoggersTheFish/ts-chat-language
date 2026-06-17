@@ -51,7 +51,7 @@ def main() -> int:
         )
 
     receipt = {
-        "version": "0.2.0",
+        "version": "0.2.1",
         "name": "TS-Chat v0.2 explicit meaning graph",
         "tests_passed": True,
         "acts_supported": [

@@ -92,7 +92,11 @@ def _scope_frame(act: DialogueActResult) -> SemanticFrame | None:
         return None
     rejects = []
     if meaning.get("rejects"):
-        rejects.append(meaning["rejects"] if isinstance(meaning["rejects"], str) else str(meaning["rejects"]))
+        rej = meaning["rejects"]
+        if isinstance(rej, list):
+            rejects.extend(rej)
+        else:
+            rejects.append(rej)
     if meaning.get("deprioritize"):
         dep = meaning["deprioritize"]
         if isinstance(dep, list):

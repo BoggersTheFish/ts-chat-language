@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "TS-Chat v0.2 explicit meaning graph",
   "tests_passed": true,
   "acts_supported": [
@@ -122,7 +122,7 @@
             "label": "scope correction",
             "slots": {
               "rejects": [
-                "['architecture_parity']"
+                "architecture_parity"
               ],
               "accepts": [],
               "desired_focus": null
@@ -134,11 +134,11 @@
             }
           },
           {
-            "node_id": "node_reject_3_['architecture_parity']",
+            "node_id": "node_reject_3_architecture_parity",
             "kind": "rejected_scope",
-            "label": "['architecture_parity']",
+            "label": "architecture_parity",
             "slots": {
-              "value": "['architecture_parity']"
+              "value": "architecture_parity"
             },
             "provenance": {
               "source_type": "frame_builder",
@@ -225,7 +225,7 @@
           {
             "edge_id": "edge_006",
             "source_id": "node_frame_03_scope_correction",
-            "target_id": "node_reject_3_['architecture_parity']",
+            "target_id": "node_reject_3_architecture_parity",
             "relation": "rejects",
             "provenance": {
               "source_type": "scope_correction",
@@ -251,7 +251,7 @@
     {
       "input": "nah, im pretty sure we now have the reasoning engine pretty solid",
       "dialogue_act": "strategic_redirect",
-      "response": "Yes. Reframing around chatbot language layer, rejecting reasoning engine, ['architecture parity']. Next we can design chatbot language layer.",
+      "response": "Yes. Reframing around chatbot language layer, rejecting reasoning engine, architecture parity. Next we can design chatbot language layer.",
       "template_id": "confirm_and_advance",
       "meaning_graph": {
         "root_node_id": "node_act_root",
@@ -274,7 +274,7 @@
                   "reasoning engine solid"
                 ],
                 "rejected_context": [
-                  "['architecture_parity']"
+                  "architecture_parity"
                 ]
               }
             },
@@ -309,7 +309,7 @@
             "slots": {
               "rejects": [
                 "reasoning_engine",
-                "['architecture_parity']"
+                "architecture_parity"
               ],
               "accepts": [
                 "chatbot_language_layer"
@@ -337,11 +337,11 @@
             }
           },
           {
-            "node_id": "node_reject_1_['architecture_parity']",
+            "node_id": "node_reject_1_architecture_parity",
             "kind": "rejected_scope",
-            "label": "['architecture_parity']",
+            "label": "architecture_parity",
             "slots": {
-              "value": "['architecture_parity']"
+              "value": "architecture_parity"
             },
             "provenance": {
               "source_type": "frame_builder",
@@ -433,7 +433,7 @@
           {
             "edge_id": "edge_004",
             "source_id": "node_frame_01_scope_correction",
-            "target_id": "node_reject_1_['architecture_parity']",
+            "target_id": "node_reject_1_architecture_parity",
             "relation": "rejects",
             "provenance": {
               "source_type": "scope_correction",
@@ -498,7 +498,7 @@
                   "what is next"
                 ],
                 "rejected_context": [
-                  "['architecture_parity']"
+                  "architecture_parity"
                 ]
               }
             },

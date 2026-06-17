@@ -22,6 +22,14 @@ class SemanticFrameTests(unittest.TestCase):
         self.assertIn("claim", schemas)
         self.assertIn("architecture_preference", schemas)
 
+    def test_scope_frame_extends_list_rejects(self) -> None:
+        utterance = normalize_utterance("nah bro we just want the same usability")
+        act = compile_dialogue_act(utterance)
+        frames, _known, _unknown = compile_semantic_frames(utterance, act)
+        scope = next(f for f in frames if f.schema == "scope_correction")
+        self.assertEqual(scope.slots["rejects"], ["architecture_parity"])
+        self.assertNotIn("['architecture_parity']", scope.slots["rejects"])
+
 
 if __name__ == "__main__":
     unittest.main()
