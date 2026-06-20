@@ -1,0 +1,316 @@
+{
+  "all_hard_gates_passed": true,
+  "average_processing_time_ms": 0.4604,
+  "case_count": 30,
+  "decision_accuracy": 1.0,
+  "deterministic_replay_failures": 0,
+  "receipt_generation_success": 1.0,
+  "rejected_claim_contamination": 0,
+  "renderer_support_violations": 0,
+  "repair_success_count": 10,
+  "results": [
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "ACCEPT",
+      "id": "accept_rel_001",
+      "observed_decision": "ACCEPT",
+      "passed": true,
+      "response": "Alice is the oldest."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "ACCEPT",
+      "id": "accept_rel_002",
+      "observed_decision": "ACCEPT",
+      "passed": true,
+      "response": "Diana is the oldest."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "ACCEPT",
+      "id": "accept_rel_003",
+      "observed_decision": "ACCEPT",
+      "passed": true,
+      "response": "The red key opens the north door."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "ACCEPT",
+      "id": "accept_rel_004",
+      "observed_decision": "ACCEPT",
+      "passed": true,
+      "response": "The brass key opens the east door."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "ACCEPT",
+      "id": "accept_bool_001",
+      "observed_decision": "ACCEPT",
+      "passed": true,
+      "response": "The alarm is active."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "ACCEPT",
+      "id": "accept_bool_002",
+      "observed_decision": "ACCEPT",
+      "passed": true,
+      "response": "The light is active."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "ACCEPT",
+      "id": "accept_plan_001",
+      "observed_decision": "ACCEPT",
+      "passed": true,
+      "response": "Verify the backup before deleting the repository."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "ACCEPT",
+      "id": "accept_plan_002",
+      "observed_decision": "ACCEPT",
+      "passed": true,
+      "response": "Lock the door before leaving the house."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "ACCEPT",
+      "id": "accept_rel_005",
+      "observed_decision": "ACCEPT",
+      "passed": true,
+      "response": "Grace is the oldest."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "ACCEPT",
+      "id": "accept_rel_006",
+      "observed_decision": "ACCEPT",
+      "passed": true,
+      "response": "The silver key opens the west door."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REPAIR",
+      "id": "repair_001",
+      "observed_decision": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Alice or Sarah own the key?"
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REPAIR",
+      "id": "repair_002",
+      "observed_decision": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Diana or Emily own the badge?"
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REPAIR",
+      "id": "repair_003",
+      "observed_decision": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Frank or Grace own the book?"
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REPAIR",
+      "id": "repair_004",
+      "observed_decision": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Helen or Iris own the note?"
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REPAIR",
+      "id": "repair_005",
+      "observed_decision": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Jack or Kate own the card?"
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REPAIR",
+      "id": "repair_006",
+      "observed_decision": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Liam or Maya own the key?"
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REPAIR",
+      "id": "repair_007",
+      "observed_decision": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Nina or Opal own the ring?"
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REPAIR",
+      "id": "repair_008",
+      "observed_decision": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Paul or Quinn own the pass?"
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REPAIR",
+      "id": "repair_009",
+      "observed_decision": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Ruth or Sofia own the map?"
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REPAIR",
+      "id": "repair_010",
+      "observed_decision": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Tara or Uma own the key?"
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REJECT",
+      "id": "reject_001",
+      "observed_decision": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that Alice is wealthy."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REJECT",
+      "id": "reject_002",
+      "observed_decision": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that Alice is tour."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REJECT",
+      "id": "reject_003",
+      "observed_decision": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that Bob is wealthy."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REJECT",
+      "id": "reject_004",
+      "observed_decision": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that Carol is travel."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REJECT",
+      "id": "reject_005",
+      "observed_decision": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that Diana is famous."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REJECT",
+      "id": "reject_006",
+      "observed_decision": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that Evan is win."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REJECT",
+      "id": "reject_007",
+      "observed_decision": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that Frank is wealthy."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REJECT",
+      "id": "reject_008",
+      "observed_decision": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that Grace is tour."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REJECT",
+      "id": "reject_009",
+      "observed_decision": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that Helen is famous."
+    },
+    {
+      "answer_ok": true,
+      "checks_ok": true,
+      "decision_ok": true,
+      "expected_decision": "REJECT",
+      "id": "reject_010",
+      "observed_decision": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that Iris is travel."
+    }
+  ],
+  "schema_failures": 0,
+  "unresolved_ambiguity_count": 10,
+  "unsupported_accepts": 0
+}
