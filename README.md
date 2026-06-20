@@ -8,6 +8,16 @@
 
 A TS-native conversational language machine. Not token prediction. Not exposure training.
 
+## Verifier-first vertical slice
+
+The first complete TS language-to-verifier vertical slice runs end to end: deterministic text parsing, MeaningGraph construction, verifier-gated `ACCEPT`/`REPAIR`/`REJECT` decisions, deterministic response rendering, and unified turn receipts.
+
+```bash
+./scripts/run_vertical_slice.sh
+```
+
+It supports bounded relational, Boolean, ambiguity, unsupported-inference, and small planning cases. It is not a general-purpose chatbot and does not use an external language model. See [the vertical-slice guide](docs/vertical_slice.md), [integration audit](docs/vertical_slice_integration_audit.md), and [limitations](docs/vertical_slice_limitations.md).
+
 ```text
 USER TEXT
   → Normalizer
