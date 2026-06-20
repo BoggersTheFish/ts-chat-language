@@ -35,6 +35,7 @@ Repository = "https://github.com/BoggersTheFish/ts-chat-language"
 
 [project.scripts]
 ts-chat = "chat.cli:main"
+ts-vertical-slice = "ts_vertical_slice.chat:main"
 
 [tool.setuptools.packages.find]
-include = ["ts_lang*", "ts_state*", "ts_render*", "ts_packs*", "chat*"]
+include = ["ts_lang*", "ts_state*", "ts_render*", "ts_packs*", "chat*", "ts_vertical_slice*"]
