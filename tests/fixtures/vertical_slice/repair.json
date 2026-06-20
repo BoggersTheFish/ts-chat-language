@@ -1,0 +1,203 @@
+{
+  "ambiguities": [
+    "'her' could refer to Alice or Sarah"
+  ],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [],
+  "deterministic_replay_hash": "11bc8630ef333d85c743508682ad4431febae44018bd9617fd272c99351f087e",
+  "final_response": "I found more than one possible interpretation. Did Alice or Sarah own the key?",
+  "final_status": "REPAIR",
+  "input_text": "Alice gave Sarah her key. Who owns the key?",
+  "meaning_graph": {
+    "edge_count": 2,
+    "edges": [
+      {
+        "edge_id": "edge_node_ambiguity_0136ef4f00fb_expresses",
+        "provenance": {
+          "original_span": "Alice gave Sarah her key.",
+          "rule_id": "ambiguity.pronoun",
+          "source_id": "node_ambiguity_0136ef4f00fb",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_ambiguity_0136ef4f00fb"
+      },
+      {
+        "edge_id": "edge_node_relation_query_45641955ee04_expresses",
+        "provenance": {
+          "original_span": "Who owns the key?",
+          "rule_id": "query.owns",
+          "source_id": "node_relation_query_45641955ee04",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_relation_query_45641955ee04"
+      }
+    ],
+    "node_count": 3,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "Alice gave Sarah her key. Who owns the key?"
+        }
+      },
+      {
+        "kind": "ambiguity",
+        "label": "ambiguity",
+        "node_id": "node_ambiguity_0136ef4f00fb",
+        "provenance": {
+          "original_span": "Alice gave Sarah her key.",
+          "rule_id": "ambiguity.pronoun",
+          "source_id": "node_ambiguity_0136ef4f00fb",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "code": "ambiguous_possessive",
+          "message": "'her' could refer to Alice or Sarah",
+          "options": [
+            "alice",
+            "sarah"
+          ],
+          "question": "Did Alice or Sarah own the key?"
+        }
+      },
+      {
+        "kind": "relation_query",
+        "label": "relation query",
+        "node_id": "node_relation_query_45641955ee04",
+        "provenance": {
+          "original_span": "Who owns the key?",
+          "rule_id": "query.owns",
+          "source_id": "node_relation_query_45641955ee04",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "object": "key",
+          "predicate": "owns",
+          "subject": ""
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "2 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "c033d6db3f712b6e489054c1a9983423d2c5d926ba53048eb1c6745e4110b96a",
+  "meaning_graph_summary": {
+    "edge_count": 2,
+    "node_count": 3,
+    "summary": "2 bounded reasoning structures"
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "ambiguity.pronoun",
+    "query.owns"
+  ],
+  "reasoning_request": {
+    "ambiguities": [
+      {
+        "blocking": true,
+        "code": "ambiguous_possessive",
+        "message": "'her' could refer to Alice or Sarah",
+        "options": [
+          "alice",
+          "sarah"
+        ],
+        "question": "Did Alice or Sarah own the key?"
+      }
+    ],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [
+      {
+        "entity_id": "key",
+        "entity_type": "thing",
+        "name": "key"
+      }
+    ],
+    "intent": "relational_query",
+    "original_text": "Alice gave Sarah her key. Who owns the key?",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "Alice gave Sarah her key.",
+        "provenance_id": "prov:node_ambiguity_0136ef4f00fb",
+        "rule_id": "ambiguity.pronoun",
+        "source_id": "node_ambiguity_0136ef4f00fb",
+        "source_type": "deterministic_rule"
+      },
+      {
+        "original_span": "Who owns the key?",
+        "provenance_id": "prov:node_relation_query_45641955ee04",
+        "rule_id": "query.owns",
+        "source_id": "node_relation_query_45641955ee04",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [
+      {
+        "kind": "query",
+        "object_id": "key",
+        "polarity": "positive",
+        "predicate": "owns",
+        "relation_id": "node_relation_query_45641955ee04",
+        "source_ids": [
+          "node_relation_query_45641955ee04"
+        ],
+        "subject_id": ""
+      }
+    ],
+    "repair_actions": [],
+    "request_id": "request_22bfa621b963cc93",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "bdef96714f5ed16794c3730ad45b9b4b900c659832fbb58a6d4ee5b16aff49e3",
+  "repair_actions": [],
+  "repair_attempted": true,
+  "repair_result": "REPAIR_NEEDS_USER",
+  "response_template": "REPAIR_CLARIFICATION",
+  "state_hash": "fcc0d6ffb00aff8bd86224065e1a6349c2b23264e298d0c7817ed3f48dd08cfa",
+  "turn_id": "turn_0001",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "ambiguity_resolved",
+      "message": "'her' could refer to Alice or Sarah",
+      "passed": false,
+      "support_ids": []
+    }
+  ],
+  "verifier_decision": "REPAIR"
+}
