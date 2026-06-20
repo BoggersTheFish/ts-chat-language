@@ -1,6 +1,6 @@
 {
   "all_hard_gates_passed": true,
-  "average_processing_time_ms": 0.4604,
+  "average_processing_time_ms": 0.4281,
   "case_count": 30,
   "decision_accuracy": 1.0,
   "deterministic_replay_failures": 0,

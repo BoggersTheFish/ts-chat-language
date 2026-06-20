@@ -7,5 +7,5 @@ Rejected-claim contamination: 0
 Replay failures: 0
 Renderer support violations: 0
 Receipt generation success: 100.0%
-Average processing time: 0.4604 ms
+Average processing time: 0.4281 ms
 Hard gates: PASS
