@@ -38,6 +38,17 @@ class TurnReceipt:
     state_hash: str
     meaning_graph: dict[str, Any]
     reasoning_request: dict[str, Any]
+    receipt_schema: str = "ts-turn-receipt-v2"
+    semantic_merge: dict[str, Any] | None = None
+    cluster_activation: dict[str, Any] | None = None
+    signed_world_state: dict[str, Any] | None = None
+    events: tuple[dict[str, Any], ...] = ()
+    state_transitions: tuple[dict[str, Any], ...] = ()
+    causal_derivations: tuple[dict[str, Any], ...] = ()
+    planning: dict[str, Any] | None = None
+    decision_subtype: str = ""
+    memory_update: dict[str, Any] | None = None
+    replay: dict[str, Any] | None = None
 
     def to_dict(self) -> dict[str, Any]: return asdict(self)
     def write(self, root: Path) -> Path:

@@ -20,7 +20,7 @@ class BridgeResult:
     request: ReasoningRequest
 
 
-def bridge_meaning_graph(graph: MeaningGraph, original_text: str, *, memory_relations: Iterable[StructuredRelation] = (), memory_claims: Iterable[StructuredClaim] = (), memory_constraints: Iterable[StructuredConstraint] = (), repair_actions: tuple[str, ...] = ()) -> BridgeResult:
+def bridge_meaning_graph(graph: MeaningGraph, original_text: str, *, memory_relations: Iterable[StructuredRelation] = (), memory_claims: Iterable[StructuredClaim] = (), memory_constraints: Iterable[StructuredConstraint] = (), repair_actions: tuple[str, ...] = (), habitat: dict | None = None) -> BridgeResult:
     warnings: list[str] = []
     relations = list(memory_relations); claims = list(memory_claims); constraints = list(memory_constraints)
     entities: dict[str, StructuredEntity] = {}
@@ -56,9 +56,10 @@ def bridge_meaning_graph(graph: MeaningGraph, original_text: str, *, memory_rela
             entity(s["first"], s.get("first_text", "")); entity(s["second"], s.get("second_text", "")); constraints.append(StructuredConstraint(node.node_id, "before", (s["first"], s["second"]), source_ids=(node.node_id,)))
         elif node.kind == "planning_query": intent = "planning_query"
         elif node.kind == "ambiguity": ambiguities.append(Ambiguity(s["code"], s["message"], tuple(s.get("options", [])), True, s.get("question", "")))
+        elif node.kind in {"world_fact","world_query","world_event","causal_rule","action_compatibility"}: intent = "habitat_query"
         elif node.kind != "dialogue_act": warnings.append(f"non_reasoning_node:{node.node_id}:{node.kind}")
 
     payload = {"text": original_text, "graph": graph.to_dict(), "memory_relations": [r.relation_id for r in memory_relations], "memory_claims": [c.claim_id for c in memory_claims], "memory_constraints": [c.constraint_id for c in memory_constraints]}
     request_id = "request_" + canonical_hash(payload)[:16]
-    request = ReasoningRequest(request_id, original_text, intent, tuple(claims), tuple(sorted(entities.values(), key=lambda x:x.entity_id)), tuple(relations), tuple(constraints), tuple(ambiguities), tuple(provenance), "natural_language_response", tuple(warnings), repair_actions)
+    request = ReasoningRequest(request_id, original_text, intent, tuple(claims), tuple(sorted(entities.values(), key=lambda x:x.entity_id)), tuple(relations), tuple(constraints), tuple(ambiguities), tuple(provenance), "natural_language_response", tuple(warnings), repair_actions, habitat)
     return BridgeResult("blocked" if any(x.startswith("BLOCKING:") for x in warnings) else "ok", tuple(warnings), request)

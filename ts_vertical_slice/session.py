@@ -13,6 +13,7 @@ from .bridge import bridge_meaning_graph
 from .parser import parse_to_meaning_graph
 from .receipt import TurnReceipt, replay_hash
 from .renderer import render_verified
+from .habitat import SemanticMemory
 
 
 @dataclass
@@ -20,9 +21,10 @@ class VerifiedState:
     relations: list[StructuredRelation] = field(default_factory=list)
     claims: list[StructuredClaim] = field(default_factory=list)
     constraints: list[StructuredConstraint] = field(default_factory=list)
+    world: SemanticMemory = field(default_factory=SemanticMemory)
 
     def to_dict(self):
-        return {"relations":[r.__dict__ for r in self.relations],"claims":[c.__dict__ for c in self.claims],"constraints":[c.__dict__ for c in self.constraints]}
+        return {"relations":[r.__dict__ for r in self.relations],"claims":[c.__dict__ for c in self.claims],"constraints":[c.__dict__ for c in self.constraints],"world":self.world.to_dict()}
     @property
     def hash(self): return canonical_hash(self.to_dict())
 
@@ -39,10 +41,22 @@ class VerticalSliceSession:
         self.turn_count += 1
         parsed = parse_to_meaning_graph(text)
         graph_dict = parsed.graph.to_dict(); graph_hash = canonical_hash(graph_dict)
-        bridge = bridge_meaning_graph(parsed.graph, text, memory_relations=self.state.relations, memory_claims=self.state.claims, memory_constraints=self.state.constraints, repair_actions=parsed.repair_actions)
+        is_habitat=any(node.kind in {"world_fact","world_query","world_event","causal_rule","action_compatibility"} for node in parsed.graph.nodes)
+        staged=self.state.world.stage(parsed.graph,self.turn_count)
+        merge_preview=self.state.world.merge_preview(staged)
+        activation=self.state.world.activate(staged)
+        habitat_payload=None
+        if is_habitat:
+            habitat_payload=self.state.world.payload(staged,activation)
+        bridge = bridge_meaning_graph(parsed.graph, text, memory_relations=() if is_habitat else self.state.relations, memory_claims=() if is_habitat else self.state.claims, memory_constraints=() if is_habitat else self.state.constraints, repair_actions=parsed.repair_actions, habitat=habitat_payload)
         decision = verify_reasoning_request(bridge.request)
         rendered = render_verified(decision, bridge.request)
-        if decision.decision == "ACCEPT" or decision.repair_result == "REPAIR_ACCEPTED": self._commit_current(bridge.request, parsed.graph)
+        memory_update={"committed":False,"before_state_hash":self.state.world.hash,"after_state_hash":self.state.world.hash,"added_semantic_ids":[],"merged_semantic_ids":[],"superseded_semantic_ids":[]}
+        if decision.decision == "ACCEPT" or decision.repair_result == "REPAIR_ACCEPTED":
+            if is_habitat: memory_update=self.state.world.commit(staged,decision.approved_memory_ids)
+            else:
+                memory_update=self.state.world.commit(staged,(item.semantic_id for item in staged.items))
+                self._commit_current(bridge.request, parsed.graph)
         state_hash = self.state.hash
         stable = {"input":text,"graph_hash":graph_hash,"request_hash":bridge.request.canonical_hash,"decision":decision.to_dict(),"response":rendered.text,"template":rendered.template_id,"state_hash":state_hash}
         receipt = TurnReceipt(
@@ -53,6 +67,10 @@ class VerticalSliceSession:
             decision.ambiguities, decision.repair_attempted, decision.repair_actions, decision.repair_result,
             decision.decision, rendered.text, rendered.template_id, replay_hash(stable),
             {"ts-chat-language":"0.8.0","ts-vertical-slice":__version__,"ts-reasoner-v0":"40.0.0"}, state_hash, graph_dict, bridge.request.to_dict(),
+            "ts-turn-receipt-v2",merge_preview,activation.to_dict() if activation else {},decision.signed_world_state,
+            tuple(staged.events),tuple(self.state.world.transitions[-len(staged.events):]) if staged.events and memory_update.get("committed") else (),
+            decision.causal_derivations,decision.planning,decision.decision_subtype,memory_update,
+            {"input_state_hash":memory_update.get("before_state_hash"),"output_state_hash":state_hash,"deterministic_replay_hash":replay_hash(stable)},
         )
         self.last_receipt=receipt
         if save: self.last_path=receipt.write(self.artifact_dir)
