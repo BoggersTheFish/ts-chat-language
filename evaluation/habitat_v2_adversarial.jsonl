@@ -1,0 +1,102 @@
+{"category": "contradictory_facts", "expect_conflict": true, "expected_decision": "REJECT", "id": "contradictory_facts_001", "turns": ["The door0 is open.", "The door0 is not open.", "Is the door0 open?"]}
+{"answer_contains": ["not open"], "category": "stale_state", "expected_decision": "ACCEPT", "id": "stale_state_001", "turns": ["The door0 is closed.", "Alice0 opens the door0.", "Bob0 closes the door0.", "Is the door0 open?"]}
+{"category": "repeated_events", "expected_decision": "ACCEPT", "id": "repeated_events_001", "turns": ["The door0 is closed.", "Alice0 opens the door0.", "Alice0 opens the door0.", "Is the door0 open?"]}
+{"category": "repeated_rules", "expected_decision": "ACCEPT", "id": "repeated_rules_001", "turns": ["If the door0 opens, the sensor0 activates.", "If the door0 opens, the sensor0 activates.", "The door0 opens.", "Is the sensor0 active?"]}
+{"category": "impossible_plans", "expected_decision": "REJECT", "id": "impossible_plans_001", "turns": ["Alice0 is in the hall0.", "The door0 is locked.", "How can Alice0 open the door0?"]}
+{"category": "missing_keys", "expected_decision": "REJECT", "id": "missing_keys_001", "turns": ["Alice0 is in the hall0.", "The door0 is locked.", "How can Alice0 open the door0?"]}
+{"category": "wrong_keys", "expected_decision": "REJECT", "id": "wrong_keys_001", "turns": ["Alice0 is in the hall0.", "The blue key 0 is inside the box0.", "The red key 0 unlocks the door0.", "The door0 is locked.", "How can Alice0 open the door0?"]}
+{"category": "ambiguous_ownership", "expected_decision": "REPAIR", "id": "ambiguous_ownership_001", "turns": ["Alice0 gave Sarah0 her key. Who owns the key?"]}
+{"category": "unsupported_locations", "expected_decision": "REPAIR", "id": "unsupported_locations_001", "turns": ["Alice0 is somewhere near the hall. How can Alice0 open the door0?"]}
+{"category": "causal_cycles", "expected_decision": "REJECT", "id": "causal_cycles_001", "turns": ["If the sensor0 activates, the alarm0 activates. If the alarm0 activates, the sensor0 activates. Is the alarm0 active?"]}
+{"category": "negated_preconditions", "expected_decision": "REJECT", "id": "negated_preconditions_001", "turns": ["The door0 is not locked. How can Alice0 open the door0?"]}
+{"category": "malformed_events", "expected_decision": "REPAIR", "id": "malformed_events_001", "turns": ["Alice0 opens gives door maybe."]}
+{"category": "irrelevant_clusters", "expected_decision": "ACCEPT", "forbidden_active_predicates": ["older_than"], "id": "irrelevant_clusters_001", "turns": ["Alice0 is older than Bob0.", "The alarm0 is active.", "Is the alarm0 active?"]}
+{"category": "rejected_contamination", "expected_decision": "REJECT", "id": "rejected_contamination_001", "turns": ["Alice0 gives the key0 to Sarah0.", "Who owns the key0?"]}
+{"category": "renderer_overstatement", "expected_decision": "REJECT", "id": "renderer_overstatement_001", "turns": ["Is the door0 open?"]}
+{"answer_contains": ["not open"], "category": "superseded_state_reuse", "expected_decision": "ACCEPT", "id": "superseded_state_reuse_001", "turns": ["The door0 is open.", "Bob0 closes the door0.", "Is the door0 open?"]}
+{"category": "planning_precondition_bypass", "expected_decision": "REJECT", "id": "planning_precondition_bypass_001", "turns": ["The red key 0 unlocks the door0.", "The door0 is locked.", "How can Alice0 open the door0?"]}
+{"category": "contradictory_facts", "expect_conflict": true, "expected_decision": "REJECT", "id": "contradictory_facts_002", "turns": ["The door1 is open.", "The door1 is not open.", "Is the door1 open?"]}
+{"answer_contains": ["not open"], "category": "stale_state", "expected_decision": "ACCEPT", "id": "stale_state_002", "turns": ["The door1 is closed.", "Alice1 opens the door1.", "Bob1 closes the door1.", "Is the door1 open?"]}
+{"category": "repeated_events", "expected_decision": "ACCEPT", "id": "repeated_events_002", "turns": ["The door1 is closed.", "Alice1 opens the door1.", "Alice1 opens the door1.", "Is the door1 open?"]}
+{"category": "repeated_rules", "expected_decision": "ACCEPT", "id": "repeated_rules_002", "turns": ["If the door1 opens, the sensor1 activates.", "If the door1 opens, the sensor1 activates.", "The door1 opens.", "Is the sensor1 active?"]}
+{"category": "impossible_plans", "expected_decision": "REJECT", "id": "impossible_plans_002", "turns": ["Alice1 is in the hall1.", "The door1 is locked.", "How can Alice1 open the door1?"]}
+{"category": "missing_keys", "expected_decision": "REJECT", "id": "missing_keys_002", "turns": ["Alice1 is in the hall1.", "The door1 is locked.", "How can Alice1 open the door1?"]}
+{"category": "wrong_keys", "expected_decision": "REJECT", "id": "wrong_keys_002", "turns": ["Alice1 is in the hall1.", "The blue key 1 is inside the box1.", "The red key 1 unlocks the door1.", "The door1 is locked.", "How can Alice1 open the door1?"]}
+{"category": "ambiguous_ownership", "expected_decision": "REPAIR", "id": "ambiguous_ownership_002", "turns": ["Alice1 gave Sarah1 her key. Who owns the key?"]}
+{"category": "unsupported_locations", "expected_decision": "REPAIR", "id": "unsupported_locations_002", "turns": ["Alice1 is somewhere near the hall. How can Alice1 open the door1?"]}
+{"category": "causal_cycles", "expected_decision": "REJECT", "id": "causal_cycles_002", "turns": ["If the sensor1 activates, the alarm1 activates. If the alarm1 activates, the sensor1 activates. Is the alarm1 active?"]}
+{"category": "negated_preconditions", "expected_decision": "REJECT", "id": "negated_preconditions_002", "turns": ["The door1 is not locked. How can Alice1 open the door1?"]}
+{"category": "malformed_events", "expected_decision": "REPAIR", "id": "malformed_events_002", "turns": ["Alice1 opens gives door maybe."]}
+{"category": "irrelevant_clusters", "expected_decision": "ACCEPT", "forbidden_active_predicates": ["older_than"], "id": "irrelevant_clusters_002", "turns": ["Alice1 is older than Bob1.", "The alarm1 is active.", "Is the alarm1 active?"]}
+{"category": "rejected_contamination", "expected_decision": "REJECT", "id": "rejected_contamination_002", "turns": ["Alice1 gives the key1 to Sarah1.", "Who owns the key1?"]}
+{"category": "renderer_overstatement", "expected_decision": "REJECT", "id": "renderer_overstatement_002", "turns": ["Is the door1 open?"]}
+{"answer_contains": ["not open"], "category": "superseded_state_reuse", "expected_decision": "ACCEPT", "id": "superseded_state_reuse_002", "turns": ["The door1 is open.", "Bob1 closes the door1.", "Is the door1 open?"]}
+{"category": "planning_precondition_bypass", "expected_decision": "REJECT", "id": "planning_precondition_bypass_002", "turns": ["The red key 1 unlocks the door1.", "The door1 is locked.", "How can Alice1 open the door1?"]}
+{"category": "contradictory_facts", "expect_conflict": true, "expected_decision": "REJECT", "id": "contradictory_facts_003", "turns": ["The door2 is open.", "The door2 is not open.", "Is the door2 open?"]}
+{"answer_contains": ["not open"], "category": "stale_state", "expected_decision": "ACCEPT", "id": "stale_state_003", "turns": ["The door2 is closed.", "Alice2 opens the door2.", "Bob2 closes the door2.", "Is the door2 open?"]}
+{"category": "repeated_events", "expected_decision": "ACCEPT", "id": "repeated_events_003", "turns": ["The door2 is closed.", "Alice2 opens the door2.", "Alice2 opens the door2.", "Is the door2 open?"]}
+{"category": "repeated_rules", "expected_decision": "ACCEPT", "id": "repeated_rules_003", "turns": ["If the door2 opens, the sensor2 activates.", "If the door2 opens, the sensor2 activates.", "The door2 opens.", "Is the sensor2 active?"]}
+{"category": "impossible_plans", "expected_decision": "REJECT", "id": "impossible_plans_003", "turns": ["Alice2 is in the hall2.", "The door2 is locked.", "How can Alice2 open the door2?"]}
+{"category": "missing_keys", "expected_decision": "REJECT", "id": "missing_keys_003", "turns": ["Alice2 is in the hall2.", "The door2 is locked.", "How can Alice2 open the door2?"]}
+{"category": "wrong_keys", "expected_decision": "REJECT", "id": "wrong_keys_003", "turns": ["Alice2 is in the hall2.", "The blue key 2 is inside the box2.", "The red key 2 unlocks the door2.", "The door2 is locked.", "How can Alice2 open the door2?"]}
+{"category": "ambiguous_ownership", "expected_decision": "REPAIR", "id": "ambiguous_ownership_003", "turns": ["Alice2 gave Sarah2 her key. Who owns the key?"]}
+{"category": "unsupported_locations", "expected_decision": "REPAIR", "id": "unsupported_locations_003", "turns": ["Alice2 is somewhere near the hall. How can Alice2 open the door2?"]}
+{"category": "causal_cycles", "expected_decision": "REJECT", "id": "causal_cycles_003", "turns": ["If the sensor2 activates, the alarm2 activates. If the alarm2 activates, the sensor2 activates. Is the alarm2 active?"]}
+{"category": "negated_preconditions", "expected_decision": "REJECT", "id": "negated_preconditions_003", "turns": ["The door2 is not locked. How can Alice2 open the door2?"]}
+{"category": "malformed_events", "expected_decision": "REPAIR", "id": "malformed_events_003", "turns": ["Alice2 opens gives door maybe."]}
+{"category": "irrelevant_clusters", "expected_decision": "ACCEPT", "forbidden_active_predicates": ["older_than"], "id": "irrelevant_clusters_003", "turns": ["Alice2 is older than Bob2.", "The alarm2 is active.", "Is the alarm2 active?"]}
+{"category": "rejected_contamination", "expected_decision": "REJECT", "id": "rejected_contamination_003", "turns": ["Alice2 gives the key2 to Sarah2.", "Who owns the key2?"]}
+{"category": "renderer_overstatement", "expected_decision": "REJECT", "id": "renderer_overstatement_003", "turns": ["Is the door2 open?"]}
+{"answer_contains": ["not open"], "category": "superseded_state_reuse", "expected_decision": "ACCEPT", "id": "superseded_state_reuse_003", "turns": ["The door2 is open.", "Bob2 closes the door2.", "Is the door2 open?"]}
+{"category": "planning_precondition_bypass", "expected_decision": "REJECT", "id": "planning_precondition_bypass_003", "turns": ["The red key 2 unlocks the door2.", "The door2 is locked.", "How can Alice2 open the door2?"]}
+{"category": "contradictory_facts", "expect_conflict": true, "expected_decision": "REJECT", "id": "contradictory_facts_004", "turns": ["The door3 is open.", "The door3 is not open.", "Is the door3 open?"]}
+{"answer_contains": ["not open"], "category": "stale_state", "expected_decision": "ACCEPT", "id": "stale_state_004", "turns": ["The door3 is closed.", "Alice3 opens the door3.", "Bob3 closes the door3.", "Is the door3 open?"]}
+{"category": "repeated_events", "expected_decision": "ACCEPT", "id": "repeated_events_004", "turns": ["The door3 is closed.", "Alice3 opens the door3.", "Alice3 opens the door3.", "Is the door3 open?"]}
+{"category": "repeated_rules", "expected_decision": "ACCEPT", "id": "repeated_rules_004", "turns": ["If the door3 opens, the sensor3 activates.", "If the door3 opens, the sensor3 activates.", "The door3 opens.", "Is the sensor3 active?"]}
+{"category": "impossible_plans", "expected_decision": "REJECT", "id": "impossible_plans_004", "turns": ["Alice3 is in the hall3.", "The door3 is locked.", "How can Alice3 open the door3?"]}
+{"category": "missing_keys", "expected_decision": "REJECT", "id": "missing_keys_004", "turns": ["Alice3 is in the hall3.", "The door3 is locked.", "How can Alice3 open the door3?"]}
+{"category": "wrong_keys", "expected_decision": "REJECT", "id": "wrong_keys_004", "turns": ["Alice3 is in the hall3.", "The blue key 3 is inside the box3.", "The red key 3 unlocks the door3.", "The door3 is locked.", "How can Alice3 open the door3?"]}
+{"category": "ambiguous_ownership", "expected_decision": "REPAIR", "id": "ambiguous_ownership_004", "turns": ["Alice3 gave Sarah3 her key. Who owns the key?"]}
+{"category": "unsupported_locations", "expected_decision": "REPAIR", "id": "unsupported_locations_004", "turns": ["Alice3 is somewhere near the hall. How can Alice3 open the door3?"]}
+{"category": "causal_cycles", "expected_decision": "REJECT", "id": "causal_cycles_004", "turns": ["If the sensor3 activates, the alarm3 activates. If the alarm3 activates, the sensor3 activates. Is the alarm3 active?"]}
+{"category": "negated_preconditions", "expected_decision": "REJECT", "id": "negated_preconditions_004", "turns": ["The door3 is not locked. How can Alice3 open the door3?"]}
+{"category": "malformed_events", "expected_decision": "REPAIR", "id": "malformed_events_004", "turns": ["Alice3 opens gives door maybe."]}
+{"category": "irrelevant_clusters", "expected_decision": "ACCEPT", "forbidden_active_predicates": ["older_than"], "id": "irrelevant_clusters_004", "turns": ["Alice3 is older than Bob3.", "The alarm3 is active.", "Is the alarm3 active?"]}
+{"category": "rejected_contamination", "expected_decision": "REJECT", "id": "rejected_contamination_004", "turns": ["Alice3 gives the key3 to Sarah3.", "Who owns the key3?"]}
+{"category": "renderer_overstatement", "expected_decision": "REJECT", "id": "renderer_overstatement_004", "turns": ["Is the door3 open?"]}
+{"answer_contains": ["not open"], "category": "superseded_state_reuse", "expected_decision": "ACCEPT", "id": "superseded_state_reuse_004", "turns": ["The door3 is open.", "Bob3 closes the door3.", "Is the door3 open?"]}
+{"category": "planning_precondition_bypass", "expected_decision": "REJECT", "id": "planning_precondition_bypass_004", "turns": ["The red key 3 unlocks the door3.", "The door3 is locked.", "How can Alice3 open the door3?"]}
+{"category": "contradictory_facts", "expect_conflict": true, "expected_decision": "REJECT", "id": "contradictory_facts_005", "turns": ["The door4 is open.", "The door4 is not open.", "Is the door4 open?"]}
+{"answer_contains": ["not open"], "category": "stale_state", "expected_decision": "ACCEPT", "id": "stale_state_005", "turns": ["The door4 is closed.", "Alice4 opens the door4.", "Bob4 closes the door4.", "Is the door4 open?"]}
+{"category": "repeated_events", "expected_decision": "ACCEPT", "id": "repeated_events_005", "turns": ["The door4 is closed.", "Alice4 opens the door4.", "Alice4 opens the door4.", "Is the door4 open?"]}
+{"category": "repeated_rules", "expected_decision": "ACCEPT", "id": "repeated_rules_005", "turns": ["If the door4 opens, the sensor4 activates.", "If the door4 opens, the sensor4 activates.", "The door4 opens.", "Is the sensor4 active?"]}
+{"category": "impossible_plans", "expected_decision": "REJECT", "id": "impossible_plans_005", "turns": ["Alice4 is in the hall4.", "The door4 is locked.", "How can Alice4 open the door4?"]}
+{"category": "missing_keys", "expected_decision": "REJECT", "id": "missing_keys_005", "turns": ["Alice4 is in the hall4.", "The door4 is locked.", "How can Alice4 open the door4?"]}
+{"category": "wrong_keys", "expected_decision": "REJECT", "id": "wrong_keys_005", "turns": ["Alice4 is in the hall4.", "The blue key 4 is inside the box4.", "The red key 4 unlocks the door4.", "The door4 is locked.", "How can Alice4 open the door4?"]}
+{"category": "ambiguous_ownership", "expected_decision": "REPAIR", "id": "ambiguous_ownership_005", "turns": ["Alice4 gave Sarah4 her key. Who owns the key?"]}
+{"category": "unsupported_locations", "expected_decision": "REPAIR", "id": "unsupported_locations_005", "turns": ["Alice4 is somewhere near the hall. How can Alice4 open the door4?"]}
+{"category": "causal_cycles", "expected_decision": "REJECT", "id": "causal_cycles_005", "turns": ["If the sensor4 activates, the alarm4 activates. If the alarm4 activates, the sensor4 activates. Is the alarm4 active?"]}
+{"category": "negated_preconditions", "expected_decision": "REJECT", "id": "negated_preconditions_005", "turns": ["The door4 is not locked. How can Alice4 open the door4?"]}
+{"category": "malformed_events", "expected_decision": "REPAIR", "id": "malformed_events_005", "turns": ["Alice4 opens gives door maybe."]}
+{"category": "irrelevant_clusters", "expected_decision": "ACCEPT", "forbidden_active_predicates": ["older_than"], "id": "irrelevant_clusters_005", "turns": ["Alice4 is older than Bob4.", "The alarm4 is active.", "Is the alarm4 active?"]}
+{"category": "rejected_contamination", "expected_decision": "REJECT", "id": "rejected_contamination_005", "turns": ["Alice4 gives the key4 to Sarah4.", "Who owns the key4?"]}
+{"category": "renderer_overstatement", "expected_decision": "REJECT", "id": "renderer_overstatement_005", "turns": ["Is the door4 open?"]}
+{"answer_contains": ["not open"], "category": "superseded_state_reuse", "expected_decision": "ACCEPT", "id": "superseded_state_reuse_005", "turns": ["The door4 is open.", "Bob4 closes the door4.", "Is the door4 open?"]}
+{"category": "planning_precondition_bypass", "expected_decision": "REJECT", "id": "planning_precondition_bypass_005", "turns": ["The red key 4 unlocks the door4.", "The door4 is locked.", "How can Alice4 open the door4?"]}
+{"category": "contradictory_facts", "expect_conflict": true, "expected_decision": "REJECT", "id": "contradictory_facts_006", "turns": ["The door5 is open.", "The door5 is not open.", "Is the door5 open?"]}
+{"answer_contains": ["not open"], "category": "stale_state", "expected_decision": "ACCEPT", "id": "stale_state_006", "turns": ["The door5 is closed.", "Alice5 opens the door5.", "Bob5 closes the door5.", "Is the door5 open?"]}
+{"category": "repeated_events", "expected_decision": "ACCEPT", "id": "repeated_events_006", "turns": ["The door5 is closed.", "Alice5 opens the door5.", "Alice5 opens the door5.", "Is the door5 open?"]}
+{"category": "repeated_rules", "expected_decision": "ACCEPT", "id": "repeated_rules_006", "turns": ["If the door5 opens, the sensor5 activates.", "If the door5 opens, the sensor5 activates.", "The door5 opens.", "Is the sensor5 active?"]}
+{"category": "impossible_plans", "expected_decision": "REJECT", "id": "impossible_plans_006", "turns": ["Alice5 is in the hall5.", "The door5 is locked.", "How can Alice5 open the door5?"]}
+{"category": "missing_keys", "expected_decision": "REJECT", "id": "missing_keys_006", "turns": ["Alice5 is in the hall5.", "The door5 is locked.", "How can Alice5 open the door5?"]}
+{"category": "wrong_keys", "expected_decision": "REJECT", "id": "wrong_keys_006", "turns": ["Alice5 is in the hall5.", "The blue key 5 is inside the box5.", "The red key 5 unlocks the door5.", "The door5 is locked.", "How can Alice5 open the door5?"]}
+{"category": "ambiguous_ownership", "expected_decision": "REPAIR", "id": "ambiguous_ownership_006", "turns": ["Alice5 gave Sarah5 her key. Who owns the key?"]}
+{"category": "unsupported_locations", "expected_decision": "REPAIR", "id": "unsupported_locations_006", "turns": ["Alice5 is somewhere near the hall. How can Alice5 open the door5?"]}
+{"category": "causal_cycles", "expected_decision": "REJECT", "id": "causal_cycles_006", "turns": ["If the sensor5 activates, the alarm5 activates. If the alarm5 activates, the sensor5 activates. Is the alarm5 active?"]}
+{"category": "negated_preconditions", "expected_decision": "REJECT", "id": "negated_preconditions_006", "turns": ["The door5 is not locked. How can Alice5 open the door5?"]}
+{"category": "malformed_events", "expected_decision": "REPAIR", "id": "malformed_events_006", "turns": ["Alice5 opens gives door maybe."]}
+{"category": "irrelevant_clusters", "expected_decision": "ACCEPT", "forbidden_active_predicates": ["older_than"], "id": "irrelevant_clusters_006", "turns": ["Alice5 is older than Bob5.", "The alarm5 is active.", "Is the alarm5 active?"]}
+{"category": "rejected_contamination", "expected_decision": "REJECT", "id": "rejected_contamination_006", "turns": ["Alice5 gives the key5 to Sarah5.", "Who owns the key5?"]}
+{"category": "renderer_overstatement", "expected_decision": "REJECT", "id": "renderer_overstatement_006", "turns": ["Is the door5 open?"]}
+{"answer_contains": ["not open"], "category": "superseded_state_reuse", "expected_decision": "ACCEPT", "id": "superseded_state_reuse_006", "turns": ["The door5 is open.", "Bob5 closes the door5.", "Is the door5 open?"]}
+{"category": "planning_precondition_bypass", "expected_decision": "REJECT", "id": "planning_precondition_bypass_006", "turns": ["The red key 5 unlocks the door5.", "The door5 is locked.", "How can Alice5 open the door5?"]}
