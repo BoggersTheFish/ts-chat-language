@@ -1,0 +1,996 @@
+{
+  "accept_count": 30,
+  "all_hard_gates_passed": true,
+  "average_processing_time_ms": 0.6312,
+  "category_distribution": {
+    "ambiguous_ownership": {
+      "REPAIR": 6
+    },
+    "causal_cycles": {
+      "REJECT": 6
+    },
+    "contradictory_facts": {
+      "REJECT": 6
+    },
+    "impossible_plans": {
+      "REJECT": 6
+    },
+    "irrelevant_clusters": {
+      "ACCEPT": 6
+    },
+    "malformed_events": {
+      "REPAIR": 6
+    },
+    "missing_keys": {
+      "REJECT": 6
+    },
+    "negated_preconditions": {
+      "REJECT": 6
+    },
+    "planning_precondition_bypass": {
+      "REJECT": 6
+    },
+    "rejected_contamination": {
+      "REJECT": 6
+    },
+    "renderer_overstatement": {
+      "REJECT": 6
+    },
+    "repeated_events": {
+      "ACCEPT": 6
+    },
+    "repeated_rules": {
+      "ACCEPT": 6
+    },
+    "stale_state": {
+      "ACCEPT": 6
+    },
+    "superseded_state_reuse": {
+      "ACCEPT": 6
+    },
+    "unsupported_locations": {
+      "REJECT": 6
+    },
+    "wrong_keys": {
+      "REJECT": 6
+    }
+  },
+  "conflict_resolution_errors": 0,
+  "decision_match_rate": 0.9411764705882353,
+  "deterministic_replay_failures": 0,
+  "duplicate_semantic_items": 0,
+  "execution_errors": 0,
+  "irrelevant_cluster_leaks": 0,
+  "maximum_processing_time_ms": 1.3591,
+  "memory_contamination_failures": 0,
+  "planning_replay_failures": 0,
+  "receipt_generation_rate": 1.0,
+  "reject_count": 60,
+  "renderer_support_violations": 0,
+  "repair_count": 12,
+  "results": [
+    {
+      "category": "contradictory_facts",
+      "expected": "REJECT",
+      "id": "contradictory_facts_001",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: door0|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "stale_state",
+      "expected": "ACCEPT",
+      "id": "stale_state_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door0 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_events",
+      "expected": "ACCEPT",
+      "id": "repeated_events_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door0 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_rules",
+      "expected": "ACCEPT",
+      "id": "repeated_rules_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The sensor0 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "impossible_plans",
+      "expected": "REJECT",
+      "id": "impossible_plans_001",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "missing_keys",
+      "expected": "REJECT",
+      "id": "missing_keys_001",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "wrong_keys",
+      "expected": "REJECT",
+      "id": "wrong_keys_001",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "ambiguous_ownership",
+      "expected": "REPAIR",
+      "id": "ambiguous_ownership_001",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Alice0 or Sarah0 own the key?",
+      "subtype": ""
+    },
+    {
+      "category": "unsupported_locations",
+      "expected": "REPAIR",
+      "id": "unsupported_locations_001",
+      "observed": "REJECT",
+      "passed": false,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "causal_cycles",
+      "expected": "REJECT",
+      "id": "causal_cycles_001",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that alarm0 active.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "negated_preconditions",
+      "expected": "REJECT",
+      "id": "negated_preconditions_001",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "malformed_events",
+      "expected": "REPAIR",
+      "id": "malformed_events_001",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Could you state one event at a time with one actor, action, and target?",
+      "subtype": ""
+    },
+    {
+      "category": "irrelevant_clusters",
+      "expected": "ACCEPT",
+      "id": "irrelevant_clusters_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm0 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "rejected_contamination",
+      "expected": "REJECT",
+      "id": "rejected_contamination_001",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that key0.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "renderer_overstatement",
+      "expected": "REJECT",
+      "id": "renderer_overstatement_001",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that door0 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "superseded_state_reuse",
+      "expected": "ACCEPT",
+      "id": "superseded_state_reuse_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door0 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "planning_precondition_bypass",
+      "expected": "REJECT",
+      "id": "planning_precondition_bypass_001",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "contradictory_facts",
+      "expected": "REJECT",
+      "id": "contradictory_facts_002",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: door1|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "stale_state",
+      "expected": "ACCEPT",
+      "id": "stale_state_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door1 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_events",
+      "expected": "ACCEPT",
+      "id": "repeated_events_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door1 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_rules",
+      "expected": "ACCEPT",
+      "id": "repeated_rules_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The sensor1 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "impossible_plans",
+      "expected": "REJECT",
+      "id": "impossible_plans_002",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "missing_keys",
+      "expected": "REJECT",
+      "id": "missing_keys_002",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "wrong_keys",
+      "expected": "REJECT",
+      "id": "wrong_keys_002",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "ambiguous_ownership",
+      "expected": "REPAIR",
+      "id": "ambiguous_ownership_002",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Alice1 or Sarah1 own the key?",
+      "subtype": ""
+    },
+    {
+      "category": "unsupported_locations",
+      "expected": "REPAIR",
+      "id": "unsupported_locations_002",
+      "observed": "REJECT",
+      "passed": false,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "causal_cycles",
+      "expected": "REJECT",
+      "id": "causal_cycles_002",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that alarm1 active.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "negated_preconditions",
+      "expected": "REJECT",
+      "id": "negated_preconditions_002",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "malformed_events",
+      "expected": "REPAIR",
+      "id": "malformed_events_002",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Could you state one event at a time with one actor, action, and target?",
+      "subtype": ""
+    },
+    {
+      "category": "irrelevant_clusters",
+      "expected": "ACCEPT",
+      "id": "irrelevant_clusters_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm1 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "rejected_contamination",
+      "expected": "REJECT",
+      "id": "rejected_contamination_002",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that key1.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "renderer_overstatement",
+      "expected": "REJECT",
+      "id": "renderer_overstatement_002",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that door1 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "superseded_state_reuse",
+      "expected": "ACCEPT",
+      "id": "superseded_state_reuse_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door1 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "planning_precondition_bypass",
+      "expected": "REJECT",
+      "id": "planning_precondition_bypass_002",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "contradictory_facts",
+      "expected": "REJECT",
+      "id": "contradictory_facts_003",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: door2|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "stale_state",
+      "expected": "ACCEPT",
+      "id": "stale_state_003",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door2 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_events",
+      "expected": "ACCEPT",
+      "id": "repeated_events_003",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door2 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_rules",
+      "expected": "ACCEPT",
+      "id": "repeated_rules_003",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The sensor2 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "impossible_plans",
+      "expected": "REJECT",
+      "id": "impossible_plans_003",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "missing_keys",
+      "expected": "REJECT",
+      "id": "missing_keys_003",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "wrong_keys",
+      "expected": "REJECT",
+      "id": "wrong_keys_003",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "ambiguous_ownership",
+      "expected": "REPAIR",
+      "id": "ambiguous_ownership_003",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Alice2 or Sarah2 own the key?",
+      "subtype": ""
+    },
+    {
+      "category": "unsupported_locations",
+      "expected": "REPAIR",
+      "id": "unsupported_locations_003",
+      "observed": "REJECT",
+      "passed": false,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "causal_cycles",
+      "expected": "REJECT",
+      "id": "causal_cycles_003",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that alarm2 active.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "negated_preconditions",
+      "expected": "REJECT",
+      "id": "negated_preconditions_003",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "malformed_events",
+      "expected": "REPAIR",
+      "id": "malformed_events_003",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Could you state one event at a time with one actor, action, and target?",
+      "subtype": ""
+    },
+    {
+      "category": "irrelevant_clusters",
+      "expected": "ACCEPT",
+      "id": "irrelevant_clusters_003",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm2 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "rejected_contamination",
+      "expected": "REJECT",
+      "id": "rejected_contamination_003",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that key2.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "renderer_overstatement",
+      "expected": "REJECT",
+      "id": "renderer_overstatement_003",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that door2 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "superseded_state_reuse",
+      "expected": "ACCEPT",
+      "id": "superseded_state_reuse_003",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door2 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "planning_precondition_bypass",
+      "expected": "REJECT",
+      "id": "planning_precondition_bypass_003",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "contradictory_facts",
+      "expected": "REJECT",
+      "id": "contradictory_facts_004",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: door3|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "stale_state",
+      "expected": "ACCEPT",
+      "id": "stale_state_004",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door3 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_events",
+      "expected": "ACCEPT",
+      "id": "repeated_events_004",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door3 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_rules",
+      "expected": "ACCEPT",
+      "id": "repeated_rules_004",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The sensor3 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "impossible_plans",
+      "expected": "REJECT",
+      "id": "impossible_plans_004",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "missing_keys",
+      "expected": "REJECT",
+      "id": "missing_keys_004",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "wrong_keys",
+      "expected": "REJECT",
+      "id": "wrong_keys_004",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "ambiguous_ownership",
+      "expected": "REPAIR",
+      "id": "ambiguous_ownership_004",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Alice3 or Sarah3 own the key?",
+      "subtype": ""
+    },
+    {
+      "category": "unsupported_locations",
+      "expected": "REPAIR",
+      "id": "unsupported_locations_004",
+      "observed": "REJECT",
+      "passed": false,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "causal_cycles",
+      "expected": "REJECT",
+      "id": "causal_cycles_004",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that alarm3 active.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "negated_preconditions",
+      "expected": "REJECT",
+      "id": "negated_preconditions_004",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "malformed_events",
+      "expected": "REPAIR",
+      "id": "malformed_events_004",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Could you state one event at a time with one actor, action, and target?",
+      "subtype": ""
+    },
+    {
+      "category": "irrelevant_clusters",
+      "expected": "ACCEPT",
+      "id": "irrelevant_clusters_004",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm3 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "rejected_contamination",
+      "expected": "REJECT",
+      "id": "rejected_contamination_004",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that key3.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "renderer_overstatement",
+      "expected": "REJECT",
+      "id": "renderer_overstatement_004",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that door3 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "superseded_state_reuse",
+      "expected": "ACCEPT",
+      "id": "superseded_state_reuse_004",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door3 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "planning_precondition_bypass",
+      "expected": "REJECT",
+      "id": "planning_precondition_bypass_004",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "contradictory_facts",
+      "expected": "REJECT",
+      "id": "contradictory_facts_005",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: door4|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "stale_state",
+      "expected": "ACCEPT",
+      "id": "stale_state_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door4 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_events",
+      "expected": "ACCEPT",
+      "id": "repeated_events_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door4 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_rules",
+      "expected": "ACCEPT",
+      "id": "repeated_rules_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The sensor4 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "impossible_plans",
+      "expected": "REJECT",
+      "id": "impossible_plans_005",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "missing_keys",
+      "expected": "REJECT",
+      "id": "missing_keys_005",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "wrong_keys",
+      "expected": "REJECT",
+      "id": "wrong_keys_005",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "ambiguous_ownership",
+      "expected": "REPAIR",
+      "id": "ambiguous_ownership_005",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Alice4 or Sarah4 own the key?",
+      "subtype": ""
+    },
+    {
+      "category": "unsupported_locations",
+      "expected": "REPAIR",
+      "id": "unsupported_locations_005",
+      "observed": "REJECT",
+      "passed": false,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "causal_cycles",
+      "expected": "REJECT",
+      "id": "causal_cycles_005",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that alarm4 active.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "negated_preconditions",
+      "expected": "REJECT",
+      "id": "negated_preconditions_005",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "malformed_events",
+      "expected": "REPAIR",
+      "id": "malformed_events_005",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Could you state one event at a time with one actor, action, and target?",
+      "subtype": ""
+    },
+    {
+      "category": "irrelevant_clusters",
+      "expected": "ACCEPT",
+      "id": "irrelevant_clusters_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm4 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "rejected_contamination",
+      "expected": "REJECT",
+      "id": "rejected_contamination_005",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that key4.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "renderer_overstatement",
+      "expected": "REJECT",
+      "id": "renderer_overstatement_005",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that door4 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "superseded_state_reuse",
+      "expected": "ACCEPT",
+      "id": "superseded_state_reuse_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door4 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "planning_precondition_bypass",
+      "expected": "REJECT",
+      "id": "planning_precondition_bypass_005",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "contradictory_facts",
+      "expected": "REJECT",
+      "id": "contradictory_facts_006",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: door5|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "stale_state",
+      "expected": "ACCEPT",
+      "id": "stale_state_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door5 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_events",
+      "expected": "ACCEPT",
+      "id": "repeated_events_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door5 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "repeated_rules",
+      "expected": "ACCEPT",
+      "id": "repeated_rules_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The sensor5 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "impossible_plans",
+      "expected": "REJECT",
+      "id": "impossible_plans_006",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "missing_keys",
+      "expected": "REJECT",
+      "id": "missing_keys_006",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "wrong_keys",
+      "expected": "REJECT",
+      "id": "wrong_keys_006",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "ambiguous_ownership",
+      "expected": "REPAIR",
+      "id": "ambiguous_ownership_006",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Did Alice5 or Sarah5 own the key?",
+      "subtype": ""
+    },
+    {
+      "category": "unsupported_locations",
+      "expected": "REPAIR",
+      "id": "unsupported_locations_006",
+      "observed": "REJECT",
+      "passed": false,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "causal_cycles",
+      "expected": "REJECT",
+      "id": "causal_cycles_006",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that alarm5 active.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "negated_preconditions",
+      "expected": "REJECT",
+      "id": "negated_preconditions_006",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "malformed_events",
+      "expected": "REPAIR",
+      "id": "malformed_events_006",
+      "observed": "REPAIR",
+      "passed": true,
+      "response": "I found more than one possible interpretation. Could you state one event at a time with one actor, action, and target?",
+      "subtype": ""
+    },
+    {
+      "category": "irrelevant_clusters",
+      "expected": "ACCEPT",
+      "id": "irrelevant_clusters_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm5 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "rejected_contamination",
+      "expected": "REJECT",
+      "id": "rejected_contamination_006",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that key5.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "renderer_overstatement",
+      "expected": "REJECT",
+      "id": "renderer_overstatement_006",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that door5 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "superseded_state_reuse",
+      "expected": "ACCEPT",
+      "id": "superseded_state_reuse_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door5 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "planning_precondition_bypass",
+      "expected": "REJECT",
+      "id": "planning_precondition_bypass_006",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    }
+  ],
+  "silent_overwrites": 0,
+  "suite": "habitat_v2_adversarial",
+  "total_cases": 102,
+  "unsupported_accepts": 0,
+  "unsupported_plan_steps": 0
+}

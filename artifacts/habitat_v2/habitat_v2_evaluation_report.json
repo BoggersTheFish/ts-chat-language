@@ -1,0 +1,1127 @@
+{
+  "accept_count": 100,
+  "all_hard_gates_passed": true,
+  "average_processing_time_ms": 0.8256,
+  "category_distribution": {
+    "causal_chain": {
+      "ACCEPT": 20
+    },
+    "cluster_relevance": {
+      "ACCEPT": 20
+    },
+    "event_transition": {
+      "ACCEPT": 20
+    },
+    "semantic_merge": {
+      "ACCEPT": 20
+    },
+    "signed_state": {
+      "ACCEPT": 10,
+      "REJECT": 10
+    },
+    "verified_planning": {
+      "ACCEPT": 10,
+      "REJECT": 10
+    }
+  },
+  "conflict_resolution_errors": 0,
+  "decision_match_rate": 1.0,
+  "deterministic_replay_failures": 0,
+  "duplicate_semantic_items": 0,
+  "execution_errors": 0,
+  "irrelevant_cluster_leaks": 0,
+  "maximum_processing_time_ms": 1.8738,
+  "memory_contamination_failures": 0,
+  "planning_replay_failures": 0,
+  "receipt_generation_rate": 1.0,
+  "reject_count": 20,
+  "renderer_support_violations": 0,
+  "repair_count": 0,
+  "results": [
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device0 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device1 is locked.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_003",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device2 is armed.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_004",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device3 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device4 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device5 is locked.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_007",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device6 is armed.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_008",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device7 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_009",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device8 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_010",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device9 is locked.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_011",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device10 is armed.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_012",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device11 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_013",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device12 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_014",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device13 is locked.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_015",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device14 is armed.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_016",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device15 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_017",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device16 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_018",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device17 is locked.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_019",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device18 is armed.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "semantic_merge",
+      "expected": "ACCEPT",
+      "id": "semantic_merge_020",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The device19 is active.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door0 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door1 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_003",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door2 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_004",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door3 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door4 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door5 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_007",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door6 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_008",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door7 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_009",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door8 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_010",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door9 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_011",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door10 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_012",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door11 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_013",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door12 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_014",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door13 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_015",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door14 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_016",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door15 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_017",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door16 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_018",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door17 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_019",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door18 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "cluster_relevance",
+      "expected": "ACCEPT",
+      "id": "cluster_relevance_020",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door19 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "ACCEPT",
+      "id": "signed_state_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The gate0 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "ACCEPT",
+      "id": "signed_state_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The gate0 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "REJECT",
+      "id": "signed_state_003",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: gate0|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "REJECT",
+      "id": "signed_state_004",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that unknown gate0 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "ACCEPT",
+      "id": "signed_state_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The gate1 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "ACCEPT",
+      "id": "signed_state_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The gate1 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "REJECT",
+      "id": "signed_state_007",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: gate1|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "REJECT",
+      "id": "signed_state_008",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that unknown gate1 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "ACCEPT",
+      "id": "signed_state_009",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The gate2 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "ACCEPT",
+      "id": "signed_state_010",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The gate2 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "REJECT",
+      "id": "signed_state_011",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: gate2|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "REJECT",
+      "id": "signed_state_012",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that unknown gate2 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "ACCEPT",
+      "id": "signed_state_013",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The gate3 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "ACCEPT",
+      "id": "signed_state_014",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The gate3 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "REJECT",
+      "id": "signed_state_015",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: gate3|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "REJECT",
+      "id": "signed_state_016",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that unknown gate3 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "ACCEPT",
+      "id": "signed_state_017",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The gate4 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "ACCEPT",
+      "id": "signed_state_018",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The gate4 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "REJECT",
+      "id": "signed_state_019",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot provide a supported answer because the available statements conflict: gate4|open|",
+      "subtype": "REJECT_CONFLICTED"
+    },
+    {
+      "category": "signed_state",
+      "expected": "REJECT",
+      "id": "signed_state_020",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "There is not enough supported information to conclude that unknown gate4 open.",
+      "subtype": "REJECT_UNSUPPORTED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door0 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door1 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_003",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door2 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_004",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door3 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door4 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door5 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_007",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door6 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_008",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door7 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_009",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door8 is open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_010",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The door9 is not open.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_011",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "Sarah0 owns the red key 0.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_012",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "Sarah1 owns the red key 1.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_013",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "Sarah2 owns the red key 2.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_014",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "Sarah3 owns the red key 3.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_015",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "Sarah4 owns the red key 4.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_016",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The key0 is inside the box0, and the box0 is in the kitchen0.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_017",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The key1 is inside the box1, and the box1 is in the kitchen1.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_018",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The key2 is inside the box2, and the box2 is in the kitchen2.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_019",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The key3 is inside the box3, and the box3 is in the kitchen3.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "event_transition",
+      "expected": "ACCEPT",
+      "id": "event_transition_020",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The key4 is inside the box4, and the box4 is in the kitchen4.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm0 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm1 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_003",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm2 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_004",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm3 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm4 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm5 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_007",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm6 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_008",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm7 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_009",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm8 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_010",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm9 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_011",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm10 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_012",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm11 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_013",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm12 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_014",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm13 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_015",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm14 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_016",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm15 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_017",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm16 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_018",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm17 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_019",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm18 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "causal_chain",
+      "expected": "ACCEPT",
+      "id": "causal_chain_020",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "The alarm19 is active. This is derived through the verified causal chain.",
+      "subtype": "CONCLUSION_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "ACCEPT",
+      "id": "verified_planning_001",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "1. Move alice0 from hall0 to kitchen0.\n2. Take red_key_0 from its container.\n3. Move alice0 from kitchen0 to north_door_0.\n4. Unlock north_door_0 with red_key_0.\n5. Open north_door_0.",
+      "subtype": "PLAN_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "ACCEPT",
+      "id": "verified_planning_002",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "1. Move alice1 from hall1 to kitchen1.\n2. Take red_key_1 from its container.\n3. Move alice1 from kitchen1 to north_door_1.\n4. Unlock north_door_1 with red_key_1.\n5. Open north_door_1.",
+      "subtype": "PLAN_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "ACCEPT",
+      "id": "verified_planning_003",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "1. Move alice2 from hall2 to kitchen2.\n2. Take red_key_2 from its container.\n3. Move alice2 from kitchen2 to north_door_2.\n4. Unlock north_door_2 with red_key_2.\n5. Open north_door_2.",
+      "subtype": "PLAN_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "ACCEPT",
+      "id": "verified_planning_004",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "1. Move alice3 from hall3 to kitchen3.\n2. Take red_key_3 from its container.\n3. Move alice3 from kitchen3 to north_door_3.\n4. Unlock north_door_3 with red_key_3.\n5. Open north_door_3.",
+      "subtype": "PLAN_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "ACCEPT",
+      "id": "verified_planning_005",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "1. Move alice4 from hall4 to kitchen4.\n2. Take red_key_4 from its container.\n3. Move alice4 from kitchen4 to north_door_4.\n4. Unlock north_door_4 with red_key_4.\n5. Open north_door_4.",
+      "subtype": "PLAN_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "ACCEPT",
+      "id": "verified_planning_006",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "1. Move alice5 from hall5 to kitchen5.\n2. Take red_key_5 from its container.\n3. Move alice5 from kitchen5 to north_door_5.\n4. Unlock north_door_5 with red_key_5.\n5. Open north_door_5.",
+      "subtype": "PLAN_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "ACCEPT",
+      "id": "verified_planning_007",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "1. Move alice6 from hall6 to kitchen6.\n2. Take red_key_6 from its container.\n3. Move alice6 from kitchen6 to north_door_6.\n4. Unlock north_door_6 with red_key_6.\n5. Open north_door_6.",
+      "subtype": "PLAN_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "ACCEPT",
+      "id": "verified_planning_008",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "1. Move alice7 from hall7 to kitchen7.\n2. Take red_key_7 from its container.\n3. Move alice7 from kitchen7 to north_door_7.\n4. Unlock north_door_7 with red_key_7.\n5. Open north_door_7.",
+      "subtype": "PLAN_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "ACCEPT",
+      "id": "verified_planning_009",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "1. Move alice8 from hall8 to kitchen8.\n2. Take red_key_8 from its container.\n3. Move alice8 from kitchen8 to north_door_8.\n4. Unlock north_door_8 with red_key_8.\n5. Open north_door_8.",
+      "subtype": "PLAN_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "ACCEPT",
+      "id": "verified_planning_010",
+      "observed": "ACCEPT",
+      "passed": true,
+      "response": "1. Move alice9 from hall9 to kitchen9.\n2. Take red_key_9 from its container.\n3. Move alice9 from kitchen9 to north_door_9.\n4. Unlock north_door_9 with red_key_9.\n5. Open north_door_9.",
+      "subtype": "PLAN_VERIFIED"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "REJECT",
+      "id": "verified_planning_011",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "REJECT",
+      "id": "verified_planning_012",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "REJECT",
+      "id": "verified_planning_013",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "REJECT",
+      "id": "verified_planning_014",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "REJECT",
+      "id": "verified_planning_015",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "REJECT",
+      "id": "verified_planning_016",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "REJECT",
+      "id": "verified_planning_017",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "REJECT",
+      "id": "verified_planning_018",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "REJECT",
+      "id": "verified_planning_019",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    },
+    {
+      "category": "verified_planning",
+      "expected": "REJECT",
+      "id": "verified_planning_020",
+      "observed": "REJECT",
+      "passed": true,
+      "response": "I cannot construct a supported plan within the bounded habitat because required preconditions are missing.",
+      "subtype": "REJECT_UNREACHABLE"
+    }
+  ],
+  "silent_overwrites": 0,
+  "suite": "habitat_v2_evaluation",
+  "total_cases": 120,
+  "unsupported_accepts": 0,
+  "unsupported_plan_steps": 0
+}

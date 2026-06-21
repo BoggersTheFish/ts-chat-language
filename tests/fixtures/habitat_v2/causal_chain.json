@@ -1,0 +1,588 @@
+{
+  "ambiguities": [],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "causal_derivations": [
+    {
+      "antecedent_ids": [
+        "door|open|"
+      ],
+      "depth": 1,
+      "derived_id": "derived_78e486b3b952086b",
+      "proposition_id": "sensor|active|",
+      "rule_id": "sem_rule_9612ac705b91cd83",
+      "support_ids": [
+        "obs_0001_4b0a204a191b",
+        "sem_event_effect_bffca385f3915c81",
+        "sem_rule_9612ac705b91cd83"
+      ]
+    },
+    {
+      "antecedent_ids": [
+        "sensor|active|",
+        "system|armed|"
+      ],
+      "depth": 2,
+      "derived_id": "derived_18232c21c553726c",
+      "proposition_id": "alarm|active|",
+      "rule_id": "sem_rule_627bf95bbd305ada",
+      "support_ids": [
+        "derived_78e486b3b952086b",
+        "obs_0001_935be225e787",
+        "sem_fact_431c33580d94e5e5",
+        "sem_rule_627bf95bbd305ada"
+      ]
+    }
+  ],
+  "cluster_activation": {
+    "activated_semantic_ids": [
+      "sem_event_effect_bffca385f3915c81",
+      "sem_fact_431c33580d94e5e5",
+      "sem_rule_627bf95bbd305ada",
+      "sem_rule_9612ac705b91cd83"
+    ],
+    "activation_edges": [
+      {
+        "depth": 1,
+        "from": "sem_rule_627bf95bbd305ada",
+        "reason": "shared:system|armed|",
+        "to": "sem_fact_431c33580d94e5e5"
+      },
+      {
+        "depth": 1,
+        "from": "sem_rule_9612ac705b91cd83",
+        "reason": "shared:door|open|",
+        "to": "sem_event_effect_bffca385f3915c81"
+      }
+    ],
+    "dormant_semantic_ids": [],
+    "max_depth": 4,
+    "seed_ids": [
+      "active",
+      "alarm"
+    ],
+    "truncated": false
+  },
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [],
+  "decision_subtype": "CONCLUSION_VERIFIED",
+  "deterministic_replay_hash": "04b011672b500641393b87b1fe5ec1e47e5459fb614ff5bd7a47e96fb468f056",
+  "events": [
+    {
+      "action": "opens",
+      "actor_id": "",
+      "destination_location_id": "",
+      "effects": [
+        {
+          "object_id": "",
+          "polarity": "positive",
+          "predicate": "open",
+          "subject_id": "door"
+        }
+      ],
+      "event_id": "sem_event_371c8263b09129d5",
+      "object_id": "",
+      "preconditions": [],
+      "source_ids": [
+        "obs_0001_8b06fb342050"
+      ],
+      "supersedes": [
+        "door|open|"
+      ],
+      "target_id": "door",
+      "turn_index": 1
+    }
+  ],
+  "final_response": "The alarm is active. This is derived through the verified causal chain.",
+  "final_status": "ACCEPT",
+  "input_text": "If the door opens, the sensor activates. If the sensor activates and the system is armed, the alarm activates. The door opens. The system is armed. Is the alarm active?",
+  "meaning_graph": {
+    "edge_count": 5,
+    "edges": [
+      {
+        "edge_id": "edge_node_causal_rule_a55489f6032e_expresses",
+        "provenance": {
+          "original_span": "If the door opens, the sensor activates.",
+          "rule_id": "habitat.rule.single",
+          "source_id": "node_causal_rule_a55489f6032e",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_causal_rule_a55489f6032e"
+      },
+      {
+        "edge_id": "edge_node_causal_rule_e89699330df2_expresses",
+        "provenance": {
+          "original_span": "If the sensor activates and the system is armed, the alarm activates.",
+          "rule_id": "habitat.rule.conjunction",
+          "source_id": "node_causal_rule_e89699330df2",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_causal_rule_e89699330df2"
+      },
+      {
+        "edge_id": "edge_node_world_event_774626290f6e_expresses",
+        "provenance": {
+          "original_span": "The door opens.",
+          "rule_id": "habitat.event.trigger",
+          "source_id": "node_world_event_774626290f6e",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_event_774626290f6e"
+      },
+      {
+        "edge_id": "edge_node_world_fact_d0218cdf4dad_expresses",
+        "provenance": {
+          "original_span": "The system is armed.",
+          "rule_id": "habitat.fact.state",
+          "source_id": "node_world_fact_d0218cdf4dad",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_fact_d0218cdf4dad"
+      },
+      {
+        "edge_id": "edge_node_world_query_470aeb8e2e9c_expresses",
+        "provenance": {
+          "original_span": "Is the alarm active?",
+          "rule_id": "habitat.query.state",
+          "source_id": "node_world_query_470aeb8e2e9c",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_query_470aeb8e2e9c"
+      }
+    ],
+    "node_count": 6,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "If the door opens, the sensor activates. If the sensor activates and the system is armed, the alarm activates. The door opens. The system is armed. Is the alarm active?"
+        }
+      },
+      {
+        "kind": "causal_rule",
+        "label": "causal rule",
+        "node_id": "node_causal_rule_a55489f6032e",
+        "provenance": {
+          "original_span": "If the door opens, the sensor activates.",
+          "rule_id": "habitat.rule.single",
+          "source_id": "node_causal_rule_a55489f6032e",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "antecedents": [
+            "door|open|"
+          ],
+          "consequent": "sensor|active|"
+        }
+      },
+      {
+        "kind": "causal_rule",
+        "label": "causal rule",
+        "node_id": "node_causal_rule_e89699330df2",
+        "provenance": {
+          "original_span": "If the sensor activates and the system is armed, the alarm activates.",
+          "rule_id": "habitat.rule.conjunction",
+          "source_id": "node_causal_rule_e89699330df2",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "antecedents": [
+            "sensor|active|",
+            "system|armed|"
+          ],
+          "consequent": "alarm|active|"
+        }
+      },
+      {
+        "kind": "world_event",
+        "label": "world event",
+        "node_id": "node_world_event_774626290f6e",
+        "provenance": {
+          "original_span": "The door opens.",
+          "rule_id": "habitat.event.trigger",
+          "source_id": "node_world_event_774626290f6e",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "action": "opens",
+          "actor": "",
+          "target": "door"
+        }
+      },
+      {
+        "kind": "world_fact",
+        "label": "world fact",
+        "node_id": "node_world_fact_d0218cdf4dad",
+        "provenance": {
+          "original_span": "The system is armed.",
+          "rule_id": "habitat.fact.state",
+          "source_id": "node_world_fact_d0218cdf4dad",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "object": "",
+          "polarity": "positive",
+          "predicate": "armed",
+          "subject": "system"
+        }
+      },
+      {
+        "kind": "world_query",
+        "label": "world query",
+        "node_id": "node_world_query_470aeb8e2e9c",
+        "provenance": {
+          "original_span": "Is the alarm active?",
+          "rule_id": "habitat.query.state",
+          "source_id": "node_world_query_470aeb8e2e9c",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "kind": "state",
+          "object_id": "",
+          "polarity": "positive",
+          "predicate": "active",
+          "subject_id": "alarm"
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "5 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "2a601942ee276008ae01b946372a0b55bf30f0b9ba94a48758d99d16e7eb9a63",
+  "meaning_graph_summary": {
+    "edge_count": 5,
+    "node_count": 6,
+    "summary": "5 bounded reasoning structures"
+  },
+  "memory_update": {
+    "added_semantic_ids": [
+      "sem_event_effect_bffca385f3915c81",
+      "sem_fact_431c33580d94e5e5",
+      "sem_rule_627bf95bbd305ada",
+      "sem_rule_9612ac705b91cd83"
+    ],
+    "after_state_hash": "e2adf9f7d224e7b4259312260b27218a456d8dbe2a7522f1cd0f744cfd8524c2",
+    "before_state_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "committed": true,
+    "merged_semantic_ids": [],
+    "superseded_semantic_ids": []
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "habitat.rule.single",
+    "habitat.rule.conjunction",
+    "habitat.event.trigger",
+    "habitat.fact.state",
+    "habitat.query.state"
+  ],
+  "planning": {},
+  "reasoning_request": {
+    "ambiguities": [],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [],
+    "habitat": {
+      "activation": {
+        "activated_semantic_ids": [
+          "sem_event_effect_bffca385f3915c81",
+          "sem_fact_431c33580d94e5e5",
+          "sem_rule_627bf95bbd305ada",
+          "sem_rule_9612ac705b91cd83"
+        ],
+        "activation_edges": [
+          {
+            "depth": 1,
+            "from": "sem_rule_627bf95bbd305ada",
+            "reason": "shared:system|armed|",
+            "to": "sem_fact_431c33580d94e5e5"
+          },
+          {
+            "depth": 1,
+            "from": "sem_rule_9612ac705b91cd83",
+            "reason": "shared:door|open|",
+            "to": "sem_event_effect_bffca385f3915c81"
+          }
+        ],
+        "dormant_semantic_ids": [],
+        "max_depth": 4,
+        "seed_ids": [
+          "active",
+          "alarm"
+        ],
+        "truncated": false
+      },
+      "events": [
+        {
+          "action": "opens",
+          "actor_id": "",
+          "destination_location_id": "",
+          "effects": [
+            {
+              "object_id": "",
+              "polarity": "positive",
+              "predicate": "open",
+              "subject_id": "door"
+            }
+          ],
+          "event_id": "sem_event_371c8263b09129d5",
+          "object_id": "",
+          "preconditions": [],
+          "source_ids": [
+            "obs_0001_8b06fb342050"
+          ],
+          "supersedes": [
+            "door|open|"
+          ],
+          "target_id": "door",
+          "turn_index": 1
+        }
+      ],
+      "facts": [
+        {
+          "active": true,
+          "object_id": "",
+          "origin": "event_effect",
+          "polarity": "positive",
+          "predicate": "open",
+          "semantic_id": "sem_event_effect_bffca385f3915c81",
+          "source_ids": [
+            "obs_0001_8b06fb342050"
+          ],
+          "subject_id": "door"
+        },
+        {
+          "active": true,
+          "object_id": "",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "armed",
+          "semantic_id": "sem_fact_431c33580d94e5e5",
+          "source_ids": [
+            "obs_0001_6ce47339ebbc"
+          ],
+          "subject_id": "system"
+        }
+      ],
+      "max_derived_facts": 64,
+      "max_inference_depth": 4,
+      "max_plan_depth": 8,
+      "memory_candidate_ids": [
+        "sem_rule_9612ac705b91cd83",
+        "sem_rule_627bf95bbd305ada",
+        "sem_event_effect_bffca385f3915c81",
+        "sem_fact_431c33580d94e5e5"
+      ],
+      "query": {
+        "kind": "state",
+        "object_id": "",
+        "polarity": "positive",
+        "predicate": "active",
+        "subject_id": "alarm"
+      },
+      "rules": [
+        {
+          "antecedents": [
+            "sensor|active|",
+            "system|armed|"
+          ],
+          "consequent": "alarm|active|",
+          "semantic_id": "sem_rule_627bf95bbd305ada",
+          "source_ids": [
+            "obs_0001_935be225e787"
+          ]
+        },
+        {
+          "antecedents": [
+            "door|open|"
+          ],
+          "consequent": "sensor|active|",
+          "semantic_id": "sem_rule_9612ac705b91cd83",
+          "source_ids": [
+            "obs_0001_4b0a204a191b"
+          ]
+        }
+      ]
+    },
+    "intent": "habitat_query",
+    "original_text": "If the door opens, the sensor activates. If the sensor activates and the system is armed, the alarm activates. The door opens. The system is armed. Is the alarm active?",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "If the door opens, the sensor activates.",
+        "provenance_id": "prov:node_causal_rule_a55489f6032e",
+        "rule_id": "habitat.rule.single",
+        "source_id": "node_causal_rule_a55489f6032e",
+        "source_type": "deterministic_rule"
+      },
+      {
+        "original_span": "If the sensor activates and the system is armed, the alarm activates.",
+        "provenance_id": "prov:node_causal_rule_e89699330df2",
+        "rule_id": "habitat.rule.conjunction",
+        "source_id": "node_causal_rule_e89699330df2",
+        "source_type": "deterministic_rule"
+      },
+      {
+        "original_span": "The door opens.",
+        "provenance_id": "prov:node_world_event_774626290f6e",
+        "rule_id": "habitat.event.trigger",
+        "source_id": "node_world_event_774626290f6e",
+        "source_type": "deterministic_rule"
+      },
+      {
+        "original_span": "The system is armed.",
+        "provenance_id": "prov:node_world_fact_d0218cdf4dad",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_d0218cdf4dad",
+        "source_type": "deterministic_rule"
+      },
+      {
+        "original_span": "Is the alarm active?",
+        "provenance_id": "prov:node_world_query_470aeb8e2e9c",
+        "rule_id": "habitat.query.state",
+        "source_id": "node_world_query_470aeb8e2e9c",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [],
+    "repair_actions": [],
+    "request_id": "request_cc4347ab8bc4fbe5",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "ac16a2d63a2a522a142fbd3cb41dfcbb2ff7046ba56681d424b5c9e64e1e7108",
+  "receipt_schema": "ts-turn-receipt-v2",
+  "repair_actions": [],
+  "repair_attempted": false,
+  "repair_result": null,
+  "replay": {
+    "deterministic_replay_hash": "04b011672b500641393b87b1fe5ec1e47e5459fb614ff5bd7a47e96fb468f056",
+    "input_state_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "output_state_hash": "97de3978c724c6b6982e9cb71601d375585dda1b2f49c02ca477d80a11f822a1"
+  },
+  "response_template": "ACCEPT_DERIVED_STATE",
+  "semantic_merge": {
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [
+      "sem_event_effect_bffca385f3915c81",
+      "sem_fact_431c33580d94e5e5",
+      "sem_rule_627bf95bbd305ada",
+      "sem_rule_9612ac705b91cd83"
+    ],
+    "observation_ids": [
+      "obs_0001_4b0a204a191b",
+      "obs_0001_6ce47339ebbc",
+      "obs_0001_8b06fb342050",
+      "obs_0001_935be225e787"
+    ],
+    "staged_count": 4
+  },
+  "signed_world_state": {
+    "door|open|": {
+      "negative_support_ids": [],
+      "object_id": "",
+      "positive_support_ids": [
+        "sem_event_effect_bffca385f3915c81"
+      ],
+      "predicate": "open",
+      "proposition_id": "door|open|",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "door"
+    },
+    "system|armed|": {
+      "negative_support_ids": [],
+      "object_id": "",
+      "positive_support_ids": [
+        "sem_fact_431c33580d94e5e5"
+      ],
+      "predicate": "armed",
+      "proposition_id": "system|armed|",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "system"
+    }
+  },
+  "state_hash": "97de3978c724c6b6982e9cb71601d375585dda1b2f49c02ca477d80a11f822a1",
+  "state_transitions": [
+    {
+      "action": "opens",
+      "actor_id": "",
+      "destination_location_id": "",
+      "effects": [
+        {
+          "object_id": "",
+          "polarity": "positive",
+          "predicate": "open",
+          "subject_id": "door"
+        }
+      ],
+      "event_id": "sem_event_371c8263b09129d5",
+      "object_id": "",
+      "preconditions": [],
+      "source_ids": [
+        "obs_0001_8b06fb342050"
+      ],
+      "supersedes": [
+        "door|open|"
+      ],
+      "target_id": "door",
+      "turn_index": 1
+    }
+  ],
+  "turn_id": "turn_0001",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "boolean_rule_supported",
+      "message": "Bounded causal derivation supports the query.",
+      "passed": true,
+      "support_ids": [
+        "derived_18232c21c553726c"
+      ]
+    },
+    {
+      "check_id": "renderer_support_available",
+      "message": "Approved structured answer has support IDs.",
+      "passed": true,
+      "support_ids": [
+        "derived_18232c21c553726c"
+      ]
+    }
+  ],
+  "verifier_decision": "ACCEPT"
+}
