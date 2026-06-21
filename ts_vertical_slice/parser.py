@@ -53,6 +53,10 @@ def parse_to_meaning_graph(text: str) -> ParseResult:
     consumed = 0
     for sentence in _sentences(text):
         plain = sentence.rstrip(".?!").strip()
+        if re.search(r"\b(?:not|no|neither|nor|false|cannot|can't|do\s+not|don't)\b", plain, re.I):
+            add("ambiguity", {"code": "unsupported_negation", "message": "Negation is not represented by the bounded milestone grammar.", "options": [], "question": "Could you restate this without negation using explicit supported facts?"}, "parser.negation_blocked", sentence)
+            consumed += 1
+            continue
         match = re.fullmatch(r"(.+?)\s+is\s+older\s+than\s+(.+)", plain, re.I)
         if match:
             add("relation_fact", {"subject": _entity(match[1]), "subject_text": _display(match[1]), "predicate": "older_than", "object": _entity(match[2]), "object_text": _display(match[2])}, "relation.older_than", sentence); consumed += 1; continue

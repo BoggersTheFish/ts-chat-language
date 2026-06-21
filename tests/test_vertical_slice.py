@@ -74,5 +74,12 @@ class VerticalSliceTests(unittest.TestCase):
         r=self.session().handle("Alice is older than Bob. Bob is older than Carol. Who is the oldest one?")
         self.assertEqual(r.repair_result,"REPAIR_ACCEPTED"); self.assertEqual(r.final_status,"REPAIR")
 
+    def test_unsupported_negation_cannot_become_affirmative_evidence(self):
+        s=self.session(); before=s.state.hash
+        r=s.handle("Alice is not older than Bob. Who is oldest?")
+        self.assertEqual(r.final_status,"REPAIR")
+        self.assertIn("parser.negation_blocked",r.parser_rules_used)
+        self.assertEqual(s.state.hash,before)
+
 
 if __name__=="__main__": unittest.main()
