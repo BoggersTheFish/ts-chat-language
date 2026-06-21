@@ -1,0 +1,284 @@
+Script started on 2026-06-21 13:26:15+01:00 [COMMAND="./scripts/two_minute_demo.sh" <not executed on terminal>]
+=== ACCEPT (verbose evidence path) ===
+TS Chat — verifier-first vertical slice
+Bounded deterministic language and reasoning demo.
+Type /help for supported examples.
+[ACCEPT] Alice is the oldest.
+Receipt: artifacts/demo_receipts/accept/turn_0001_19d20969e9.json
+
+INPUT
+Alice is older than Bob. Bob is older than Carol. Who is oldest?
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 3,
+  "edges": [
+    {
+      "edge_id": "edge_node_relation_fact_eb7ef28682a2_expresses",
+      "provenance": {
+        "original_span": "Alice is older than Bob.",
+        "rule_id": "relation.older_than",
+        "source_id": "node_relation_fact_eb7ef28682a2",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_relation_fact_eb7ef28682a2"
+    },
+    {
+      "edge_id": "edge_node_relation_fact_9980885973fd_expresses",
+      "provenance": {
+        "original_span": "Bob is older than Carol.",
+        "rule_id": "relation.older_than",
+        "source_id": "node_relation_fact_9980885973fd",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_relation_fact_9980885973fd"
+    },
+    {
+      "edge_id": "edge_node_ordering_query_05246b541346_expresses",
+      "provenance": {
+        "original_span": "Who is oldest?",
+        "rule_id": "query.oldest",
+        "source_id": "node_ordering_query_05246b541346",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_ordering_query_05246b541346"
+    }
+  ],
+  "node_count": 4,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "Alice is older than Bob. Bob is older than Carol. Who is oldest?"
+      }
+    },
+    {
+      "kind": "relation_fact",
+      "label": "relation fact",
+      "node_id": "node_relation_fact_eb7ef28682a2",
+      "provenance": {
+        "original_span": "Alice is older than Bob.",
+        "rule_id": "relation.older_than",
+        "source_id": "node_relation_fact_eb7ef28682a2",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "bob",
+        "object_text": "Bob",
+        "predicate": "older_than",
+        "subject": "alice",
+        "subject_text": "Alice"
+      }
+    },
+    {
+      "kind": "relation_fact",
+      "label": "relation fact",
+      "node_id": "node_relation_fact_9980885973fd",
+      "provenance": {
+        "original_span": "Bob is older than Carol.",
+        "rule_id": "relation.older_than",
+        "source_id": "node_relation_fact_9980885973fd",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "carol",
+        "object_text": "Carol",
+        "predicate": "older_than",
+        "subject": "bob",
+        "subject_text": "Bob"
+      }
+    },
+    {
+      "kind": "ordering_query",
+      "label": "ordering query",
+      "node_id": "node_ordering_query_05246b541346",
+      "provenance": {
+        "original_span": "Who is oldest?",
+        "rule_id": "query.oldest",
+        "source_id": "node_ordering_query_05246b541346",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "predicate": "oldest"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "3 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [
+    {
+      "entity_id": "alice",
+      "entity_type": "thing",
+      "name": "Alice"
+    },
+    {
+      "entity_id": "bob",
+      "entity_type": "thing",
+      "name": "Bob"
+    },
+    {
+      "entity_id": "carol",
+      "entity_type": "thing",
+      "name": "Carol"
+    }
+  ],
+  "intent": "ordering_query",
+  "original_text": "Alice is older than Bob. Bob is older than Carol. Who is oldest?",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "Alice is older than Bob.",
+      "provenance_id": "prov:node_relation_fact_eb7ef28682a2",
+      "rule_id": "relation.older_than",
+      "source_id": "node_relation_fact_eb7ef28682a2",
+      "source_type": "deterministic_rule"
+    },
+    {
+      "original_span": "Bob is older than Carol.",
+      "provenance_id": "prov:node_relation_fact_9980885973fd",
+      "rule_id": "relation.older_than",
+      "source_id": "node_relation_fact_9980885973fd",
+      "source_type": "deterministic_rule"
+    },
+    {
+      "original_span": "Who is oldest?",
+      "provenance_id": "prov:node_ordering_query_05246b541346",
+      "rule_id": "query.oldest",
+      "source_id": "node_ordering_query_05246b541346",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [
+    {
+      "kind": "fact",
+      "object_id": "bob",
+      "polarity": "positive",
+      "predicate": "older_than",
+      "relation_id": "node_relation_fact_eb7ef28682a2",
+      "source_ids": [
+        "node_relation_fact_eb7ef28682a2"
+      ],
+      "subject_id": "alice"
+    },
+    {
+      "kind": "fact",
+      "object_id": "carol",
+      "polarity": "positive",
+      "predicate": "older_than",
+      "relation_id": "node_relation_fact_9980885973fd",
+      "source_ids": [
+        "node_relation_fact_9980885973fd"
+      ],
+      "subject_id": "bob"
+    },
+    {
+      "kind": "query",
+      "object_id": "",
+      "polarity": "positive",
+      "predicate": "oldest",
+      "relation_id": "node_ordering_query_05246b541346",
+      "source_ids": [
+        "node_ordering_query_05246b541346"
+      ],
+      "subject_id": ""
+    }
+  ],
+  "repair_actions": [],
+  "request_id": "request_0715946f4ca08f21",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "no_blocking_contradiction",
+    "message": "No blocking contradiction found.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "relation_chain_supported",
+    "message": "Unique ordering maximum follows from the chain.",
+    "passed": true,
+    "support_ids": [
+      "node_relation_fact_eb7ef28682a2",
+      "node_relation_fact_9980885973fd"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "node_relation_fact_eb7ef28682a2",
+      "node_relation_fact_9980885973fd"
+    ]
+  }
+]
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+RESPONSE
+Alice is the oldest.
+
+REPLAY HASH
+19d20969e9d6eb4ef6cf7bbcaa1fed9e6ca85f0bb894d21746b817b8439b137e
+
+=== REPAIR ===
+TS Chat — verifier-first vertical slice
+Bounded deterministic language and reasoning demo.
+Type /help for supported examples.
+[REPAIR] I found more than one possible interpretation. Did Alice or Sarah own the key?
+Receipt: artifacts/demo_receipts/repair/turn_0001_11bc8630ef.json
+
+=== REJECT ===
+TS Chat — verifier-first vertical slice
+Bounded deterministic language and reasoning demo.
+Type /help for supported examples.
+[REJECT] There is not enough supported information to conclude that Alice is wealthy.
+Receipt: artifacts/demo_receipts/reject/turn_0001_dcae03f334.json
+
+Script done on 2026-06-21 13:26:16+01:00 [COMMAND_EXIT_CODE="0"]

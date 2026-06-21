@@ -16,7 +16,16 @@ The first complete TS language-to-verifier vertical slice runs end to end: deter
 ./scripts/run_vertical_slice.sh
 ```
 
-It supports bounded relational, Boolean, ambiguity, unsupported-inference, and small planning cases. It is not a general-purpose chatbot and does not use an external language model. See [the vertical-slice guide](docs/vertical_slice.md), [integration audit](docs/vertical_slice_integration_audit.md), and [limitations](docs/vertical_slice_limitations.md).
+It supports bounded relational, Boolean, ambiguity, unsupported-inference, and small planning cases. It is not a general-purpose chatbot and does not use an external language model. See [the vertical-slice guide](docs/vertical_slice.md), [integration audit](docs/vertical_slice_integration_audit.md), [limitations](docs/vertical_slice_limitations.md), and the [public break-it challenge](docs/vertical_slice_break_it_challenge.md).
+
+The frozen adversarial suite contains 165 punctuation, paraphrase, negation, contradiction, ambiguity, malformed-input, inference-jump, and memory-contamination probes:
+
+```bash
+.venv/bin/python -m ts_vertical_slice.challenge
+./scripts/record_two_minute_demo.sh
+```
+
+The repository preserves both the untuned baseline failure distribution and the rerun after one general negation safety mitigation.
 
 ```text
 USER TEXT

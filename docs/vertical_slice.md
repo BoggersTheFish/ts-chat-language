@@ -52,9 +52,20 @@ Conversation memory stores only verified premises and constraints with provenanc
 ```bash
 PYTHONPATH=../TS-Reasoner-v0:. python3 -m unittest discover -v
 PYTHONPATH=../TS-Reasoner-v0:. python3 -m ts_vertical_slice.evaluation
+PYTHONPATH=../TS-Reasoner-v0:. python3 -m ts_vertical_slice.challenge
 PYTHONPATH=../TS-Reasoner-v0:. python3 -m ts_vertical_slice.fixtures --update
 ```
 
 The evaluation set contains 10 ACCEPT, 10 REPAIR, and 10 REJECT cases. Reports are written to `artifacts/vertical_slice/`. Fixture updates are explicit and never happen during normal tests.
+
+The separate frozen challenge set contains 165 cases. Its first run exposed nine unsupported negation accepts and nine contaminations. That baseline is retained in `artifacts/vertical_slice_challenge/challenge_report_baseline.*`. One general parser safety rule now blocks unsupported negation from becoming affirmative evidence; the complete unchanged corpus rerun is in `challenge_report.*`.
+
+Record the three-decision demonstration as one continuous terminal transcript:
+
+```bash
+./scripts/record_two_minute_demo.sh
+```
+
+The transcript, timing log, and three example JSON receipts are saved under `artifacts/`. See the [public break-it challenge](vertical_slice_break_it_challenge.md) for the falsification target and report format.
 
 Future learned language generation may attach only as a proposer before the bridge or as a surface candidate after verification; it must never create support, mutate accepted memory, or bypass the structured renderer gate.

@@ -1,0 +1,274 @@
+{
+  "ambiguities": [],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [],
+  "deterministic_replay_hash": "19d20969e9d6eb4ef6cf7bbcaa1fed9e6ca85f0bb894d21746b817b8439b137e",
+  "final_response": "Alice is the oldest.",
+  "final_status": "ACCEPT",
+  "input_text": "Alice is older than Bob. Bob is older than Carol. Who is oldest?",
+  "meaning_graph": {
+    "edge_count": 3,
+    "edges": [
+      {
+        "edge_id": "edge_node_relation_fact_eb7ef28682a2_expresses",
+        "provenance": {
+          "original_span": "Alice is older than Bob.",
+          "rule_id": "relation.older_than",
+          "source_id": "node_relation_fact_eb7ef28682a2",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_relation_fact_eb7ef28682a2"
+      },
+      {
+        "edge_id": "edge_node_relation_fact_9980885973fd_expresses",
+        "provenance": {
+          "original_span": "Bob is older than Carol.",
+          "rule_id": "relation.older_than",
+          "source_id": "node_relation_fact_9980885973fd",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_relation_fact_9980885973fd"
+      },
+      {
+        "edge_id": "edge_node_ordering_query_05246b541346_expresses",
+        "provenance": {
+          "original_span": "Who is oldest?",
+          "rule_id": "query.oldest",
+          "source_id": "node_ordering_query_05246b541346",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_ordering_query_05246b541346"
+      }
+    ],
+    "node_count": 4,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "Alice is older than Bob. Bob is older than Carol. Who is oldest?"
+        }
+      },
+      {
+        "kind": "relation_fact",
+        "label": "relation fact",
+        "node_id": "node_relation_fact_eb7ef28682a2",
+        "provenance": {
+          "original_span": "Alice is older than Bob.",
+          "rule_id": "relation.older_than",
+          "source_id": "node_relation_fact_eb7ef28682a2",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "object": "bob",
+          "object_text": "Bob",
+          "predicate": "older_than",
+          "subject": "alice",
+          "subject_text": "Alice"
+        }
+      },
+      {
+        "kind": "relation_fact",
+        "label": "relation fact",
+        "node_id": "node_relation_fact_9980885973fd",
+        "provenance": {
+          "original_span": "Bob is older than Carol.",
+          "rule_id": "relation.older_than",
+          "source_id": "node_relation_fact_9980885973fd",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "object": "carol",
+          "object_text": "Carol",
+          "predicate": "older_than",
+          "subject": "bob",
+          "subject_text": "Bob"
+        }
+      },
+      {
+        "kind": "ordering_query",
+        "label": "ordering query",
+        "node_id": "node_ordering_query_05246b541346",
+        "provenance": {
+          "original_span": "Who is oldest?",
+          "rule_id": "query.oldest",
+          "source_id": "node_ordering_query_05246b541346",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "predicate": "oldest"
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "3 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "cc3bff93eb6f1a7e0732f48e3909c04d37c875e3c96056576bae1d1302d3b58c",
+  "meaning_graph_summary": {
+    "edge_count": 3,
+    "node_count": 4,
+    "summary": "3 bounded reasoning structures"
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "relation.older_than",
+    "relation.older_than",
+    "query.oldest"
+  ],
+  "reasoning_request": {
+    "ambiguities": [],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [
+      {
+        "entity_id": "alice",
+        "entity_type": "thing",
+        "name": "Alice"
+      },
+      {
+        "entity_id": "bob",
+        "entity_type": "thing",
+        "name": "Bob"
+      },
+      {
+        "entity_id": "carol",
+        "entity_type": "thing",
+        "name": "Carol"
+      }
+    ],
+    "intent": "ordering_query",
+    "original_text": "Alice is older than Bob. Bob is older than Carol. Who is oldest?",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "Alice is older than Bob.",
+        "provenance_id": "prov:node_relation_fact_eb7ef28682a2",
+        "rule_id": "relation.older_than",
+        "source_id": "node_relation_fact_eb7ef28682a2",
+        "source_type": "deterministic_rule"
+      },
+      {
+        "original_span": "Bob is older than Carol.",
+        "provenance_id": "prov:node_relation_fact_9980885973fd",
+        "rule_id": "relation.older_than",
+        "source_id": "node_relation_fact_9980885973fd",
+        "source_type": "deterministic_rule"
+      },
+      {
+        "original_span": "Who is oldest?",
+        "provenance_id": "prov:node_ordering_query_05246b541346",
+        "rule_id": "query.oldest",
+        "source_id": "node_ordering_query_05246b541346",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [
+      {
+        "kind": "fact",
+        "object_id": "bob",
+        "polarity": "positive",
+        "predicate": "older_than",
+        "relation_id": "node_relation_fact_eb7ef28682a2",
+        "source_ids": [
+          "node_relation_fact_eb7ef28682a2"
+        ],
+        "subject_id": "alice"
+      },
+      {
+        "kind": "fact",
+        "object_id": "carol",
+        "polarity": "positive",
+        "predicate": "older_than",
+        "relation_id": "node_relation_fact_9980885973fd",
+        "source_ids": [
+          "node_relation_fact_9980885973fd"
+        ],
+        "subject_id": "bob"
+      },
+      {
+        "kind": "query",
+        "object_id": "",
+        "polarity": "positive",
+        "predicate": "oldest",
+        "relation_id": "node_ordering_query_05246b541346",
+        "source_ids": [
+          "node_ordering_query_05246b541346"
+        ],
+        "subject_id": ""
+      }
+    ],
+    "repair_actions": [],
+    "request_id": "request_0715946f4ca08f21",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "7c0dfbfeb2cfb8f61de9468507895ea1b56949362c2ec07f9034afb9ed810b62",
+  "repair_actions": [],
+  "repair_attempted": false,
+  "repair_result": null,
+  "response_template": "ACCEPT_ORDERING",
+  "state_hash": "d9c4b4c62eab9ecbfa0fa46d4383f3485440a563fbfe9ec198e5f43cc7bcf341",
+  "turn_id": "turn_0001",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "no_blocking_contradiction",
+      "message": "No blocking contradiction found.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "relation_chain_supported",
+      "message": "Unique ordering maximum follows from the chain.",
+      "passed": true,
+      "support_ids": [
+        "node_relation_fact_eb7ef28682a2",
+        "node_relation_fact_9980885973fd"
+      ]
+    },
+    {
+      "check_id": "renderer_support_available",
+      "message": "Approved structured answer has support IDs.",
+      "passed": true,
+      "support_ids": [
+        "node_relation_fact_eb7ef28682a2",
+        "node_relation_fact_9980885973fd"
+      ]
+    }
+  ],
+  "verifier_decision": "ACCEPT"
+}
