@@ -102,6 +102,10 @@ class SemanticMemory:
                 translated={"subject":slots["subject"],"predicate":slots["predicate"],"object":slots.get("object",""),"polarity":slots.get("polarity","positive")}
                 sid=semantic_id("fact",translated["subject"],translated["predicate"],translated["object"],translated["polarity"])
                 items.append(self._new_item(sid,"fact",translated,observation))
+            elif node.kind == "boolean_fact":
+                subject=str(slots["subject"]); raw=str(slots["predicate"]); predicate=raw.removeprefix(subject+"_")
+                translated={"subject":subject,"predicate":predicate,"object":"","polarity":slots.get("polarity","positive")}
+                sid=semantic_id("fact",subject,predicate,"",translated["polarity"]);items.append(self._new_item(sid,"fact",translated,observation))
             elif node.kind == "causal_rule":
                 operands=tuple(slots["antecedents"]); consequent=str(slots["consequent"])
                 sid=semantic_id("rule",operands=(*operands,consequent))
