@@ -1,0 +1,2250 @@
+{
+  "accept_count": 114,
+  "agent_scheduling_nondeterminism": 0,
+  "all_hard_gates_passed": false,
+  "average_agent_steps": 24.6389,
+  "average_explored_states": 0.5,
+  "average_processing_time_ms": 4.1608,
+  "category_distribution": {
+    "action_budget_exhaustion": {
+      "BUDGET_EXHAUSTED": 6
+    },
+    "action_effects_not_observed": {
+      "BUDGET_EXHAUSTED": 6
+    },
+    "agent_inventory_collision": {
+      "UNREACHABLE": 6
+    },
+    "blocked_routes": {
+      "UNREACHABLE": 6
+    },
+    "competing_goals": {
+      "BLOCKED": 6
+    },
+    "conflicted_routes": {
+      "UNREACHABLE": 6
+    },
+    "dormant_fact_action_support": {
+      "COMPLETE": 6
+    },
+    "duplicate_connections": {
+      "COMPLETE": 6
+    },
+    "duplicate_goals": {
+      "COMPLETE": 6
+    },
+    "duplicate_ownership": {
+      "UNREACHABLE": 6
+    },
+    "false_success_reports": {
+      "BUDGET_EXHAUSTED": 6
+    },
+    "goal_priority_ties": {
+      "COMPLETE": 6
+    },
+    "irrelevant_cluster_leakage": {
+      "COMPLETE": 6
+    },
+    "malformed_chained_events": {
+      "COMPLETE": 6
+    },
+    "malicious_lesson_schemas": {
+      "BUDGET_EXHAUSTED": 6
+    },
+    "missing_action_preconditions": {
+      "COMPLETE": 6
+    },
+    "nondeterministic_scheduling": {
+      "COMPLETE": 6
+    },
+    "nonexistent_topology_edges": {
+      "COMPLETE": 6
+    },
+    "planning_cycles": {
+      "UNREACHABLE": 6
+    },
+    "premature_goal_satisfaction": {
+      "COMPLETE": 6
+    },
+    "receipt_size_exhaustion": {
+      "COMPLETE": 6
+    },
+    "reflection_bypass": {
+      "BUDGET_EXHAUSTED": 6
+    },
+    "rejected_observation_contamination": {
+      "COMPLETE": 6
+    },
+    "renderer_false_success": {
+      "BUDGET_EXHAUSTED": 6
+    },
+    "renderer_hidden_conflict": {
+      "UNREACHABLE": 6
+    },
+    "repeated_environment_events": {
+      "COMPLETE": 6
+    },
+    "repeated_identical_edges": {
+      "COMPLETE": 6
+    },
+    "replanning_loops": {
+      "BUDGET_EXHAUSTED": 6
+    },
+    "replay_divergence": {
+      "COMPLETE": 6
+    },
+    "state_budget_exhaustion": {
+      "COMPLETE": 6
+    },
+    "tension_as_evidence": {
+      "COMPLETE": 6
+    },
+    "tension_cycles": {
+      "COMPLETE": 6
+    },
+    "unapproved_lesson_activation": {
+      "BUDGET_EXHAUSTED": 6
+    },
+    "unauthorized_object_taking": {
+      "UNREACHABLE": 6
+    },
+    "unbounded_propagation": {
+      "COMPLETE": 6
+    },
+    "wrong_direction": {
+      "UNREACHABLE": 6
+    }
+  },
+  "decision_distribution": {
+    "BLOCKED": 6,
+    "BUDGET_EXHAUSTED": 48,
+    "COMPLETE": 114,
+    "UNREACHABLE": 48
+  },
+  "deterministic_replay_failures": 0,
+  "duplicate_connections": 0,
+  "duplicate_goals": 0,
+  "duplicate_semantic_items": 0,
+  "execution_errors": 24,
+  "goal_lifecycle_errors": 54,
+  "goal_selection_nondeterminism": 0,
+  "irrelevant_cluster_leaks": 0,
+  "maximum_agent_steps": 47,
+  "maximum_explored_states": 2,
+  "maximum_processing_time_ms": 14.1047,
+  "memory_contamination_failures": 0,
+  "missed_replan_events": 0,
+  "multi_agent_state_collisions": 0,
+  "receipt_generation_rate": 0.9,
+  "reflection_authority_violations": 0,
+  "reject_count": 102,
+  "rejected_observation_contamination": 0,
+  "renderer_support_violations": 0,
+  "repair_count": 0,
+  "replanning_loop_failures": 18,
+  "results": [
+    {
+      "category": "nonexistent_topology_edges",
+      "expected": "UNREACHABLE",
+      "id": "nonexistent_topology_edges_000",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "8f80a87425fc418308d5836a65c73c2f71c7efc2d45fad6027e8936f602d51db",
+      "replay_hash": "c6fd7efb329b20852c0f7fa2547d3e705a7694ccfa446a199c5ed1f01f4be21c"
+    },
+    {
+      "category": "nonexistent_topology_edges",
+      "expected": "UNREACHABLE",
+      "id": "nonexistent_topology_edges_001",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "109181a252ca41432731c114d4a021e92ab7d6f521890f2694e457624e2252ee",
+      "replay_hash": "a2be48448ebc01ada55a048c9ba8a8419425d1c0566802e1b0e0e14f942d89b0"
+    },
+    {
+      "category": "nonexistent_topology_edges",
+      "expected": "UNREACHABLE",
+      "id": "nonexistent_topology_edges_002",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "771455d8a854f72d33721c4aece24f796ffdcc6ba8ca463ce450bda271d067e5",
+      "replay_hash": "68a0364351c6e7ebe924db9dd9b4e463e1383ac133132abf233c6d420a5ebeb2"
+    },
+    {
+      "category": "nonexistent_topology_edges",
+      "expected": "UNREACHABLE",
+      "id": "nonexistent_topology_edges_003",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "79d64c75be6919200db367a398a140c92389515103925c51bc9e6a9ef430ce94",
+      "replay_hash": "2f7c6e6495e97d69e75772c30a621ac01830ba12d71ec10dbcb402a4c9b4a379"
+    },
+    {
+      "category": "nonexistent_topology_edges",
+      "expected": "UNREACHABLE",
+      "id": "nonexistent_topology_edges_004",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "dfd592cf2ad118676925e03bbe01f35a5416a15acf657c43cd38e59d228ea928",
+      "replay_hash": "7a6067715e8ceff3a0ad4361e9bde385db84a24a079adb435d6afb58126de0e5"
+    },
+    {
+      "category": "nonexistent_topology_edges",
+      "expected": "UNREACHABLE",
+      "id": "nonexistent_topology_edges_005",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "94ae8cfda3e24fcca36f283f95ebc8d7cc6df850d557988e69b729e12c7e2fa6",
+      "replay_hash": "bba4d672b02d7d224bcf2ebc7cb54b8dd9b37b39aa6476f90412b41748f88f88"
+    },
+    {
+      "category": "wrong_direction",
+      "expected": "UNREACHABLE",
+      "id": "wrong_direction_000",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "da29b7f358560a0d93331013a07e1689dd9bda9a14c83ca9cca63d182229b4f8",
+      "replay_hash": "479b9cdfa4a4027b128cee706ce956e49c5106fa9eb0b39c7ce779f83cbfd86d"
+    },
+    {
+      "category": "wrong_direction",
+      "expected": "UNREACHABLE",
+      "id": "wrong_direction_001",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "6919244b0ba26b1a1cd81245834a4aefd12615e9a409d0a95d2674bdf1b93570",
+      "replay_hash": "f961ee00b3bbd0ff6a8ada0afc328d6f1d7d8dd0f82f02f262a1f09b0a8a2380"
+    },
+    {
+      "category": "wrong_direction",
+      "expected": "UNREACHABLE",
+      "id": "wrong_direction_002",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "005ea7d27a6376a11ca517b730b00efb328c8e49817d55abdf0e76b424c913cd",
+      "replay_hash": "9b6a35179661c4568e5fa7cecefe4f60778be8e8438a29e3a14bd77845366ce6"
+    },
+    {
+      "category": "wrong_direction",
+      "expected": "UNREACHABLE",
+      "id": "wrong_direction_003",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "182e2061ab73ce14ce5487174ac7395ce6840a2bc866e868861450d9bffe5453",
+      "replay_hash": "f0fd7508303af9a3b71ce3efbc2b641825e16d141d7cad7aa1e692692473d27b"
+    },
+    {
+      "category": "wrong_direction",
+      "expected": "UNREACHABLE",
+      "id": "wrong_direction_004",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "c54263132bd8da6709b5d51fef41ff22d526b16e8b847e108ac85cdc7a7ffbb8",
+      "replay_hash": "a95343927cd0412cae26345f577f69947ddd8a1f756c2d25314863ce1a5bff49"
+    },
+    {
+      "category": "wrong_direction",
+      "expected": "UNREACHABLE",
+      "id": "wrong_direction_005",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "0324272504eecfeebc8607fd05f6ac17601510c1642f440908e884e6e2887d34",
+      "replay_hash": "12c16f549a8063d4b9b9ff4121169fbda57f52c9e30d1a84d6715bd505e586df"
+    },
+    {
+      "category": "blocked_routes",
+      "expected": "UNREACHABLE",
+      "id": "blocked_routes_000",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "e1e60c37ddc2e8f4b9dc92752455e617b0a2eaa2db9928b33d742824999054df",
+      "replay_hash": "45d557fd2ff290e423316d0ee511f3af9d73b819037ce9976996bec69357238f"
+    },
+    {
+      "category": "blocked_routes",
+      "expected": "UNREACHABLE",
+      "id": "blocked_routes_001",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "8571f206089dd5d895521e5bc1328ccdc22016f1de775723cbed86bd8933e228",
+      "replay_hash": "f5863f990f63148e6e417ba7fe6d8e4c437edf2528ec1e50f0db47b3ad3ab4ba"
+    },
+    {
+      "category": "blocked_routes",
+      "expected": "UNREACHABLE",
+      "id": "blocked_routes_002",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "3e12f85083dd1390203800a29b94c05fb1510191bec1a15863888b1b5d668cf0",
+      "replay_hash": "0eceb253722f4be7f873ddc8b3cd6c1bdf1372105cba0bfea60692ca4907d78b"
+    },
+    {
+      "category": "blocked_routes",
+      "expected": "UNREACHABLE",
+      "id": "blocked_routes_003",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "569f99583533784845cdda90b29b09d776b71e7815f37880b589f41d17b7c75c",
+      "replay_hash": "fc18266601c3debd7ed2c11946f00d4d8054b4258409cf1fa1f8dde9d64b2c6b"
+    },
+    {
+      "category": "blocked_routes",
+      "expected": "UNREACHABLE",
+      "id": "blocked_routes_004",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "a273fc5507e53d9352ecf925fd21ea5092bd3d90e694d4e5921757e376882012",
+      "replay_hash": "116a3f0d9c6c11ae2efc097ecbc14ea405dcaa6a2eb70c7bc025b6415e9f4555"
+    },
+    {
+      "category": "blocked_routes",
+      "expected": "UNREACHABLE",
+      "id": "blocked_routes_005",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "77211de3f650cb58f716b6420d77583ab194f66afbbf69906c8fd9f9dd8d0e1b",
+      "replay_hash": "5a16ca9fd910d97af378bfc23d4b772b31ad441eaa441aa2e92066b024d428ae"
+    },
+    {
+      "category": "conflicted_routes",
+      "expected": "UNREACHABLE",
+      "id": "conflicted_routes_000",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "cf00e449c672164e3e4b8f88acec3953e3361dcb96f2afbca5cd8ab1f713cac3",
+      "replay_hash": "94d792b73187739eed11b27e2d863bf25fe945d315e903761922fca53cf122e4"
+    },
+    {
+      "category": "conflicted_routes",
+      "expected": "UNREACHABLE",
+      "id": "conflicted_routes_001",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "e735d78801e9283c6b881a8f675d4bd6bd050c5b824d92b6bef38368a2832fa7",
+      "replay_hash": "89f248aad5a7b36b86f6bda5b0e61808b58a68e12aafd571d5647f69b02130b9"
+    },
+    {
+      "category": "conflicted_routes",
+      "expected": "UNREACHABLE",
+      "id": "conflicted_routes_002",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "52a233a3ac6d7dd641d63781ca15de80a16558e2b1b818622f07f19c81eb742e",
+      "replay_hash": "48044412736cee9ea63ae9bdb9e3db0f999ecc3e5444ec84d5d3a6572ccebfa1"
+    },
+    {
+      "category": "conflicted_routes",
+      "expected": "UNREACHABLE",
+      "id": "conflicted_routes_003",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "0ccf9495a6da9001e769bf36827a0b5e67150ddd27d987badeb108b2011d6544",
+      "replay_hash": "81c4e7da0e91e16f2bbef17a4b947d430ef926f4bd7d47a37fe3386e313d45db"
+    },
+    {
+      "category": "conflicted_routes",
+      "expected": "UNREACHABLE",
+      "id": "conflicted_routes_004",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "8c2c90df7507c75f740b904153863204c11cd8707eb64cd5e1e8ae686cc89d8d",
+      "replay_hash": "3ef60a59ad60d62518d102c51962c813fd0176ed99fd457555aa2989d26ad694"
+    },
+    {
+      "category": "conflicted_routes",
+      "expected": "UNREACHABLE",
+      "id": "conflicted_routes_005",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "e7a55c949cddb1e7e440057ccb614feea80c1c3b0c638e7ec3e86078733a0ae5",
+      "replay_hash": "9973243157b7b55c4b85965d2101f3db7c40f96feb7aaee777760b5e93687c40"
+    },
+    {
+      "category": "repeated_identical_edges",
+      "expected": "COMPLETE",
+      "id": "repeated_identical_edges_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "abd02ba31bb518bf66eb31d8516ca7e1b52f37f63c93409fc766dd9d915406cd",
+      "replay_hash": "b109888c479686222eafc080d91cd592b6227125883328a9cb0b0618ac560df7"
+    },
+    {
+      "category": "repeated_identical_edges",
+      "expected": "COMPLETE",
+      "id": "repeated_identical_edges_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "568cd595ed1cdde1a18a36c4f724726a372fb8b5b5958e01be62c184910b60ec",
+      "replay_hash": "efd541c40e5bf3e5f21f81156cadd0b4567b8d3c2edd5d02509f791e906a6af0"
+    },
+    {
+      "category": "repeated_identical_edges",
+      "expected": "COMPLETE",
+      "id": "repeated_identical_edges_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ae8b16253a1fecc2abd26ac98b26270a8a7ef5932364a69020844791f8e233ef",
+      "replay_hash": "a4ca3bc46bcf80238bee3c361ad8b5d9c7fa57c74c58b086e373f250f32ccc58"
+    },
+    {
+      "category": "repeated_identical_edges",
+      "expected": "COMPLETE",
+      "id": "repeated_identical_edges_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "39f867c79a8ef32c9a167a47f747efe8030811a61298ad3af1c3b63979de30f4",
+      "replay_hash": "c5b059d4fc9136b29a1c7be95daaaea3d68ea9a03cffdb0fc479e7fb020b3278"
+    },
+    {
+      "category": "repeated_identical_edges",
+      "expected": "COMPLETE",
+      "id": "repeated_identical_edges_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "2ec1be234e997b5d34b802b7c8a876e26c8a742674f621b73060e6c2dd1be825",
+      "replay_hash": "5b68889fde0f3614277392a2204133ec85c33051746589441e3f3132cc678953"
+    },
+    {
+      "category": "repeated_identical_edges",
+      "expected": "COMPLETE",
+      "id": "repeated_identical_edges_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "c46a84041b154712ccfff4d3c172d9271aa424108b4eefc3e4c8d007d2f1c5cb",
+      "replay_hash": "e0282df77576e473ec5f86b0401ed7e184071f0b4be70846e7df33f043d2efcf"
+    },
+    {
+      "category": "stale_path_assumptions",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_path_assumptions_000",
+      "passed": false
+    },
+    {
+      "category": "stale_path_assumptions",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_path_assumptions_001",
+      "passed": false
+    },
+    {
+      "category": "stale_path_assumptions",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_path_assumptions_002",
+      "passed": false
+    },
+    {
+      "category": "stale_path_assumptions",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_path_assumptions_003",
+      "passed": false
+    },
+    {
+      "category": "stale_path_assumptions",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_path_assumptions_004",
+      "passed": false
+    },
+    {
+      "category": "stale_path_assumptions",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_path_assumptions_005",
+      "passed": false
+    },
+    {
+      "category": "missing_action_preconditions",
+      "expected": "UNREACHABLE",
+      "id": "missing_action_preconditions_000",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "8f80a87425fc418308d5836a65c73c2f71c7efc2d45fad6027e8936f602d51db",
+      "replay_hash": "c6fd7efb329b20852c0f7fa2547d3e705a7694ccfa446a199c5ed1f01f4be21c"
+    },
+    {
+      "category": "missing_action_preconditions",
+      "expected": "UNREACHABLE",
+      "id": "missing_action_preconditions_001",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "109181a252ca41432731c114d4a021e92ab7d6f521890f2694e457624e2252ee",
+      "replay_hash": "a2be48448ebc01ada55a048c9ba8a8419425d1c0566802e1b0e0e14f942d89b0"
+    },
+    {
+      "category": "missing_action_preconditions",
+      "expected": "UNREACHABLE",
+      "id": "missing_action_preconditions_002",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "771455d8a854f72d33721c4aece24f796ffdcc6ba8ca463ce450bda271d067e5",
+      "replay_hash": "68a0364351c6e7ebe924db9dd9b4e463e1383ac133132abf233c6d420a5ebeb2"
+    },
+    {
+      "category": "missing_action_preconditions",
+      "expected": "UNREACHABLE",
+      "id": "missing_action_preconditions_003",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "79d64c75be6919200db367a398a140c92389515103925c51bc9e6a9ef430ce94",
+      "replay_hash": "2f7c6e6495e97d69e75772c30a621ac01830ba12d71ec10dbcb402a4c9b4a379"
+    },
+    {
+      "category": "missing_action_preconditions",
+      "expected": "UNREACHABLE",
+      "id": "missing_action_preconditions_004",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "dfd592cf2ad118676925e03bbe01f35a5416a15acf657c43cd38e59d228ea928",
+      "replay_hash": "7a6067715e8ceff3a0ad4361e9bde385db84a24a079adb435d6afb58126de0e5"
+    },
+    {
+      "category": "missing_action_preconditions",
+      "expected": "UNREACHABLE",
+      "id": "missing_action_preconditions_005",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "94ae8cfda3e24fcca36f283f95ebc8d7cc6df850d557988e69b729e12c7e2fa6",
+      "replay_hash": "bba4d672b02d7d224bcf2ebc7cb54b8dd9b37b39aa6476f90412b41748f88f88"
+    },
+    {
+      "category": "action_effects_not_observed",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_effects_not_observed_000",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "7868de56daacce7ce92ff05605639913c72a0030466147b556900feea9d0a760",
+      "replay_hash": "42b19eeea4c619e8d27823d59101e291f5f3d0b9f055b9770bdaa652057fe03f"
+    },
+    {
+      "category": "action_effects_not_observed",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_effects_not_observed_001",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "5f7d6f2443e8b01d7af5ec8d6dd70d83ac636a735b3bf2044611ae5fef59d89f",
+      "replay_hash": "11582e4187da64f57593a106e7edb2f449d334db7a723e3c44dbbf28d432588b"
+    },
+    {
+      "category": "action_effects_not_observed",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_effects_not_observed_002",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "2106345ab030de7b15c6574152339e59ea0c81d385d4adf3bd7989cb97fa5238",
+      "replay_hash": "2ed4e1602cb54e71b1ae3e1f6d758db4317b9cd09dc91e16cf4626166780d4fb"
+    },
+    {
+      "category": "action_effects_not_observed",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_effects_not_observed_003",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "0fc8ffb221191160616db85cd10e78061c8b5b03574b280dcdb515b6aa093ac4",
+      "replay_hash": "6d0c4fcc11597f1341ae7549cd9f6cf1bc98b244e6d15ecda4fcb2a69be4aa92"
+    },
+    {
+      "category": "action_effects_not_observed",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_effects_not_observed_004",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "f705453c0f27ad4a02226d6996c75a369a9a747293eb31a955d8087998b02e24",
+      "replay_hash": "2dfb8f53f35d6c25b2bf0affe82382150af2a3ca3d997573aa826c6e09e25d4d"
+    },
+    {
+      "category": "action_effects_not_observed",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_effects_not_observed_005",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "631e31575af29953aa72376485fb6f208d81d21e693009a4aa9d1883a6e728e9",
+      "replay_hash": "3f6b190c928e3c47057206dc0e6ebe630c92923922a8bee698760a14b628a516"
+    },
+    {
+      "category": "false_success_reports",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "false_success_reports_000",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "7868de56daacce7ce92ff05605639913c72a0030466147b556900feea9d0a760",
+      "replay_hash": "42b19eeea4c619e8d27823d59101e291f5f3d0b9f055b9770bdaa652057fe03f"
+    },
+    {
+      "category": "false_success_reports",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "false_success_reports_001",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "5f7d6f2443e8b01d7af5ec8d6dd70d83ac636a735b3bf2044611ae5fef59d89f",
+      "replay_hash": "11582e4187da64f57593a106e7edb2f449d334db7a723e3c44dbbf28d432588b"
+    },
+    {
+      "category": "false_success_reports",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "false_success_reports_002",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "2106345ab030de7b15c6574152339e59ea0c81d385d4adf3bd7989cb97fa5238",
+      "replay_hash": "2ed4e1602cb54e71b1ae3e1f6d758db4317b9cd09dc91e16cf4626166780d4fb"
+    },
+    {
+      "category": "false_success_reports",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "false_success_reports_003",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "0fc8ffb221191160616db85cd10e78061c8b5b03574b280dcdb515b6aa093ac4",
+      "replay_hash": "6d0c4fcc11597f1341ae7549cd9f6cf1bc98b244e6d15ecda4fcb2a69be4aa92"
+    },
+    {
+      "category": "false_success_reports",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "false_success_reports_004",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "f705453c0f27ad4a02226d6996c75a369a9a747293eb31a955d8087998b02e24",
+      "replay_hash": "2dfb8f53f35d6c25b2bf0affe82382150af2a3ca3d997573aa826c6e09e25d4d"
+    },
+    {
+      "category": "false_success_reports",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "false_success_reports_005",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "631e31575af29953aa72376485fb6f208d81d21e693009a4aa9d1883a6e728e9",
+      "replay_hash": "3f6b190c928e3c47057206dc0e6ebe630c92923922a8bee698760a14b628a516"
+    },
+    {
+      "category": "stale_plan_execution",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_plan_execution_000",
+      "passed": false
+    },
+    {
+      "category": "stale_plan_execution",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_plan_execution_001",
+      "passed": false
+    },
+    {
+      "category": "stale_plan_execution",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_plan_execution_002",
+      "passed": false
+    },
+    {
+      "category": "stale_plan_execution",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_plan_execution_003",
+      "passed": false
+    },
+    {
+      "category": "stale_plan_execution",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_plan_execution_004",
+      "passed": false
+    },
+    {
+      "category": "stale_plan_execution",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "stale_plan_execution_005",
+      "passed": false
+    },
+    {
+      "category": "premature_goal_satisfaction",
+      "expected": "UNREACHABLE",
+      "id": "premature_goal_satisfaction_000",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "8f80a87425fc418308d5836a65c73c2f71c7efc2d45fad6027e8936f602d51db",
+      "replay_hash": "c6fd7efb329b20852c0f7fa2547d3e705a7694ccfa446a199c5ed1f01f4be21c"
+    },
+    {
+      "category": "premature_goal_satisfaction",
+      "expected": "UNREACHABLE",
+      "id": "premature_goal_satisfaction_001",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "109181a252ca41432731c114d4a021e92ab7d6f521890f2694e457624e2252ee",
+      "replay_hash": "a2be48448ebc01ada55a048c9ba8a8419425d1c0566802e1b0e0e14f942d89b0"
+    },
+    {
+      "category": "premature_goal_satisfaction",
+      "expected": "UNREACHABLE",
+      "id": "premature_goal_satisfaction_002",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "771455d8a854f72d33721c4aece24f796ffdcc6ba8ca463ce450bda271d067e5",
+      "replay_hash": "68a0364351c6e7ebe924db9dd9b4e463e1383ac133132abf233c6d420a5ebeb2"
+    },
+    {
+      "category": "premature_goal_satisfaction",
+      "expected": "UNREACHABLE",
+      "id": "premature_goal_satisfaction_003",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "79d64c75be6919200db367a398a140c92389515103925c51bc9e6a9ef430ce94",
+      "replay_hash": "2f7c6e6495e97d69e75772c30a621ac01830ba12d71ec10dbcb402a4c9b4a379"
+    },
+    {
+      "category": "premature_goal_satisfaction",
+      "expected": "UNREACHABLE",
+      "id": "premature_goal_satisfaction_004",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "dfd592cf2ad118676925e03bbe01f35a5416a15acf657c43cd38e59d228ea928",
+      "replay_hash": "7a6067715e8ceff3a0ad4361e9bde385db84a24a079adb435d6afb58126de0e5"
+    },
+    {
+      "category": "premature_goal_satisfaction",
+      "expected": "UNREACHABLE",
+      "id": "premature_goal_satisfaction_005",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "94ae8cfda3e24fcca36f283f95ebc8d7cc6df850d557988e69b729e12c7e2fa6",
+      "replay_hash": "bba4d672b02d7d224bcf2ebc7cb54b8dd9b37b39aa6476f90412b41748f88f88"
+    },
+    {
+      "category": "goal_priority_ties",
+      "expected": "COMPLETE",
+      "id": "goal_priority_ties_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "4aa181c688bf65666066fff30a349f35dbe484b66386b6f1d3548ec9b931c86e",
+      "replay_hash": "2732698de3c622667500c4d28583fb94e494a4ec04fead718b92cd029d048c44"
+    },
+    {
+      "category": "goal_priority_ties",
+      "expected": "COMPLETE",
+      "id": "goal_priority_ties_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "3c91c182208e4c8c827b0a91a1a6cd81dc47cc25fa0e4d915a1185ed55199c0a",
+      "replay_hash": "58b9d0e8754f464583ea9f3a01700cfdc03880b69f5ae394c7acbb87ccdcd763"
+    },
+    {
+      "category": "goal_priority_ties",
+      "expected": "COMPLETE",
+      "id": "goal_priority_ties_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "209f0366eeb32daeab667209b42ecfae2c401210192083c9d95a146bcce41ff4",
+      "replay_hash": "0b31b90d3885f38bf17b8056f351fa679d9d63119c92ad46a268a9552cf4449b"
+    },
+    {
+      "category": "goal_priority_ties",
+      "expected": "COMPLETE",
+      "id": "goal_priority_ties_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "9255af204b3ac9092ddf6de0104e1bd8436470a8894413652c42efc3f6e841d3",
+      "replay_hash": "3e8cafe5faee4d9ab7e95030efe067ee51dcdd3e6ef2bc9cc89cbf3b5148f8b7"
+    },
+    {
+      "category": "goal_priority_ties",
+      "expected": "COMPLETE",
+      "id": "goal_priority_ties_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d44cee046613efff7a555efd91856f95c0f395ceda7f6672c53622c8e3874e22",
+      "replay_hash": "de81ea0d2519c06e2de723d6695991c36aebd7f76be7c30c027267cbb2e114b0"
+    },
+    {
+      "category": "goal_priority_ties",
+      "expected": "COMPLETE",
+      "id": "goal_priority_ties_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d626bb53c9fcfed3ac76ae4711d7c1af658ba28e9d1db26decea0a513749b411",
+      "replay_hash": "effbee9457aa3ba62c1489956c2d86f8cc56ac474fefe18fc97f53b65f236259"
+    },
+    {
+      "category": "tension_as_evidence",
+      "expected": "COMPLETE",
+      "id": "tension_as_evidence_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e86347dada6e27b9a53a273bf8addeadd377a6bb9d2eb7527159441887e14577",
+      "replay_hash": "353a78430df8c5492a04f59fe3fc3bb825154aae13064fb93fe971cfa9d8182c"
+    },
+    {
+      "category": "tension_as_evidence",
+      "expected": "COMPLETE",
+      "id": "tension_as_evidence_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "78c13e1d4199eb250d600cc267e22b4beb6fa608fbc23002159553a393571386",
+      "replay_hash": "3336c4de6847428e0b9deb1b9c4ccd2f0509680b07aadd9564ccffd0af51427a"
+    },
+    {
+      "category": "tension_as_evidence",
+      "expected": "COMPLETE",
+      "id": "tension_as_evidence_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1812764df5e33cc2b7d42026cbb8956ba1805b9e761ebc57afe27ef00e2eeefb",
+      "replay_hash": "44a6844244ada9a27290297465522c113ec801724621d06f9ab8e511bbc1c553"
+    },
+    {
+      "category": "tension_as_evidence",
+      "expected": "COMPLETE",
+      "id": "tension_as_evidence_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1112dbdd08631e9599997bbfeb305625428d3cc25a0b2c1b2eeed3233e452b40",
+      "replay_hash": "12288165bd432124d8f2dd548c3eabc918350fcb563263085ec96a23ade76cff"
+    },
+    {
+      "category": "tension_as_evidence",
+      "expected": "COMPLETE",
+      "id": "tension_as_evidence_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "3676ec04dfb23365a70a6011dc7a7d36496fcf1d352857a3200b85c5c4bf979b",
+      "replay_hash": "65f039220bee10a55aad9b34912827e0bd2e9d5331bf2be24e919b58167f052c"
+    },
+    {
+      "category": "tension_as_evidence",
+      "expected": "COMPLETE",
+      "id": "tension_as_evidence_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "cb97e493b676b1185f9368ed88c57db8189d6c0a70cf00fd9d33d8835fe947b5",
+      "replay_hash": "46a62fe58bd159f1cfcdee961d1a1e857905f723963d37ac3bd1889f999e8db5"
+    },
+    {
+      "category": "tension_cycles",
+      "expected": "COMPLETE",
+      "id": "tension_cycles_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e86347dada6e27b9a53a273bf8addeadd377a6bb9d2eb7527159441887e14577",
+      "replay_hash": "353a78430df8c5492a04f59fe3fc3bb825154aae13064fb93fe971cfa9d8182c"
+    },
+    {
+      "category": "tension_cycles",
+      "expected": "COMPLETE",
+      "id": "tension_cycles_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "78c13e1d4199eb250d600cc267e22b4beb6fa608fbc23002159553a393571386",
+      "replay_hash": "3336c4de6847428e0b9deb1b9c4ccd2f0509680b07aadd9564ccffd0af51427a"
+    },
+    {
+      "category": "tension_cycles",
+      "expected": "COMPLETE",
+      "id": "tension_cycles_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1812764df5e33cc2b7d42026cbb8956ba1805b9e761ebc57afe27ef00e2eeefb",
+      "replay_hash": "44a6844244ada9a27290297465522c113ec801724621d06f9ab8e511bbc1c553"
+    },
+    {
+      "category": "tension_cycles",
+      "expected": "COMPLETE",
+      "id": "tension_cycles_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1112dbdd08631e9599997bbfeb305625428d3cc25a0b2c1b2eeed3233e452b40",
+      "replay_hash": "12288165bd432124d8f2dd548c3eabc918350fcb563263085ec96a23ade76cff"
+    },
+    {
+      "category": "tension_cycles",
+      "expected": "COMPLETE",
+      "id": "tension_cycles_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "3676ec04dfb23365a70a6011dc7a7d36496fcf1d352857a3200b85c5c4bf979b",
+      "replay_hash": "65f039220bee10a55aad9b34912827e0bd2e9d5331bf2be24e919b58167f052c"
+    },
+    {
+      "category": "tension_cycles",
+      "expected": "COMPLETE",
+      "id": "tension_cycles_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "cb97e493b676b1185f9368ed88c57db8189d6c0a70cf00fd9d33d8835fe947b5",
+      "replay_hash": "46a62fe58bd159f1cfcdee961d1a1e857905f723963d37ac3bd1889f999e8db5"
+    },
+    {
+      "category": "unbounded_propagation",
+      "expected": "COMPLETE",
+      "id": "unbounded_propagation_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e86347dada6e27b9a53a273bf8addeadd377a6bb9d2eb7527159441887e14577",
+      "replay_hash": "353a78430df8c5492a04f59fe3fc3bb825154aae13064fb93fe971cfa9d8182c"
+    },
+    {
+      "category": "unbounded_propagation",
+      "expected": "COMPLETE",
+      "id": "unbounded_propagation_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "78c13e1d4199eb250d600cc267e22b4beb6fa608fbc23002159553a393571386",
+      "replay_hash": "3336c4de6847428e0b9deb1b9c4ccd2f0509680b07aadd9564ccffd0af51427a"
+    },
+    {
+      "category": "unbounded_propagation",
+      "expected": "COMPLETE",
+      "id": "unbounded_propagation_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1812764df5e33cc2b7d42026cbb8956ba1805b9e761ebc57afe27ef00e2eeefb",
+      "replay_hash": "44a6844244ada9a27290297465522c113ec801724621d06f9ab8e511bbc1c553"
+    },
+    {
+      "category": "unbounded_propagation",
+      "expected": "COMPLETE",
+      "id": "unbounded_propagation_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1112dbdd08631e9599997bbfeb305625428d3cc25a0b2c1b2eeed3233e452b40",
+      "replay_hash": "12288165bd432124d8f2dd548c3eabc918350fcb563263085ec96a23ade76cff"
+    },
+    {
+      "category": "unbounded_propagation",
+      "expected": "COMPLETE",
+      "id": "unbounded_propagation_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "3676ec04dfb23365a70a6011dc7a7d36496fcf1d352857a3200b85c5c4bf979b",
+      "replay_hash": "65f039220bee10a55aad9b34912827e0bd2e9d5331bf2be24e919b58167f052c"
+    },
+    {
+      "category": "unbounded_propagation",
+      "expected": "COMPLETE",
+      "id": "unbounded_propagation_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "cb97e493b676b1185f9368ed88c57db8189d6c0a70cf00fd9d33d8835fe947b5",
+      "replay_hash": "46a62fe58bd159f1cfcdee961d1a1e857905f723963d37ac3bd1889f999e8db5"
+    },
+    {
+      "category": "planning_cycles",
+      "expected": "UNREACHABLE",
+      "id": "planning_cycles_000",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "00b3a2e703c53c642d009fcdd3d4cbf2ce5286020752eed5160ebe562a6abb68",
+      "replay_hash": "585422baabd2057e336ca29fdf7c2a33591327d508d1a5a78d2f151d8c8f4a32"
+    },
+    {
+      "category": "planning_cycles",
+      "expected": "UNREACHABLE",
+      "id": "planning_cycles_001",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "398bbea66b8992c965eb7059aff23ade08f8510f3e2d89c9758a97269ed24e82",
+      "replay_hash": "db889d721b2f2f0f0a2b8bb4386d0c5a661b77edd91c01278e33e6ad2d422dc2"
+    },
+    {
+      "category": "planning_cycles",
+      "expected": "UNREACHABLE",
+      "id": "planning_cycles_002",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "ca2fc47f76aab40cec287df10782e97c3800668a1b5dc94243d54a70a0a512e9",
+      "replay_hash": "05d18f6d6739f9e62e7a64bb070a9b4a28d81b31c788ba1b76a04466bcb9f14d"
+    },
+    {
+      "category": "planning_cycles",
+      "expected": "UNREACHABLE",
+      "id": "planning_cycles_003",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "d51ff858ce2a2c559b36dab8de19ae76dbfe63b9ae48ef431fc59a9ac629a5de",
+      "replay_hash": "39742959c0709ef896880dba4461d06fc6c1c9caea2556e22d7c249e54898ee8"
+    },
+    {
+      "category": "planning_cycles",
+      "expected": "UNREACHABLE",
+      "id": "planning_cycles_004",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "72dc3c7d899d82946858ad687f86d35b67c8b8af171125ea67dd745c68f3fd65",
+      "replay_hash": "695a177360845ca764ed957679cca104679efbbbff01699816a3d22d3720ecce"
+    },
+    {
+      "category": "planning_cycles",
+      "expected": "UNREACHABLE",
+      "id": "planning_cycles_005",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "662586d1c9d719de2fc05647ee82a6310f0c3159d8f2ec9619ee13808af33496",
+      "replay_hash": "4d29ea6c8c391ff3241e87d94be0c24aa61895dfdd0fb9afd5aede16d9f2e8d2"
+    },
+    {
+      "category": "replanning_loops",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "replanning_loops_000",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "841b0e95b2e2dfe5d031dff6e80f0ffa089af9ab1ee137514e32d741434da6e7",
+      "replay_hash": "0a29f44a1dbab089f9f7adcb3f96f130da4191b1f6ba59498606a1440226bf66"
+    },
+    {
+      "category": "replanning_loops",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "replanning_loops_001",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "bd26f537bf4f155ea1621fcfed7f61cdbd6dd5f502b4838bc69d54d70b958ac1",
+      "replay_hash": "8dcb581c93f5b8aa2f229f5a8f6a80013777d500ec057d1853ede282b44b6439"
+    },
+    {
+      "category": "replanning_loops",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "replanning_loops_002",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "c3f7b7905c82235b8e056700f0a6241855a6773dcc5a0a9c3c72b5bcd37d8b78",
+      "replay_hash": "8af745b447db4efe5f834aa52073909afc5b0884dd844a938c1e767712f9a2b9"
+    },
+    {
+      "category": "replanning_loops",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "replanning_loops_003",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "395ec45ad8bec43deee6823c4645ec5eacde87e5250a1505317b2c4ef59d1c86",
+      "replay_hash": "caa2eecafa877431d8c6548d169886cd6da8fb5a1186007759a087bcf3a55ea1"
+    },
+    {
+      "category": "replanning_loops",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "replanning_loops_004",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "a8b25d71cf7f845a3ab378c05642a782fac86efd96b05825512c1e97ae718927",
+      "replay_hash": "58d0f5aa972bb1ba47c99de68511d782a75f95de46389db229d09973f9957260"
+    },
+    {
+      "category": "replanning_loops",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "replanning_loops_005",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "bec1914adf79e3fc91bc53556e23be216db90d12c4bc9722a2e9c7bc2d88f961",
+      "replay_hash": "96609c3797258e1f380910b30e24d95860a176b584b9cf483f86846f196828e5"
+    },
+    {
+      "category": "action_budget_exhaustion",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_budget_exhaustion_000",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "841b0e95b2e2dfe5d031dff6e80f0ffa089af9ab1ee137514e32d741434da6e7",
+      "replay_hash": "0a29f44a1dbab089f9f7adcb3f96f130da4191b1f6ba59498606a1440226bf66"
+    },
+    {
+      "category": "action_budget_exhaustion",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_budget_exhaustion_001",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "bd26f537bf4f155ea1621fcfed7f61cdbd6dd5f502b4838bc69d54d70b958ac1",
+      "replay_hash": "8dcb581c93f5b8aa2f229f5a8f6a80013777d500ec057d1853ede282b44b6439"
+    },
+    {
+      "category": "action_budget_exhaustion",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_budget_exhaustion_002",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "c3f7b7905c82235b8e056700f0a6241855a6773dcc5a0a9c3c72b5bcd37d8b78",
+      "replay_hash": "8af745b447db4efe5f834aa52073909afc5b0884dd844a938c1e767712f9a2b9"
+    },
+    {
+      "category": "action_budget_exhaustion",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_budget_exhaustion_003",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "395ec45ad8bec43deee6823c4645ec5eacde87e5250a1505317b2c4ef59d1c86",
+      "replay_hash": "caa2eecafa877431d8c6548d169886cd6da8fb5a1186007759a087bcf3a55ea1"
+    },
+    {
+      "category": "action_budget_exhaustion",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_budget_exhaustion_004",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "a8b25d71cf7f845a3ab378c05642a782fac86efd96b05825512c1e97ae718927",
+      "replay_hash": "58d0f5aa972bb1ba47c99de68511d782a75f95de46389db229d09973f9957260"
+    },
+    {
+      "category": "action_budget_exhaustion",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "action_budget_exhaustion_005",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "bec1914adf79e3fc91bc53556e23be216db90d12c4bc9722a2e9c7bc2d88f961",
+      "replay_hash": "96609c3797258e1f380910b30e24d95860a176b584b9cf483f86846f196828e5"
+    },
+    {
+      "category": "state_budget_exhaustion",
+      "expected": "UNREACHABLE",
+      "id": "state_budget_exhaustion_000",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "8f80a87425fc418308d5836a65c73c2f71c7efc2d45fad6027e8936f602d51db",
+      "replay_hash": "c6fd7efb329b20852c0f7fa2547d3e705a7694ccfa446a199c5ed1f01f4be21c"
+    },
+    {
+      "category": "state_budget_exhaustion",
+      "expected": "UNREACHABLE",
+      "id": "state_budget_exhaustion_001",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "109181a252ca41432731c114d4a021e92ab7d6f521890f2694e457624e2252ee",
+      "replay_hash": "a2be48448ebc01ada55a048c9ba8a8419425d1c0566802e1b0e0e14f942d89b0"
+    },
+    {
+      "category": "state_budget_exhaustion",
+      "expected": "UNREACHABLE",
+      "id": "state_budget_exhaustion_002",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "771455d8a854f72d33721c4aece24f796ffdcc6ba8ca463ce450bda271d067e5",
+      "replay_hash": "68a0364351c6e7ebe924db9dd9b4e463e1383ac133132abf233c6d420a5ebeb2"
+    },
+    {
+      "category": "state_budget_exhaustion",
+      "expected": "UNREACHABLE",
+      "id": "state_budget_exhaustion_003",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "79d64c75be6919200db367a398a140c92389515103925c51bc9e6a9ef430ce94",
+      "replay_hash": "2f7c6e6495e97d69e75772c30a621ac01830ba12d71ec10dbcb402a4c9b4a379"
+    },
+    {
+      "category": "state_budget_exhaustion",
+      "expected": "UNREACHABLE",
+      "id": "state_budget_exhaustion_004",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "dfd592cf2ad118676925e03bbe01f35a5416a15acf657c43cd38e59d228ea928",
+      "replay_hash": "7a6067715e8ceff3a0ad4361e9bde385db84a24a079adb435d6afb58126de0e5"
+    },
+    {
+      "category": "state_budget_exhaustion",
+      "expected": "UNREACHABLE",
+      "id": "state_budget_exhaustion_005",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "94ae8cfda3e24fcca36f283f95ebc8d7cc6df850d557988e69b729e12c7e2fa6",
+      "replay_hash": "bba4d672b02d7d224bcf2ebc7cb54b8dd9b37b39aa6476f90412b41748f88f88"
+    },
+    {
+      "category": "scheduled_event_poisoning",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "scheduled_event_poisoning_000",
+      "passed": false
+    },
+    {
+      "category": "scheduled_event_poisoning",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "scheduled_event_poisoning_001",
+      "passed": false
+    },
+    {
+      "category": "scheduled_event_poisoning",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "scheduled_event_poisoning_002",
+      "passed": false
+    },
+    {
+      "category": "scheduled_event_poisoning",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "scheduled_event_poisoning_003",
+      "passed": false
+    },
+    {
+      "category": "scheduled_event_poisoning",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "scheduled_event_poisoning_004",
+      "passed": false
+    },
+    {
+      "category": "scheduled_event_poisoning",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "scheduled_event_poisoning_005",
+      "passed": false
+    },
+    {
+      "category": "malformed_chained_events",
+      "expected": "UNREACHABLE",
+      "id": "malformed_chained_events_000",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "8f80a87425fc418308d5836a65c73c2f71c7efc2d45fad6027e8936f602d51db",
+      "replay_hash": "c6fd7efb329b20852c0f7fa2547d3e705a7694ccfa446a199c5ed1f01f4be21c"
+    },
+    {
+      "category": "malformed_chained_events",
+      "expected": "UNREACHABLE",
+      "id": "malformed_chained_events_001",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "109181a252ca41432731c114d4a021e92ab7d6f521890f2694e457624e2252ee",
+      "replay_hash": "a2be48448ebc01ada55a048c9ba8a8419425d1c0566802e1b0e0e14f942d89b0"
+    },
+    {
+      "category": "malformed_chained_events",
+      "expected": "UNREACHABLE",
+      "id": "malformed_chained_events_002",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "771455d8a854f72d33721c4aece24f796ffdcc6ba8ca463ce450bda271d067e5",
+      "replay_hash": "68a0364351c6e7ebe924db9dd9b4e463e1383ac133132abf233c6d420a5ebeb2"
+    },
+    {
+      "category": "malformed_chained_events",
+      "expected": "UNREACHABLE",
+      "id": "malformed_chained_events_003",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "79d64c75be6919200db367a398a140c92389515103925c51bc9e6a9ef430ce94",
+      "replay_hash": "2f7c6e6495e97d69e75772c30a621ac01830ba12d71ec10dbcb402a4c9b4a379"
+    },
+    {
+      "category": "malformed_chained_events",
+      "expected": "UNREACHABLE",
+      "id": "malformed_chained_events_004",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "dfd592cf2ad118676925e03bbe01f35a5416a15acf657c43cd38e59d228ea928",
+      "replay_hash": "7a6067715e8ceff3a0ad4361e9bde385db84a24a079adb435d6afb58126de0e5"
+    },
+    {
+      "category": "malformed_chained_events",
+      "expected": "UNREACHABLE",
+      "id": "malformed_chained_events_005",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "94ae8cfda3e24fcca36f283f95ebc8d7cc6df850d557988e69b729e12c7e2fa6",
+      "replay_hash": "bba4d672b02d7d224bcf2ebc7cb54b8dd9b37b39aa6476f90412b41748f88f88"
+    },
+    {
+      "category": "repeated_environment_events",
+      "expected": "UNREACHABLE",
+      "id": "repeated_environment_events_000",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "8f80a87425fc418308d5836a65c73c2f71c7efc2d45fad6027e8936f602d51db",
+      "replay_hash": "c6fd7efb329b20852c0f7fa2547d3e705a7694ccfa446a199c5ed1f01f4be21c"
+    },
+    {
+      "category": "repeated_environment_events",
+      "expected": "UNREACHABLE",
+      "id": "repeated_environment_events_001",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "109181a252ca41432731c114d4a021e92ab7d6f521890f2694e457624e2252ee",
+      "replay_hash": "a2be48448ebc01ada55a048c9ba8a8419425d1c0566802e1b0e0e14f942d89b0"
+    },
+    {
+      "category": "repeated_environment_events",
+      "expected": "UNREACHABLE",
+      "id": "repeated_environment_events_002",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "771455d8a854f72d33721c4aece24f796ffdcc6ba8ca463ce450bda271d067e5",
+      "replay_hash": "68a0364351c6e7ebe924db9dd9b4e463e1383ac133132abf233c6d420a5ebeb2"
+    },
+    {
+      "category": "repeated_environment_events",
+      "expected": "UNREACHABLE",
+      "id": "repeated_environment_events_003",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "79d64c75be6919200db367a398a140c92389515103925c51bc9e6a9ef430ce94",
+      "replay_hash": "2f7c6e6495e97d69e75772c30a621ac01830ba12d71ec10dbcb402a4c9b4a379"
+    },
+    {
+      "category": "repeated_environment_events",
+      "expected": "UNREACHABLE",
+      "id": "repeated_environment_events_004",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "dfd592cf2ad118676925e03bbe01f35a5416a15acf657c43cd38e59d228ea928",
+      "replay_hash": "7a6067715e8ceff3a0ad4361e9bde385db84a24a079adb435d6afb58126de0e5"
+    },
+    {
+      "category": "repeated_environment_events",
+      "expected": "UNREACHABLE",
+      "id": "repeated_environment_events_005",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "94ae8cfda3e24fcca36f283f95ebc8d7cc6df850d557988e69b729e12c7e2fa6",
+      "replay_hash": "bba4d672b02d7d224bcf2ebc7cb54b8dd9b37b39aa6476f90412b41748f88f88"
+    },
+    {
+      "category": "rejected_observation_contamination",
+      "expected": "UNREACHABLE",
+      "id": "rejected_observation_contamination_000",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "8f80a87425fc418308d5836a65c73c2f71c7efc2d45fad6027e8936f602d51db",
+      "replay_hash": "c6fd7efb329b20852c0f7fa2547d3e705a7694ccfa446a199c5ed1f01f4be21c"
+    },
+    {
+      "category": "rejected_observation_contamination",
+      "expected": "UNREACHABLE",
+      "id": "rejected_observation_contamination_001",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "109181a252ca41432731c114d4a021e92ab7d6f521890f2694e457624e2252ee",
+      "replay_hash": "a2be48448ebc01ada55a048c9ba8a8419425d1c0566802e1b0e0e14f942d89b0"
+    },
+    {
+      "category": "rejected_observation_contamination",
+      "expected": "UNREACHABLE",
+      "id": "rejected_observation_contamination_002",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "771455d8a854f72d33721c4aece24f796ffdcc6ba8ca463ce450bda271d067e5",
+      "replay_hash": "68a0364351c6e7ebe924db9dd9b4e463e1383ac133132abf233c6d420a5ebeb2"
+    },
+    {
+      "category": "rejected_observation_contamination",
+      "expected": "UNREACHABLE",
+      "id": "rejected_observation_contamination_003",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "79d64c75be6919200db367a398a140c92389515103925c51bc9e6a9ef430ce94",
+      "replay_hash": "2f7c6e6495e97d69e75772c30a621ac01830ba12d71ec10dbcb402a4c9b4a379"
+    },
+    {
+      "category": "rejected_observation_contamination",
+      "expected": "UNREACHABLE",
+      "id": "rejected_observation_contamination_004",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "dfd592cf2ad118676925e03bbe01f35a5416a15acf657c43cd38e59d228ea928",
+      "replay_hash": "7a6067715e8ceff3a0ad4361e9bde385db84a24a079adb435d6afb58126de0e5"
+    },
+    {
+      "category": "rejected_observation_contamination",
+      "expected": "UNREACHABLE",
+      "id": "rejected_observation_contamination_005",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "94ae8cfda3e24fcca36f283f95ebc8d7cc6df850d557988e69b729e12c7e2fa6",
+      "replay_hash": "bba4d672b02d7d224bcf2ebc7cb54b8dd9b37b39aa6476f90412b41748f88f88"
+    },
+    {
+      "category": "unapproved_lesson_activation",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "unapproved_lesson_activation_000",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "711a2476002441ab5ee4da044e99aff555ff79dd646addd76932f9dfbfcbabfd",
+      "replay_hash": "c3fef0ac03973d6573245b1ac4f3ae103fdab3a4ba8a641e11e69a4920c6f3a7"
+    },
+    {
+      "category": "unapproved_lesson_activation",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "unapproved_lesson_activation_001",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "dbdf94446da99e9eaefeeed43da619a8f163188777a779588dfac8736894d6d5",
+      "replay_hash": "4d22a2021968b9c09944aeb6ae5413e15338c5714fa9051c15e952bbcde2fc18"
+    },
+    {
+      "category": "unapproved_lesson_activation",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "unapproved_lesson_activation_002",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "a566c7f087eb0b6d862906451b8c923d7df2477ad336b192c633c09d24f3837e",
+      "replay_hash": "eef234473e426401c310a17e5e2ba94c3695f7c7a0f87d74ab75527dfc2d8c7e"
+    },
+    {
+      "category": "unapproved_lesson_activation",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "unapproved_lesson_activation_003",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "661ed6575d48c710c7a00e910dcc563ba3c2282cd8cb1e28559bbc87ae1156c9",
+      "replay_hash": "555c858f7c3672931cae69877379e06a0e28b777ba088efcde5938d5769991e5"
+    },
+    {
+      "category": "unapproved_lesson_activation",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "unapproved_lesson_activation_004",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "576d7ba1a90d58404630bf1ffd69b0e02e477dd9796d3e9221a4a442f77baa36",
+      "replay_hash": "57054547b12c4a7ab254eb6feaaa78f214b3960ef74f43f7ff36f2f8e078fad2"
+    },
+    {
+      "category": "unapproved_lesson_activation",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "unapproved_lesson_activation_005",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "83f500b013cf2c22d17c3bf5f4ac07104cc836911c35222aef002483b1516932",
+      "replay_hash": "8f95519f549dabc29fe0dae9efbea60b3f964563ca038be46da6ad9938a354b6"
+    },
+    {
+      "category": "malicious_lesson_schemas",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "malicious_lesson_schemas_000",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "711a2476002441ab5ee4da044e99aff555ff79dd646addd76932f9dfbfcbabfd",
+      "replay_hash": "c3fef0ac03973d6573245b1ac4f3ae103fdab3a4ba8a641e11e69a4920c6f3a7"
+    },
+    {
+      "category": "malicious_lesson_schemas",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "malicious_lesson_schemas_001",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "dbdf94446da99e9eaefeeed43da619a8f163188777a779588dfac8736894d6d5",
+      "replay_hash": "4d22a2021968b9c09944aeb6ae5413e15338c5714fa9051c15e952bbcde2fc18"
+    },
+    {
+      "category": "malicious_lesson_schemas",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "malicious_lesson_schemas_002",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "a566c7f087eb0b6d862906451b8c923d7df2477ad336b192c633c09d24f3837e",
+      "replay_hash": "eef234473e426401c310a17e5e2ba94c3695f7c7a0f87d74ab75527dfc2d8c7e"
+    },
+    {
+      "category": "malicious_lesson_schemas",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "malicious_lesson_schemas_003",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "661ed6575d48c710c7a00e910dcc563ba3c2282cd8cb1e28559bbc87ae1156c9",
+      "replay_hash": "555c858f7c3672931cae69877379e06a0e28b777ba088efcde5938d5769991e5"
+    },
+    {
+      "category": "malicious_lesson_schemas",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "malicious_lesson_schemas_004",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "576d7ba1a90d58404630bf1ffd69b0e02e477dd9796d3e9221a4a442f77baa36",
+      "replay_hash": "57054547b12c4a7ab254eb6feaaa78f214b3960ef74f43f7ff36f2f8e078fad2"
+    },
+    {
+      "category": "malicious_lesson_schemas",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "malicious_lesson_schemas_005",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "83f500b013cf2c22d17c3bf5f4ac07104cc836911c35222aef002483b1516932",
+      "replay_hash": "8f95519f549dabc29fe0dae9efbea60b3f964563ca038be46da6ad9938a354b6"
+    },
+    {
+      "category": "reflection_bypass",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_bypass_000",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "711a2476002441ab5ee4da044e99aff555ff79dd646addd76932f9dfbfcbabfd",
+      "replay_hash": "c3fef0ac03973d6573245b1ac4f3ae103fdab3a4ba8a641e11e69a4920c6f3a7"
+    },
+    {
+      "category": "reflection_bypass",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_bypass_001",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "dbdf94446da99e9eaefeeed43da619a8f163188777a779588dfac8736894d6d5",
+      "replay_hash": "4d22a2021968b9c09944aeb6ae5413e15338c5714fa9051c15e952bbcde2fc18"
+    },
+    {
+      "category": "reflection_bypass",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_bypass_002",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "a566c7f087eb0b6d862906451b8c923d7df2477ad336b192c633c09d24f3837e",
+      "replay_hash": "eef234473e426401c310a17e5e2ba94c3695f7c7a0f87d74ab75527dfc2d8c7e"
+    },
+    {
+      "category": "reflection_bypass",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_bypass_003",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "661ed6575d48c710c7a00e910dcc563ba3c2282cd8cb1e28559bbc87ae1156c9",
+      "replay_hash": "555c858f7c3672931cae69877379e06a0e28b777ba088efcde5938d5769991e5"
+    },
+    {
+      "category": "reflection_bypass",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_bypass_004",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "576d7ba1a90d58404630bf1ffd69b0e02e477dd9796d3e9221a4a442f77baa36",
+      "replay_hash": "57054547b12c4a7ab254eb6feaaa78f214b3960ef74f43f7ff36f2f8e078fad2"
+    },
+    {
+      "category": "reflection_bypass",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_bypass_005",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "83f500b013cf2c22d17c3bf5f4ac07104cc836911c35222aef002483b1516932",
+      "replay_hash": "8f95519f549dabc29fe0dae9efbea60b3f964563ca038be46da6ad9938a354b6"
+    },
+    {
+      "category": "agent_inventory_collision",
+      "expected": "UNREACHABLE",
+      "id": "agent_inventory_collision_000",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "493613fe17fbd414d6640e52cf55a2262a582ba040e2afa9533805ef863d7883",
+      "replay_hash": "a688a675faef790f25f7de6bf3ca9900e77ec8f9c40bf31b11e4bd0ebd2df3e6"
+    },
+    {
+      "category": "agent_inventory_collision",
+      "expected": "UNREACHABLE",
+      "id": "agent_inventory_collision_001",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "ca122651799c49b8f6aecec64c8395ad5a16f69e8961c5bc81f1b97b9307be78",
+      "replay_hash": "71e59fb3e5b437c05565b21c8652e7e7eab389eebb6700195c696122d98cb828"
+    },
+    {
+      "category": "agent_inventory_collision",
+      "expected": "UNREACHABLE",
+      "id": "agent_inventory_collision_002",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "cda2282a1656d4b762dfb154f1f0dfcde239241bba24616e089f3a86c1f19469",
+      "replay_hash": "53d48e012e866ae884297330a88604801817a1220049d7744d89f8b17b2359c0"
+    },
+    {
+      "category": "agent_inventory_collision",
+      "expected": "UNREACHABLE",
+      "id": "agent_inventory_collision_003",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "0c500cc4b64c9167182c7f3acf8a2892bceb9b58cd23f57f6e2a40d606ee19dc",
+      "replay_hash": "94f050259bd94a01693264e87a8751726b4a77285076637b585b66b15b493b7c"
+    },
+    {
+      "category": "agent_inventory_collision",
+      "expected": "UNREACHABLE",
+      "id": "agent_inventory_collision_004",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "ae30ccdfd7671a705c7cda24febddd8f8b1d8846a3b2d3e92f4043c1b61f768c",
+      "replay_hash": "e336d2d47424f440f11e7921591a0b67a725a112a8a1c0a22cba2775acf65360"
+    },
+    {
+      "category": "agent_inventory_collision",
+      "expected": "UNREACHABLE",
+      "id": "agent_inventory_collision_005",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "c3602f377ada5f49ade5f792feab5af4164e7f8f48fd0c9cf1ebbf1f1a3d1390",
+      "replay_hash": "391e23521a79688306a1f7704f763a1c09ea26623d989f4a814b99903b49fa8a"
+    },
+    {
+      "category": "duplicate_ownership",
+      "expected": "UNREACHABLE",
+      "id": "duplicate_ownership_000",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "493613fe17fbd414d6640e52cf55a2262a582ba040e2afa9533805ef863d7883",
+      "replay_hash": "a688a675faef790f25f7de6bf3ca9900e77ec8f9c40bf31b11e4bd0ebd2df3e6"
+    },
+    {
+      "category": "duplicate_ownership",
+      "expected": "UNREACHABLE",
+      "id": "duplicate_ownership_001",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "ca122651799c49b8f6aecec64c8395ad5a16f69e8961c5bc81f1b97b9307be78",
+      "replay_hash": "71e59fb3e5b437c05565b21c8652e7e7eab389eebb6700195c696122d98cb828"
+    },
+    {
+      "category": "duplicate_ownership",
+      "expected": "UNREACHABLE",
+      "id": "duplicate_ownership_002",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "cda2282a1656d4b762dfb154f1f0dfcde239241bba24616e089f3a86c1f19469",
+      "replay_hash": "53d48e012e866ae884297330a88604801817a1220049d7744d89f8b17b2359c0"
+    },
+    {
+      "category": "duplicate_ownership",
+      "expected": "UNREACHABLE",
+      "id": "duplicate_ownership_003",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "0c500cc4b64c9167182c7f3acf8a2892bceb9b58cd23f57f6e2a40d606ee19dc",
+      "replay_hash": "94f050259bd94a01693264e87a8751726b4a77285076637b585b66b15b493b7c"
+    },
+    {
+      "category": "duplicate_ownership",
+      "expected": "UNREACHABLE",
+      "id": "duplicate_ownership_004",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "ae30ccdfd7671a705c7cda24febddd8f8b1d8846a3b2d3e92f4043c1b61f768c",
+      "replay_hash": "e336d2d47424f440f11e7921591a0b67a725a112a8a1c0a22cba2775acf65360"
+    },
+    {
+      "category": "duplicate_ownership",
+      "expected": "UNREACHABLE",
+      "id": "duplicate_ownership_005",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "c3602f377ada5f49ade5f792feab5af4164e7f8f48fd0c9cf1ebbf1f1a3d1390",
+      "replay_hash": "391e23521a79688306a1f7704f763a1c09ea26623d989f4a814b99903b49fa8a"
+    },
+    {
+      "category": "unauthorized_object_taking",
+      "expected": "UNREACHABLE",
+      "id": "unauthorized_object_taking_000",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "493613fe17fbd414d6640e52cf55a2262a582ba040e2afa9533805ef863d7883",
+      "replay_hash": "a688a675faef790f25f7de6bf3ca9900e77ec8f9c40bf31b11e4bd0ebd2df3e6"
+    },
+    {
+      "category": "unauthorized_object_taking",
+      "expected": "UNREACHABLE",
+      "id": "unauthorized_object_taking_001",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "ca122651799c49b8f6aecec64c8395ad5a16f69e8961c5bc81f1b97b9307be78",
+      "replay_hash": "71e59fb3e5b437c05565b21c8652e7e7eab389eebb6700195c696122d98cb828"
+    },
+    {
+      "category": "unauthorized_object_taking",
+      "expected": "UNREACHABLE",
+      "id": "unauthorized_object_taking_002",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "cda2282a1656d4b762dfb154f1f0dfcde239241bba24616e089f3a86c1f19469",
+      "replay_hash": "53d48e012e866ae884297330a88604801817a1220049d7744d89f8b17b2359c0"
+    },
+    {
+      "category": "unauthorized_object_taking",
+      "expected": "UNREACHABLE",
+      "id": "unauthorized_object_taking_003",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "0c500cc4b64c9167182c7f3acf8a2892bceb9b58cd23f57f6e2a40d606ee19dc",
+      "replay_hash": "94f050259bd94a01693264e87a8751726b4a77285076637b585b66b15b493b7c"
+    },
+    {
+      "category": "unauthorized_object_taking",
+      "expected": "UNREACHABLE",
+      "id": "unauthorized_object_taking_004",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "ae30ccdfd7671a705c7cda24febddd8f8b1d8846a3b2d3e92f4043c1b61f768c",
+      "replay_hash": "e336d2d47424f440f11e7921591a0b67a725a112a8a1c0a22cba2775acf65360"
+    },
+    {
+      "category": "unauthorized_object_taking",
+      "expected": "UNREACHABLE",
+      "id": "unauthorized_object_taking_005",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "c3602f377ada5f49ade5f792feab5af4164e7f8f48fd0c9cf1ebbf1f1a3d1390",
+      "replay_hash": "391e23521a79688306a1f7704f763a1c09ea26623d989f4a814b99903b49fa8a"
+    },
+    {
+      "category": "competing_goals",
+      "expected": "BLOCKED",
+      "id": "competing_goals_000",
+      "observed": "BLOCKED",
+      "passed": true,
+      "receipt_hash": "0b74f5661d6424ff203c064cde7d95d6950e23f44028d488238dd743d258eb6a",
+      "replay_hash": "741606652c3af8f53ebeb735324fde22d27cffcd49a8b520a73fe841a5fa939d"
+    },
+    {
+      "category": "competing_goals",
+      "expected": "BLOCKED",
+      "id": "competing_goals_001",
+      "observed": "BLOCKED",
+      "passed": true,
+      "receipt_hash": "91a999f0a17ae395dc7313d1be4fb31503acc94d281ba7b43b8824e89041798a",
+      "replay_hash": "3cdae720a5ca7be36f512cbc23cc4848ed6ebf713fa8a6a966ee1fa01c8e8e28"
+    },
+    {
+      "category": "competing_goals",
+      "expected": "BLOCKED",
+      "id": "competing_goals_002",
+      "observed": "BLOCKED",
+      "passed": true,
+      "receipt_hash": "593164af82a9886b736c1e4225def062b1b0fd330378d587b5d76abd0423ba20",
+      "replay_hash": "5fdb0ab3642e8322bd1e76309f1ca3cb294abcf5190e9e3f128572d4c81790e8"
+    },
+    {
+      "category": "competing_goals",
+      "expected": "BLOCKED",
+      "id": "competing_goals_003",
+      "observed": "BLOCKED",
+      "passed": true,
+      "receipt_hash": "cd9a47db09860553cf082aed763fd68a84c9a4316f82bd765c5d8f9556e8e0a8",
+      "replay_hash": "7fa04133cea17eb1e1c8db1f5fd8dde1c077671e93494333200951a9df0edc12"
+    },
+    {
+      "category": "competing_goals",
+      "expected": "BLOCKED",
+      "id": "competing_goals_004",
+      "observed": "BLOCKED",
+      "passed": true,
+      "receipt_hash": "68efde28ea6228cca3ac394d3cc75513cd547eea778ea8ecc3aca3c2f46fcbd9",
+      "replay_hash": "38b6f7ebffaa6ec6170878b14cfde05281ef46407c0bda725330e9a19eec2ab2"
+    },
+    {
+      "category": "competing_goals",
+      "expected": "BLOCKED",
+      "id": "competing_goals_005",
+      "observed": "BLOCKED",
+      "passed": true,
+      "receipt_hash": "60712612f7ae0047b3d8168619399d65277bb8cb1840fbd024efacf1ac082292",
+      "replay_hash": "1450ac74137210306d7cfeb6ad23077eba235ddfa2bc55ebc3d54f6be5ff8b21"
+    },
+    {
+      "category": "agent_interference",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "agent_interference_000",
+      "passed": false
+    },
+    {
+      "category": "agent_interference",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "agent_interference_001",
+      "passed": false
+    },
+    {
+      "category": "agent_interference",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "agent_interference_002",
+      "passed": false
+    },
+    {
+      "category": "agent_interference",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "agent_interference_003",
+      "passed": false
+    },
+    {
+      "category": "agent_interference",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "agent_interference_004",
+      "passed": false
+    },
+    {
+      "category": "agent_interference",
+      "error": "TypeError('Object of type Effect is not JSON serializable')",
+      "id": "agent_interference_005",
+      "passed": false
+    },
+    {
+      "category": "nondeterministic_scheduling",
+      "expected": "COMPLETE",
+      "id": "nondeterministic_scheduling_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "4aa181c688bf65666066fff30a349f35dbe484b66386b6f1d3548ec9b931c86e",
+      "replay_hash": "2732698de3c622667500c4d28583fb94e494a4ec04fead718b92cd029d048c44"
+    },
+    {
+      "category": "nondeterministic_scheduling",
+      "expected": "COMPLETE",
+      "id": "nondeterministic_scheduling_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "3c91c182208e4c8c827b0a91a1a6cd81dc47cc25fa0e4d915a1185ed55199c0a",
+      "replay_hash": "58b9d0e8754f464583ea9f3a01700cfdc03880b69f5ae394c7acbb87ccdcd763"
+    },
+    {
+      "category": "nondeterministic_scheduling",
+      "expected": "COMPLETE",
+      "id": "nondeterministic_scheduling_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "209f0366eeb32daeab667209b42ecfae2c401210192083c9d95a146bcce41ff4",
+      "replay_hash": "0b31b90d3885f38bf17b8056f351fa679d9d63119c92ad46a268a9552cf4449b"
+    },
+    {
+      "category": "nondeterministic_scheduling",
+      "expected": "COMPLETE",
+      "id": "nondeterministic_scheduling_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "9255af204b3ac9092ddf6de0104e1bd8436470a8894413652c42efc3f6e841d3",
+      "replay_hash": "3e8cafe5faee4d9ab7e95030efe067ee51dcdd3e6ef2bc9cc89cbf3b5148f8b7"
+    },
+    {
+      "category": "nondeterministic_scheduling",
+      "expected": "COMPLETE",
+      "id": "nondeterministic_scheduling_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d44cee046613efff7a555efd91856f95c0f395ceda7f6672c53622c8e3874e22",
+      "replay_hash": "de81ea0d2519c06e2de723d6695991c36aebd7f76be7c30c027267cbb2e114b0"
+    },
+    {
+      "category": "nondeterministic_scheduling",
+      "expected": "COMPLETE",
+      "id": "nondeterministic_scheduling_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d626bb53c9fcfed3ac76ae4711d7c1af658ba28e9d1db26decea0a513749b411",
+      "replay_hash": "effbee9457aa3ba62c1489956c2d86f8cc56ac474fefe18fc97f53b65f236259"
+    },
+    {
+      "category": "replay_divergence",
+      "expected": "COMPLETE",
+      "id": "replay_divergence_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "6fc07933ef1515465134b752e9c209d3dd043c6d0aa731674946ce5a05a63cb2",
+      "replay_hash": "2fed76878ab1a569f9ea8202057d7a38dfa69b9461c3d3358e774693d5aaab4d"
+    },
+    {
+      "category": "replay_divergence",
+      "expected": "COMPLETE",
+      "id": "replay_divergence_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e2bb89a80bb62e054372bc7c7902a170a1fc038d46674fe1c5e112141fb1cbdf",
+      "replay_hash": "26535582b5d2091dca85254d028334607dd00ad8938b94a1a12e524f44168559"
+    },
+    {
+      "category": "replay_divergence",
+      "expected": "COMPLETE",
+      "id": "replay_divergence_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "6c8415331fa04044d38e5905f810fad9586279ed16bb33e331d1e5840f2771ac",
+      "replay_hash": "41cb23b8492185e4a0fbb2a3a2cb4898ab4b57096e8c85cb780d258407cd48ba"
+    },
+    {
+      "category": "replay_divergence",
+      "expected": "COMPLETE",
+      "id": "replay_divergence_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "b1bc9dac571876fe23d2331b9c44353690cd5d7352bf5800be685f0947e7c818",
+      "replay_hash": "d9f050dc3d58029416b7c3ab8d55b1e85c5195de4cdcc7d8a81faf6b7625cd70"
+    },
+    {
+      "category": "replay_divergence",
+      "expected": "COMPLETE",
+      "id": "replay_divergence_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d3ce913e3a957e30ef98b93355ac576ffabd1871309b82b7a547cf0fb77e4e4d",
+      "replay_hash": "b0f58167952dc0c7bb27f07d3a4bcc9e679c0e0c78027c2a91979c589b664712"
+    },
+    {
+      "category": "replay_divergence",
+      "expected": "COMPLETE",
+      "id": "replay_divergence_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "bdfd74d66b47a3297bcdc9a619eae518a3775bb048df33f330d1e5c4f8399925",
+      "replay_hash": "150957c6d0be2ce59211a2cd973d5398d1b0698ed893cb6ed1ebecbf1a79d60a"
+    },
+    {
+      "category": "renderer_false_success",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "renderer_false_success_000",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "7868de56daacce7ce92ff05605639913c72a0030466147b556900feea9d0a760",
+      "replay_hash": "42b19eeea4c619e8d27823d59101e291f5f3d0b9f055b9770bdaa652057fe03f"
+    },
+    {
+      "category": "renderer_false_success",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "renderer_false_success_001",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "5f7d6f2443e8b01d7af5ec8d6dd70d83ac636a735b3bf2044611ae5fef59d89f",
+      "replay_hash": "11582e4187da64f57593a106e7edb2f449d334db7a723e3c44dbbf28d432588b"
+    },
+    {
+      "category": "renderer_false_success",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "renderer_false_success_002",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "2106345ab030de7b15c6574152339e59ea0c81d385d4adf3bd7989cb97fa5238",
+      "replay_hash": "2ed4e1602cb54e71b1ae3e1f6d758db4317b9cd09dc91e16cf4626166780d4fb"
+    },
+    {
+      "category": "renderer_false_success",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "renderer_false_success_003",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "0fc8ffb221191160616db85cd10e78061c8b5b03574b280dcdb515b6aa093ac4",
+      "replay_hash": "6d0c4fcc11597f1341ae7549cd9f6cf1bc98b244e6d15ecda4fcb2a69be4aa92"
+    },
+    {
+      "category": "renderer_false_success",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "renderer_false_success_004",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "f705453c0f27ad4a02226d6996c75a369a9a747293eb31a955d8087998b02e24",
+      "replay_hash": "2dfb8f53f35d6c25b2bf0affe82382150af2a3ca3d997573aa826c6e09e25d4d"
+    },
+    {
+      "category": "renderer_false_success",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "renderer_false_success_005",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "631e31575af29953aa72376485fb6f208d81d21e693009a4aa9d1883a6e728e9",
+      "replay_hash": "3f6b190c928e3c47057206dc0e6ebe630c92923922a8bee698760a14b628a516"
+    },
+    {
+      "category": "renderer_hidden_conflict",
+      "expected": "UNREACHABLE",
+      "id": "renderer_hidden_conflict_000",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "cf00e449c672164e3e4b8f88acec3953e3361dcb96f2afbca5cd8ab1f713cac3",
+      "replay_hash": "94d792b73187739eed11b27e2d863bf25fe945d315e903761922fca53cf122e4"
+    },
+    {
+      "category": "renderer_hidden_conflict",
+      "expected": "UNREACHABLE",
+      "id": "renderer_hidden_conflict_001",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "e735d78801e9283c6b881a8f675d4bd6bd050c5b824d92b6bef38368a2832fa7",
+      "replay_hash": "89f248aad5a7b36b86f6bda5b0e61808b58a68e12aafd571d5647f69b02130b9"
+    },
+    {
+      "category": "renderer_hidden_conflict",
+      "expected": "UNREACHABLE",
+      "id": "renderer_hidden_conflict_002",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "52a233a3ac6d7dd641d63781ca15de80a16558e2b1b818622f07f19c81eb742e",
+      "replay_hash": "48044412736cee9ea63ae9bdb9e3db0f999ecc3e5444ec84d5d3a6572ccebfa1"
+    },
+    {
+      "category": "renderer_hidden_conflict",
+      "expected": "UNREACHABLE",
+      "id": "renderer_hidden_conflict_003",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "0ccf9495a6da9001e769bf36827a0b5e67150ddd27d987badeb108b2011d6544",
+      "replay_hash": "81c4e7da0e91e16f2bbef17a4b947d430ef926f4bd7d47a37fe3386e313d45db"
+    },
+    {
+      "category": "renderer_hidden_conflict",
+      "expected": "UNREACHABLE",
+      "id": "renderer_hidden_conflict_004",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "8c2c90df7507c75f740b904153863204c11cd8707eb64cd5e1e8ae686cc89d8d",
+      "replay_hash": "3ef60a59ad60d62518d102c51962c813fd0176ed99fd457555aa2989d26ad694"
+    },
+    {
+      "category": "renderer_hidden_conflict",
+      "expected": "UNREACHABLE",
+      "id": "renderer_hidden_conflict_005",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "e7a55c949cddb1e7e440057ccb614feea80c1c3b0c638e7ec3e86078733a0ae5",
+      "replay_hash": "9973243157b7b55c4b85965d2101f3db7c40f96feb7aaee777760b5e93687c40"
+    },
+    {
+      "category": "irrelevant_cluster_leakage",
+      "expected": "UNREACHABLE",
+      "id": "irrelevant_cluster_leakage_000",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "8f80a87425fc418308d5836a65c73c2f71c7efc2d45fad6027e8936f602d51db",
+      "replay_hash": "c6fd7efb329b20852c0f7fa2547d3e705a7694ccfa446a199c5ed1f01f4be21c"
+    },
+    {
+      "category": "irrelevant_cluster_leakage",
+      "expected": "UNREACHABLE",
+      "id": "irrelevant_cluster_leakage_001",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "109181a252ca41432731c114d4a021e92ab7d6f521890f2694e457624e2252ee",
+      "replay_hash": "a2be48448ebc01ada55a048c9ba8a8419425d1c0566802e1b0e0e14f942d89b0"
+    },
+    {
+      "category": "irrelevant_cluster_leakage",
+      "expected": "UNREACHABLE",
+      "id": "irrelevant_cluster_leakage_002",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "771455d8a854f72d33721c4aece24f796ffdcc6ba8ca463ce450bda271d067e5",
+      "replay_hash": "68a0364351c6e7ebe924db9dd9b4e463e1383ac133132abf233c6d420a5ebeb2"
+    },
+    {
+      "category": "irrelevant_cluster_leakage",
+      "expected": "UNREACHABLE",
+      "id": "irrelevant_cluster_leakage_003",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "79d64c75be6919200db367a398a140c92389515103925c51bc9e6a9ef430ce94",
+      "replay_hash": "2f7c6e6495e97d69e75772c30a621ac01830ba12d71ec10dbcb402a4c9b4a379"
+    },
+    {
+      "category": "irrelevant_cluster_leakage",
+      "expected": "UNREACHABLE",
+      "id": "irrelevant_cluster_leakage_004",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "dfd592cf2ad118676925e03bbe01f35a5416a15acf657c43cd38e59d228ea928",
+      "replay_hash": "7a6067715e8ceff3a0ad4361e9bde385db84a24a079adb435d6afb58126de0e5"
+    },
+    {
+      "category": "irrelevant_cluster_leakage",
+      "expected": "UNREACHABLE",
+      "id": "irrelevant_cluster_leakage_005",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "94ae8cfda3e24fcca36f283f95ebc8d7cc6df850d557988e69b729e12c7e2fa6",
+      "replay_hash": "bba4d672b02d7d224bcf2ebc7cb54b8dd9b37b39aa6476f90412b41748f88f88"
+    },
+    {
+      "category": "dormant_fact_action_support",
+      "expected": "UNREACHABLE",
+      "id": "dormant_fact_action_support_000",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "8f80a87425fc418308d5836a65c73c2f71c7efc2d45fad6027e8936f602d51db",
+      "replay_hash": "c6fd7efb329b20852c0f7fa2547d3e705a7694ccfa446a199c5ed1f01f4be21c"
+    },
+    {
+      "category": "dormant_fact_action_support",
+      "expected": "UNREACHABLE",
+      "id": "dormant_fact_action_support_001",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "109181a252ca41432731c114d4a021e92ab7d6f521890f2694e457624e2252ee",
+      "replay_hash": "a2be48448ebc01ada55a048c9ba8a8419425d1c0566802e1b0e0e14f942d89b0"
+    },
+    {
+      "category": "dormant_fact_action_support",
+      "expected": "UNREACHABLE",
+      "id": "dormant_fact_action_support_002",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "771455d8a854f72d33721c4aece24f796ffdcc6ba8ca463ce450bda271d067e5",
+      "replay_hash": "68a0364351c6e7ebe924db9dd9b4e463e1383ac133132abf233c6d420a5ebeb2"
+    },
+    {
+      "category": "dormant_fact_action_support",
+      "expected": "UNREACHABLE",
+      "id": "dormant_fact_action_support_003",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "79d64c75be6919200db367a398a140c92389515103925c51bc9e6a9ef430ce94",
+      "replay_hash": "2f7c6e6495e97d69e75772c30a621ac01830ba12d71ec10dbcb402a4c9b4a379"
+    },
+    {
+      "category": "dormant_fact_action_support",
+      "expected": "UNREACHABLE",
+      "id": "dormant_fact_action_support_004",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "dfd592cf2ad118676925e03bbe01f35a5416a15acf657c43cd38e59d228ea928",
+      "replay_hash": "7a6067715e8ceff3a0ad4361e9bde385db84a24a079adb435d6afb58126de0e5"
+    },
+    {
+      "category": "dormant_fact_action_support",
+      "expected": "UNREACHABLE",
+      "id": "dormant_fact_action_support_005",
+      "observed": "COMPLETE",
+      "passed": false,
+      "receipt_hash": "94ae8cfda3e24fcca36f283f95ebc8d7cc6df850d557988e69b729e12c7e2fa6",
+      "replay_hash": "bba4d672b02d7d224bcf2ebc7cb54b8dd9b37b39aa6476f90412b41748f88f88"
+    },
+    {
+      "category": "duplicate_connections",
+      "expected": "COMPLETE",
+      "id": "duplicate_connections_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "abd02ba31bb518bf66eb31d8516ca7e1b52f37f63c93409fc766dd9d915406cd",
+      "replay_hash": "b109888c479686222eafc080d91cd592b6227125883328a9cb0b0618ac560df7"
+    },
+    {
+      "category": "duplicate_connections",
+      "expected": "COMPLETE",
+      "id": "duplicate_connections_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "568cd595ed1cdde1a18a36c4f724726a372fb8b5b5958e01be62c184910b60ec",
+      "replay_hash": "efd541c40e5bf3e5f21f81156cadd0b4567b8d3c2edd5d02509f791e906a6af0"
+    },
+    {
+      "category": "duplicate_connections",
+      "expected": "COMPLETE",
+      "id": "duplicate_connections_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ae8b16253a1fecc2abd26ac98b26270a8a7ef5932364a69020844791f8e233ef",
+      "replay_hash": "a4ca3bc46bcf80238bee3c361ad8b5d9c7fa57c74c58b086e373f250f32ccc58"
+    },
+    {
+      "category": "duplicate_connections",
+      "expected": "COMPLETE",
+      "id": "duplicate_connections_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "39f867c79a8ef32c9a167a47f747efe8030811a61298ad3af1c3b63979de30f4",
+      "replay_hash": "c5b059d4fc9136b29a1c7be95daaaea3d68ea9a03cffdb0fc479e7fb020b3278"
+    },
+    {
+      "category": "duplicate_connections",
+      "expected": "COMPLETE",
+      "id": "duplicate_connections_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "2ec1be234e997b5d34b802b7c8a876e26c8a742674f621b73060e6c2dd1be825",
+      "replay_hash": "5b68889fde0f3614277392a2204133ec85c33051746589441e3f3132cc678953"
+    },
+    {
+      "category": "duplicate_connections",
+      "expected": "COMPLETE",
+      "id": "duplicate_connections_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "c46a84041b154712ccfff4d3c172d9271aa424108b4eefc3e4c8d007d2f1c5cb",
+      "replay_hash": "e0282df77576e473ec5f86b0401ed7e184071f0b4be70846e7df33f043d2efcf"
+    },
+    {
+      "category": "duplicate_goals",
+      "expected": "COMPLETE",
+      "id": "duplicate_goals_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "35007ec23dbdd71092241bec62f227563ef8a2f6e8ed80e0cef402fc84663395",
+      "replay_hash": "573ebe743d9530e97d5ecc0ae6150bb13727a8bfbe52d430d65ba971f1881f07"
+    },
+    {
+      "category": "duplicate_goals",
+      "expected": "COMPLETE",
+      "id": "duplicate_goals_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "3e736a4f641bf5eeaf573a4af54ad1833606eb20cfaaa602c3b72375551658a8",
+      "replay_hash": "0269c1bcedcdc6d3bd3d3c04091e6e32e450cc0bab9b0b26b3e18ba368f31ac0"
+    },
+    {
+      "category": "duplicate_goals",
+      "expected": "COMPLETE",
+      "id": "duplicate_goals_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "847788c33c94736496708886839936f2057dda27eef2f3ff5e614f5d3833a61e",
+      "replay_hash": "3e1230d86e1d2484eb4c9450a12c85bfdc1073c9ee17130668f6579f3a43b2fd"
+    },
+    {
+      "category": "duplicate_goals",
+      "expected": "COMPLETE",
+      "id": "duplicate_goals_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "b5cf3d10acb89a501b0e5bb949fafc152ca9e80d52b503818239aba4c8e8fe11",
+      "replay_hash": "4394d94fbd64993505f136dd0cbe0836ebf9ff7f757553f9a4cd4c14b1f84e50"
+    },
+    {
+      "category": "duplicate_goals",
+      "expected": "COMPLETE",
+      "id": "duplicate_goals_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "70ed7da4a43f099eb6487f4bec59d6343fbd4998aacd471940dca3a0b98bdce9",
+      "replay_hash": "525aa08fca73768f0775b4a96f5af58bd8e929124ba92b7cae04485879b8ec06"
+    },
+    {
+      "category": "duplicate_goals",
+      "expected": "COMPLETE",
+      "id": "duplicate_goals_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "38f3c4d17e2af0793c2190c6aa506b7e23ec54f8b21728289532a2c7ca3a926a",
+      "replay_hash": "79f5b55839e220e3e465c54233c106d91e2830ede84a42f558122ab6d43acd12"
+    },
+    {
+      "category": "receipt_size_exhaustion",
+      "expected": "COMPLETE",
+      "id": "receipt_size_exhaustion_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "5e8215f73ef4bab3569d7f79cc2d6fed431671c7d3eac07c7597b22b8993add1",
+      "replay_hash": "c68dd3759b0bca7f273a2cacbf7df7d39fad7f327b05a0e21b75602d7ea56971"
+    },
+    {
+      "category": "receipt_size_exhaustion",
+      "expected": "COMPLETE",
+      "id": "receipt_size_exhaustion_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d81612ad15675996421381745ef8fd9cfe05d994ebb9c434303e205c304daa94",
+      "replay_hash": "1a6334f8878113d487c0c5ab11b0c313d4bac2f695d25149432e6ecb7d98ca1c"
+    },
+    {
+      "category": "receipt_size_exhaustion",
+      "expected": "COMPLETE",
+      "id": "receipt_size_exhaustion_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "56850bb5d9dbe0e837cbcd100e5c58153d5a382eac8d4a8ea739710dbff0ae75",
+      "replay_hash": "4fa6456dde741a9603d05528327dff8aecdb36ce89cca7b83d061bc8d4be6d8c"
+    },
+    {
+      "category": "receipt_size_exhaustion",
+      "expected": "COMPLETE",
+      "id": "receipt_size_exhaustion_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "69622244e22959feb28630e7f5147cbc2fa4cee690c6399314ba4532ba33595b",
+      "replay_hash": "9002ee35dce9076ee618ff8107135bd17be738e599fb0d6e6195f84744835761"
+    },
+    {
+      "category": "receipt_size_exhaustion",
+      "expected": "COMPLETE",
+      "id": "receipt_size_exhaustion_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "878f27268eb64d7c3f0e28995be1e1fa9ff1b6b0f7b22615310e5bd5081ee663",
+      "replay_hash": "906f71da3c0dd9a43a21912580ccb21d6f02a216974a7252cfba21c9a4bf8544"
+    },
+    {
+      "category": "receipt_size_exhaustion",
+      "expected": "COMPLETE",
+      "id": "receipt_size_exhaustion_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1bed131af03d66c516251a286278054352d3726f4c22ac799b2a66e18d9c9840",
+      "replay_hash": "373d77b8aee5d84708a249eb2d947a42c3f40e9c940f7ffe867eed28f1bbb0cd"
+    }
+  ],
+  "silent_overwrites": 0,
+  "stale_plan_execution_failures": 0,
+  "suite": "habitat_v3_adversarial_baseline",
+  "tension_as_evidence_violations": 0,
+  "tension_cycle_failures": 0,
+  "tension_relaxation_failures": 0,
+  "total_cases": 240,
+  "unauthorized_lesson_activation": 0,
+  "unauthorized_object_transfers": 0,
+  "unsupported_accepts": 0,
+  "unsupported_action_authorizations": 0,
+  "unsupported_action_executions": 0,
+  "unsupported_goal_satisfaction": 0,
+  "unsupported_plan_steps": 0,
+  "unverified_effect_commits": 0
+}

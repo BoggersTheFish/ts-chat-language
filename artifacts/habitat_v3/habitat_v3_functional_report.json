@@ -1,0 +1,2238 @@
+{
+  "accept_count": 180,
+  "agent_scheduling_nondeterminism": 0,
+  "all_hard_gates_passed": true,
+  "average_agent_steps": 25.125,
+  "average_explored_states": 0.4,
+  "average_processing_time_ms": 4.4569,
+  "category_distribution": {
+    "action_execution": {
+      "COMPLETE": 30
+    },
+    "effect_verification": {
+      "COMPLETE": 30
+    },
+    "multi_agent": {
+      "COMPLETE": 30
+    },
+    "persistent_goal": {
+      "COMPLETE": 30
+    },
+    "reflection_and_lesson": {
+      "BUDGET_EXHAUSTED": 30
+    },
+    "replanning": {
+      "UNREACHABLE": 30
+    },
+    "tension_computation_relaxation": {
+      "COMPLETE": 30
+    },
+    "topology_and_route": {
+      "COMPLETE": 30
+    }
+  },
+  "decision_distribution": {
+    "BUDGET_EXHAUSTED": 30,
+    "COMPLETE": 180,
+    "UNREACHABLE": 30
+  },
+  "decision_match_rate": 1.0,
+  "deterministic_replay_failures": 0,
+  "duplicate_connections": 0,
+  "duplicate_goals": 0,
+  "duplicate_semantic_items": 0,
+  "execution_errors": 0,
+  "goal_lifecycle_errors": 0,
+  "goal_selection_nondeterminism": 0,
+  "irrelevant_cluster_leaks": 0,
+  "maximum_agent_steps": 34,
+  "maximum_explored_states": 2,
+  "maximum_processing_time_ms": 14.4655,
+  "memory_contamination_failures": 0,
+  "missed_replan_events": 0,
+  "multi_agent_state_collisions": 0,
+  "receipt_generation_rate": 1.0,
+  "reflection_authority_violations": 0,
+  "reject_count": 60,
+  "rejected_observation_contamination": 0,
+  "renderer_support_violations": 0,
+  "repair_count": 0,
+  "replanning_loop_failures": 0,
+  "results": [
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "5dc58cec96c88f06cae9cb0bbc35fcfb1c7bac928c583f84dc59830d95fb656f",
+      "replay_hash": "94a7b41b0e7f30b530dc93e77b9366bf9bdd751f8648ab79d264c04b2e434825"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "589dc38981469036c0f3e8bde06cf55354bf9a77b60bc89545746df61bdb7080",
+      "replay_hash": "59d6bdec452058b3a4924bdbf456900ad92b981371dd78ccc0ff1272e7e1e1a8"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "3a0518be29d512304db08d23c8cd566725a4a10f72087e48325730e5ae92a367",
+      "replay_hash": "d930381b4ba745b63f9fd0a501a44831cfd0a26dd9c947092fe83bd68666be2e"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "22659584cc875f8cc842cdf08eeeeaaccc425431a09d352ac0387a776d2f657d",
+      "replay_hash": "b6ef63301e963e26be52d4a59c24bafaf0fe857ed5efd18c8fcb3c5f77383377"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "7369db2934e4ed9e66de06a7daf39e33b96d0192b97f7cd2afdbd56870093528",
+      "replay_hash": "ab82b774157f2d929fc58a8dc36f8e4961d0977e86788504c2fcdedb93c22ba1"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_000",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "b2877bfbb0b48621ef2a1cabc3d473c256ef07ab1a7a550e2a0fa0e43b13d976",
+      "replay_hash": "d9a3596261a3e16aa0f0ec5ce18fe6d85b2e195d99fa73edae0a14270d992302"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_000",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "748101a9f3868a3e7d4d1720922e3114ba2f4b7b94a3286a129a93d44f84a6df",
+      "replay_hash": "0b1109c214c6feae6b190acfbc2b511055d560eacf6236f82c355eea8d6d43cc"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_000",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "19003c8f6b831b2d8d7dc75b3c13b25661ec6d0666c407239c6d317ba55849d1",
+      "replay_hash": "ace03b9df17ffa61f9a9b335e0b240815a93914a53e3f50c2d3f4fbab8cb1901"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "9a433383b504fb6d4cee6293ad7e449055ca538f61952c0ae81aeccc99ccc101",
+      "replay_hash": "12986ccd76ada3835df13a9725b8efdc7de3e381078be1ccfca9cf390ec3f39b"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "b8fdd82844d2c3d1b69568151aec7df5651ce9cd7ba0418af2dfef1f0f62a6e1",
+      "replay_hash": "adc67bf8be64a3e7a897f829d3a7c840e3d311b94260de3ebbccdaf27352cbd2"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "8faf58af1e80a7b3c7331f99ace28e5afa93d94dd16ef6c4fc3fe50c5efee838",
+      "replay_hash": "8d4786e3de6b26fbe5a3481add60ed6c724793358674f1e6154163b5520bd739"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "f14789c369a275947a6799261e53e4110f52a317202bd1f5a245a39b45e4b2e0",
+      "replay_hash": "393e712b0078e67c7be5ac53bb1951e5d45bdb232a8cb8bf94911ec61579f7e1"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "825355abf49803f79653729b9aba4066f458a50cad0fc144c8d9abe8dc3b3744",
+      "replay_hash": "4188f8cf1627577d06fd55e24eec58139955e2f541553bab0b6b6a214c0c3084"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_001",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "c825f55e9ddaa69d4b480759a758d840b17072eca902579f33a1d8e12713290f",
+      "replay_hash": "d3f0338eaf458bedee32cc9faa8fd6136799940b98a455ec952518d71edae1bc"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_001",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "61812841b487455552d352374ef59d628e25e7b9389021a5381a3c777dee9400",
+      "replay_hash": "ccf1e03c445e3d43a2bed2d16bdb74e9df44a926140b955cc970e65a41aa592e"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_001",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "5e80bed35a283228ec3de35f7b9c2cb1096df5681ff4b1d06d7f6b32ebf66298",
+      "replay_hash": "7be2d22a1827efce47d28a81813a44af65c1dc8a9a8e2b9cff9a7d846c8b709e"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "af775b89fc0105ae30147ffa27210e0327e4bf909d8af7df5296cfc8758cae17",
+      "replay_hash": "aabf7f71365cc09db6645abb7d151488ca741a73b6ca6cf2879092445c556dc9"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "4a6e6c6560f2d8c61a52418b013e6938e9ab9b6bcdb0e91d5a6c1160e4574a6b",
+      "replay_hash": "07e531ba31b7ac50294f1818f887fd4ddcc0ddc415f2f79c3a5948f282912d7b"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "b88daaba9a66743d8ea47584fdd1d458f05d57aefdcb7418dc0d28e91bab0254",
+      "replay_hash": "33a9f59ce1ea1df16e347aefde3f6bc466bb53e6d0bb0b95b773624128d9f173"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "22963227fbd7e894e06b6646ad4ce50177ca6ef661b695913b8193fcb8b387de",
+      "replay_hash": "bff549525ad5b5c8c62f75078f1a29283f8b1d29eebbcbefde4a9c9127b7a1c9"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "fc8b844761b093e51a6b86ef4a3969626ef8281c8d4b28f5fec85003b0e8ce36",
+      "replay_hash": "da26eab6cc9a08316b92afebbc46db0edf515c67fa989b226bda82cf5888ef3d"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_002",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "4ceacac3cd28b3892945019b1baf730628cbd3a6562e0f1622dbec21c4d86426",
+      "replay_hash": "9cb49d65c0d6ef2204c81fca16aa0ff1e2a00cb32cb5796fc2c171247115bb9b"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_002",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "17d5cb3cc39d84d5f1368c511778d94ec9aef45b5d719f17eb4329004f232bea",
+      "replay_hash": "5eeb5ceb606585afef3c6aa591cbd3820eac94d5feae330613386337bce652db"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_002",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1f5b31c06e6fd68a8498d5a4d1548a761f2c8faf4446b3ca8b8f184c85fdc708",
+      "replay_hash": "9929d44e24c77682d013ad137b6ea15e8e06e3475a01d4b6515191ec3795d768"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ac21687f8ea8139f49ee6bb74285f70da79e5fb7b084c0ea55ca39d8a572854c",
+      "replay_hash": "1d1a49346080d3e4b4a50b8a10181c1044c95663084deaa9448b1ef6a43f807f"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "2801c360e93f0e2b12c841bc89115a91470eb8b62e7daac01fc41926309533a1",
+      "replay_hash": "6bac9a2445c73d875731a6f4c3d36f08f41dc08ad6f710e0868d6bac1c09dbf4"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e3808201856a97f8bed76639d850531bd5bc97f917b0ad694e045fcb9674f059",
+      "replay_hash": "aae33588d28466c5975a198556fafc583c390c8dfc1f0708aa601d46fde77a42"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d992a66fab67bc0274f31ff137c5a6107105cfc0b445fa7a5adc26566f31c8e7",
+      "replay_hash": "9196bd4cbc89140e5fe1003ab54d89ebdd60ec28d50cd37c9e2f950ff77db688"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "0013a1597eaa2c5ac3a6992f5c18b446fa3f726e8d7153cd8db6e1e167ac90dd",
+      "replay_hash": "daf8add7f182e73ff565d345fbad6d892d08962fccfe4d36e22333ad69187b92"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_003",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "80014679b99c731b230a3c2a75833cd00f38a0018e4bbbb3e3f69e39f1f686ed",
+      "replay_hash": "8a6428e60983c9072e19d5c2bd87ce0eca76291fe8c32958bc420b26bcf24218"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_003",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "3d93490001386d735e97538eca7e0645612df0bb500741234cccd972595ab84f",
+      "replay_hash": "57758979a7e1e54b845c5c4d92da22097cbc3f253a704adf11bf811f49527e32"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_003",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e637964b6802d9013d56b3ea05cd70f60b28825e37aa5ed83cc9eddd357e8226",
+      "replay_hash": "d155ad039ef289d151b8393206cb69ddebe4a50ea60926579ac32ebc244c548f"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "de46d03b503c9da3b8ee96af3db74786b932c37dcfdda572c082b3b9b04f2895",
+      "replay_hash": "1ff3ea422528743182ff36ba3543427bdad6ffaa5121260d08395159e5adb090"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "7f42bc62050cfdc1dfae291d28085fe06614ba9640349dd6889acefe7d7a0521",
+      "replay_hash": "3add0ce6e494ae7342797e18caa709b7049e3ad1acb8a6a8b6d93f3b194936d8"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "5213b625b582144c0c8b23e1f978e3e3fa84dc8d479e98f29f422c7b376f67bd",
+      "replay_hash": "612a7369b2c9220866a2567377a1bd5076c1dec7478798e586cdb0623b4b6f73"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "8ec44a408d02fd2f2ed2c98b5b040feeb7978eb965d2fbc5b12dffc2b0aa876a",
+      "replay_hash": "6dd937dfbb6cf001c3b58a2f4c2b4a74863dbfbba412aea9e042571471f9ff03"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e65c1443cad042a0ad22521fb812e5b922f8c8566baab9a21eef7f4c9283c5a7",
+      "replay_hash": "30d79bcbf49ccb9193fde918ffa6f3d830373fefc293d41e07e01d1e53468157"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_004",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "acd84d7a93bbe5c7ec4479a38c199dd6c28fc07aa442e5d7ce0ec34332257f4d",
+      "replay_hash": "fbb66a13d518cb4b48b8cea239bde2d133c964945c4bd9d1d82773db47b274cf"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_004",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "0ca1d6dd55da9169d55fdcb912a52c9e74f6dbaf1caf4dd5743da715cf70429b",
+      "replay_hash": "9551b46ad9631c4ffe9c95bdaf94ddb854bc814cce48c1fb6cc523a50b12168c"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_004",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "2e4420c142070d7e3333351484fed77748bcda938892e6327616d502336c6246",
+      "replay_hash": "2a8b5a0eb0893df9977afd6f61664f698c4ad8ebd813dec7226dfefbb0812d05"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ba9a40ddffa72839bc6fd8cc6143365be0cb6375b9bdc8921e2dba54f5c97faa",
+      "replay_hash": "c61003045b7dc72a7544da608f197677f73b498420bcea5890bdc7eaff1cc44f"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "48461d5f0968604e4d4fb1aa57418bc17747c41425c829bbbaa9c6f338625224",
+      "replay_hash": "bfce8271422502c66771251c9ab7898e66da2342f4c1759f06e301101c59f212"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e1583474f465955a8284061eb2804c7af5327e671bf0338f19771ee0d41af945",
+      "replay_hash": "d11a29329e2b9d41893aea69d6f2233b1dfdd95e18a12dd4997cedd5cdd0a4bb"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "933fcc43c0acd50522d23c26b26001019a5f02185b7c446d4b8f185e628c41c4",
+      "replay_hash": "40cdab6218f5e158bc4d91cf6ed949495419b79d996b1b78da1c0fe7e80dc5fd"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "151bb6f4b3e5a080a03ff385858bd68ac59206cab06759efc5af0b66f55a3e71",
+      "replay_hash": "969884545acc1dace364d75729df0dd7a12914079cc1743d0306381d9530af0b"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_005",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "755b97d39d5baddef56011880e04509a966379d53926098ac257a01b038931e1",
+      "replay_hash": "eda01f7d4f37607d9b01cf6ce0bd71f8129994c672d41afc42376c47df7f2e22"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_005",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "5362796349c35d2f63c22e1082faf9635844ccb8145951032a9974d457bd3c18",
+      "replay_hash": "b61c3c3ef6ecf965e3f2dd3f33fe111685c7448f35fd70dfe4dd5a7db307891a"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_005",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "8f0fcf762bb9848a0fcceb63dc8e337332db49a19124b96a45bac14731321c97",
+      "replay_hash": "03f0800da47f13d178dbc7d0eda5200cd60e776bd5d4fde5719c79a8fa0b177b"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_006",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "03f75c4f298aa2dfe271f4c97318fc6e818efbb3b1bf1377c0a6b999a008ab85",
+      "replay_hash": "a2f615c943db071abaf23897b84c436f7a172fec883af80b09fe8eee8b80ab39"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_006",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "909c099b2952bc44684de65ab444bbf9a3600516b157f090114e451e1dc2968f",
+      "replay_hash": "390a074db8eb215ff7773ca7de65bdd9fc4af8999c5ed7a94a1b7c4fc13ab0ea"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_006",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "7d8dc03902a1546f240295da87ba1d65ecee88059b5f94fa4921f2cc466082a2",
+      "replay_hash": "20746e0a442d2315852a223f84a98ca0bab27d4a50e72c49266fa5f610a28ac2"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_006",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "118b650d2a527b0d3a4a3345ee09805cc306b8f3c8b9c607e34fc228f1367235",
+      "replay_hash": "ffad5217fde2757bd3bdf638a47da26e2c0b46e846dd504e5d48cd0c594fa77b"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_006",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "f424bbcc5901cd503d82e58366d7dee12b8bc346e9d7192550ef6438bec81b45",
+      "replay_hash": "dcb957d20c3201bc09e381f2a51cb672ebeef396e4c7c0200dbb8ae6b34315c6"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_006",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "987dfb1ad5020a0b10fb9a87add13516b13ec4fa819614f704afad7c01b47062",
+      "replay_hash": "07ec444d004beabb71402f9cf8ff4012eba31993dd3f576e84ca9a07d684bc27"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_006",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "8438991ebc50b89abad018f108d498d40159534032f5d14a6acd544e5aa36e92",
+      "replay_hash": "a96dc91cc7d0901398e153cd94f7060b5a18b7bd7c90ab1478b90eaccbbdf86d"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_006",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "b29b5eedab1caf09f4fc6f160c294aa041e969f35b2df752e5075ad4281bbf6c",
+      "replay_hash": "60cc777e574865c05b64228cb16f6f5e5d60613a18671bcce83cc6c56fcf256c"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_007",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "0542ca34b57239fc155612cbc409998c654fa69423acd7ef1088434e47edb76a",
+      "replay_hash": "df13a310696e528e24b114019ccde3b981aae82efb1b5d0d8d458ff1a6f9648f"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_007",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "f4bc06d7b0ca714d1f16a42f425a6e7f6384b3f678d038b465be06bbcded47e5",
+      "replay_hash": "4e8c7a392ff2404488ad9bfaabff93ba6d86f6ef9845353a0c15281dbf01e193"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_007",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d0ccd4cf6ee16fe8112b6659d24ecf062969763482f46e66821a4fa18cc1a984",
+      "replay_hash": "f9d813daa58f39eb2fb1ba70d3bb574becf2943e6da597ded559a2dd9070e34e"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_007",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "718870df0e73f6096d78b9225ed390e46683f1615cfe599500d12456484e4f8e",
+      "replay_hash": "43dbf4007545fe043a4873d86374e01887e75ff4e9611268bcb16c2636081004"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_007",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "3a00e8f1cfb1969bea81a7d82b8e0bc7b1e90713f950ec9a5364660c8521e746",
+      "replay_hash": "13d959ae814009fc2af8e53bd63e31eb0ebe71501377ef9232e1cae3f580aeff"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_007",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "462f7764dd1087e18f42209eff841e5c14f4f75435088f318d246fccaee0634d",
+      "replay_hash": "e454f390657f427a719689b0b2d56c27c8d0d87fec4d8159dffa2e8b8b96df34"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_007",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "49eac85a1b1d0bb7fb072204572d9bbfe75663e16a6bd88ee8e4d76663f0fe36",
+      "replay_hash": "a031144cf872b1f64b7900d11048271bd15c03f5605af4bfe8e771906bb3a20e"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_007",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "2506e817af4fe30d6a40b779499c423f97e82d00e2cf0c8d8cb2a95654d55d4f",
+      "replay_hash": "f7dbbe3aac1a0e9f47c8960a5b04f8d8dd5d4a2484e604831d5c72805c0de8df"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_008",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "b822dc527040539e94261e0e2be0523aeb087e8009ac1e6b3b5c3e2b738e9a82",
+      "replay_hash": "cc96cf2552b4627817b891a405af88f3122a8f93d4c8c83b749c92d31165e0ca"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_008",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "6404552feadebedca5f701c48d9de6a456904272c883e9c1e405127632659758",
+      "replay_hash": "4621240d2c0ee06be9320113d5dab2dd484b71eca24a51385cb5d7ea50c60ac7"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_008",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1b56c06e1281560f9a2949a3046a1d24fbf90130408d520e1cd259e00a384f3d",
+      "replay_hash": "deebc6e3d62a70d4038c322e3d38b14f8e0292979ffd5756f2a493266ba5f27b"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_008",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "48b7274063c012967a5c95b76bd26fb5b04b27efa59f1d3be947c227cf6fa7f3",
+      "replay_hash": "33170644a719df3829adeb25cbd16019f4db8ff8c9003e759efab033ce8086f1"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_008",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ce923b6f5bbf925344303fb198348f77969fdc798a96fa478974f5e4be1d49ba",
+      "replay_hash": "1516ed92cb16742b1a8166eddf1f5d417de98e967fa7f4fe12a4feac6fd095d2"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_008",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "247813351a43ceba02e6d6c9b009c860ebd87338f2fc8449557e5ec0483d1a62",
+      "replay_hash": "8ae412f91c12b23d3da13d5cdc3ba9e0d7d237872143f19c22de83fe89a73b40"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_008",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "0e4ce08438b501a68e2553848adbb08c2c635010b29bfb4ff40ab3b263720957",
+      "replay_hash": "a25865430167446fd60fbb710ffd4302404237f6cdc0b2661681c777636eba26"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_008",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d604fc4b86cbf06d08d652b39f0514891ae865c7a92397893d41093314d1929e",
+      "replay_hash": "127a469334454a2d4e1ab16eb22a1057bc19aa2c6de97bac3e1a584eaa52712c"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_009",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "cd83759363a2ad9dccb89530b6d6c3e515575de7c9761828921c044017c31ae3",
+      "replay_hash": "87a65aeb2c4e242d4c9d75b26f23fc05b8d8c5d2453f7af826a166bc5ab189dc"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_009",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e499685b967d0594c6c4e4a50823163e38aca1809b756d0160d05baed4827312",
+      "replay_hash": "8d555c89f80e28313df2257165b1a7f5e28a7fdb1a9ac4a8b8624a2ae0ae1943"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_009",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "0dc4302b014cfbffbde22d69e0bd03e8dcaff6e5590ff6f41842b81e1d8fe4b2",
+      "replay_hash": "0dc7a9ffe560c33bf76ee6d0b84dd3f44a329d9d89dec219d6b911e1afb1c0bf"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_009",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ade20ab3d2e7c7c3f9e626c100fd1659e9d87d81d5bc3b12d518fbe70728fcf6",
+      "replay_hash": "a8e33729e6f7a3ff02cd0b4883d412f823970dc7b731b3e9728ce949e9e2d21a"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_009",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "2ee88023b5522c5c67443e9a6a8b9e00497402e8078c39a5558be6e28c522022",
+      "replay_hash": "94f5e01af0200092d29098366e692df15c68e2992869132fafd6dbaf819c5f8a"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_009",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "2adb45eb3af4bd94815bbd4615154393a2934e316c58ed7cdb5915861617a6aa",
+      "replay_hash": "0b55d53fa088e466d510bce944d5e1ba3576f66d3729e9eaf0d1649e3d59f3f5"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_009",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "ae57211780487552d663a5c0ae80a79f5c81bc4d281b7713f8b03ed65cebd60b",
+      "replay_hash": "dd704a431d873627215107a2f29a4d12314693760f51beeb6ea66dc149cf0806"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_009",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "64de02f77ae08a5857c50d10cf2a7625f6ddd90274bbb502aaf8d9d40777483d",
+      "replay_hash": "bce38b573d930d22fea5690e25bffc5ce1d7267f24367df2253c83cc91731156"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_010",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "918cb02c7281e7345dc203092f495f7c1ca6d93e2117b338641aee429a3b1a70",
+      "replay_hash": "87ff13ecac90ad49f9f660d4e3db2a2eebe642e666e3534f0c5e6c06137e1b7f"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_010",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "5070bd804d12756940d503682fdf78ddb68b4aa687c9c9cb492f70f0a9a9cb7a",
+      "replay_hash": "0b2081b70d66f7f4ae66e15585a42abc6d6b2242082b12187ed7f4e3ae59d651"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_010",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "3e930b0bf21d7146495edfbfd68946acff4736697741b4a7286f4b369deb2b30",
+      "replay_hash": "11499a562931fe2ff378da98511af4582aa3f92b6bd2cf4734d738d1c6faaa8b"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_010",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "b97f06b80bebee3ee6f7636cf8eb70b3724725a8d5b50927038ac78f4c265cfc",
+      "replay_hash": "7dae1d21cbc4f437a8bdc55463d4c817860c1adbf18063c877ec20eefcf57797"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_010",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "acf79e2daf4d6ddbe4468195ee797803a56ddfcb0a0ab1eb291e0c94db962797",
+      "replay_hash": "c07fa1b7dc0fe923c4e0c42be48bd3b0d01764138831a53dcfffebc9ec1d050c"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_010",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "a088af6330b4ac7f073de5803405300b678c6c154a69ee752e0485fe5d5fc09a",
+      "replay_hash": "c6ce8501735c3ea1d3a863fcf231963292fbc4c7821bde26832aed6e86de3a4c"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_010",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "f93b2abba28e473843bf4e974b3e6b69d2274658a63755a1a150c9b171356a65",
+      "replay_hash": "65f8b55b53b462f53decdc71ad218070724599e305c44f576551ab1d06cbd840"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_010",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "24b0ad9744f03af84292c905719f19ee616aa1447cc84c0c2418a9e96ad7b892",
+      "replay_hash": "6af4ff8095b37abf77dcfb86ea3af71ff4010acdaf4d54e70f34bc905163ebaa"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_011",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "7166b4a1445c97b049b89cad3cf7093d2b99ad6b9231f28199c71e97c0e44844",
+      "replay_hash": "aae0eb3ec692394c1b8c0bf3c6f36046af96e1b15f351408ba60466e1ca13047"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_011",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e5fadd3068f506d221fca6c12148432e3aa3effc7212f8f4ebe82259ceae8bc5",
+      "replay_hash": "44599bc600d397294ed4cc7892c816b17905408a4fe894abe2e1c07a03e3198b"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_011",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "72f8ab3be8e10f85974c3eeb7c20f5648515e5369778b3c6646f2295c1f2ff1a",
+      "replay_hash": "8767525c3cfe51dc7c722c93a030e302faee1d8f5d7a2ee92f05bf34624467c3"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_011",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "16fc22bc55509b362d7324664a70511df4a715c451dd37250b5da307f9b053b6",
+      "replay_hash": "75826b491e4e7ce549f70e398fe20ac6f66aea19506659a264eb62da8041c9b4"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_011",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "76bff0817085674a6c9a0b06219243936d6402467250f2b02de725c75796a4c1",
+      "replay_hash": "d0d34133c5729738fd218a042d3eaf976f6de9c12beaf6bbe6426ead68f91bed"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_011",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "360f2fe95d83c336adafb833eb8120d402bf52951f3efa527c2f00232340c2c4",
+      "replay_hash": "21344100d66971fb9b881a9070c86b376b69c0da5ddc76a0be920bec5eb5a28c"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_011",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "6d58327bef7ef7435977b693a627f2bf5dc33378e79273d883a550ef2dbc724d",
+      "replay_hash": "41cfba2171c140cb846c9bbe0e3babdacc35decee31c33dc04d9c826e2cbb6c3"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_011",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "f5c1e7a1131d21bba7bf1e05fca603a05b2ef1da2b4cdfa208eab6b9441e490d",
+      "replay_hash": "77733cb93ce5731fc565e5da036b0636bbc46a8e74c18d7e93528133a3ead927"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_012",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1678242f65bcfecf3f2c1990e96a0c0f5bca2f4500c8e3e6f1252c27d5ce2a3e",
+      "replay_hash": "581ececfe63567a85c75ca1d65837243d862f685e674e39a991ce85acb4e9e75"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_012",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "4055475fcf1f96f611048d0a980fbc79c0de2757968d6f7bf5cc620628a2e18f",
+      "replay_hash": "27f28f406eb92ba63f6149fb08a8bbcd31ea6a6689f68fc8ca843e8c07746aa6"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_012",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "9f7b7065ded9ce23e4e4a57a4a32d749397e0753c9502ef69c7d0c5ca881c5b9",
+      "replay_hash": "5eaca37623d32f8f1757a1aa6f1fac3b22fc6fb4bf4b427b7817f633e52d9548"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_012",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "58e2265120568ff77a0196d74a195bfbe7eb3008a89f8db796976aa087f4edb8",
+      "replay_hash": "72807c3e42436720adc70a61a3c182010c50545885c361160356715bb76bdbf9"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_012",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "95ce500632c7e0776a6380771827aaf9d2bdd17269897d5bea531fe9da17b507",
+      "replay_hash": "c8b1eef4bdd92e4a3408767ac22943497ce7cdbd6a51cd32b231b5cda724d1c9"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_012",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "512dfcdb12385179223685b44e93d67edb6cba60a6a9dd674f8567bf31ae4755",
+      "replay_hash": "42ab0fdf3e9804e791fde9d5bd5580156993af36b8ea269c95c5ac767f1e54b6"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_012",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "d3f6cdad300bf5db5fc1993fe16c29a38129a6035a4b07381dbf8166511b9c49",
+      "replay_hash": "e3fd962348fbdd8f2f4ffc1015b49a3c9c78b2ab452e58727bfac7af89b1cf08"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_012",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d5daa3a6b759be97e9358ed6042a178ee75ea386965939c7f50b8c0f355e566f",
+      "replay_hash": "0892f4d6b5a99873ca7ec4577f697e045b78b38726574f3074ece88031924c1f"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_013",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d64bfd2326966199c17d398ce33db8a8d311170aded3392599d2e8657d479379",
+      "replay_hash": "b84dcd15a3d31b8251d2260019fd9363f4cc4f41a066e9977f678d770b6af5fe"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_013",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "949d1aaf2d425617dce44d797aff22c667f68df45aebdf72810bcfb8f68f0392",
+      "replay_hash": "8a82e82d1b299ff892becf082617e018deb3f3e8f1159e205e8d7e0eecd1fbab"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_013",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d25f8d5cfa217858d6dc6581c9508a459b7894d20c0f9ef01e82cc3dc6d29c34",
+      "replay_hash": "92f42f370664e6e9cb0228932644c12a23ce199e6fc4c756812e56f5caa0dc60"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_013",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "7ed3c44a8b4b1ef1d477dbb852a9fe525d94a5b227cae880fbb575497aa2a74e",
+      "replay_hash": "f8d61df263c0aa55b23d4af12cd15582f7cc967eba31ebfbdfb113a4484b5691"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_013",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ff76780acc1ac3ebedf77869ca60faeee22c4a83b400a899bd7b49e1891d6915",
+      "replay_hash": "4abcf750b97ff93b9421791724729cad767db7e838767b7e3e6ec37af1603081"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_013",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "659465719ce6527ac601e0dbb0af342974d0d60effb9b43015017755eefa7691",
+      "replay_hash": "8594643051d8654048150d8763d46a28f3b80a7f45f7ae3d5fbbd130f6cd5c33"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_013",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "ef2b91ad1f2b916ea933d38cc90f2900cb78082d9ab21e3d61454d58e1d80c15",
+      "replay_hash": "7b933168c2489da908ea3b7f8f46b6d601371f93321bed23369aa7ae6612e0a5"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_013",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "c4e197c37f41968e6cbcb7737bb077a7800a4d571a9685e65f7291b89c97c3f8",
+      "replay_hash": "adb5a311e652fa9ff259922ff3eb3abc36b4dc528af4193322ebe9164fcdb383"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_014",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "c659a988d3ef87c4330d0ab4a8a4337728da15b82face6383f78c691034819ad",
+      "replay_hash": "745b853d502f713abfba79c3874e38eb085469cfdd85b1e0d89477999110d17b"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_014",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e33deb8e754cf604ba52e474d4dcf273b79da373c0a7fc08600da82ae69a62c5",
+      "replay_hash": "f05acfdd380bd7a1ca929937d4e0824883c64c1a74b1d836e59429ff66a24a3c"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_014",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "7a75da3e4becc1086fe4d2f218e2dc8f8d181b9ff15c09740c2a19d8476113cc",
+      "replay_hash": "dcad930621004e13c7e9bf4bfa7aa5e83ca83f7c25b276bbb046c820641930d1"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_014",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "4804fe8a211c63f4146d3e252ce9ca155d3584511ffdbe9e990ae59b9acf66c0",
+      "replay_hash": "a25e33c2074ec8a6b1473a376b9802a019135722cca3af604f99cd8e3c2a0fe7"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_014",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "cd6d9592c54c9432c60261964aa0e46fb5a7428c1ded08a2f4c36b4f30fc6a68",
+      "replay_hash": "5a449b4f034062ec72711eb0fec9ed6b4ff6d23eac0536320bafe542472d877d"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_014",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "5b0f0292bfa24906b9ba2765d3fedc2c16760774b0b7839a2019ae5ea5d6c7ac",
+      "replay_hash": "33a8e625058158a76a5e172d3497a99334266801cce072304b9d010aa82b1c8e"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_014",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "c14d6079ab88aa0b64e41efc2e34eae10c7679868e1ecee3b7cc34f81c51a31c",
+      "replay_hash": "0a13de0f7a1bc7def2a7c62b3ac90d369ce1d255b6e90afe654210f2b16a9d23"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_014",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "9717479f35b37b1c51af72d9f929b64e71e675160140598ba4bf9878aa1894f6",
+      "replay_hash": "5833aceaafccab4de0af9fd553bf4c507482e1e3f0f8e0eac2e85a6ad98b360e"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_015",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "154a631016c86a67febf7583ef158c32889d8e10b338f11d0db7369616d0c6e1",
+      "replay_hash": "d7961fb7601fab988f8665ad41ab0a75d5bc7cc078818efda3c67d0b11a6920f"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_015",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e0c337c6a8ee6c53ed157b060eb68e116972befe158e82e6b50fb1f9952e518d",
+      "replay_hash": "fab0bd2df6463fc68233a8b601e1941df1214aada6fc8e658eea27bfc5543ed4"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_015",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "126ad3a99598f9a902ac39fe87c25e0e7a3c4e6187449713d888c8ba39dfda4f",
+      "replay_hash": "140a6b6881aec0a125caaf82d5b6efe6a25150acbf49629e3204402630de485a"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_015",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "54d05040220740ff4f47029d3b8357c44c10303323c383f4300e145b4adc8e80",
+      "replay_hash": "888067d873552a1c52917b7e4349a2a8957a7e4f3894176fc330fcfd18bcc5af"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_015",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "da0c121a35994b36bc2ab3f38c0aba360620981d26f88c34cd8b2131e092bc7c",
+      "replay_hash": "ce7892eb9c8b55eaafd7c29a42de599cd455ca7a5fb666fa199f6180dfa932da"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_015",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "711152a67a131fd9c13534df016cdff286abfdfcd0adc4da225e928229b7102c",
+      "replay_hash": "a24558a3864e642211b1ef5a67b74b179141b1c1723dc56ff68281c37b681608"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_015",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "1b99425dbb3d955ee8111c66791dbf952887b0a1894157b98517a3ebb8f1cae4",
+      "replay_hash": "1c3f5649487995d80c9b657de37854de2a69825a0c3a28688e155c8338b92511"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_015",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "837ee7706c6468729e13cc6bce40d9e7ecd855faf1c5f779338e5f1a8d8c2446",
+      "replay_hash": "2737026e27c1ba9cdce1a254b41722a78f48a3a3f4c9b8752043a65fc6600cdf"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_016",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e3f5fc033131b536648b6a08bdd05363251b91dc54f6c70eff39730668a40247",
+      "replay_hash": "d1a2e16043479e2c12d57a91acc1f586a95c2a90c55ac1f91d2951fb7ed4adf3"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_016",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "27424f9f4a10e1a7908f0aef47eb1b348714ac45156afbf7152894d05e3f5e0a",
+      "replay_hash": "bc940a3768b5c01d40401d6107d82760a19138559ec2a1f5a80e707ca6e6cea3"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_016",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1ead498289647932999a429fa4dff2f81d9d51bfca0470a150670c2090a156f1",
+      "replay_hash": "1c41970e2a0cc2ce2ab798ff7adc8564e236648e0460ec4173c413ec21ae5bde"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_016",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "83c2995f965052cfd58e34379907693e53c61b5add9f224d8d27ab68875f70a8",
+      "replay_hash": "57db8e8105c0067b37515919a855ccd56e1eaa059b127c37ce4d107bddc68c7b"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_016",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "0fe537468e5fce2a7e79c946fb72c3e2c0094e907fe94363b8ca93e0fd610411",
+      "replay_hash": "22d77251c8c93eab2ce84255297c6284d8993d6cee3e731253686208910103fb"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_016",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "e6f72acefed90fafecb35d7dc71c0bcdae9b2a4a42dae7532c75343a77a2749f",
+      "replay_hash": "e30371757fa73e272719e805f4b5ec97c00e2d54eb509ee8734ccd612b6b46a8"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_016",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "9805ee6da0774b0c509cc8ecf3c3fef18438c8297a6cf458130074f41cf6ff1d",
+      "replay_hash": "00d0c349c4e74c32a0392a25e750a274c9eae11fa6506113ecfeff2f9d4057f1"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_016",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "20d8af7f0b75c1c048dbc229aaa787a90f502a0b03647d79d8fa2cadfc16a75d",
+      "replay_hash": "536f7ffee4b397530cae2fe6f71bb7fa193a06db5871c016021bc8be0d8abf0b"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_017",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "89861ce1b6781ec3641aa6293165f1fb2d16ab51f011f14407a79c9e364d2af8",
+      "replay_hash": "fde3875fe2c39374e3ff252b86185755e3162ba5e79c79993fd1263193627657"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_017",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "0282e1e2fa4c81fff04ea28ce021e9ada2f2c82070ab8ecce94c9bb253f78a26",
+      "replay_hash": "218acefcf8d86cd459395559543e6e276ddcc2da0e87d25b3684aa1a5d5887a9"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_017",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d6797f1747e17fb2069008253d578cd5662cff83afb4ed1b823973dc49aad8f1",
+      "replay_hash": "6febfa51069f42e23396b688a9c7e85ea0ba41d4600226e7f9b37d1661fefd31"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_017",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "cbd5af2da906701a8345c5193b3ae191e41e47563e472e1573c70d3eb279b6f9",
+      "replay_hash": "375367b7e8d73ec006dba18ca5626284ac2579c6bf97395cc45161ea01ae51b0"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_017",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d19788679acf752ca03378535ffcec2e16f5833919c0366c9cd0d1b8ed20a690",
+      "replay_hash": "e23e7e41d2e31caffdb37abbcc452b0f0ef63c4c7e969085754fcf764317a368"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_017",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "72e96501a01cbbc0e634b8e50b94b4d8e44e2b90bff0d99c6469b5768d8c4eca",
+      "replay_hash": "7abaee5492e2cf4050d24b0fe211bfd6e69586c2dd87cf5a46923178c28ff532"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_017",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "98dc4462ad1f21cd719c62ab540b5119538ef3787b3c07fe3b0808973b4585ce",
+      "replay_hash": "23fe7d0af7229c450a1b4f367f8f6b1c1e29d55b8bc8a48ab277197610a8e9f8"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_017",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e3865702180fea756b9745ae191d94ae06dd679a2fc1a13b54638deed701c2bc",
+      "replay_hash": "de715dbc84fe133f8d3eae89731e5551bcbb6aedd066020c4f88959bd9be8c0c"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_018",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "f3a527d2ccf7b008d66a810e5bd0aebf18fdad09dbd884dcabacd7ed2a845262",
+      "replay_hash": "d40a9fdb4e6bcbcd6d3d83845b89e91d10dac0bf65ceacf485f4c309dccb9378"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_018",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "9df448c82dbf65434a18169644c69959176c264c624458c9e57254f974b435f2",
+      "replay_hash": "132cdf26a0883c54ab895e9edd379580e25d5ba7916aa6c27708adc5fc1b6ade"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_018",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "68a9fa5aeb0ec3568bd683c17fb4a1bc70bbaabed1e62e2fde85c32c6eb0ba26",
+      "replay_hash": "77032094c8379fb7e28f478c2872552486ad2a9a8f681c119a066b4d96eeff6b"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_018",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "45996c4f029761e3cd903ad680735f59c2d7791d35e86bcca4501fef6bed2ab0",
+      "replay_hash": "c71433f3b4a7136c8ca10b6dd16b479c54894dd98ea12e22ec52170d7535b3eb"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_018",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "acdb7cb8fe951167667d7b9e19d18af334629b158cf9f91bd802ff9e0fa5ffec",
+      "replay_hash": "98ba0fe68c4fbea5b23cb84b6970beb7c855ba4a29160c45235d552438af3b93"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_018",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "424ee7d35a7e387ee204a2a2441d07d43634cd77fa437cab7bfc305428a2a16a",
+      "replay_hash": "3877bbb561b2c2fa32c221a29cba5218cc043fc8a2b3bb7c9155cb37cd91be44"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_018",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "290c6e066402d5a0456483e2498031db03b6a971323d628f78ba8ad373ce967c",
+      "replay_hash": "e2efe6a0d298cb760cbf4c516025407d9ba5c7457dde4764bd1542e7fefc80a5"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_018",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "822d5d9c2cae65a138f66377efc93e31b0c23da14e1b73e6d45ba4a28ab0b1f2",
+      "replay_hash": "e1c8162a5934abe33a6c445640faee33048b3973b32e9b78201f1ea431855481"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_019",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "19660c23badf1b547d7c73a5beb5cfb153a91e0530d3f0512598d950f2b6e840",
+      "replay_hash": "c974cdd2ddebacbffd8932180f1335c12820cf3f69ba5b8308f40e337dd806b5"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_019",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "c788973f8508c2f604b1c9de3a892db722b269a253a60f85f614083fc7d90974",
+      "replay_hash": "061c7896beec649c551b993aec156fd81ed9ffe438eab2a92269b1a3e5a4501b"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_019",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "fc8a494cf9665e0dab9c3ddc049bbbe9876268a407e1b087426e815a83739cc4",
+      "replay_hash": "a433e22de67ae1301e0488f85891fa78a19dd997afd4042032d285c7f6ad5d5c"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_019",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d85a935d95201c475ca2091f390c4bed5c49d5e1ddbf365f8448ec092ed13b6a",
+      "replay_hash": "96b56a55072c7512d538e6b462ec2b29163b4dc7f3bed42e89f6722e70b88a05"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_019",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "42e81dd7bcc0dc33c17f6158351f61908d49e5df3868d57cf9f36bae825d8df6",
+      "replay_hash": "966a70813ed9fa85ab7275bebad80ba879b18af51e9d3ea709b5036a6d39c48b"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_019",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "87e74c23d490955ba5b1631f2844d93a9ca916db1d17a89b5c55a79f1b471267",
+      "replay_hash": "f43746dd496e1fe749a6db849b324841b76f8a6eb4c1c123d22357b878d1c39a"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_019",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "74b578cd33081a34dc3df190209d382244053880484dd79ff3d712bc2b59eaa2",
+      "replay_hash": "d7c3f64a71a471a00bcc9de95a1ac2a9e797c1feaf14e3fef62a4042b0f1aebb"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_019",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "debc734d53b7356fdccda43b758c438fb36f0ae528399db4497e84839ad822b6",
+      "replay_hash": "fee5f3398ffb69c5cc176eaa15123fa712b907ea277cbb5d561e7ea541b3a4d8"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_020",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e5a74d254df547d31820c12f24d8b33f4fb97b9707520b575521efe9a394f798",
+      "replay_hash": "7995c7df443193699c3c43e2763bf99a6791292ce8a8068b324630f2967ecbd4"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_020",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ffe6b3ada828727d36d3ccd406b9463417b0a4532c01a228ae533c8a5b66e985",
+      "replay_hash": "c5ca4882c61cf0e5e7518cc55c76a8aed94356193a8114e672c7385904d4c535"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_020",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ecba02abad5f9d27495b11f42362af28852ff70f716bf69c3ae8d00120e7a172",
+      "replay_hash": "66cd25c39490cef628f2c51acee82d52f2ebf1de4e539d91a96887214690d8a3"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_020",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e2138d03415988e843cf9c5e8f5e3017e0ab6be7a13e77028d42a431f06bae3c",
+      "replay_hash": "6154074b2f12007c5bb1e3d08ebd0e66a9b2d622110f8e6de9935bc952ae869d"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_020",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "45897b3f88e196505f32c7b3b5f16dd49cb83401f9a5dc2f38998ee86b0ca857",
+      "replay_hash": "cb7d5f9d5d1db03ec77f94fa20b602c5fad30bf1ec594f25e248ee5c77c25bf5"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_020",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "5a7bda9e2ac515516eb611c57d652621e8ba5573453ceace894177bbcd581f08",
+      "replay_hash": "76e004344c361f375e0e65d76350ffe3c4a2d695219ba807b2b7ff425d5ed8e8"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_020",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "22138337586d1b5593f9fd89020f197555f6e93fd43eb47860d7ece1d7c26f01",
+      "replay_hash": "a1e4561d7d27e45c611d21e1dcbb7565ce4ff2aa8442315049a5c4141b63b841"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_020",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "9bd833edd083ef01413359c1bbc12cd85fe3d2bd1d760e87bae9f6fd46dcbd6f",
+      "replay_hash": "5abc143e6537f1304b9ffdaa6563bf8872bb69a8a762b3c4551b2fabce827d35"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_021",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "a0588f8460c3967c50fff63e997353be1f9e4a07a36c2deba66999145914012c",
+      "replay_hash": "93d50f2696370aad694ec946509d7184c5f422d4b9789d06b17d3a5b834c692e"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_021",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "edf1a790aa9a6e241d7280a0faddb1746f68abef55cf3619cd061c446afa750a",
+      "replay_hash": "d50567981e85ee803158f836265d62eff6a713d0a349378b50ce97d22bccc116"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_021",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "894efb7b46e8053c91931baa3730b7fc7f70875ebf2ed8aef3d89413a259c323",
+      "replay_hash": "5217426a53b41dbe466b92a3ce9fcbc0a28faeae283c2f6c19568d0c1347fc9f"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_021",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "9b972f1322b0e3aea675f00cc62b0da60145a2e5a3b61af49decfb3a57da91e5",
+      "replay_hash": "a053b6af2fee2217271715c349e687868cdc3648e6adfeeeedd83532d44929ad"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_021",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "065034c8a1fee275938c2392dd3e793e6fae26a87ae49355f139f1a76dbc5145",
+      "replay_hash": "3b8e4ed5f3f32d2c1ad8bf732b62e8e7ac5fa69644f2c2a0b9246f986ab0f490"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_021",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "5efae9a56c0def51d79d859cdff5c0fd574f1ed43a9dd2d2627bc8f93c04ee03",
+      "replay_hash": "88ff8ab3b15fb351e269719513962d6abb18b09c06d36f52b77511130dee6317"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_021",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "381c0937f39d92ab1370c6dacd5c2172675e52e4e973607d6569790253a8791a",
+      "replay_hash": "3ab4930952e19ac8e77d1b15dfde3df26253dfda56c0d030b8db26948423eb10"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_021",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "476eb2c0c5750a2a2c42f05fcdbb1d8bf33400299d66c5a9cf97305f184d8655",
+      "replay_hash": "1ef51abc5e678a1f1b2244857fe62b0031977dadbd279aaabe3d31fa34df7066"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_022",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "c87249b5783722513137495226a23da60e1fed6f276d9710505ec09761feba5c",
+      "replay_hash": "d4bcf03b2c486662897c62ca304002ce18a2588e913f6fe7459eb68f7669daff"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_022",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "038104c482674265af21f2a2f39cce2c57720dc605fe7807006dd02b77e612b7",
+      "replay_hash": "4b48153a40a4d7bd239112f38578cbf8b3662f5516be532e9d882841fcdcf18e"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_022",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e40b0d88985775ea0b63968ba536158bc50ce2a562dc89e7dac1251f1e650e55",
+      "replay_hash": "647f1927071572881d949cd67d3f76573993278c2645d9aa4278085ec48d23a6"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_022",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "2547de944aae9fbf4ecb460580b30704cf196366d8e12d27875c0fc87689af0c",
+      "replay_hash": "b96ba402a513adcbc9eea41ec90045347f9a12f21cf23084093013220b4225ea"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_022",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "f8ae7d9f5937add91954284fb1a884dece2a097ceac865de66d2aa9d70b13e5d",
+      "replay_hash": "e5cdd90f5c7723823befcc5c2b8cc41d8f6b7daf23d1a019848350f4f5c607d3"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_022",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "4edc60a37cb0a331b51d906309396a5aef965071e66997f0e45dca16bc5f6de2",
+      "replay_hash": "ee6fab64b224b0d394016c9441134672c95cefd71ecd635fd2275db5d94245e6"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_022",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "137a500841d402dba25e4f4a9d75b208ec140dff3dbb1b7dab81d8c0af69dda2",
+      "replay_hash": "064445866945ca09e1fd18b9818a351142829c8dbb01ac1fa879720a17d66bb0"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_022",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "c8feda1bc8781d902ff50413346e742aa3b6046f43b241b488af2279c2c4eb2d",
+      "replay_hash": "dae589fd071b609790c3f3194b02364d8f50a5f2be808e4139c1798de49fc2bb"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_023",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d26a9edb8f9c49f43a5470c9220dee3ce8d7169d21e1977146d799d71fef67de",
+      "replay_hash": "e32f36ed5badb2481755fb19f683f1e730bb29eb0bff8c3c0c592b6a41f8ad95"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_023",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "03fb16cbcd7293ad357b9dba267f22f29bba105bf11fe7a9d76fd4fc7dec2e79",
+      "replay_hash": "25958c08c92aae3257f3c02a3a848deeda7fb06bb4c62d9273058ab4fe0e418e"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_023",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ec1750a159dec9a7ffd78e6f8910cac2e00f5f0b9b63e6a88a0137a68eeaec64",
+      "replay_hash": "26e56af7329fd469a3076e6947a76b76c5096106bf3db1e26677988b7121f088"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_023",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "832d0474dd52dc6165ced20a3818a6a6a77f13c5b08c377179997a2c53bee373",
+      "replay_hash": "361e9e6751c556824f2e653c5e169b71c6e15df32556d2273a5ec7d0ee459dc9"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_023",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "8ef892e864d6f2b1c71c17e2659d016c78e78f3176b2fdb2ad599e8ac9bec822",
+      "replay_hash": "ceb4f567fb216b807b7621bb1cfae30fe331b38aa636c76d4e31bb7b0aef6260"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_023",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "a25ef4d726ceacebd771778cc220c2a1dd475a027a1daf0ac319a5481664bd1a",
+      "replay_hash": "933ed327a17090f264549a355c0b7c54e5e96b0b8b45b0721e9765ef6284c5a5"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_023",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "52b3a7764bf205352cdf66dcd6b1cf090195f100e4b34c3de955ec9c9537ce90",
+      "replay_hash": "5204ae164c061f66ff5aa2d1d87a2f02d0bcb6ef153108cc1bb981090be451f8"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_023",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e0d10a9bab91237d9be79b0bc94a02404502e34b568d156a6fb929fd7be4ba89",
+      "replay_hash": "729cadf56384a693879f218a4d4fdf3605105e6ccd71c82fe7d76b26ed1c10bf"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_024",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "89d34012e9c37641a1c8f29b8fc7a2db24c3164ffb9d882b76ac7e294119fdd2",
+      "replay_hash": "7ec6987c55d969e4ace5f66883996b362746daf0b18a9d50ce431ef1356a3429"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_024",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "66e51653a5cd0f2755115d693ea60d09f4eb3a4580be78c161544db2dbc09797",
+      "replay_hash": "968d15021395a633ffc9df73e139be0c08c74f23f02c969265a25fc937072a19"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_024",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "817e31ad22179c46be48ee464ca8728d116697278023b0aa462a78a8b1cc4146",
+      "replay_hash": "00978d26615c30ddc8a19cde350eace8d67a0b6b34059e7fd15034349805825a"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_024",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "2327e16a8af230357f4ed3f2f1662ad86220a2d09d9908a47c29b217cc0a1005",
+      "replay_hash": "9084f9f59b73dc81f452d15889d1b25053604d989f9c18abec34f5fc56b2ed13"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_024",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "269fb084bc9a48b7dbec250eefe6410157d34c036ae6d6524ba7f218f1759075",
+      "replay_hash": "3eef802792070df1072286abd93d2b92f3fb86fadc08e753738527af3ca59927"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_024",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "67dcc72201042ad7eb336942230e3f366a9419683515f3757937ad2e6c78854f",
+      "replay_hash": "ef70db2526fd581803d496e7a8e1184f5cf2a30533d09b4961535a3de54dbfad"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_024",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "82a68e5000ffc16a25a70238ef443ea9774583434dc9f2b0b062ee75f9fe12e3",
+      "replay_hash": "1e10f64c797131f87d6b67638e142869986f6a82bbd35fcb1bc30417f33c5ba7"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_024",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d3b1444195dff821e392453054ea8d911caf564f7cab0f18724804d665c5bac1",
+      "replay_hash": "7f77c0c1cec07001d952e48c0428233065e9b78d068769be4e649a848eeda29a"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_025",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "9aa728d77f81024a345b6daff266ca6e7fb6d3966e00af0ae9f777c1a82d0b2d",
+      "replay_hash": "d2c8eee70f25bee9cfca05dfaf53af65487dde01fe647daf948bfcc1ac198fc3"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_025",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "3b40b47bb378002cb5226a459559895dfa90f3acc033615d26e9bde405896f2e",
+      "replay_hash": "61cc57775faaa900ba256ab452dd05cf22149e3c4733227eee9b4303da6e6b26"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_025",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ab12e08cf4adf3d214731e8004b3e5f191679cd710990eae354a71320aa8af15",
+      "replay_hash": "10246b6c2b39d45f61d392ef3b0ed3bc0c0f806ecf28d4df5a9d5ceda0dc10ec"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_025",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e923b19827c79a87f6414d1d9875ef0d105733ff49337f4cbb1e4cb1750dacfe",
+      "replay_hash": "75d744e12b3c5565348bba3b543d5dcbb4a4889fd74db25b4bf5e7389c913184"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_025",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "732aa26d4b6c5173c27b95ecc42d15a7a30f92c17191c065a5fcb0866a09a6e2",
+      "replay_hash": "276c202631898f54825a14dc3337e340462c289fd1c8e0a92e295005bfbb9eb4"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_025",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "4596ee50cd8700685bb1647095b7e4d76e3227b858c15b0c477f9c99a73033aa",
+      "replay_hash": "fef24dfe55b25759b86fe8def8dd36bd07d546854592af1fe7650a45f22f9efa"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_025",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "eb94560dbb8c93732b1d8f31a159accf0062858d567d909fe2edd121283e66a2",
+      "replay_hash": "46f0e128aa035bab871fc1aca16ba9bc92bfc1d01f8713fe5357f59aa15af125"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_025",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "014d7e69c0ad52fc0a5b9a6ba9fa116be21303c2e74052a584916719fe1457cb",
+      "replay_hash": "385c23412ae753d06c86e02c97514ecbe9e7875fc2c5524eb9a50646ce28240b"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_026",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "6d4e15a45282a212f2511d32458330eee4670e891ac95c9730ef800a78ac6994",
+      "replay_hash": "18a77f0602e343cb44b6f708e8178113d6217be634f0649f83d3a915805b57cb"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_026",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "4cf572a6afd5c079027337a8a2e41bd845175faea7544c61d21a4750bd070f11",
+      "replay_hash": "d15157f04be9d644a51d97d7745eb23dfe1c935387dc3c270c99cdbf24009fe5"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_026",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "e769ff96051d74d78e4464648a76b47b8210d3aadb36abdc10d5144e0b81fbf5",
+      "replay_hash": "07b14e82cee5c63d778d603831a2346c4c88c85e2d6a654196e6a2c246a57fca"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_026",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ad2bf923139eae8a04d0576ef5205f5eb68b7e40d91de8642cf365e1352e4ebb",
+      "replay_hash": "b4e28ff1e0746cef828ca3b31b5172c3184a26c5d3a9f78b342153c135c18260"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_026",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "f60d6daefc7d651f24311a61dbbed18f5d35b1e7c5c13b12049fc20e95f9a4f1",
+      "replay_hash": "16409ada2a072a3d79bd41f984e557c35b1181df92def84fcb523129e6dffe58"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_026",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "9067fa26b7b2225e1ac7dc5fe18bce1087db5f0b680f7824d8046eef038abdf4",
+      "replay_hash": "848e79c7558f2e8ec234c5b1f8f278a029cdd7f8764c683952d93df08f57d721"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_026",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "db11304616800960f3b2cb2c63dedb24770ae938fe1da8bd0de4638dcc5455e0",
+      "replay_hash": "e64e2e785912515f6724588c1bb47ea8d687c7de7da3462581eb962ccb6b63c8"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_026",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "6605700ad75ea2175f23b37ec367f3f2c5d899b4b342541efb2afc7503d48a5d",
+      "replay_hash": "917b7d6f0b59dd00ac3fea50475450444317b968cf81e06b93a091be7767f097"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_027",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "96248dec983e8f23a02b2f1d9106614f6719b92ed200c66b7abfbba28f52aeef",
+      "replay_hash": "a0d95c47397a36c5d242b19a859e3010ae4298152dddfc3ab4f06cad54963adc"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_027",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "33ec3d81dc0d7f378db6c8db3c29a1f89d2b78e380ec0852a0d9f4b9a41230ba",
+      "replay_hash": "a1aaeca5a2752e930974f329a0fd8501c48c6dcae9f4e8dad38ea2ac33d6d65f"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_027",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "d299e131cad05ce11b60f5b601f44c0773d63bad2ccd25bf0641bfceb86deb9a",
+      "replay_hash": "98ce625bb0ec067f1cc98b0f168d7f34bcbc624476ec86a51a1d609baf90e3ff"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_027",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "9b5a8f4bf9908e3d2bd46b76acc875510f80e536ed473c8ba7bddee45ce42bf8",
+      "replay_hash": "b905228bec8b20e193601d09a3be23e07e72c9abe14b2d6cfdda5d6f3f90ea5a"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_027",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "1267b64bd8f85f1caa36ca660aece087eca8a41065e2615f7f4814cee1bc59c6",
+      "replay_hash": "4ca14f6f7554183349b8d05a858b4ee16172748b00b3b448172bcc3faabf799e"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_027",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "27a92e494760fc686c36b549bddc2356d968fb627b1063917c74daa2f98c1ada",
+      "replay_hash": "91ef0d1e76d82db4518520af60571d14ca07d4c82773ea586b281e4ee08ec597"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_027",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "fc0cdd35740e8e1d84c775328e2dfe9dea11af43e07a186937fa01e0c6e13bd6",
+      "replay_hash": "4526f2dfee5a87a8afdd787e4a4878111baa445a921819870f2ff0c98d957ff0"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_027",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "6ed12acbd1d7f9bfc6cda8618594ff1fe09726acc58bdfa9b3372d0cdb366f9f",
+      "replay_hash": "43639cb0416b51dfed2f7802389b83f6c7e34dc423a759d6d20a86b4b999a234"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_028",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "ad7fe09380057bb0f46013033a247db8ee98eb62bc7bb1025aacabd47e9044d9",
+      "replay_hash": "5356a45d8ba5cc8a8b21b89c5e67196d31923727e43ff8379a0051c88ec761d5"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_028",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "45fc86bf1b27db11e012ffc88dfeb70d58f99dec4c9a8b98339e9982d5ecf377",
+      "replay_hash": "935075f799b063053441e02a6542ce96b80669bb86c8f0ad830a5dd5dbabb4c5"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_028",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "4fc51d38f5bdcfe74e351839bfa3e7ea3cbbf091ead8c61cc4b2c5fbbf97b299",
+      "replay_hash": "6e678e1c30a10dee584418f0a4242725a1dfc1fd8a5f3f1ca12fd531bb97b420"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_028",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "8263b2d3a88a469c9c2447700c19e4a69e69969fd73fd8f8761be413811dd397",
+      "replay_hash": "c28f9dba8df20703fa00a2ca006afea7ce6ab298ff6dc53b80713cdf5136e087"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_028",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "b9dd429c543343e01c69726be104cdf13539b750b9a199a83d52dfe1e8f99062",
+      "replay_hash": "070a3d05a0fbf4a6abcce668e25f4e2bae3de40631400a6184d5df64244fdf43"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_028",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "76ea543c41c86601ef29ba3e80f048b8916fc9c6017ea59dac45c5d85d4de9c7",
+      "replay_hash": "1d6c9d2f1a1bf73a95ad44a63f2948b5adb8515cfd67d0d188ee9eaa7a7730c5"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_028",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "cd9b4687b26d33984212184cc0deb835742484015e1608722f2e0e73026a735c",
+      "replay_hash": "f576d3ee8ea2953a1da032556dd0433b0455eb7130b4473559e8984571b3be92"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_028",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "8ba94110beeadc8eb83ce47e97297b08fd05a1b24739b37226baf09f8543139a",
+      "replay_hash": "fba760766e481e142fddc14b6115c99c1aea161c676d632454708f6c24734385"
+    },
+    {
+      "category": "topology_and_route",
+      "expected": "COMPLETE",
+      "id": "topology_029",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "f28f47678bc26d6508bbe8c5add79b645401d851728cbfd11c87afcd67d2334c",
+      "replay_hash": "8d5e73aca50a2153f365d4e3c707b7448fd449e82e8d68d9bae59cfa9dc4eabd"
+    },
+    {
+      "category": "persistent_goal",
+      "expected": "COMPLETE",
+      "id": "goal_029",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "7151f14fb936b6b1420f8f53eac846e61c2e4d88a40cc368eb8b398937619686",
+      "replay_hash": "f9d44f436952c9eb827e5324f89f927e6ec9efb5eaab0712b4805f0fe54b97a6"
+    },
+    {
+      "category": "tension_computation_relaxation",
+      "expected": "COMPLETE",
+      "id": "tension_029",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "aed8934511918d2c6454d6a917c709d5b023eb278adc73b8fd2beed81547732a",
+      "replay_hash": "54b3d0eb81f890670ccdcd18764f90e4bd76bb172e09c93a14bbd0d5d70cddaa"
+    },
+    {
+      "category": "action_execution",
+      "expected": "COMPLETE",
+      "id": "action_029",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "b0ec17915d4883c654f2863d5fb9d0a67bc3438e07275269bc43d728368a4aae",
+      "replay_hash": "026bec13973d3fcc81c100a012ca003a47d01ede67e8f28929d5a11071ae5f1e"
+    },
+    {
+      "category": "effect_verification",
+      "expected": "COMPLETE",
+      "id": "effect_029",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "4c0aab16f7081c898d34719863f3561972498adc9b25e9505231e5c9fae8e723",
+      "replay_hash": "b277a5e58efe4b98fbb4e79bd2911adea067ac14709ea9866137055f5ac584b6"
+    },
+    {
+      "category": "replanning",
+      "expected": "UNREACHABLE",
+      "id": "replan_029",
+      "observed": "UNREACHABLE",
+      "passed": true,
+      "receipt_hash": "f0a55ecb35886222af2011aab7723ace4444dc8133c2b116463a2abc30f2dfbc",
+      "replay_hash": "d7d47a0812ee48358b25eff2ef29a2a40a0086deed8a99b01e763ea79e813b77"
+    },
+    {
+      "category": "reflection_and_lesson",
+      "expected": "BUDGET_EXHAUSTED",
+      "id": "reflection_029",
+      "observed": "BUDGET_EXHAUSTED",
+      "passed": true,
+      "receipt_hash": "088ee654cd94361372db0b03d70157fa68a0e5e459ed23dfbcce0abf1ee4ccec",
+      "replay_hash": "28493f030e83954cc6dcace4a9dded90755bf8a812e198496a9ace5489a9427c"
+    },
+    {
+      "category": "multi_agent",
+      "expected": "COMPLETE",
+      "id": "multi_029",
+      "observed": "COMPLETE",
+      "passed": true,
+      "receipt_hash": "8d9d076842de5622e755b562ca1c7c3185767ccad1ae590f4148a71166844b66",
+      "replay_hash": "31c40eb495d474cebebc0171c5b8040e88f844bfe10fe5884c2771108ccde60c"
+    }
+  ],
+  "silent_overwrites": 0,
+  "stale_plan_execution_failures": 0,
+  "suite": "habitat_v3_functional",
+  "tension_as_evidence_violations": 0,
+  "tension_cycle_failures": 0,
+  "tension_relaxation_failures": 0,
+  "total_cases": 240,
+  "unauthorized_lesson_activation": 0,
+  "unauthorized_object_transfers": 0,
+  "unsupported_accepts": 0,
+  "unsupported_action_authorizations": 0,
+  "unsupported_action_executions": 0,
+  "unsupported_goal_satisfaction": 0,
+  "unsupported_plan_steps": 0,
+  "unverified_effect_commits": 0
+}
