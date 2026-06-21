@@ -58,6 +58,16 @@ class VerticalSliceSession:
                 memory_update=self.state.world.commit(staged,(item.semantic_id for item in staged.items))
                 self._commit_current(bridge.request, parsed.graph)
         state_hash = self.state.hash
+        transition_receipts=()
+        if staged.events and memory_update.get("committed"):
+            event_checks=tuple(check for check in (item.__dict__ for item in decision.checks) if check["check_id"]=="event_precondition_supported")
+            transition_receipts=tuple({
+                "prior_state_hash":memory_update.get("before_state_hash"),"triggering_event":event,
+                "checked_preconditions":event_checks,"applied_effects":event.get("effects",()),
+                "resulting_state_hash":memory_update.get("after_state_hash"),
+                "superseded_evidence":tuple(memory_update.get("superseded_semantic_ids",())),
+                "provenance_ids":tuple(event.get("source_ids",())),
+            } for event in staged.events)
         stable = {"input":text,"graph_hash":graph_hash,"request_hash":bridge.request.canonical_hash,"decision":decision.to_dict(),"response":rendered.text,"template":rendered.template_id,"state_hash":state_hash}
         receipt = TurnReceipt(
             f"turn_{self.turn_count:04d}", text, parsed.status, parsed.rules_used, parsed.warnings,
@@ -68,7 +78,7 @@ class VerticalSliceSession:
             decision.decision, rendered.text, rendered.template_id, replay_hash(stable),
             {"ts-chat-language":"0.8.0","ts-vertical-slice":__version__,"ts-reasoner-v0":"40.0.0"}, state_hash, graph_dict, bridge.request.to_dict(),
             "ts-turn-receipt-v2",merge_preview,activation.to_dict() if activation else {},decision.signed_world_state,
-            tuple(staged.events),tuple(self.state.world.transitions[-len(staged.events):]) if staged.events and memory_update.get("committed") else (),
+            tuple(staged.events),transition_receipts,
             decision.causal_derivations,decision.planning,decision.decision_subtype,memory_update,
             {"input_state_hash":memory_update.get("before_state_hash"),"output_state_hash":state_hash,"deterministic_replay_hash":replay_hash(stable)},
         )

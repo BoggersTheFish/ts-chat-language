@@ -342,10 +342,7 @@
   "state_hash": "48e73873323297682ea8af0c44e0e14fb59b4457b884f610ebe79c209d4f90a7",
   "state_transitions": [
     {
-      "action": "gives",
-      "actor_id": "alice",
-      "destination_location_id": "",
-      "effects": [
+      "applied_effects": [
         {
           "object_id": "red_key",
           "polarity": "negative",
@@ -359,24 +356,61 @@
           "subject_id": "sarah"
         }
       ],
-      "event_id": "sem_event_b2ad049da8fc5416",
-      "object_id": "red_key",
-      "preconditions": [
+      "checked_preconditions": [
         {
-          "object_id": "red_key",
-          "polarity": "positive",
-          "predicate": "owns",
-          "subject_id": "alice"
+          "check_id": "event_precondition_supported",
+          "message": "Event precondition alice|owns|red_key is SUPPORTED_TRUE.",
+          "passed": true,
+          "support_ids": [
+            "sem_fact_f5d72a87882a94ea"
+          ]
         }
       ],
-      "source_ids": [
+      "prior_state_hash": "6dc5e92b53f25211f62cdaa38035e16347b73f9752339838a72965eacb188e5e",
+      "provenance_ids": [
         "obs_0002_cfb8fc4b956d"
       ],
-      "supersedes": [
-        "*|owns|red_key"
+      "resulting_state_hash": "dfd0a887eecf19e95caa484d5b62a90906f92cc74e1b34ef200897b34d6deb37",
+      "superseded_evidence": [
+        "sem_fact_f5d72a87882a94ea"
       ],
-      "target_id": "sarah",
-      "turn_index": 2
+      "triggering_event": {
+        "action": "gives",
+        "actor_id": "alice",
+        "destination_location_id": "",
+        "effects": [
+          {
+            "object_id": "red_key",
+            "polarity": "negative",
+            "predicate": "owns",
+            "subject_id": "alice"
+          },
+          {
+            "object_id": "red_key",
+            "polarity": "positive",
+            "predicate": "owns",
+            "subject_id": "sarah"
+          }
+        ],
+        "event_id": "sem_event_b2ad049da8fc5416",
+        "object_id": "red_key",
+        "preconditions": [
+          {
+            "object_id": "red_key",
+            "polarity": "positive",
+            "predicate": "owns",
+            "subject_id": "alice"
+          }
+        ],
+        "source_ids": [
+          "obs_0002_cfb8fc4b956d"
+        ],
+        "supersedes": [
+          "*|owns|red_key"
+        ],
+        "target_id": "sarah",
+        "turn_index": 2
+      }
     }
   ],
   "turn_id": "turn_0002",

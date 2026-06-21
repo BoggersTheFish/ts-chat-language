@@ -534,10 +534,7 @@
   "state_hash": "97de3978c724c6b6982e9cb71601d375585dda1b2f49c02ca477d80a11f822a1",
   "state_transitions": [
     {
-      "action": "opens",
-      "actor_id": "",
-      "destination_location_id": "",
-      "effects": [
+      "applied_effects": [
         {
           "object_id": "",
           "polarity": "positive",
@@ -545,17 +542,37 @@
           "subject_id": "door"
         }
       ],
-      "event_id": "sem_event_371c8263b09129d5",
-      "object_id": "",
-      "preconditions": [],
-      "source_ids": [
+      "checked_preconditions": [],
+      "prior_state_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "provenance_ids": [
         "obs_0001_8b06fb342050"
       ],
-      "supersedes": [
-        "door|open|"
-      ],
-      "target_id": "door",
-      "turn_index": 1
+      "resulting_state_hash": "e2adf9f7d224e7b4259312260b27218a456d8dbe2a7522f1cd0f744cfd8524c2",
+      "superseded_evidence": [],
+      "triggering_event": {
+        "action": "opens",
+        "actor_id": "",
+        "destination_location_id": "",
+        "effects": [
+          {
+            "object_id": "",
+            "polarity": "positive",
+            "predicate": "open",
+            "subject_id": "door"
+          }
+        ],
+        "event_id": "sem_event_371c8263b09129d5",
+        "object_id": "",
+        "preconditions": [],
+        "source_ids": [
+          "obs_0001_8b06fb342050"
+        ],
+        "supersedes": [
+          "door|open|"
+        ],
+        "target_id": "door",
+        "turn_index": 1
+      }
     }
   ],
   "turn_id": "turn_0001",
