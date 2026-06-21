@@ -1,0 +1,1260 @@
+{
+  "action_transactions": [
+    {
+      "action_id": "action:bbe8f172feff8cfca5a5",
+      "committed": true,
+      "effect_verification": {
+        "action_id": "action:bbe8f172feff8cfca5a5",
+        "approved": true,
+        "execution_id": "execution:d6c46126e8e564931bf4",
+        "expected": [
+          [
+            "alarm",
+            "active",
+            "",
+            "positive"
+          ]
+        ],
+        "observed": [
+          [
+            "alarm",
+            "active",
+            "",
+            "positive"
+          ]
+        ],
+        "reason": "EFFECTS_MATCH",
+        "verification_id": "effect_verification:b4cfdfdee334d68f90c8"
+      },
+      "expected_effects": [
+        {
+          "object_id": "",
+          "polarity": "positive",
+          "predicate": "active",
+          "subject_id": "alarm"
+        }
+      ],
+      "lifecycle": [
+        "ACTION_PROPOSED",
+        "PRECONDITIONS_VERIFIED",
+        "ACTION_AUTHORIZED",
+        "ENVIRONMENT_EXECUTED",
+        "EFFECTS_OBSERVED",
+        "EFFECTS_VERIFIED",
+        "WORLD_COMMITTED"
+      ],
+      "observed_effects": [
+        {
+          "object_id": "",
+          "polarity": "positive",
+          "predicate": "active",
+          "subject_id": "alarm"
+        }
+      ],
+      "post_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+      "pre_state_hash": "cb7ca1f1843767a1583cc32dbb571ce922ee65d9a25907f95b022648946c88b2",
+      "provenance_ids": [
+        "environment:snapshot"
+      ],
+      "support_ids": [
+        "directive:c910b62a28f8c5000e6e"
+      ],
+      "transaction_id": "transaction:2b6bcfd6185df1b6a2fa"
+    },
+    {
+      "action_id": "action:42cabbcdd7e3fd74134e",
+      "committed": true,
+      "effect_verification": {
+        "action_id": "action:42cabbcdd7e3fd74134e",
+        "approved": true,
+        "execution_id": "execution:be17bffb59bf1e9aacb2",
+        "expected": [
+          [
+            "beacon",
+            "active",
+            "",
+            "positive"
+          ]
+        ],
+        "observed": [
+          [
+            "beacon",
+            "active",
+            "",
+            "positive"
+          ]
+        ],
+        "reason": "EFFECTS_MATCH",
+        "verification_id": "effect_verification:5eb3ad4d24c6a67a448a"
+      },
+      "expected_effects": [
+        {
+          "object_id": "",
+          "polarity": "positive",
+          "predicate": "active",
+          "subject_id": "beacon"
+        }
+      ],
+      "lifecycle": [
+        "ACTION_PROPOSED",
+        "PRECONDITIONS_VERIFIED",
+        "ACTION_AUTHORIZED",
+        "ENVIRONMENT_EXECUTED",
+        "EFFECTS_OBSERVED",
+        "EFFECTS_VERIFIED",
+        "WORLD_COMMITTED"
+      ],
+      "observed_effects": [
+        {
+          "object_id": "",
+          "polarity": "positive",
+          "predicate": "active",
+          "subject_id": "beacon"
+        }
+      ],
+      "post_state_hash": "d5300e8c90baa6a94a14cbc1f2c3fe746a5cc4d19d3e30055516688f17614a96",
+      "pre_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+      "provenance_ids": [
+        "environment:snapshot"
+      ],
+      "support_ids": [
+        "directive:1d72477079d3d2fdd9c5"
+      ],
+      "transaction_id": "transaction:e68d77367b894fefbb0c"
+    }
+  ],
+  "agent_loop": {
+    "iterations": 3,
+    "state": "COMPLETE",
+    "steps": [
+      {
+        "decision": "OBSERVED",
+        "loop_step_id": "loop:0001",
+        "phase": "OBSERVE",
+        "post_state_hash": "0649b7c6375e91c0f8cfdf267470ef003758680301fb6bfdfa4fce25c237a87c",
+        "pre_state_hash": "0649b7c6375e91c0f8cfdf267470ef003758680301fb6bfdfa4fce25c237a87c",
+        "receipt_id": "loop_receipt:062af91134dd340f9510",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "VERIFIED_OBSERVATION_COMMITTED",
+        "loop_step_id": "loop:0002",
+        "phase": "UPDATE_WORLD",
+        "post_state_hash": "cb7ca1f1843767a1583cc32dbb571ce922ee65d9a25907f95b022648946c88b2",
+        "pre_state_hash": "0649b7c6375e91c0f8cfdf267470ef003758680301fb6bfdfa4fce25c237a87c",
+        "receipt_id": "loop_receipt:8c24a9cebe50206a6ad3",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "GOALS_EVALUATED",
+        "loop_step_id": "loop:0003",
+        "phase": "EVALUATE_GOALS",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:f2764f2410b078f873fd",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "COMPUTE_TIER_HIGH",
+        "loop_step_id": "loop:0004",
+        "phase": "COMPUTE_TENSION",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:50b44b49dca384bf789d",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "SELECTED",
+        "loop_step_id": "loop:0005",
+        "phase": "SELECT_GOAL",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:206cb9e3e1742bbbb270",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "CLUSTER_ACTIVATED",
+        "loop_step_id": "loop:0006",
+        "phase": "ACTIVATE_CLUSTER",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:615c10210b060fb15d46",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "PLAN_PROPOSED",
+        "loop_step_id": "loop:0007",
+        "phase": "PLAN",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:a361c61b860f0919df2a",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "PLAN_VERIFIED",
+        "loop_step_id": "loop:0008",
+        "phase": "VERIFY_PLAN",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:19da391f8864c1cc3886",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [
+          "directive:c910b62a28f8c5000e6e"
+        ],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "ACTION_PROPOSED",
+        "loop_step_id": "loop:0009",
+        "phase": "PROPOSE_ACTION",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:eb2ed766e1c9361ea25d",
+        "selected_action_id": "action:bbe8f172feff8cfca5a5",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "plan:f6eb998011299420aabd",
+        "support_ids": [
+          "directive:c910b62a28f8c5000e6e"
+        ],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "AUTHORIZED",
+        "loop_step_id": "loop:0010",
+        "phase": "VERIFY_ACTION_PRECONDITIONS",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:36c6bfda5a82a301b704",
+        "selected_action_id": "action:bbe8f172feff8cfca5a5",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "plan:f6eb998011299420aabd",
+        "support_ids": [
+          "directive:c910b62a28f8c5000e6e"
+        ],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "ENVIRONMENT_EXECUTED",
+        "loop_step_id": "loop:0011",
+        "phase": "EXECUTE_ACTION",
+        "post_state_hash": "cb7ca1f1843767a1583cc32dbb571ce922ee65d9a25907f95b022648946c88b2",
+        "pre_state_hash": "cb7ca1f1843767a1583cc32dbb571ce922ee65d9a25907f95b022648946c88b2",
+        "receipt_id": "loop_receipt:8c5155b9fed558651f96",
+        "selected_action_id": "action:bbe8f172feff8cfca5a5",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "plan:f6eb998011299420aabd",
+        "support_ids": [],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "WORLD_COMMITTED",
+        "loop_step_id": "loop:0012",
+        "phase": "VERIFY_EFFECTS",
+        "post_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+        "pre_state_hash": "cb7ca1f1843767a1583cc32dbb571ce922ee65d9a25907f95b022648946c88b2",
+        "receipt_id": "loop_receipt:336172dbccaf906ceb45",
+        "selected_action_id": "action:bbe8f172feff8cfca5a5",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "plan:f6eb998011299420aabd",
+        "support_ids": [
+          "directive:c910b62a28f8c5000e6e"
+        ],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "SATISFIED",
+        "loop_step_id": "loop:0013",
+        "phase": "UPDATE_GOAL",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:3b493926d5519c7d2748",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "plan:f6eb998011299420aabd",
+        "support_ids": [
+          "env_fact:05cf64e51a977a412ed1"
+        ],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "GOAL_SATISFIED",
+        "loop_step_id": "loop:0014",
+        "phase": "REFLECT",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:b328d07243fe354430b7",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "plan:f6eb998011299420aabd",
+        "support_ids": [],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "OBSERVED",
+        "loop_step_id": "loop:0015",
+        "phase": "OBSERVE",
+        "post_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+        "pre_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+        "receipt_id": "loop_receipt:290e359536b0f65712df",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "VERIFIED_OBSERVATION_COMMITTED",
+        "loop_step_id": "loop:0016",
+        "phase": "UPDATE_WORLD",
+        "post_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+        "pre_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+        "receipt_id": "loop_receipt:bad4a96c9fd75247ebf7",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "GOALS_EVALUATED",
+        "loop_step_id": "loop:0017",
+        "phase": "EVALUATE_GOALS",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:403a9bff90aff3272a46",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "COMPUTE_TIER_MEDIUM",
+        "loop_step_id": "loop:0018",
+        "phase": "COMPUTE_TENSION",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:5552474c5947ed99d5d7",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:alarm:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "SELECTED",
+        "loop_step_id": "loop:0019",
+        "phase": "SELECT_GOAL",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:48e19c016c84b3928be2",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "CLUSTER_ACTIVATED",
+        "loop_step_id": "loop:0020",
+        "phase": "ACTIVATE_CLUSTER",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:fd178caf1cef5d7bde0c",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [
+          "env_fact:05cf64e51a977a412ed1"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "PLAN_PROPOSED",
+        "loop_step_id": "loop:0021",
+        "phase": "PLAN",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:5224167bda5e0b1c372e",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "PLAN_VERIFIED",
+        "loop_step_id": "loop:0022",
+        "phase": "VERIFY_PLAN",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:3a0fae8c0e46d80674c1",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [
+          "directive:1d72477079d3d2fdd9c5"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "ACTION_PROPOSED",
+        "loop_step_id": "loop:0023",
+        "phase": "PROPOSE_ACTION",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:774509ecef5efa9d6e6a",
+        "selected_action_id": "action:42cabbcdd7e3fd74134e",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "plan:c5c800b021359233f272",
+        "support_ids": [
+          "directive:1d72477079d3d2fdd9c5"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "AUTHORIZED",
+        "loop_step_id": "loop:0024",
+        "phase": "VERIFY_ACTION_PRECONDITIONS",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:12f39bbb5a4bbcbb79c5",
+        "selected_action_id": "action:42cabbcdd7e3fd74134e",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "plan:c5c800b021359233f272",
+        "support_ids": [
+          "directive:1d72477079d3d2fdd9c5"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "ENVIRONMENT_EXECUTED",
+        "loop_step_id": "loop:0025",
+        "phase": "EXECUTE_ACTION",
+        "post_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+        "pre_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+        "receipt_id": "loop_receipt:9a8e95a177d14e888bd2",
+        "selected_action_id": "action:42cabbcdd7e3fd74134e",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "plan:c5c800b021359233f272",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "WORLD_COMMITTED",
+        "loop_step_id": "loop:0026",
+        "phase": "VERIFY_EFFECTS",
+        "post_state_hash": "d5300e8c90baa6a94a14cbc1f2c3fe746a5cc4d19d3e30055516688f17614a96",
+        "pre_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+        "receipt_id": "loop_receipt:08ede715ce5cea1e0211",
+        "selected_action_id": "action:42cabbcdd7e3fd74134e",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "plan:c5c800b021359233f272",
+        "support_ids": [
+          "directive:1d72477079d3d2fdd9c5"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "SATISFIED",
+        "loop_step_id": "loop:0027",
+        "phase": "UPDATE_GOAL",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:ba38f2654e9a661cda02",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "plan:c5c800b021359233f272",
+        "support_ids": [
+          "env_fact:6c8c9375a521f8aa47ae"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "GOAL_SATISFIED",
+        "loop_step_id": "loop:0028",
+        "phase": "REFLECT",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:c5d690f89ccffc44eba9",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "plan:c5c800b021359233f272",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "OBSERVED",
+        "loop_step_id": "loop:0029",
+        "phase": "OBSERVE",
+        "post_state_hash": "d5300e8c90baa6a94a14cbc1f2c3fe746a5cc4d19d3e30055516688f17614a96",
+        "pre_state_hash": "d5300e8c90baa6a94a14cbc1f2c3fe746a5cc4d19d3e30055516688f17614a96",
+        "receipt_id": "loop_receipt:730a83bb95d02228d333",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "VERIFIED_OBSERVATION_COMMITTED",
+        "loop_step_id": "loop:0030",
+        "phase": "UPDATE_WORLD",
+        "post_state_hash": "d5300e8c90baa6a94a14cbc1f2c3fe746a5cc4d19d3e30055516688f17614a96",
+        "pre_state_hash": "d5300e8c90baa6a94a14cbc1f2c3fe746a5cc4d19d3e30055516688f17614a96",
+        "receipt_id": "loop_receipt:fd19019b1320db93a0c4",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "GOALS_EVALUATED",
+        "loop_step_id": "loop:0031",
+        "phase": "EVALUATE_GOALS",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:fb5d7ff4851696adaa4d",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "COMPUTE_TIER_LOW",
+        "loop_step_id": "loop:0032",
+        "phase": "COMPUTE_TENSION",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:aa7fd9633646fbd44dd5",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:beacon:active:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "NO_ACTIVE_GOAL",
+        "loop_step_id": "loop:0033",
+        "phase": "SELECT_GOAL",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:ecfff5ed006a96b4c82e",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "COMPLETE",
+        "loop_step_id": "loop:0034",
+        "phase": "COMPLETE",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:7dc881b14ffedff9ce94",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      }
+    ]
+  },
+  "cluster_activation": {},
+  "decision": {
+    "goal_satisfaction_supported": true,
+    "status": "ACCEPT",
+    "subtype": "COMPLETE",
+    "support_ids": [
+      "directive:1d72477079d3d2fdd9c5",
+      "directive:c910b62a28f8c5000e6e"
+    ]
+  },
+  "environment_events": [],
+  "goals": {
+    "items": {
+      "goal:alice:alarm:active:positive": {
+        "created_turn": 1,
+        "deadline_turn": null,
+        "depends_on_goal_ids": [],
+        "desired_polarity": "positive",
+        "goal_id": "goal:alice:alarm:active:positive",
+        "goal_type": "state_goal",
+        "object_id": "",
+        "owner_agent_id": "alice",
+        "parent_goal_id": null,
+        "predicate": "active",
+        "priority": 200,
+        "provenance_ids": [
+          "provenance:96ca7b7900375d5a31a4"
+        ],
+        "resolution_support_ids": [
+          "env_fact:05cf64e51a977a412ed1"
+        ],
+        "source_ids": [
+          "directive:c910b62a28f8c5000e6e"
+        ],
+        "status": "SATISFIED",
+        "subject_id": "alarm",
+        "updated_turn": 1
+      },
+      "goal:alice:beacon:active:positive": {
+        "created_turn": 2,
+        "deadline_turn": null,
+        "depends_on_goal_ids": [],
+        "desired_polarity": "positive",
+        "goal_id": "goal:alice:beacon:active:positive",
+        "goal_type": "state_goal",
+        "object_id": "",
+        "owner_agent_id": "alice",
+        "parent_goal_id": null,
+        "predicate": "active",
+        "priority": 100,
+        "provenance_ids": [
+          "provenance:ade9ac3c77abadf66cdb"
+        ],
+        "resolution_support_ids": [
+          "env_fact:6c8c9375a521f8aa47ae"
+        ],
+        "source_ids": [
+          "directive:1d72477079d3d2fdd9c5"
+        ],
+        "status": "SATISFIED",
+        "subject_id": "beacon",
+        "updated_turn": 2
+      }
+    },
+    "verifications": [
+      {
+        "approved": true,
+        "goal_id": "goal:alice:alarm:active:positive",
+        "operation": "create",
+        "previous_status": "",
+        "reason": "GOAL_SCHEMA_VERIFIED",
+        "requested_status": "PROPOSED",
+        "support_ids": [
+          "directive:c910b62a28f8c5000e6e"
+        ],
+        "verification_id": "goal_verification:aee2b73e167c6abc"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:alarm:active:positive",
+        "operation": "transition",
+        "previous_status": "PROPOSED",
+        "reason": "GOAL_TRANSITION_ALLOWED",
+        "requested_status": "ACTIVE",
+        "support_ids": [],
+        "verification_id": "goal_verification:ef1968ccc860a956"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:beacon:active:positive",
+        "operation": "create",
+        "previous_status": "",
+        "reason": "GOAL_SCHEMA_VERIFIED",
+        "requested_status": "PROPOSED",
+        "support_ids": [
+          "directive:1d72477079d3d2fdd9c5"
+        ],
+        "verification_id": "goal_verification:afaa8b0c47066e10"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:beacon:active:positive",
+        "operation": "transition",
+        "previous_status": "PROPOSED",
+        "reason": "GOAL_TRANSITION_ALLOWED",
+        "requested_status": "ACTIVE",
+        "support_ids": [],
+        "verification_id": "goal_verification:39f008148ef04c06"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:alarm:active:positive",
+        "operation": "priority",
+        "previous_status": "100",
+        "reason": "GOAL_PRIORITY_VERIFIED",
+        "requested_status": "200",
+        "support_ids": [
+          "demo:priority"
+        ],
+        "verification_id": "goal_verification:839ff1532fba5b8d"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:beacon:active:positive",
+        "operation": "priority",
+        "previous_status": "100",
+        "reason": "GOAL_PRIORITY_VERIFIED",
+        "requested_status": "100",
+        "support_ids": [
+          "demo:priority"
+        ],
+        "verification_id": "goal_verification:9a7a3361119c6c89"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:alarm:active:positive",
+        "operation": "transition",
+        "previous_status": "ACTIVE",
+        "reason": "GOAL_TARGET_SUPPORTED",
+        "requested_status": "SATISFIED",
+        "support_ids": [
+          "env_fact:05cf64e51a977a412ed1"
+        ],
+        "verification_id": "goal_verification:b8e1c0b4a8929f8c"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:beacon:active:positive",
+        "operation": "transition",
+        "previous_status": "ACTIVE",
+        "reason": "GOAL_TARGET_SUPPORTED",
+        "requested_status": "SATISFIED",
+        "support_ids": [
+          "env_fact:6c8c9375a521f8aa47ae"
+        ],
+        "verification_id": "goal_verification:36e18e3b0ac9c94e"
+      }
+    ]
+  },
+  "lessons": {
+    "approval_receipts": [],
+    "items": {}
+  },
+  "meaning_graph": {
+    "edge_count": 0,
+    "graph_hash": "ae0e9985bc695cfd66bdd1c535e642055a1deed8ea0b2a5f63a0a5d95b4d4f95",
+    "nodes": []
+  },
+  "memory_update": {
+    "committed_transactions": 2,
+    "world_state_hash": "d5300e8c90baa6a94a14cbc1f2c3fe746a5cc4d19d3e30055516688f17614a96"
+  },
+  "multi_agent": {
+    "agents": [
+      {
+        "active_goal_ids": [],
+        "agent_id": "alice",
+        "carried_object_ids": [],
+        "current_location_id": "",
+        "name": "Alice",
+        "owned_object_ids": [],
+        "policy_ids": [],
+        "status": "ACTIVE"
+      }
+    ],
+    "scheduling_policy": "priority_then_tension_then_agent_id"
+  },
+  "parse": {
+    "directives": [],
+    "status": "command",
+    "warnings": []
+  },
+  "planning": {
+    "plans": [
+      {
+        "actions": [
+          {
+            "action_id": "action:bbe8f172feff8cfca5a5",
+            "action_type": "activate",
+            "actor_id": "alice",
+            "cost": 1,
+            "destination_location_id": "",
+            "expected_effects": [
+              {
+                "object_id": "",
+                "polarity": "positive",
+                "predicate": "active",
+                "subject_id": "alarm"
+              }
+            ],
+            "object_id": "",
+            "preconditions": [],
+            "recipient_id": "",
+            "source_location_id": "",
+            "support_ids": [
+              "directive:c910b62a28f8c5000e6e"
+            ],
+            "target_id": "alarm"
+          }
+        ],
+        "completed_action_ids": [],
+        "expected_intermediate_state_hashes": [
+          "f047889c5155738f0d22df96f29e06f864689c4d9d19d40a449b412b5999785d"
+        ],
+        "explored_state_count": 0,
+        "goal_id": "goal:alice:alarm:active:positive",
+        "invalidated": false,
+        "originating_relevant_cluster_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "originating_world_state_hash": "cb7ca1f1843767a1583cc32dbb571ce922ee65d9a25907f95b022648946c88b2",
+        "plan_id": "plan:f6eb998011299420aabd",
+        "planning_limits": {
+          "max_depth": 12,
+          "max_states": 2048
+        },
+        "stale_cause": "",
+        "support_ids": [
+          "directive:c910b62a28f8c5000e6e"
+        ],
+        "verification_id": "plan_verification:125e943d50e427b36137"
+      },
+      {
+        "actions": [
+          {
+            "action_id": "action:42cabbcdd7e3fd74134e",
+            "action_type": "activate",
+            "actor_id": "alice",
+            "cost": 1,
+            "destination_location_id": "",
+            "expected_effects": [
+              {
+                "object_id": "",
+                "polarity": "positive",
+                "predicate": "active",
+                "subject_id": "beacon"
+              }
+            ],
+            "object_id": "",
+            "preconditions": [],
+            "recipient_id": "",
+            "source_location_id": "",
+            "support_ids": [
+              "directive:1d72477079d3d2fdd9c5"
+            ],
+            "target_id": "beacon"
+          }
+        ],
+        "completed_action_ids": [],
+        "expected_intermediate_state_hashes": [
+          "6e776d4dc675d471f8bddde831c985dc9ba1fddda461d87ba941c442d0755cfb"
+        ],
+        "explored_state_count": 0,
+        "goal_id": "goal:alice:beacon:active:positive",
+        "invalidated": false,
+        "originating_relevant_cluster_hash": "f90209b9cddaa4b44119947ead3129c9f3d6f78295a2f05af3f95a852dd407e4",
+        "originating_world_state_hash": "84bf649df458cc6c5d0b68670e408143920238d944ad959190be1904822b2ff2",
+        "plan_id": "plan:c5c800b021359233f272",
+        "planning_limits": {
+          "max_depth": 8,
+          "max_states": 512
+        },
+        "stale_cause": "",
+        "support_ids": [
+          "directive:1d72477079d3d2fdd9c5"
+        ],
+        "verification_id": "plan_verification:d6d63160cde2f0c6ad28"
+      }
+    ],
+    "selected_plan_id": ""
+  },
+  "receipt_hash": "edcfbf9b1b82098af00c3168575f641f622e4c6402a98187e140edc8934392ac",
+  "receipt_schema": "ts-turn-receipt-v3",
+  "reflection": {
+    "records": [
+      {
+        "causal_factors": [],
+        "failed_assumptions": [],
+        "goal_id": "goal:alice:alarm:active:positive",
+        "proposed_lessons": [],
+        "reflection_id": "reflection:064a95e544ca090761d4",
+        "source_ids": [
+          "loop_receipt:8c5155b9fed558651f96",
+          "loop_receipt:a361c61b860f0919df2a",
+          "loop_receipt:eb2ed766e1c9361ea25d",
+          "loop_receipt:f2764f2410b078f873fd"
+        ],
+        "status": "RECORDED",
+        "successful_decisions": [],
+        "summary_code": "GOAL_SATISFIED",
+        "trigger_receipt_ids": [
+          "loop_receipt:8c5155b9fed558651f96",
+          "loop_receipt:a361c61b860f0919df2a",
+          "loop_receipt:eb2ed766e1c9361ea25d",
+          "loop_receipt:f2764f2410b078f873fd"
+        ],
+        "trigger_type": "GOAL_SATISFIED"
+      },
+      {
+        "causal_factors": [],
+        "failed_assumptions": [],
+        "goal_id": "goal:alice:beacon:active:positive",
+        "proposed_lessons": [],
+        "reflection_id": "reflection:7c1d6dd4bf4bd03075b0",
+        "source_ids": [
+          "loop_receipt:bad4a96c9fd75247ebf7",
+          "loop_receipt:eb2ed766e1c9361ea25d",
+          "loop_receipt:f2764f2410b078f873fd",
+          "loop_receipt:fd178caf1cef5d7bde0c"
+        ],
+        "status": "RECORDED",
+        "successful_decisions": [],
+        "summary_code": "GOAL_SATISFIED",
+        "trigger_receipt_ids": [
+          "loop_receipt:bad4a96c9fd75247ebf7",
+          "loop_receipt:eb2ed766e1c9361ea25d",
+          "loop_receipt:f2764f2410b078f873fd",
+          "loop_receipt:fd178caf1cef5d7bde0c"
+        ],
+        "trigger_type": "GOAL_SATISFIED"
+      }
+    ]
+  },
+  "rendering": {
+    "support_ids": [
+      "directive:1d72477079d3d2fdd9c5",
+      "directive:c910b62a28f8c5000e6e"
+    ],
+    "support_validated": true,
+    "text": "All active goals are satisfied in the verified world state."
+  },
+  "replanning": {
+    "count": 0,
+    "events": []
+  },
+  "replay": {
+    "approved_lessons_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "compatible_repository_shas": {
+      "ts-chat-language": "development",
+      "ts-reasoner-v0": "development"
+    },
+    "configuration": {
+      "max_action_executions": 32,
+      "max_active_cluster_items": 512,
+      "max_active_goals": 64,
+      "max_agents": 8,
+      "max_causal_derivations": 64,
+      "max_environment_events": 128,
+      "max_explored_states": 2048,
+      "max_loop_iterations": 64,
+      "max_planner_depth": 12,
+      "max_plans_per_goal": 8,
+      "max_receipt_size": 1000000,
+      "max_replans": 8,
+      "max_semantic_memory_items": 4096,
+      "max_tension_records": 256,
+      "max_topology_size": 1024,
+      "max_wall_clock_duration": 10.0
+    },
+    "final_run_replay_hash": "b418964b11ba3777b42c06d78bf4633fee896c22a9e49d0948284f29a2f626f4",
+    "initial_environment_snapshot_hash": "b65a9ab08bc9cb83281b6b9607fee21a28f594444846d95e4508857c9517e913",
+    "input_sequence_hash": "a8270919f8ac2d217f1c9cb3b7da3bdf8b98c286e855a7c94a7120d5b3d4311e",
+    "scheduled_events_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "semantic_merge": {
+    "committed_to_environment": false,
+    "goal_verification_ids": [
+      "goal_verification:afaa8b0c47066e10",
+      "goal_verification:39f008148ef04c06"
+    ],
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [],
+    "trusted_world_committed": false
+  },
+  "signed_world_state": {
+    "alarm|active|": {
+      "negative_support_ids": [],
+      "object_id": "",
+      "positive_support_ids": [
+        "env_fact:05cf64e51a977a412ed1"
+      ],
+      "predicate": "active",
+      "proposition_id": "alarm|active|",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "alarm"
+    },
+    "beacon|active|": {
+      "negative_support_ids": [],
+      "object_id": "",
+      "positive_support_ids": [
+        "env_fact:6c8c9375a521f8aa47ae"
+      ],
+      "predicate": "active",
+      "proposition_id": "beacon|active|",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "beacon"
+    }
+  },
+  "tension": {
+    "tension:failed_action:action:42cabbcdd7e3fd74134e": {
+      "created_step": 2,
+      "last_updated_step": 2,
+      "propagated_value": 0,
+      "propagation_receipts": [],
+      "raw_value": 0.0,
+      "resolution_condition": "",
+      "source_id": "action:42cabbcdd7e3fd74134e",
+      "source_ids": [],
+      "source_type": "failed_action",
+      "status": "RELAXED",
+      "target_semantic_ids": [],
+      "tension_id": "tension:failed_action:action:42cabbcdd7e3fd74134e",
+      "total_value": 0.0
+    },
+    "tension:failed_action:action:bbe8f172feff8cfca5a5": {
+      "created_step": 1,
+      "last_updated_step": 1,
+      "propagated_value": 0,
+      "propagation_receipts": [],
+      "raw_value": 0.0,
+      "resolution_condition": "",
+      "source_id": "action:bbe8f172feff8cfca5a5",
+      "source_ids": [],
+      "source_type": "failed_action",
+      "status": "RELAXED",
+      "target_semantic_ids": [],
+      "tension_id": "tension:failed_action:action:bbe8f172feff8cfca5a5",
+      "total_value": 0.0
+    },
+    "tension:unsatisfied_goal:goal:alice:alarm:active:positive": {
+      "created_step": 1,
+      "last_updated_step": 3,
+      "propagated_value": 0,
+      "propagation_receipts": [],
+      "raw_value": 0.0,
+      "resolution_condition": "",
+      "source_id": "goal:alice:alarm:active:positive",
+      "source_ids": [],
+      "source_type": "unsatisfied_goal",
+      "status": "RELAXED",
+      "target_semantic_ids": [],
+      "tension_id": "tension:unsatisfied_goal:goal:alice:alarm:active:positive",
+      "total_value": 0.0
+    },
+    "tension:unsatisfied_goal:goal:alice:beacon:active:positive": {
+      "created_step": 1,
+      "last_updated_step": 3,
+      "propagated_value": 0,
+      "propagation_receipts": [],
+      "raw_value": 0.0,
+      "resolution_condition": "",
+      "source_id": "goal:alice:beacon:active:positive",
+      "source_ids": [],
+      "source_type": "unsatisfied_goal",
+      "status": "RELAXED",
+      "target_semantic_ids": [],
+      "tension_id": "tension:unsatisfied_goal:goal:alice:beacon:active:positive",
+      "total_value": 0.0
+    }
+  },
+  "turn": {
+    "input": "/run",
+    "turn_id": "turn:0003"
+  }
+}

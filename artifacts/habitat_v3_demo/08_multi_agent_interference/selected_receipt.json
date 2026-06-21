@@ -1,0 +1,1225 @@
+{
+  "action_transactions": [
+    {
+      "action_id": "action:c3b13b7abdfc77ced4ae",
+      "committed": true,
+      "effect_verification": {
+        "action_id": "action:c3b13b7abdfc77ced4ae",
+        "approved": true,
+        "execution_id": "execution:0fae910e598dee03d48a",
+        "expected": [
+          [
+            "alice",
+            "at",
+            "hall",
+            "negative"
+          ],
+          [
+            "alice",
+            "at",
+            "kitchen",
+            "positive"
+          ]
+        ],
+        "observed": [
+          [
+            "alice",
+            "at",
+            "hall",
+            "negative"
+          ],
+          [
+            "alice",
+            "at",
+            "kitchen",
+            "positive"
+          ]
+        ],
+        "reason": "EFFECTS_MATCH",
+        "verification_id": "effect_verification:3d937551716d0c14ae2f"
+      },
+      "expected_effects": [
+        {
+          "object_id": "kitchen",
+          "polarity": "positive",
+          "predicate": "at",
+          "subject_id": "alice"
+        },
+        {
+          "object_id": "hall",
+          "polarity": "negative",
+          "predicate": "at",
+          "subject_id": "alice"
+        }
+      ],
+      "lifecycle": [
+        "ACTION_PROPOSED",
+        "PRECONDITIONS_VERIFIED",
+        "ACTION_AUTHORIZED",
+        "ENVIRONMENT_EXECUTED",
+        "EFFECTS_OBSERVED",
+        "EFFECTS_VERIFIED",
+        "WORLD_COMMITTED"
+      ],
+      "observed_effects": [
+        {
+          "object_id": "kitchen",
+          "polarity": "positive",
+          "predicate": "at",
+          "subject_id": "alice"
+        },
+        {
+          "object_id": "hall",
+          "polarity": "negative",
+          "predicate": "at",
+          "subject_id": "alice"
+        }
+      ],
+      "post_state_hash": "7b87996085dd0d05016b56dfa1882b53efea9e2b32d5f16159e38a67d0689b4f",
+      "pre_state_hash": "defced7829843f2cb08320f7f75454788d62abe7beddac4e6347cd3a9d6130c6",
+      "provenance_ids": [
+        "environment:snapshot"
+      ],
+      "support_ids": [
+        "connection:hall:kitchen",
+        "directive:94b4d100049055b3405c",
+        "fact:5d6b44a2b47113dd2491"
+      ],
+      "transaction_id": "transaction:c38968eab6436cbf0f1f"
+    }
+  ],
+  "agent_loop": {
+    "iterations": 2,
+    "state": "UNREACHABLE",
+    "steps": [
+      {
+        "decision": "OBSERVED",
+        "loop_step_id": "loop:0001",
+        "phase": "OBSERVE",
+        "post_state_hash": "0649b7c6375e91c0f8cfdf267470ef003758680301fb6bfdfa4fce25c237a87c",
+        "pre_state_hash": "0649b7c6375e91c0f8cfdf267470ef003758680301fb6bfdfa4fce25c237a87c",
+        "receipt_id": "loop_receipt:062af91134dd340f9510",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "VERIFIED_OBSERVATION_COMMITTED",
+        "loop_step_id": "loop:0002",
+        "phase": "UPDATE_WORLD",
+        "post_state_hash": "defced7829843f2cb08320f7f75454788d62abe7beddac4e6347cd3a9d6130c6",
+        "pre_state_hash": "0649b7c6375e91c0f8cfdf267470ef003758680301fb6bfdfa4fce25c237a87c",
+        "receipt_id": "loop_receipt:ffe89f503545b497030c",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "GOALS_EVALUATED",
+        "loop_step_id": "loop:0003",
+        "phase": "EVALUATE_GOALS",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:f2764f2410b078f873fd",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "COMPUTE_TIER_MEDIUM",
+        "loop_step_id": "loop:0004",
+        "phase": "COMPUTE_TENSION",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:8b5ae38ae9a69081ec0f",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "SELECTED",
+        "loop_step_id": "loop:0005",
+        "phase": "SELECT_GOAL",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:04f55b3c2e6af6f6f803",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "CLUSTER_ACTIVATED",
+        "loop_step_id": "loop:0006",
+        "phase": "ACTIVATE_CLUSTER",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:6848d4b7b3aa9d854d69",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [
+          "connection:hall:kitchen",
+          "connection:kitchen:north_door",
+          "fact:4413d06061b425f20017",
+          "fact:5d6b44a2b47113dd2491",
+          "fact:cd3a7f9c8f35bd38174d"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "PLAN_PROPOSED",
+        "loop_step_id": "loop:0007",
+        "phase": "PLAN",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:69b368e03bdb29491e01",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "PLAN_VERIFIED",
+        "loop_step_id": "loop:0008",
+        "phase": "VERIFY_PLAN",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:ec1282d81a7bc67fdfaf",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [
+          "connection:hall:kitchen",
+          "connection:kitchen:north_door",
+          "directive:94b4d100049055b3405c",
+          "directive:b7fefdae8e91617e95f7",
+          "directive:b825cd84d2c2323dcd5a",
+          "fact:2b061d1251a16b17f8da",
+          "fact:4413d06061b425f20017",
+          "fact:5d6b44a2b47113dd2491",
+          "fact:cd3a7f9c8f35bd38174d"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "ACTION_PROPOSED",
+        "loop_step_id": "loop:0009",
+        "phase": "PROPOSE_ACTION",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:9adb4a17af418a261183",
+        "selected_action_id": "action:c3b13b7abdfc77ced4ae",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [
+          "connection:hall:kitchen",
+          "directive:94b4d100049055b3405c",
+          "fact:5d6b44a2b47113dd2491"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "AUTHORIZED",
+        "loop_step_id": "loop:0010",
+        "phase": "VERIFY_ACTION_PRECONDITIONS",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:91da9a7299749d3d9bb2",
+        "selected_action_id": "action:c3b13b7abdfc77ced4ae",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [
+          "connection:hall:kitchen",
+          "directive:94b4d100049055b3405c",
+          "fact:5d6b44a2b47113dd2491"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "ENVIRONMENT_EXECUTED",
+        "loop_step_id": "loop:0011",
+        "phase": "EXECUTE_ACTION",
+        "post_state_hash": "defced7829843f2cb08320f7f75454788d62abe7beddac4e6347cd3a9d6130c6",
+        "pre_state_hash": "defced7829843f2cb08320f7f75454788d62abe7beddac4e6347cd3a9d6130c6",
+        "receipt_id": "loop_receipt:3b32830e421e822c3ce0",
+        "selected_action_id": "action:c3b13b7abdfc77ced4ae",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "WORLD_COMMITTED",
+        "loop_step_id": "loop:0012",
+        "phase": "VERIFY_EFFECTS",
+        "post_state_hash": "7b87996085dd0d05016b56dfa1882b53efea9e2b32d5f16159e38a67d0689b4f",
+        "pre_state_hash": "defced7829843f2cb08320f7f75454788d62abe7beddac4e6347cd3a9d6130c6",
+        "receipt_id": "loop_receipt:daaa4fbfc17e89141586",
+        "selected_action_id": "action:c3b13b7abdfc77ced4ae",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [
+          "connection:hall:kitchen",
+          "directive:94b4d100049055b3405c",
+          "fact:5d6b44a2b47113dd2491"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "ACTIVE",
+        "loop_step_id": "loop:0013",
+        "phase": "UPDATE_GOAL",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:f0e2ad4054c72872e441",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "OBSERVED",
+        "loop_step_id": "loop:0014",
+        "phase": "OBSERVE",
+        "post_state_hash": "7b87996085dd0d05016b56dfa1882b53efea9e2b32d5f16159e38a67d0689b4f",
+        "pre_state_hash": "7b87996085dd0d05016b56dfa1882b53efea9e2b32d5f16159e38a67d0689b4f",
+        "receipt_id": "loop_receipt:a00e87e78bb938c86169",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "VERIFIED_OBSERVATION_COMMITTED",
+        "loop_step_id": "loop:0015",
+        "phase": "UPDATE_WORLD",
+        "post_state_hash": "7b87996085dd0d05016b56dfa1882b53efea9e2b32d5f16159e38a67d0689b4f",
+        "pre_state_hash": "7b87996085dd0d05016b56dfa1882b53efea9e2b32d5f16159e38a67d0689b4f",
+        "receipt_id": "loop_receipt:e08d3cf7309885a2f2cb",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "GOALS_EVALUATED",
+        "loop_step_id": "loop:0016",
+        "phase": "EVALUATE_GOALS",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:2d148d8c9613187ff538",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "COMPUTE_TIER_MEDIUM",
+        "loop_step_id": "loop:0017",
+        "phase": "COMPUTE_TENSION",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:cf4aba2cd86b4871bb4c",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "SELECTED",
+        "loop_step_id": "loop:0018",
+        "phase": "SELECT_GOAL",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:93fa61ac4037554a7416",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "CLUSTER_ACTIVATED",
+        "loop_step_id": "loop:0019",
+        "phase": "ACTIVATE_CLUSTER",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:efb8c9a8131ca28a6e76",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [
+          "connection:hall:kitchen",
+          "connection:kitchen:north_door",
+          "env_fact:9877a39a0c9b0208ddd7",
+          "env_fact:e18302b1dce3dbcf0c4b",
+          "fact:4413d06061b425f20017",
+          "fact:cd3a7f9c8f35bd38174d"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "AGENT_INTERFERENCE",
+        "loop_step_id": "loop:0020",
+        "phase": "REPLAN",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:23d4ca5d742425cd5c05",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.75
+        },
+        "tension_before": {
+          "total": 0.75
+        }
+      },
+      {
+        "decision": "PRECONDITION_CHANGED_AFTER_PLANNING",
+        "loop_step_id": "loop:0021",
+        "phase": "REFLECT",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:9aebee09ec1c2977a6fd",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "plan:b166af1034f63cbb93ae",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.75
+        },
+        "tension_before": {
+          "total": 0.75
+        }
+      },
+      {
+        "decision": "MISSING_KEY_LOCATION",
+        "loop_step_id": "loop:0022",
+        "phase": "PLAN",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:5f305e1dd6cf3eeb5440",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.75
+        },
+        "tension_before": {
+          "total": 0.75
+        }
+      },
+      {
+        "decision": "MISSING_KEY_LOCATION",
+        "loop_step_id": "loop:0023",
+        "phase": "UNREACHABLE",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:7e6a102fa1a3f2363849",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      },
+      {
+        "decision": "MISSING_KEY_LOCATION",
+        "loop_step_id": "loop:0024",
+        "phase": "REFLECT",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:42f57fda2ff469c0a823",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 1.0
+        },
+        "tension_before": {
+          "total": 1.0
+        }
+      }
+    ]
+  },
+  "cluster_activation": {},
+  "decision": {
+    "goal_satisfaction_supported": true,
+    "status": "REJECT",
+    "subtype": "UNREACHABLE",
+    "support_ids": [
+      "connection:hall:kitchen",
+      "directive:94b4d100049055b3405c",
+      "fact:5d6b44a2b47113dd2491"
+    ]
+  },
+  "environment_events": [
+    {
+      "actor_id": "bob",
+      "effects": [
+        {
+          "object_id": "kitchen",
+          "polarity": "negative",
+          "predicate": "at",
+          "subject_id": "red_key"
+        },
+        {
+          "object_id": "red_key",
+          "polarity": "positive",
+          "predicate": "carries",
+          "subject_id": "bob"
+        }
+      ],
+      "event_id": "event:a8dbe42797d114cd7130",
+      "post_state_hash": "51f47c4b929f7f8095a17625eb194a937dff0e26c0d905f4c8199e820a2b157f",
+      "pre_state_hash": "a7197c504a35202dc6e17c67fbe0f583bd445bf8e008510288ef12223b313a86",
+      "provenance_ids": [
+        "provenance:cda9ef2c8f2a1f23c9d6"
+      ],
+      "source_ids": [
+        "directive:a8dbe42797d114cd7130"
+      ],
+      "trigger": "after_enter"
+    }
+  ],
+  "goals": {
+    "items": {
+      "goal:alice:north_door:open:positive": {
+        "created_turn": 8,
+        "deadline_turn": null,
+        "depends_on_goal_ids": [],
+        "desired_polarity": "positive",
+        "goal_id": "goal:alice:north_door:open:positive",
+        "goal_type": "state_goal",
+        "object_id": "",
+        "owner_agent_id": "alice",
+        "parent_goal_id": null,
+        "predicate": "open",
+        "priority": 100,
+        "provenance_ids": [
+          "provenance:823591e07b36f305dcbb"
+        ],
+        "resolution_support_ids": [],
+        "source_ids": [
+          "directive:b7fefdae8e91617e95f7"
+        ],
+        "status": "UNREACHABLE",
+        "subject_id": "north_door",
+        "updated_turn": 2
+      }
+    },
+    "verifications": [
+      {
+        "approved": true,
+        "goal_id": "goal:alice:north_door:open:positive",
+        "operation": "create",
+        "previous_status": "",
+        "reason": "GOAL_SCHEMA_VERIFIED",
+        "requested_status": "PROPOSED",
+        "support_ids": [
+          "directive:b7fefdae8e91617e95f7"
+        ],
+        "verification_id": "goal_verification:796a2f611202892a"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:north_door:open:positive",
+        "operation": "transition",
+        "previous_status": "PROPOSED",
+        "reason": "GOAL_TRANSITION_ALLOWED",
+        "requested_status": "ACTIVE",
+        "support_ids": [],
+        "verification_id": "goal_verification:bf62ca4ddc760518"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:north_door:open:positive",
+        "operation": "transition",
+        "previous_status": "ACTIVE",
+        "reason": "GOAL_TRANSITION_ALLOWED",
+        "requested_status": "UNREACHABLE",
+        "support_ids": [],
+        "verification_id": "goal_verification:d2a9a23a9c5911a6"
+      }
+    ]
+  },
+  "lessons": {
+    "approval_receipts": [],
+    "items": {
+      "lesson:0a3454863fd4edc3bb26": {
+        "condition": {
+          "action_type": "*",
+          "required_predicate": "current_preconditions"
+        },
+        "evidence_receipt_ids": [
+          "loop_receipt:efb8c9a8131ca28a6e76",
+          "loop_receipt:f0e2ad4054c72872e441",
+          "loop_receipt:f2764f2410b078f873fd",
+          "loop_receipt:ffe89f503545b497030c"
+        ],
+        "lesson_id": "lesson:0a3454863fd4edc3bb26",
+        "lesson_type": "REVALIDATE_PRECONDITION",
+        "recommended_policy": {
+          "operation": "verify_immediately_before_execution"
+        },
+        "status": "PROPOSED"
+      }
+    }
+  },
+  "meaning_graph": {
+    "edge_count": 0,
+    "graph_hash": "ae0e9985bc695cfd66bdd1c535e642055a1deed8ea0b2a5f63a0a5d95b4d4f95",
+    "nodes": []
+  },
+  "memory_update": {
+    "committed_transactions": 1,
+    "world_state_hash": "7b87996085dd0d05016b56dfa1882b53efea9e2b32d5f16159e38a67d0689b4f"
+  },
+  "multi_agent": {
+    "agents": [
+      {
+        "active_goal_ids": [],
+        "agent_id": "alice",
+        "carried_object_ids": [],
+        "current_location_id": "kitchen",
+        "name": "Alice",
+        "owned_object_ids": [],
+        "policy_ids": [],
+        "status": "ACTIVE"
+      }
+    ],
+    "scheduling_policy": "priority_then_tension_then_agent_id"
+  },
+  "parse": {
+    "directives": [],
+    "status": "command",
+    "warnings": []
+  },
+  "planning": {
+    "plans": [
+      {
+        "actions": [
+          {
+            "action_id": "action:c3b13b7abdfc77ced4ae",
+            "action_type": "move",
+            "actor_id": "alice",
+            "cost": 1,
+            "destination_location_id": "kitchen",
+            "expected_effects": [
+              {
+                "object_id": "kitchen",
+                "polarity": "positive",
+                "predicate": "at",
+                "subject_id": "alice"
+              },
+              {
+                "object_id": "hall",
+                "polarity": "negative",
+                "predicate": "at",
+                "subject_id": "alice"
+              }
+            ],
+            "object_id": "",
+            "preconditions": [
+              {
+                "expected_status": "SUPPORTED_TRUE",
+                "object_id": "hall",
+                "predicate": "at",
+                "subject_id": "alice"
+              }
+            ],
+            "recipient_id": "",
+            "source_location_id": "hall",
+            "support_ids": [
+              "connection:hall:kitchen",
+              "directive:94b4d100049055b3405c",
+              "fact:5d6b44a2b47113dd2491"
+            ],
+            "target_id": ""
+          },
+          {
+            "action_id": "action:04efdcebc1404687c07e",
+            "action_type": "take",
+            "actor_id": "alice",
+            "cost": 1,
+            "destination_location_id": "",
+            "expected_effects": [
+              {
+                "object_id": "red_key",
+                "polarity": "positive",
+                "predicate": "carries",
+                "subject_id": "alice"
+              },
+              {
+                "object_id": "kitchen",
+                "polarity": "negative",
+                "predicate": "at",
+                "subject_id": "red_key"
+              }
+            ],
+            "object_id": "red_key",
+            "preconditions": [
+              {
+                "expected_status": "SUPPORTED_TRUE",
+                "object_id": "kitchen",
+                "predicate": "at",
+                "subject_id": "alice"
+              },
+              {
+                "expected_status": "SUPPORTED_TRUE",
+                "object_id": "kitchen",
+                "predicate": "at",
+                "subject_id": "red_key"
+              }
+            ],
+            "recipient_id": "",
+            "source_location_id": "kitchen",
+            "support_ids": [
+              "fact:2b061d1251a16b17f8da",
+              "fact:4413d06061b425f20017"
+            ],
+            "target_id": ""
+          },
+          {
+            "action_id": "action:42cd936ef9bb1884e573",
+            "action_type": "move",
+            "actor_id": "alice",
+            "cost": 1,
+            "destination_location_id": "north_door",
+            "expected_effects": [
+              {
+                "object_id": "north_door",
+                "polarity": "positive",
+                "predicate": "at",
+                "subject_id": "alice"
+              },
+              {
+                "object_id": "kitchen",
+                "polarity": "negative",
+                "predicate": "at",
+                "subject_id": "alice"
+              }
+            ],
+            "object_id": "",
+            "preconditions": [
+              {
+                "expected_status": "SUPPORTED_TRUE",
+                "object_id": "kitchen",
+                "predicate": "at",
+                "subject_id": "alice"
+              }
+            ],
+            "recipient_id": "",
+            "source_location_id": "kitchen",
+            "support_ids": [
+              "connection:kitchen:north_door",
+              "directive:b825cd84d2c2323dcd5a"
+            ],
+            "target_id": ""
+          },
+          {
+            "action_id": "action:a52614bd0de4439c1858",
+            "action_type": "unlock",
+            "actor_id": "alice",
+            "cost": 1,
+            "destination_location_id": "",
+            "expected_effects": [
+              {
+                "object_id": "",
+                "polarity": "negative",
+                "predicate": "locked",
+                "subject_id": "north_door"
+              }
+            ],
+            "object_id": "red_key",
+            "preconditions": [
+              {
+                "expected_status": "SUPPORTED_TRUE",
+                "object_id": "",
+                "predicate": "locked",
+                "subject_id": "north_door"
+              },
+              {
+                "expected_status": "SUPPORTED_TRUE",
+                "object_id": "red_key",
+                "predicate": "carries",
+                "subject_id": "alice"
+              }
+            ],
+            "recipient_id": "",
+            "source_location_id": "",
+            "support_ids": [
+              "fact:4413d06061b425f20017",
+              "fact:cd3a7f9c8f35bd38174d"
+            ],
+            "target_id": "north_door"
+          },
+          {
+            "action_id": "action:e36b129742bfdc0902dc",
+            "action_type": "open",
+            "actor_id": "alice",
+            "cost": 1,
+            "destination_location_id": "",
+            "expected_effects": [
+              {
+                "object_id": "",
+                "polarity": "positive",
+                "predicate": "open",
+                "subject_id": "north_door"
+              }
+            ],
+            "object_id": "",
+            "preconditions": [
+              {
+                "expected_status": "SUPPORTED_FALSE",
+                "object_id": "",
+                "predicate": "locked",
+                "subject_id": "north_door"
+              },
+              {
+                "expected_status": "SUPPORTED_TRUE",
+                "object_id": "north_door",
+                "predicate": "at",
+                "subject_id": "alice"
+              }
+            ],
+            "recipient_id": "",
+            "source_location_id": "",
+            "support_ids": [
+              "connection:hall:kitchen",
+              "connection:kitchen:north_door",
+              "directive:94b4d100049055b3405c",
+              "directive:b7fefdae8e91617e95f7",
+              "directive:b825cd84d2c2323dcd5a"
+            ],
+            "target_id": "north_door"
+          }
+        ],
+        "completed_action_ids": [],
+        "expected_intermediate_state_hashes": [
+          "d617bb43cd1b83fbbb09539c9d39d27e759c5172d740d87b73a3d1e4f21db558",
+          "13c9eef0164c7462ed8468be66158caea8e7af7e7fbebe063a1fc39f98145c40",
+          "c078781b90f90ac07980fbd4cd611eda1da9b5f95830350755d4e2f7eee1f1e7",
+          "0006bcdaf7e3a452e86244fde196e16e08e6aba73e6fc820561cf2ca2596c08b",
+          "5bf9f064e011c9689530f3fcf77cb897193f4889b87375333f5e63cb8de2ca83"
+        ],
+        "explored_state_count": 2,
+        "goal_id": "goal:alice:north_door:open:positive",
+        "invalidated": false,
+        "originating_relevant_cluster_hash": "30ca75254014ef0b98a74e8d6dab4fb444b1158bda67846c2af0b756e032fa5a",
+        "originating_world_state_hash": "defced7829843f2cb08320f7f75454788d62abe7beddac4e6347cd3a9d6130c6",
+        "plan_id": "plan:b166af1034f63cbb93ae",
+        "planning_limits": {
+          "max_depth": 8,
+          "max_states": 512
+        },
+        "stale_cause": "",
+        "support_ids": [
+          "connection:hall:kitchen",
+          "connection:kitchen:north_door",
+          "directive:94b4d100049055b3405c",
+          "directive:b7fefdae8e91617e95f7",
+          "directive:b825cd84d2c2323dcd5a",
+          "fact:2b061d1251a16b17f8da",
+          "fact:4413d06061b425f20017",
+          "fact:5d6b44a2b47113dd2491",
+          "fact:cd3a7f9c8f35bd38174d"
+        ],
+        "verification_id": "plan_verification:a9c68a3f282300e13340"
+      }
+    ],
+    "selected_plan_id": ""
+  },
+  "receipt_hash": "e3366fe47373cb80da0264a848ff444d7c839b44d6a02453c0585638ce2d6fee",
+  "receipt_schema": "ts-turn-receipt-v3",
+  "reflection": {
+    "records": [
+      {
+        "causal_factors": [
+          "AGENT_INTERFERENCE"
+        ],
+        "failed_assumptions": [
+          "AGENT_INTERFERENCE"
+        ],
+        "goal_id": "goal:alice:north_door:open:positive",
+        "proposed_lessons": [
+          "lesson:0a3454863fd4edc3bb26"
+        ],
+        "reflection_id": "reflection:fab9e42a316a2f1f0db4",
+        "source_ids": [
+          "loop_receipt:efb8c9a8131ca28a6e76",
+          "loop_receipt:f0e2ad4054c72872e441",
+          "loop_receipt:f2764f2410b078f873fd",
+          "loop_receipt:ffe89f503545b497030c"
+        ],
+        "status": "RECORDED",
+        "successful_decisions": [],
+        "summary_code": "PRECONDITION_CHANGED_AFTER_PLANNING",
+        "trigger_receipt_ids": [
+          "loop_receipt:efb8c9a8131ca28a6e76",
+          "loop_receipt:f0e2ad4054c72872e441",
+          "loop_receipt:f2764f2410b078f873fd",
+          "loop_receipt:ffe89f503545b497030c"
+        ],
+        "trigger_type": "STALE_PLAN"
+      },
+      {
+        "causal_factors": [
+          "MISSING_KEY_LOCATION"
+        ],
+        "failed_assumptions": [
+          "MISSING_KEY_LOCATION"
+        ],
+        "goal_id": "goal:alice:north_door:open:positive",
+        "proposed_lessons": [],
+        "reflection_id": "reflection:e797d71dc8edd804e574",
+        "source_ids": [
+          "loop_receipt:efb8c9a8131ca28a6e76",
+          "loop_receipt:f0e2ad4054c72872e441",
+          "loop_receipt:f2764f2410b078f873fd",
+          "loop_receipt:ffe89f503545b497030c"
+        ],
+        "status": "RECORDED",
+        "successful_decisions": [],
+        "summary_code": "MISSING_KEY_LOCATION",
+        "trigger_receipt_ids": [
+          "loop_receipt:efb8c9a8131ca28a6e76",
+          "loop_receipt:f0e2ad4054c72872e441",
+          "loop_receipt:f2764f2410b078f873fd",
+          "loop_receipt:ffe89f503545b497030c"
+        ],
+        "trigger_type": "UNREACHABLE"
+      }
+    ]
+  },
+  "rendering": {
+    "support_ids": [
+      "connection:hall:kitchen",
+      "directive:94b4d100049055b3405c",
+      "fact:5d6b44a2b47113dd2491"
+    ],
+    "support_validated": true,
+    "text": "REJECT_UNREACHABLE: no verified bounded plan exists."
+  },
+  "replanning": {
+    "count": 1,
+    "events": [
+      {
+        "cause": "AGENT_INTERFERENCE",
+        "completed_action_ids": [
+          "action:c3b13b7abdfc77ced4ae"
+        ],
+        "goal_id": "goal:alice:north_door:open:positive",
+        "invalidated_plan_id": "plan:b166af1034f63cbb93ae",
+        "replan_id": "replan:0001",
+        "world_state_hash": "7b87996085dd0d05016b56dfa1882b53efea9e2b32d5f16159e38a67d0689b4f"
+      }
+    ]
+  },
+  "replay": {
+    "approved_lessons_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "compatible_repository_shas": {
+      "ts-chat-language": "development",
+      "ts-reasoner-v0": "development"
+    },
+    "configuration": {
+      "max_action_executions": 32,
+      "max_active_cluster_items": 512,
+      "max_active_goals": 64,
+      "max_agents": 8,
+      "max_causal_derivations": 64,
+      "max_environment_events": 128,
+      "max_explored_states": 2048,
+      "max_loop_iterations": 64,
+      "max_planner_depth": 12,
+      "max_plans_per_goal": 8,
+      "max_receipt_size": 1000000,
+      "max_replans": 8,
+      "max_semantic_memory_items": 4096,
+      "max_tension_records": 256,
+      "max_topology_size": 1024,
+      "max_wall_clock_duration": 10.0
+    },
+    "final_run_replay_hash": "935f16813fa9482b402292f806c99125d7b354d62dc3183c5646829bbe01eeac",
+    "initial_environment_snapshot_hash": "fb8d1239bf2361a11a490cc2db3431dbae67db8f8f745d3a2275de19332478b5",
+    "input_sequence_hash": "31a32af2f4602871e4ad467dbb4fffe29a0e7a271ddac4e25da5da908596d550",
+    "scheduled_events_hash": "3da0715885179ae9bcc0ae97d547511f350f25b5c72a28297339cac72391d0c7"
+  },
+  "semantic_merge": {
+    "committed_to_environment": false,
+    "goal_verification_ids": [
+      "goal_verification:796a2f611202892a",
+      "goal_verification:bf62ca4ddc760518"
+    ],
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [],
+    "trusted_world_committed": false
+  },
+  "signed_world_state": {
+    "alice|at|hall": {
+      "negative_support_ids": [
+        "env_fact:e18302b1dce3dbcf0c4b"
+      ],
+      "object_id": "hall",
+      "positive_support_ids": [],
+      "predicate": "at",
+      "proposition_id": "alice|at|hall",
+      "status": "SUPPORTED_FALSE",
+      "subject_id": "alice"
+    },
+    "alice|at|kitchen": {
+      "negative_support_ids": [],
+      "object_id": "kitchen",
+      "positive_support_ids": [
+        "env_fact:9877a39a0c9b0208ddd7"
+      ],
+      "predicate": "at",
+      "proposition_id": "alice|at|kitchen",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "alice"
+    },
+    "bob|carries|red_key": {
+      "negative_support_ids": [],
+      "object_id": "red_key",
+      "positive_support_ids": [
+        "env_fact:4bb3e23e828a61fd205d"
+      ],
+      "predicate": "carries",
+      "proposition_id": "bob|carries|red_key",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "bob"
+    },
+    "north_door|locked|": {
+      "negative_support_ids": [],
+      "object_id": "",
+      "positive_support_ids": [
+        "fact:cd3a7f9c8f35bd38174d"
+      ],
+      "predicate": "locked",
+      "proposition_id": "north_door|locked|",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "north_door"
+    },
+    "red_key|at|kitchen": {
+      "negative_support_ids": [
+        "env_fact:86c107e04c7427b64ef6"
+      ],
+      "object_id": "kitchen",
+      "positive_support_ids": [],
+      "predicate": "at",
+      "proposition_id": "red_key|at|kitchen",
+      "status": "SUPPORTED_FALSE",
+      "subject_id": "red_key"
+    },
+    "red_key|unlocks|north_door": {
+      "negative_support_ids": [],
+      "object_id": "north_door",
+      "positive_support_ids": [
+        "fact:4413d06061b425f20017"
+      ],
+      "predicate": "unlocks",
+      "proposition_id": "red_key|unlocks|north_door",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "red_key"
+    }
+  },
+  "tension": {
+    "tension:failed_action:action:c3b13b7abdfc77ced4ae": {
+      "created_step": 1,
+      "last_updated_step": 1,
+      "propagated_value": 0,
+      "propagation_receipts": [],
+      "raw_value": 0.0,
+      "resolution_condition": "",
+      "source_id": "action:c3b13b7abdfc77ced4ae",
+      "source_ids": [],
+      "source_type": "failed_action",
+      "status": "RELAXED",
+      "target_semantic_ids": [],
+      "tension_id": "tension:failed_action:action:c3b13b7abdfc77ced4ae",
+      "total_value": 0.0
+    },
+    "tension:stale_plan:goal:alice:north_door:open:positive": {
+      "created_step": 2,
+      "last_updated_step": 2,
+      "propagated_value": 0,
+      "propagation_receipts": [],
+      "raw_value": 0.25,
+      "resolution_condition": "",
+      "source_id": "goal:alice:north_door:open:positive",
+      "source_ids": [],
+      "source_type": "stale_plan",
+      "status": "ACTIVE",
+      "target_semantic_ids": [
+        "north_door|open|"
+      ],
+      "tension_id": "tension:stale_plan:goal:alice:north_door:open:positive",
+      "total_value": 0.25
+    },
+    "tension:unreachable_route:goal:alice:north_door:open:positive": {
+      "created_step": 2,
+      "last_updated_step": 2,
+      "propagated_value": 0,
+      "propagation_receipts": [],
+      "raw_value": 0.3,
+      "resolution_condition": "",
+      "source_id": "goal:alice:north_door:open:positive",
+      "source_ids": [],
+      "source_type": "unreachable_route",
+      "status": "ACTIVE",
+      "target_semantic_ids": [
+        "north_door|open|"
+      ],
+      "tension_id": "tension:unreachable_route:goal:alice:north_door:open:positive",
+      "total_value": 0.3
+    },
+    "tension:unsatisfied_goal:goal:alice:north_door:open:positive": {
+      "created_step": 1,
+      "last_updated_step": 2,
+      "propagated_value": 0,
+      "propagation_receipts": [],
+      "raw_value": 0.5,
+      "resolution_condition": "north_door|open| supported",
+      "source_id": "goal:alice:north_door:open:positive",
+      "source_ids": [],
+      "source_type": "unsatisfied_goal",
+      "status": "ACTIVE",
+      "target_semantic_ids": [
+        "north_door|open|"
+      ],
+      "tension_id": "tension:unsatisfied_goal:goal:alice:north_door:open:positive",
+      "total_value": 0.5
+    }
+  },
+  "turn": {
+    "input": "/run",
+    "turn_id": "turn:0009"
+  }
+}

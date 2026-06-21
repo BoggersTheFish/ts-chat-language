@@ -1,0 +1,430 @@
+{
+  "action_transactions": [],
+  "agent_loop": {
+    "iterations": 1,
+    "state": "UNREACHABLE",
+    "steps": [
+      {
+        "decision": "OBSERVED",
+        "loop_step_id": "loop:0001",
+        "phase": "OBSERVE",
+        "post_state_hash": "0649b7c6375e91c0f8cfdf267470ef003758680301fb6bfdfa4fce25c237a87c",
+        "pre_state_hash": "0649b7c6375e91c0f8cfdf267470ef003758680301fb6bfdfa4fce25c237a87c",
+        "receipt_id": "loop_receipt:062af91134dd340f9510",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "VERIFIED_OBSERVATION_COMMITTED",
+        "loop_step_id": "loop:0002",
+        "phase": "UPDATE_WORLD",
+        "post_state_hash": "51c87366ffad98e8fcb708655eb9b09b1457e04a6d67325ed31e3eba53727077",
+        "pre_state_hash": "0649b7c6375e91c0f8cfdf267470ef003758680301fb6bfdfa4fce25c237a87c",
+        "receipt_id": "loop_receipt:829172f053645aab9c39",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [
+          "environment:snapshot"
+        ],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "GOALS_EVALUATED",
+        "loop_step_id": "loop:0003",
+        "phase": "EVALUATE_GOALS",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:f2764f2410b078f873fd",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0
+        },
+        "tension_before": {
+          "total": 0
+        }
+      },
+      {
+        "decision": "COMPUTE_TIER_MEDIUM",
+        "loop_step_id": "loop:0004",
+        "phase": "COMPUTE_TENSION",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:8b5ae38ae9a69081ec0f",
+        "selected_action_id": "",
+        "selected_goal_id": "",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "SELECTED",
+        "loop_step_id": "loop:0005",
+        "phase": "SELECT_GOAL",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:04f55b3c2e6af6f6f803",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "CLUSTER_ACTIVATED",
+        "loop_step_id": "loop:0006",
+        "phase": "ACTIVATE_CLUSTER",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:81635ca5f49112b25be1",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [
+          "connection:hall:north_door",
+          "fact:5d6b44a2b47113dd2491",
+          "fact:cd3a7f9c8f35bd38174d"
+        ],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "MISSING_COMPATIBLE_KEY",
+        "loop_step_id": "loop:0007",
+        "phase": "PLAN",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:78b7f906b64c72f566b8",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.5
+        },
+        "tension_before": {
+          "total": 0.5
+        }
+      },
+      {
+        "decision": "MISSING_COMPATIBLE_KEY",
+        "loop_step_id": "loop:0008",
+        "phase": "UNREACHABLE",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:b88b68fb55c93f805a77",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.8
+        },
+        "tension_before": {
+          "total": 0.8
+        }
+      },
+      {
+        "decision": "MISSING_COMPATIBLE_KEY",
+        "loop_step_id": "loop:0009",
+        "phase": "REFLECT",
+        "post_state_hash": "",
+        "pre_state_hash": "",
+        "receipt_id": "loop_receipt:ea296e47d966168b1b53",
+        "selected_action_id": "",
+        "selected_goal_id": "goal:alice:north_door:open:positive",
+        "selected_plan_id": "",
+        "support_ids": [],
+        "tension_after": {
+          "total": 0.8
+        },
+        "tension_before": {
+          "total": 0.8
+        }
+      }
+    ]
+  },
+  "cluster_activation": {},
+  "decision": {
+    "goal_satisfaction_supported": true,
+    "status": "REJECT",
+    "subtype": "UNREACHABLE",
+    "support_ids": []
+  },
+  "environment_events": [],
+  "goals": {
+    "items": {
+      "goal:alice:north_door:open:positive": {
+        "created_turn": 4,
+        "deadline_turn": null,
+        "depends_on_goal_ids": [],
+        "desired_polarity": "positive",
+        "goal_id": "goal:alice:north_door:open:positive",
+        "goal_type": "state_goal",
+        "object_id": "",
+        "owner_agent_id": "alice",
+        "parent_goal_id": null,
+        "predicate": "open",
+        "priority": 100,
+        "provenance_ids": [
+          "provenance:823591e07b36f305dcbb"
+        ],
+        "resolution_support_ids": [],
+        "source_ids": [
+          "directive:b7fefdae8e91617e95f7"
+        ],
+        "status": "UNREACHABLE",
+        "subject_id": "north_door",
+        "updated_turn": 1
+      }
+    },
+    "verifications": [
+      {
+        "approved": true,
+        "goal_id": "goal:alice:north_door:open:positive",
+        "operation": "create",
+        "previous_status": "",
+        "reason": "GOAL_SCHEMA_VERIFIED",
+        "requested_status": "PROPOSED",
+        "support_ids": [
+          "directive:b7fefdae8e91617e95f7"
+        ],
+        "verification_id": "goal_verification:796a2f611202892a"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:north_door:open:positive",
+        "operation": "transition",
+        "previous_status": "PROPOSED",
+        "reason": "GOAL_TRANSITION_ALLOWED",
+        "requested_status": "ACTIVE",
+        "support_ids": [],
+        "verification_id": "goal_verification:bf62ca4ddc760518"
+      },
+      {
+        "approved": true,
+        "goal_id": "goal:alice:north_door:open:positive",
+        "operation": "transition",
+        "previous_status": "ACTIVE",
+        "reason": "GOAL_TRANSITION_ALLOWED",
+        "requested_status": "UNREACHABLE",
+        "support_ids": [],
+        "verification_id": "goal_verification:d2a9a23a9c5911a6"
+      }
+    ]
+  },
+  "lessons": {
+    "approval_receipts": [],
+    "items": {}
+  },
+  "meaning_graph": {
+    "edge_count": 0,
+    "graph_hash": "ae0e9985bc695cfd66bdd1c535e642055a1deed8ea0b2a5f63a0a5d95b4d4f95",
+    "nodes": []
+  },
+  "memory_update": {
+    "committed_transactions": 0,
+    "world_state_hash": "51c87366ffad98e8fcb708655eb9b09b1457e04a6d67325ed31e3eba53727077"
+  },
+  "multi_agent": {
+    "agents": [
+      {
+        "active_goal_ids": [],
+        "agent_id": "alice",
+        "carried_object_ids": [],
+        "current_location_id": "hall",
+        "name": "Alice",
+        "owned_object_ids": [],
+        "policy_ids": [],
+        "status": "ACTIVE"
+      }
+    ],
+    "scheduling_policy": "priority_then_tension_then_agent_id"
+  },
+  "parse": {
+    "directives": [],
+    "status": "command",
+    "warnings": []
+  },
+  "planning": {
+    "plans": [],
+    "selected_plan_id": ""
+  },
+  "receipt_hash": "3bc5820fa4d82b71c08eaf2f2a675fa50d266380b8689a59911a5867d956d45d",
+  "receipt_schema": "ts-turn-receipt-v3",
+  "reflection": {
+    "records": [
+      {
+        "causal_factors": [
+          "MISSING_COMPATIBLE_KEY"
+        ],
+        "failed_assumptions": [
+          "MISSING_COMPATIBLE_KEY"
+        ],
+        "goal_id": "goal:alice:north_door:open:positive",
+        "proposed_lessons": [],
+        "reflection_id": "reflection:94da7deccf0d5df996d1",
+        "source_ids": [
+          "loop_receipt:829172f053645aab9c39",
+          "loop_receipt:8b5ae38ae9a69081ec0f",
+          "loop_receipt:b88b68fb55c93f805a77",
+          "loop_receipt:f2764f2410b078f873fd"
+        ],
+        "status": "RECORDED",
+        "successful_decisions": [],
+        "summary_code": "MISSING_COMPATIBLE_KEY",
+        "trigger_receipt_ids": [
+          "loop_receipt:829172f053645aab9c39",
+          "loop_receipt:8b5ae38ae9a69081ec0f",
+          "loop_receipt:b88b68fb55c93f805a77",
+          "loop_receipt:f2764f2410b078f873fd"
+        ],
+        "trigger_type": "UNREACHABLE"
+      }
+    ]
+  },
+  "rendering": {
+    "support_ids": [],
+    "support_validated": true,
+    "text": "REJECT_UNREACHABLE: no verified bounded plan exists."
+  },
+  "replanning": {
+    "count": 0,
+    "events": []
+  },
+  "replay": {
+    "approved_lessons_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "compatible_repository_shas": {
+      "ts-chat-language": "development",
+      "ts-reasoner-v0": "development"
+    },
+    "configuration": {
+      "max_action_executions": 32,
+      "max_active_cluster_items": 512,
+      "max_active_goals": 64,
+      "max_agents": 8,
+      "max_causal_derivations": 64,
+      "max_environment_events": 128,
+      "max_explored_states": 2048,
+      "max_loop_iterations": 64,
+      "max_planner_depth": 12,
+      "max_plans_per_goal": 8,
+      "max_receipt_size": 1000000,
+      "max_replans": 8,
+      "max_semantic_memory_items": 4096,
+      "max_tension_records": 256,
+      "max_topology_size": 1024,
+      "max_wall_clock_duration": 10.0
+    },
+    "final_run_replay_hash": "ed8b17d4f9b5331148d87b6fe772a423938ff63447749796acc946fe0c91e33c",
+    "initial_environment_snapshot_hash": "70c3d799d484a90b6cb3ad83dd04c533b67d626372ecd176cc2bc846a8cdf52e",
+    "input_sequence_hash": "082b5c6f8d5893cdf5143b837a09022f9424f4087654af177519622cdf962c9e",
+    "scheduled_events_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "semantic_merge": {
+    "committed_to_environment": false,
+    "goal_verification_ids": [
+      "goal_verification:796a2f611202892a",
+      "goal_verification:bf62ca4ddc760518"
+    ],
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [],
+    "trusted_world_committed": false
+  },
+  "signed_world_state": {
+    "alice|at|hall": {
+      "negative_support_ids": [],
+      "object_id": "hall",
+      "positive_support_ids": [
+        "fact:5d6b44a2b47113dd2491"
+      ],
+      "predicate": "at",
+      "proposition_id": "alice|at|hall",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "alice"
+    },
+    "north_door|locked|": {
+      "negative_support_ids": [],
+      "object_id": "",
+      "positive_support_ids": [
+        "fact:cd3a7f9c8f35bd38174d"
+      ],
+      "predicate": "locked",
+      "proposition_id": "north_door|locked|",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "north_door"
+    }
+  },
+  "tension": {
+    "tension:unreachable_route:goal:alice:north_door:open:positive": {
+      "created_step": 1,
+      "last_updated_step": 1,
+      "propagated_value": 0,
+      "propagation_receipts": [],
+      "raw_value": 0.3,
+      "resolution_condition": "",
+      "source_id": "goal:alice:north_door:open:positive",
+      "source_ids": [],
+      "source_type": "unreachable_route",
+      "status": "ACTIVE",
+      "target_semantic_ids": [
+        "north_door|open|"
+      ],
+      "tension_id": "tension:unreachable_route:goal:alice:north_door:open:positive",
+      "total_value": 0.3
+    },
+    "tension:unsatisfied_goal:goal:alice:north_door:open:positive": {
+      "created_step": 1,
+      "last_updated_step": 1,
+      "propagated_value": 0,
+      "propagation_receipts": [],
+      "raw_value": 0.5,
+      "resolution_condition": "north_door|open| supported",
+      "source_id": "goal:alice:north_door:open:positive",
+      "source_ids": [],
+      "source_type": "unsatisfied_goal",
+      "status": "ACTIVE",
+      "target_semantic_ids": [
+        "north_door|open|"
+      ],
+      "tension_id": "tension:unsatisfied_goal:goal:alice:north_door:open:positive",
+      "total_value": 0.5
+    }
+  },
+  "turn": {
+    "input": "/run",
+    "turn_id": "turn:0005"
+  }
+}

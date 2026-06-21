@@ -1,0 +1,88 @@
+Script started on 2026-06-21 22:36:42+01:00 [COMMAND="scripts/run_habitat_v3.sh" <not executed on terminal>]
+
+=== 01_topology_aware_execution ===
+> Alice is in the hall.
+> The hall connects to the kitchen.
+> The kitchen connects to the north door.
+> The red key is in the kitchen.
+> The red key unlocks the north door.
+> The north door is locked.
+> Goal: Open the north door.
+COMPLETE: All active goals are satisfied in the verified world state.
+actions: 5 replans: 0 replay: 5c62668c4f21e4bffbfe0160aed42e1ed01a22368b556224b0ec735886cb61c1
+
+=== 02_blocked_direct_route ===
+> The hall connects to the kitchen.
+> The kitchen connects to the garden.
+> The hall does not connect to the garden.
+> Alice is in the hall.
+> Goal: Move Alice to the garden.
+COMPLETE: All active goals are satisfied in the verified world state.
+actions: 2 replans: 0 replay: 83b7d17b28a79b345d2d4b9623331200f18af6542b38d335d9a50efa2023ad26
+
+=== 03_replanning_object_movement ===
+> Alice is in the hall.
+> The hall connects to the kitchen.
+> The kitchen connects to the north door.
+> The red key is in the kitchen.
+> The red key unlocks the north door.
+> The north door is locked.
+> After Alice enters the kitchen, Bob takes the red key.
+> Goal: Open the north door.
+UNREACHABLE: REJECT_UNREACHABLE: no verified bounded plan exists.
+actions: 1 replans: 1 replay: 935f16813fa9482b402292f806c99125d7b354d62dc3183c5646829bbe01eeac
+
+=== 04_effect_mismatch ===
+> Goal: Activate the alarm.
+BUDGET_EXHAUSTED: Execution budget exhausted without claiming success.
+actions: 3 replans: 3 replay: 73f32cf7ab0c6fccc5ea5264fba603f69131fb51d8860d54684f3d818c2e532f
+
+=== 05_conflicted_topology ===
+> The hall connects to the kitchen.
+> The hall does not connect to the kitchen.
+> Alice is in the hall.
+> Goal: Move Alice to the kitchen.
+UNREACHABLE: REJECT_UNREACHABLE: no verified bounded plan exists.
+actions: 0 replans: 0 replay: e177527cba77f5ed11e7ea0a2a29c6277264bfe585cf6510279757b64f64c0f5
+
+=== 06_multiple_goals ===
+> Goal: Activate the alarm.
+> Goal: Activate the beacon.
+COMPLETE: All active goals are satisfied in the verified world state.
+actions: 2 replans: 0 replay: b418964b11ba3777b42c06d78bf4633fee896c22a9e49d0948284f29a2f626f4
+
+=== 07_impossible_goal ===
+> Alice is in the hall.
+> The hall connects to the north door.
+> The north door is locked.
+> Goal: Open the north door.
+UNREACHABLE: REJECT_UNREACHABLE: no verified bounded plan exists.
+actions: 0 replans: 0 replay: ed8b17d4f9b5331148d87b6fe772a423938ff63447749796acc946fe0c91e33c
+
+=== 08_multi_agent_interference ===
+> Alice is in the hall.
+> The hall connects to the kitchen.
+> The kitchen connects to the north door.
+> The red key is in the kitchen.
+> The red key unlocks the north door.
+> The north door is locked.
+> After Alice enters the kitchen, Bob takes the red key.
+> Goal: Open the north door.
+UNREACHABLE: REJECT_UNREACHABLE: no verified bounded plan exists.
+actions: 1 replans: 1 replay: 935f16813fa9482b402292f806c99125d7b354d62dc3183c5646829bbe01eeac
+stale causes: ['AGENT_INTERFERENCE']
+
+=== 09_competing_agent_goals ===
+> Alice wants the north door closed.
+> Bob wants the north door open.
+BLOCKED: The active goal is blocked.
+actions: 0 replans: 0 replay: 42487baeb87a6499a05aa03875e6315843005313ed5ec041e8f99575422fe1cb
+
+=== 10_reflection_lesson_approval ===
+proposed: lesson:878f54f5178ae117d2f4 PROPOSED
+approval: {'receipt_id': 'lesson_approval:50553dbc044d02676982', 'lesson_id': 'lesson:878f54f5178ae117d2f4', 'approved': True, 'reason': 'LESSON_SCHEMA_AND_AUTHORITY_VERIFIED', 'status': 'APPROVED'}
+COMPLETE policy applied: True
+
+All ten bounded demonstrations completed.
+
+Script done on 2026-06-21 22:36:43+01:00 [COMMAND_EXIT_CODE="0"]
