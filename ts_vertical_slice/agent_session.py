@@ -125,3 +125,6 @@ class HabitatV3Session:
 
     def force_effect_mismatch(self,action_type:str)->None:
         snapshot=self.environment.snapshot();self.environment.restore_for_replay(replace(snapshot,forced_mismatch_action_types=tuple(sorted(set((*snapshot.forced_mismatch_action_types,action_type))))))
+
+    def clear_effect_mismatch(self,action_type:str)->None:
+        snapshot=self.environment.snapshot();self.environment.restore_for_replay(replace(snapshot,forced_mismatch_action_types=tuple(value for value in snapshot.forced_mismatch_action_types if value!=action_type)))

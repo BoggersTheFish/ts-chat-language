@@ -1,9 +1,11 @@
 import unittest
+from pathlib import Path
 
 from ts_reasoner.agent_control import GoalStatus
 from ts_vertical_slice.agent_parser import parse_agent_text
 from ts_vertical_slice.agent_session import HabitatV3Session
-from ts_vertical_slice.receipt_v3 import REQUIRED_SECTIONS
+from ts_vertical_slice.receipt_v3 import REQUIRED_SECTIONS, write_v3_receipt
+from ts_reasoner.agent_runtime import AgentLimits
 
 
 class HabitatV3LanguageTests(unittest.TestCase):
@@ -53,6 +55,10 @@ class HabitatV3LanguageTests(unittest.TestCase):
         self.assertTrue(session.goals.transition(identity,GoalStatus.PAUSED,turn=2).approved)
         self.assertTrue(session.goals.transition(identity,GoalStatus.ACTIVE,turn=3).approved)
         self.assertTrue(session.goals.transition(identity,GoalStatus.ABANDONED,turn=4).approved)
+
+    def test_receipt_size_limit_is_explicit(self):
+        session=HabitatV3Session("/tmp/habitat_v3_small_receipt",limits=AgentLimits(max_receipt_size=1));receipt=session.handle("Goal: Activate the alarm.",save=False)
+        with self.assertRaisesRegex(OverflowError,"MAX_RECEIPT_SIZE"):write_v3_receipt(receipt,Path("/tmp/habitat_v3_small_receipt"))
 
 
 if __name__=="__main__":unittest.main()

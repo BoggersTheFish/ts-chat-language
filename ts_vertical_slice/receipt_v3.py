@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from dataclasses import asdict
 from pathlib import Path
 from typing import Any
 
@@ -39,7 +40,7 @@ def build_v3_receipt(*, turn:dict[str,Any], parse:dict[str,Any], session:"Any") 
         "decision":session.last_decision,
         "rendering":session.last_rendering,
         "memory_update":session.last_memory_update,
-        "replay":{"initial_environment_snapshot_hash":run.initial_snapshot_hash if run else canonical_hash(session.environment.snapshot().__dict__),"input_sequence_hash":canonical_hash(session.input_sequence),"scheduled_events_hash":canonical_hash([item.__dict__ for item in session.environment.snapshot().scheduled_events]),"approved_lessons_hash":canonical_hash([key for key,value in sorted((run.lessons if run else {}).items()) if value.status=="APPROVED"]),"configuration":run.configuration.__dict__ if run else session.limits.__dict__,"compatible_repository_shas":session.repository_shas,"final_run_replay_hash":run.final_replay_hash if run else ""},
+        "replay":{"initial_environment_snapshot_hash":run.initial_snapshot_hash if run else canonical_hash(asdict(session.environment.snapshot())),"input_sequence_hash":canonical_hash(session.input_sequence),"scheduled_events_hash":canonical_hash([asdict(item) for item in session.environment.snapshot().scheduled_events]),"approved_lessons_hash":canonical_hash([key for key,value in sorted((run.lessons if run else {}).items()) if value.status=="APPROVED"]),"configuration":run.configuration.__dict__ if run else session.limits.__dict__,"compatible_repository_shas":session.repository_shas,"final_run_replay_hash":run.final_replay_hash if run else ""},
     }
     payload["receipt_hash"]=canonical_hash(payload)
     return payload
