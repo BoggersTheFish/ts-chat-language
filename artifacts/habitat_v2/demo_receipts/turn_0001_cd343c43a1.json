@@ -1,0 +1,234 @@
+{
+  "ambiguities": [],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "causal_derivations": [],
+  "cluster_activation": {
+    "activated_semantic_ids": [
+      "sem_fact_0c8c2e6723472377"
+    ],
+    "activation_edges": [],
+    "dormant_semantic_ids": [],
+    "max_depth": 4,
+    "seed_ids": [],
+    "truncated": false
+  },
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [],
+  "decision_subtype": "PREMISE_RECORDED",
+  "deterministic_replay_hash": "cd343c43a1822bbbf450c888a625bce50a09108121d3422e74a54d3d55192e93",
+  "events": [],
+  "final_response": "Recorded as a user-provided premise.",
+  "final_status": "ACCEPT",
+  "input_text": "The door is open.",
+  "meaning_graph": {
+    "edge_count": 1,
+    "edges": [
+      {
+        "edge_id": "edge_node_world_fact_f166e719819f_expresses",
+        "provenance": {
+          "original_span": "The door is open.",
+          "rule_id": "habitat.fact.state",
+          "source_id": "node_world_fact_f166e719819f",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_fact_f166e719819f"
+      }
+    ],
+    "node_count": 2,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "The door is open."
+        }
+      },
+      {
+        "kind": "world_fact",
+        "label": "world fact",
+        "node_id": "node_world_fact_f166e719819f",
+        "provenance": {
+          "original_span": "The door is open.",
+          "rule_id": "habitat.fact.state",
+          "source_id": "node_world_fact_f166e719819f",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "object": "",
+          "polarity": "positive",
+          "predicate": "open",
+          "subject": "door"
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "1 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "e21f7327bfb20d9aae3c569751a851230127eaa277436e086db8e03238210e47",
+  "meaning_graph_summary": {
+    "edge_count": 1,
+    "node_count": 2,
+    "summary": "1 bounded reasoning structures"
+  },
+  "memory_update": {
+    "added_semantic_ids": [
+      "sem_fact_0c8c2e6723472377"
+    ],
+    "after_state_hash": "7b905d088700cbcea93301182dae5025b404d869779c272117b2a3ea5ffa10a2",
+    "before_state_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "committed": true,
+    "merged_semantic_ids": [],
+    "superseded_semantic_ids": []
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "habitat.fact.state"
+  ],
+  "planning": {},
+  "reasoning_request": {
+    "ambiguities": [],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [],
+    "habitat": {
+      "activation": {
+        "activated_semantic_ids": [
+          "sem_fact_0c8c2e6723472377"
+        ],
+        "activation_edges": [],
+        "dormant_semantic_ids": [],
+        "max_depth": 4,
+        "seed_ids": [],
+        "truncated": false
+      },
+      "events": [],
+      "facts": [
+        {
+          "active": true,
+          "object_id": "",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "open",
+          "semantic_id": "sem_fact_0c8c2e6723472377",
+          "source_ids": [
+            "obs_0001_bd7e595950c2"
+          ],
+          "subject_id": "door"
+        }
+      ],
+      "max_derived_facts": 64,
+      "max_inference_depth": 4,
+      "max_plan_depth": 8,
+      "memory_candidate_ids": [
+        "sem_fact_0c8c2e6723472377"
+      ],
+      "query": {
+        "kind": "record"
+      },
+      "rules": []
+    },
+    "intent": "habitat_query",
+    "original_text": "The door is open.",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "The door is open.",
+        "provenance_id": "prov:node_world_fact_f166e719819f",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_f166e719819f",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [],
+    "repair_actions": [],
+    "request_id": "request_5c1ffdd95f6828e7",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "20ca6cf71f786f03b81839a04ae97123b6281c58b2389bbeddcfabe274cc7667",
+  "receipt_schema": "ts-turn-receipt-v2",
+  "repair_actions": [],
+  "repair_attempted": false,
+  "repair_result": null,
+  "replay": {
+    "deterministic_replay_hash": "cd343c43a1822bbbf450c888a625bce50a09108121d3422e74a54d3d55192e93",
+    "input_state_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "output_state_hash": "bf548c4d841f96f71485bfcb4a606056fb4c7591efeedaa9a098e4b7dfd06312"
+  },
+  "response_template": "ACCEPT_RECORDED",
+  "semantic_merge": {
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [
+      "sem_fact_0c8c2e6723472377"
+    ],
+    "observation_ids": [
+      "obs_0001_bd7e595950c2"
+    ],
+    "staged_count": 1
+  },
+  "signed_world_state": {
+    "door|open|": {
+      "negative_support_ids": [],
+      "object_id": "",
+      "positive_support_ids": [
+        "sem_fact_0c8c2e6723472377"
+      ],
+      "predicate": "open",
+      "proposition_id": "door|open|",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "door"
+    }
+  },
+  "state_hash": "bf548c4d841f96f71485bfcb4a606056fb4c7591efeedaa9a098e4b7dfd06312",
+  "state_transitions": [],
+  "turn_id": "turn_0001",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "premises_representable",
+      "message": "Habitat premises and effects are structurally representable.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_0c8c2e6723472377"
+      ]
+    },
+    {
+      "check_id": "renderer_support_available",
+      "message": "Approved structured answer has support IDs.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_0c8c2e6723472377"
+      ]
+    }
+  ],
+  "verifier_decision": "ACCEPT"
+}

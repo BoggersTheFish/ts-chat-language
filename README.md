@@ -27,6 +27,12 @@ The frozen adversarial suite contains 165 punctuation, paraphrase, negation, con
 
 The repository preserves both the untuned baseline failure distribution and the rerun after one general negation safety mitigation.
 
+### Habitat v2
+
+Habitat v2 additively extends the released path with stable semantic merging, provenance-preserving signed evidence, query-relevant cluster activation, deterministic events, bounded causal closure, verified action planning, and `TurnReceipt` schema v2. It preserves the same verifier and renderer authority boundary.
+
+See [the Habitat guide](docs/habitat_v2.md) and [honest limitations](docs/habitat_v2_limitations.md).
+
 ```text
 USER TEXT
   → Normalizer

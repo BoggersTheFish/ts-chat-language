@@ -1,0 +1,421 @@
+{
+  "ambiguities": [],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "causal_derivations": [],
+  "cluster_activation": {
+    "activated_semantic_ids": [
+      "sem_event_effect_1cf65946d60630d8",
+      "sem_event_effect_74c10b67e30a5544",
+      "sem_fact_f5d72a87882a94ea"
+    ],
+    "activation_edges": [
+      {
+        "depth": 1,
+        "from": "sem_event_effect_74c10b67e30a5544",
+        "reason": "shared:alice",
+        "to": "sem_fact_f5d72a87882a94ea"
+      }
+    ],
+    "dormant_semantic_ids": [],
+    "max_depth": 4,
+    "seed_ids": [],
+    "truncated": false
+  },
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [],
+  "decision_subtype": "PREMISE_RECORDED",
+  "deterministic_replay_hash": "30c884b759915aea66074ffa76d3652a535666c7321960cb8f0ede70b159c748",
+  "events": [
+    {
+      "action": "gives",
+      "actor_id": "alice",
+      "destination_location_id": "",
+      "effects": [
+        {
+          "object_id": "red_key",
+          "polarity": "negative",
+          "predicate": "owns",
+          "subject_id": "alice"
+        },
+        {
+          "object_id": "red_key",
+          "polarity": "positive",
+          "predicate": "owns",
+          "subject_id": "sarah"
+        }
+      ],
+      "event_id": "sem_event_b2ad049da8fc5416",
+      "object_id": "red_key",
+      "preconditions": [
+        {
+          "object_id": "red_key",
+          "polarity": "positive",
+          "predicate": "owns",
+          "subject_id": "alice"
+        }
+      ],
+      "source_ids": [
+        "obs_0002_cfb8fc4b956d"
+      ],
+      "supersedes": [
+        "*|owns|red_key"
+      ],
+      "target_id": "sarah",
+      "turn_index": 2
+    }
+  ],
+  "final_response": "Recorded as a user-provided premise.",
+  "final_status": "ACCEPT",
+  "input_text": "Alice gives the red key to Sarah.",
+  "meaning_graph": {
+    "edge_count": 1,
+    "edges": [
+      {
+        "edge_id": "edge_node_world_event_27e180d90890_expresses",
+        "provenance": {
+          "original_span": "Alice gives the red key to Sarah.",
+          "rule_id": "habitat.event.give",
+          "source_id": "node_world_event_27e180d90890",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_event_27e180d90890"
+      }
+    ],
+    "node_count": 2,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "Alice gives the red key to Sarah."
+        }
+      },
+      {
+        "kind": "world_event",
+        "label": "world event",
+        "node_id": "node_world_event_27e180d90890",
+        "provenance": {
+          "original_span": "Alice gives the red key to Sarah.",
+          "rule_id": "habitat.event.give",
+          "source_id": "node_world_event_27e180d90890",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "action": "gives",
+          "actor": "alice",
+          "object": "red_key",
+          "target": "sarah"
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "1 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "2acd461ae8a84abc7fb5b3a79c0323dcfa80bdd2e1acbdda0ad0376494ccb064",
+  "meaning_graph_summary": {
+    "edge_count": 1,
+    "node_count": 2,
+    "summary": "1 bounded reasoning structures"
+  },
+  "memory_update": {
+    "added_semantic_ids": [
+      "sem_event_effect_1cf65946d60630d8",
+      "sem_event_effect_74c10b67e30a5544"
+    ],
+    "after_state_hash": "dfd0a887eecf19e95caa484d5b62a90906f92cc74e1b34ef200897b34d6deb37",
+    "before_state_hash": "6dc5e92b53f25211f62cdaa38035e16347b73f9752339838a72965eacb188e5e",
+    "committed": true,
+    "merged_semantic_ids": [],
+    "superseded_semantic_ids": [
+      "sem_fact_f5d72a87882a94ea"
+    ]
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "habitat.event.give"
+  ],
+  "planning": {},
+  "reasoning_request": {
+    "ambiguities": [],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [],
+    "habitat": {
+      "activation": {
+        "activated_semantic_ids": [
+          "sem_event_effect_1cf65946d60630d8",
+          "sem_event_effect_74c10b67e30a5544",
+          "sem_fact_f5d72a87882a94ea"
+        ],
+        "activation_edges": [
+          {
+            "depth": 1,
+            "from": "sem_event_effect_74c10b67e30a5544",
+            "reason": "shared:alice",
+            "to": "sem_fact_f5d72a87882a94ea"
+          }
+        ],
+        "dormant_semantic_ids": [],
+        "max_depth": 4,
+        "seed_ids": [],
+        "truncated": false
+      },
+      "events": [
+        {
+          "action": "gives",
+          "actor_id": "alice",
+          "destination_location_id": "",
+          "effects": [
+            {
+              "object_id": "red_key",
+              "polarity": "negative",
+              "predicate": "owns",
+              "subject_id": "alice"
+            },
+            {
+              "object_id": "red_key",
+              "polarity": "positive",
+              "predicate": "owns",
+              "subject_id": "sarah"
+            }
+          ],
+          "event_id": "sem_event_b2ad049da8fc5416",
+          "object_id": "red_key",
+          "preconditions": [
+            {
+              "object_id": "red_key",
+              "polarity": "positive",
+              "predicate": "owns",
+              "subject_id": "alice"
+            }
+          ],
+          "source_ids": [
+            "obs_0002_cfb8fc4b956d"
+          ],
+          "supersedes": [
+            "*|owns|red_key"
+          ],
+          "target_id": "sarah",
+          "turn_index": 2
+        }
+      ],
+      "facts": [
+        {
+          "active": true,
+          "object_id": "red_key",
+          "origin": "event_effect",
+          "polarity": "positive",
+          "predicate": "owns",
+          "semantic_id": "sem_event_effect_1cf65946d60630d8",
+          "source_ids": [
+            "obs_0002_cfb8fc4b956d"
+          ],
+          "subject_id": "sarah"
+        },
+        {
+          "active": true,
+          "object_id": "red_key",
+          "origin": "event_effect",
+          "polarity": "negative",
+          "predicate": "owns",
+          "semantic_id": "sem_event_effect_74c10b67e30a5544",
+          "source_ids": [
+            "obs_0002_cfb8fc4b956d"
+          ],
+          "subject_id": "alice"
+        },
+        {
+          "active": true,
+          "object_id": "red_key",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "owns",
+          "semantic_id": "sem_fact_f5d72a87882a94ea",
+          "source_ids": [
+            "obs_0001_5c021c198c94"
+          ],
+          "subject_id": "alice"
+        }
+      ],
+      "max_derived_facts": 64,
+      "max_inference_depth": 4,
+      "max_plan_depth": 8,
+      "memory_candidate_ids": [
+        "sem_event_effect_74c10b67e30a5544",
+        "sem_event_effect_1cf65946d60630d8"
+      ],
+      "query": {
+        "kind": "record"
+      },
+      "rules": []
+    },
+    "intent": "habitat_query",
+    "original_text": "Alice gives the red key to Sarah.",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "Alice gives the red key to Sarah.",
+        "provenance_id": "prov:node_world_event_27e180d90890",
+        "rule_id": "habitat.event.give",
+        "source_id": "node_world_event_27e180d90890",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [],
+    "repair_actions": [],
+    "request_id": "request_e3c2b3e1b18c05f1",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "6cb11491a40f20d501948b9ac448278a4e8d443744fab3413af77a7674fcd711",
+  "receipt_schema": "ts-turn-receipt-v2",
+  "repair_actions": [],
+  "repair_attempted": false,
+  "repair_result": null,
+  "replay": {
+    "deterministic_replay_hash": "30c884b759915aea66074ffa76d3652a535666c7321960cb8f0ede70b159c748",
+    "input_state_hash": "6dc5e92b53f25211f62cdaa38035e16347b73f9752339838a72965eacb188e5e",
+    "output_state_hash": "48e73873323297682ea8af0c44e0e14fb59b4457b884f610ebe79c209d4f90a7"
+  },
+  "response_template": "ACCEPT_RECORDED",
+  "semantic_merge": {
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [
+      "sem_event_effect_1cf65946d60630d8",
+      "sem_event_effect_74c10b67e30a5544"
+    ],
+    "observation_ids": [
+      "obs_0002_cfb8fc4b956d",
+      "obs_0002_cfb8fc4b956d"
+    ],
+    "staged_count": 2
+  },
+  "signed_world_state": {
+    "alice|owns|red_key": {
+      "negative_support_ids": [
+        "sem_event_effect_74c10b67e30a5544"
+      ],
+      "object_id": "red_key",
+      "positive_support_ids": [
+        "sem_fact_f5d72a87882a94ea"
+      ],
+      "predicate": "owns",
+      "proposition_id": "alice|owns|red_key",
+      "status": "CONFLICTED",
+      "subject_id": "alice"
+    },
+    "sarah|owns|red_key": {
+      "negative_support_ids": [],
+      "object_id": "red_key",
+      "positive_support_ids": [
+        "sem_event_effect_1cf65946d60630d8"
+      ],
+      "predicate": "owns",
+      "proposition_id": "sarah|owns|red_key",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "sarah"
+    }
+  },
+  "state_hash": "48e73873323297682ea8af0c44e0e14fb59b4457b884f610ebe79c209d4f90a7",
+  "state_transitions": [
+    {
+      "action": "gives",
+      "actor_id": "alice",
+      "destination_location_id": "",
+      "effects": [
+        {
+          "object_id": "red_key",
+          "polarity": "negative",
+          "predicate": "owns",
+          "subject_id": "alice"
+        },
+        {
+          "object_id": "red_key",
+          "polarity": "positive",
+          "predicate": "owns",
+          "subject_id": "sarah"
+        }
+      ],
+      "event_id": "sem_event_b2ad049da8fc5416",
+      "object_id": "red_key",
+      "preconditions": [
+        {
+          "object_id": "red_key",
+          "polarity": "positive",
+          "predicate": "owns",
+          "subject_id": "alice"
+        }
+      ],
+      "source_ids": [
+        "obs_0002_cfb8fc4b956d"
+      ],
+      "supersedes": [
+        "*|owns|red_key"
+      ],
+      "target_id": "sarah",
+      "turn_index": 2
+    }
+  ],
+  "turn_id": "turn_0002",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "event_precondition_supported",
+      "message": "Event precondition alice|owns|red_key is SUPPORTED_TRUE.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_f5d72a87882a94ea"
+      ]
+    },
+    {
+      "check_id": "premises_representable",
+      "message": "Habitat premises and effects are structurally representable.",
+      "passed": true,
+      "support_ids": [
+        "sem_event_effect_1cf65946d60630d8",
+        "sem_event_effect_74c10b67e30a5544",
+        "sem_fact_f5d72a87882a94ea"
+      ]
+    },
+    {
+      "check_id": "renderer_support_available",
+      "message": "Approved structured answer has support IDs.",
+      "passed": true,
+      "support_ids": [
+        "sem_event_effect_1cf65946d60630d8",
+        "sem_event_effect_74c10b67e30a5544",
+        "sem_fact_f5d72a87882a94ea"
+      ]
+    }
+  ],
+  "verifier_decision": "ACCEPT"
+}

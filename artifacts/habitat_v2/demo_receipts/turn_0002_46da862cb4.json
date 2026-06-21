@@ -1,0 +1,275 @@
+{
+  "ambiguities": [],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "causal_derivations": [],
+  "cluster_activation": {
+    "activated_semantic_ids": [
+      "sem_fact_869624f7207f8714",
+      "sem_fact_ad639da6c3fbc9e6"
+    ],
+    "activation_edges": [
+      {
+        "depth": 1,
+        "from": "sem_fact_869624f7207f8714",
+        "reason": "shared:box",
+        "to": "sem_fact_ad639da6c3fbc9e6"
+      }
+    ],
+    "dormant_semantic_ids": [],
+    "max_depth": 4,
+    "seed_ids": [],
+    "truncated": false
+  },
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [],
+  "decision_subtype": "PREMISE_RECORDED",
+  "deterministic_replay_hash": "46da862cb4de449e8e6edc5664557e604da9a9e92a5d061233242dc25c7df658",
+  "events": [],
+  "final_response": "Recorded as a user-provided premise.",
+  "final_status": "ACCEPT",
+  "input_text": "The box is in the kitchen.",
+  "meaning_graph": {
+    "edge_count": 1,
+    "edges": [
+      {
+        "edge_id": "edge_node_world_fact_11747d59f651_expresses",
+        "provenance": {
+          "original_span": "The box is in the kitchen.",
+          "rule_id": "habitat.fact.location",
+          "source_id": "node_world_fact_11747d59f651",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_fact_11747d59f651"
+      }
+    ],
+    "node_count": 2,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "The box is in the kitchen."
+        }
+      },
+      {
+        "kind": "world_fact",
+        "label": "world fact",
+        "node_id": "node_world_fact_11747d59f651",
+        "provenance": {
+          "original_span": "The box is in the kitchen.",
+          "rule_id": "habitat.fact.location",
+          "source_id": "node_world_fact_11747d59f651",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "object": "kitchen",
+          "polarity": "positive",
+          "predicate": "at",
+          "subject": "box"
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "1 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "102f3e1940b2eb04ef88be27bb01a5a4a1f04f74cc70e359e4bc076bda179116",
+  "meaning_graph_summary": {
+    "edge_count": 1,
+    "node_count": 2,
+    "summary": "1 bounded reasoning structures"
+  },
+  "memory_update": {
+    "added_semantic_ids": [
+      "sem_fact_869624f7207f8714"
+    ],
+    "after_state_hash": "9e77595270fd549e0bb4459470ba6d0d853872980b4035007730314aa93a238f",
+    "before_state_hash": "be8e79656659c79e380ec5f18cbefcf019e2345f96ad9a9371f3256d86092619",
+    "committed": true,
+    "merged_semantic_ids": [],
+    "superseded_semantic_ids": []
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "habitat.fact.location"
+  ],
+  "planning": {},
+  "reasoning_request": {
+    "ambiguities": [],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [],
+    "habitat": {
+      "activation": {
+        "activated_semantic_ids": [
+          "sem_fact_869624f7207f8714",
+          "sem_fact_ad639da6c3fbc9e6"
+        ],
+        "activation_edges": [
+          {
+            "depth": 1,
+            "from": "sem_fact_869624f7207f8714",
+            "reason": "shared:box",
+            "to": "sem_fact_ad639da6c3fbc9e6"
+          }
+        ],
+        "dormant_semantic_ids": [],
+        "max_depth": 4,
+        "seed_ids": [],
+        "truncated": false
+      },
+      "events": [],
+      "facts": [
+        {
+          "active": true,
+          "object_id": "kitchen",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "at",
+          "semantic_id": "sem_fact_869624f7207f8714",
+          "source_ids": [
+            "obs_0002_b169b4487a8d"
+          ],
+          "subject_id": "box"
+        },
+        {
+          "active": true,
+          "object_id": "box",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "inside",
+          "semantic_id": "sem_fact_ad639da6c3fbc9e6",
+          "source_ids": [
+            "obs_0001_cc001c75b257"
+          ],
+          "subject_id": "key"
+        }
+      ],
+      "max_derived_facts": 64,
+      "max_inference_depth": 4,
+      "max_plan_depth": 8,
+      "memory_candidate_ids": [
+        "sem_fact_869624f7207f8714"
+      ],
+      "query": {
+        "kind": "record"
+      },
+      "rules": []
+    },
+    "intent": "habitat_query",
+    "original_text": "The box is in the kitchen.",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "The box is in the kitchen.",
+        "provenance_id": "prov:node_world_fact_11747d59f651",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_11747d59f651",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [],
+    "repair_actions": [],
+    "request_id": "request_6c8acf8491a14f56",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "7747c95f001ae3c1b49a8a48c72e5aeaaa51e614f7bdda2e71c0ead6f1942268",
+  "receipt_schema": "ts-turn-receipt-v2",
+  "repair_actions": [],
+  "repair_attempted": false,
+  "repair_result": null,
+  "replay": {
+    "deterministic_replay_hash": "46da862cb4de449e8e6edc5664557e604da9a9e92a5d061233242dc25c7df658",
+    "input_state_hash": "be8e79656659c79e380ec5f18cbefcf019e2345f96ad9a9371f3256d86092619",
+    "output_state_hash": "68778ba1c6ca633b89a962f64bcd1f7ebfdd3faa3533521e2695ffad3946056c"
+  },
+  "response_template": "ACCEPT_RECORDED",
+  "semantic_merge": {
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [
+      "sem_fact_869624f7207f8714"
+    ],
+    "observation_ids": [
+      "obs_0002_b169b4487a8d"
+    ],
+    "staged_count": 1
+  },
+  "signed_world_state": {
+    "box|at|kitchen": {
+      "negative_support_ids": [],
+      "object_id": "kitchen",
+      "positive_support_ids": [
+        "sem_fact_869624f7207f8714"
+      ],
+      "predicate": "at",
+      "proposition_id": "box|at|kitchen",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "box"
+    },
+    "key|inside|box": {
+      "negative_support_ids": [],
+      "object_id": "box",
+      "positive_support_ids": [
+        "sem_fact_ad639da6c3fbc9e6"
+      ],
+      "predicate": "inside",
+      "proposition_id": "key|inside|box",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "key"
+    }
+  },
+  "state_hash": "68778ba1c6ca633b89a962f64bcd1f7ebfdd3faa3533521e2695ffad3946056c",
+  "state_transitions": [],
+  "turn_id": "turn_0002",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "premises_representable",
+      "message": "Habitat premises and effects are structurally representable.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_869624f7207f8714",
+        "sem_fact_ad639da6c3fbc9e6"
+      ]
+    },
+    {
+      "check_id": "renderer_support_available",
+      "message": "Approved structured answer has support IDs.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_869624f7207f8714",
+        "sem_fact_ad639da6c3fbc9e6"
+      ]
+    }
+  ],
+  "verifier_decision": "ACCEPT"
+}

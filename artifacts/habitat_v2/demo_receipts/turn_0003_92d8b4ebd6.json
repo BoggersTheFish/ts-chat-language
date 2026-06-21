@@ -1,0 +1,248 @@
+{
+  "ambiguities": [],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "causal_derivations": [],
+  "cluster_activation": {
+    "activated_semantic_ids": [
+      "sem_fact_0c8c2e6723472377",
+      "sem_fact_d2e3f29d5e756351"
+    ],
+    "activation_edges": [],
+    "dormant_semantic_ids": [],
+    "max_depth": 4,
+    "seed_ids": [
+      "door",
+      "open"
+    ],
+    "truncated": false
+  },
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [
+    "door|open|"
+  ],
+  "decision_subtype": "REJECT_CONFLICTED",
+  "deterministic_replay_hash": "92d8b4ebd63fd1d316ea219483afcbc65542e40ff201c8532cf198db1cea2ea0",
+  "events": [],
+  "final_response": "I cannot provide a supported answer because the available statements conflict: door|open|",
+  "final_status": "REJECT",
+  "input_text": "Is the door open?",
+  "meaning_graph": {
+    "edge_count": 1,
+    "edges": [
+      {
+        "edge_id": "edge_node_world_query_89372022869d_expresses",
+        "provenance": {
+          "original_span": "Is the door open?",
+          "rule_id": "habitat.query.state",
+          "source_id": "node_world_query_89372022869d",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_query_89372022869d"
+      }
+    ],
+    "node_count": 2,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "Is the door open?"
+        }
+      },
+      {
+        "kind": "world_query",
+        "label": "world query",
+        "node_id": "node_world_query_89372022869d",
+        "provenance": {
+          "original_span": "Is the door open?",
+          "rule_id": "habitat.query.state",
+          "source_id": "node_world_query_89372022869d",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "kind": "state",
+          "object_id": "",
+          "polarity": "positive",
+          "predicate": "open",
+          "subject_id": "door"
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "1 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "dfd613f6ef8ad688db4342badd16655c80d02eaf6f363cdfa750101f427b5d4c",
+  "meaning_graph_summary": {
+    "edge_count": 1,
+    "node_count": 2,
+    "summary": "1 bounded reasoning structures"
+  },
+  "memory_update": {
+    "added_semantic_ids": [],
+    "after_state_hash": "25869818581c979909c2d39e75282156377f06bdf56a284dd555e10fe6c10478",
+    "before_state_hash": "25869818581c979909c2d39e75282156377f06bdf56a284dd555e10fe6c10478",
+    "committed": false,
+    "merged_semantic_ids": [],
+    "superseded_semantic_ids": []
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "habitat.query.state"
+  ],
+  "planning": {},
+  "reasoning_request": {
+    "ambiguities": [],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [],
+    "habitat": {
+      "activation": {
+        "activated_semantic_ids": [
+          "sem_fact_0c8c2e6723472377",
+          "sem_fact_d2e3f29d5e756351"
+        ],
+        "activation_edges": [],
+        "dormant_semantic_ids": [],
+        "max_depth": 4,
+        "seed_ids": [
+          "door",
+          "open"
+        ],
+        "truncated": false
+      },
+      "events": [],
+      "facts": [
+        {
+          "active": true,
+          "object_id": "",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "open",
+          "semantic_id": "sem_fact_0c8c2e6723472377",
+          "source_ids": [
+            "obs_0001_bd7e595950c2"
+          ],
+          "subject_id": "door"
+        },
+        {
+          "active": true,
+          "object_id": "",
+          "origin": "user_premise",
+          "polarity": "negative",
+          "predicate": "open",
+          "semantic_id": "sem_fact_d2e3f29d5e756351",
+          "source_ids": [
+            "obs_0002_f2d007d0ba37"
+          ],
+          "subject_id": "door"
+        }
+      ],
+      "max_derived_facts": 64,
+      "max_inference_depth": 4,
+      "max_plan_depth": 8,
+      "memory_candidate_ids": [],
+      "query": {
+        "kind": "state",
+        "object_id": "",
+        "polarity": "positive",
+        "predicate": "open",
+        "subject_id": "door"
+      },
+      "rules": []
+    },
+    "intent": "habitat_query",
+    "original_text": "Is the door open?",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "Is the door open?",
+        "provenance_id": "prov:node_world_query_89372022869d",
+        "rule_id": "habitat.query.state",
+        "source_id": "node_world_query_89372022869d",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [],
+    "repair_actions": [],
+    "request_id": "request_4177b72b70ad4de0",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "6e5bf54756946331e5017e8b0058a29958a8b00b4b20cd2408734349d92a8c98",
+  "receipt_schema": "ts-turn-receipt-v2",
+  "repair_actions": [],
+  "repair_attempted": false,
+  "repair_result": null,
+  "replay": {
+    "deterministic_replay_hash": "92d8b4ebd63fd1d316ea219483afcbc65542e40ff201c8532cf198db1cea2ea0",
+    "input_state_hash": "25869818581c979909c2d39e75282156377f06bdf56a284dd555e10fe6c10478",
+    "output_state_hash": "0ee4847078ba5f0e2eb49e3c9137b7ed8c585449a5bddd866d3fc4fd9da7889b"
+  },
+  "response_template": "REJECT_CONTRADICTION",
+  "semantic_merge": {
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [],
+    "observation_ids": [],
+    "staged_count": 0
+  },
+  "signed_world_state": {
+    "door|open|": {
+      "negative_support_ids": [
+        "sem_fact_d2e3f29d5e756351"
+      ],
+      "object_id": "",
+      "positive_support_ids": [
+        "sem_fact_0c8c2e6723472377"
+      ],
+      "predicate": "open",
+      "proposition_id": "door|open|",
+      "status": "CONFLICTED",
+      "subject_id": "door"
+    }
+  },
+  "state_hash": "0ee4847078ba5f0e2eb49e3c9137b7ed8c585449a5bddd866d3fc4fd9da7889b",
+  "state_transitions": [],
+  "turn_id": "turn_0003",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "signed_state_unconflicted",
+      "message": "Both positive and negative evidence are active.",
+      "passed": false,
+      "support_ids": [
+        "sem_fact_0c8c2e6723472377",
+        "sem_fact_d2e3f29d5e756351"
+      ]
+    }
+  ],
+  "verifier_decision": "REJECT"
+}

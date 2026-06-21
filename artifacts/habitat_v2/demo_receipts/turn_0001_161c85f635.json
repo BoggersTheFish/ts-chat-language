@@ -1,0 +1,234 @@
+{
+  "ambiguities": [],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "causal_derivations": [],
+  "cluster_activation": {
+    "activated_semantic_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "activation_edges": [],
+    "dormant_semantic_ids": [],
+    "max_depth": 4,
+    "seed_ids": [],
+    "truncated": false
+  },
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [],
+  "decision_subtype": "PREMISE_RECORDED",
+  "deterministic_replay_hash": "161c85f6350a263812c4d06b4efa714fdf5364e9f8b93160e014bfcd801f6265",
+  "events": [],
+  "final_response": "Recorded as a user-provided premise.",
+  "final_status": "ACCEPT",
+  "input_text": "Alice is in the hall.",
+  "meaning_graph": {
+    "edge_count": 1,
+    "edges": [
+      {
+        "edge_id": "edge_node_world_fact_39c082033d6e_expresses",
+        "provenance": {
+          "original_span": "Alice is in the hall.",
+          "rule_id": "habitat.fact.location",
+          "source_id": "node_world_fact_39c082033d6e",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_fact_39c082033d6e"
+      }
+    ],
+    "node_count": 2,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "Alice is in the hall."
+        }
+      },
+      {
+        "kind": "world_fact",
+        "label": "world fact",
+        "node_id": "node_world_fact_39c082033d6e",
+        "provenance": {
+          "original_span": "Alice is in the hall.",
+          "rule_id": "habitat.fact.location",
+          "source_id": "node_world_fact_39c082033d6e",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "object": "hall",
+          "polarity": "positive",
+          "predicate": "at",
+          "subject": "alice"
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "1 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "6e609ea36d18f47f9ae6aa3f804d843cee79dda707e9c0e58894b89e4c53c2c6",
+  "meaning_graph_summary": {
+    "edge_count": 1,
+    "node_count": 2,
+    "summary": "1 bounded reasoning structures"
+  },
+  "memory_update": {
+    "added_semantic_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "after_state_hash": "e6a3fa9097e31d11a802be2f81425a51e76ac35d32352195a6a359a9aa34497c",
+    "before_state_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "committed": true,
+    "merged_semantic_ids": [],
+    "superseded_semantic_ids": []
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "habitat.fact.location"
+  ],
+  "planning": {},
+  "reasoning_request": {
+    "ambiguities": [],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [],
+    "habitat": {
+      "activation": {
+        "activated_semantic_ids": [
+          "sem_fact_5ff15daf3a78e83d"
+        ],
+        "activation_edges": [],
+        "dormant_semantic_ids": [],
+        "max_depth": 4,
+        "seed_ids": [],
+        "truncated": false
+      },
+      "events": [],
+      "facts": [
+        {
+          "active": true,
+          "object_id": "hall",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "at",
+          "semantic_id": "sem_fact_5ff15daf3a78e83d",
+          "source_ids": [
+            "obs_0001_dfd5e4200085"
+          ],
+          "subject_id": "alice"
+        }
+      ],
+      "max_derived_facts": 64,
+      "max_inference_depth": 4,
+      "max_plan_depth": 8,
+      "memory_candidate_ids": [
+        "sem_fact_5ff15daf3a78e83d"
+      ],
+      "query": {
+        "kind": "record"
+      },
+      "rules": []
+    },
+    "intent": "habitat_query",
+    "original_text": "Alice is in the hall.",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "Alice is in the hall.",
+        "provenance_id": "prov:node_world_fact_39c082033d6e",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_39c082033d6e",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [],
+    "repair_actions": [],
+    "request_id": "request_b31832054658d7d1",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "ce2773e1df21ebfb54ab0cfc7d7bf8800619a2be4e1bdbdb06ada0f5f20ffa9f",
+  "receipt_schema": "ts-turn-receipt-v2",
+  "repair_actions": [],
+  "repair_attempted": false,
+  "repair_result": null,
+  "replay": {
+    "deterministic_replay_hash": "161c85f6350a263812c4d06b4efa714fdf5364e9f8b93160e014bfcd801f6265",
+    "input_state_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "output_state_hash": "e08ba9619a133f4e64c7158001f694ab62dd68704e800695c9a3e51c2b0a0edd"
+  },
+  "response_template": "ACCEPT_RECORDED",
+  "semantic_merge": {
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "observation_ids": [
+      "obs_0001_dfd5e4200085"
+    ],
+    "staged_count": 1
+  },
+  "signed_world_state": {
+    "alice|at|hall": {
+      "negative_support_ids": [],
+      "object_id": "hall",
+      "positive_support_ids": [
+        "sem_fact_5ff15daf3a78e83d"
+      ],
+      "predicate": "at",
+      "proposition_id": "alice|at|hall",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "alice"
+    }
+  },
+  "state_hash": "e08ba9619a133f4e64c7158001f694ab62dd68704e800695c9a3e51c2b0a0edd",
+  "state_transitions": [],
+  "turn_id": "turn_0001",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "premises_representable",
+      "message": "Habitat premises and effects are structurally representable.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_5ff15daf3a78e83d"
+      ]
+    },
+    {
+      "check_id": "renderer_support_available",
+      "message": "Approved structured answer has support IDs.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_5ff15daf3a78e83d"
+      ]
+    }
+  ],
+  "verifier_decision": "ACCEPT"
+}

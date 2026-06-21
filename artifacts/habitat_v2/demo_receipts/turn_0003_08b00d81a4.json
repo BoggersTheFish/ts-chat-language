@@ -1,0 +1,278 @@
+{
+  "ambiguities": [],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "causal_derivations": [],
+  "cluster_activation": {
+    "activated_semantic_ids": [
+      "sem_fact_869624f7207f8714",
+      "sem_fact_ad639da6c3fbc9e6"
+    ],
+    "activation_edges": [
+      {
+        "depth": 1,
+        "from": "sem_fact_ad639da6c3fbc9e6",
+        "reason": "shared:box",
+        "to": "sem_fact_869624f7207f8714"
+      }
+    ],
+    "dormant_semantic_ids": [],
+    "max_depth": 4,
+    "seed_ids": [
+      "inside",
+      "key"
+    ],
+    "truncated": false
+  },
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [],
+  "decision_subtype": "CONCLUSION_VERIFIED",
+  "deterministic_replay_hash": "08b00d81a44655f4ec29bfd2254dd67ca4a68737a1382ac054897983a69eb1a2",
+  "events": [],
+  "final_response": "The key is inside the box, and the box is in the kitchen.",
+  "final_status": "ACCEPT",
+  "input_text": "Where is the key?",
+  "meaning_graph": {
+    "edge_count": 1,
+    "edges": [
+      {
+        "edge_id": "edge_node_world_query_68c55a998a99_expresses",
+        "provenance": {
+          "original_span": "Where is the key?",
+          "rule_id": "habitat.query.location",
+          "source_id": "node_world_query_68c55a998a99",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_query_68c55a998a99"
+      }
+    ],
+    "node_count": 2,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "Where is the key?"
+        }
+      },
+      {
+        "kind": "world_query",
+        "label": "world query",
+        "node_id": "node_world_query_68c55a998a99",
+        "provenance": {
+          "original_span": "Where is the key?",
+          "rule_id": "habitat.query.location",
+          "source_id": "node_world_query_68c55a998a99",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "kind": "location",
+          "object_id": "",
+          "polarity": "positive",
+          "predicate": "inside",
+          "subject_id": "key"
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "1 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "fd11b7670feca38b3f52564a8322bd0beab0ea9188eaf99d0ab85f2a7dfcf61c",
+  "meaning_graph_summary": {
+    "edge_count": 1,
+    "node_count": 2,
+    "summary": "1 bounded reasoning structures"
+  },
+  "memory_update": {
+    "added_semantic_ids": [],
+    "after_state_hash": "9e77595270fd549e0bb4459470ba6d0d853872980b4035007730314aa93a238f",
+    "before_state_hash": "9e77595270fd549e0bb4459470ba6d0d853872980b4035007730314aa93a238f",
+    "committed": false,
+    "merged_semantic_ids": [],
+    "superseded_semantic_ids": []
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "habitat.query.location"
+  ],
+  "planning": {},
+  "reasoning_request": {
+    "ambiguities": [],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [],
+    "habitat": {
+      "activation": {
+        "activated_semantic_ids": [
+          "sem_fact_869624f7207f8714",
+          "sem_fact_ad639da6c3fbc9e6"
+        ],
+        "activation_edges": [
+          {
+            "depth": 1,
+            "from": "sem_fact_ad639da6c3fbc9e6",
+            "reason": "shared:box",
+            "to": "sem_fact_869624f7207f8714"
+          }
+        ],
+        "dormant_semantic_ids": [],
+        "max_depth": 4,
+        "seed_ids": [
+          "inside",
+          "key"
+        ],
+        "truncated": false
+      },
+      "events": [],
+      "facts": [
+        {
+          "active": true,
+          "object_id": "kitchen",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "at",
+          "semantic_id": "sem_fact_869624f7207f8714",
+          "source_ids": [
+            "obs_0002_b169b4487a8d"
+          ],
+          "subject_id": "box"
+        },
+        {
+          "active": true,
+          "object_id": "box",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "inside",
+          "semantic_id": "sem_fact_ad639da6c3fbc9e6",
+          "source_ids": [
+            "obs_0001_cc001c75b257"
+          ],
+          "subject_id": "key"
+        }
+      ],
+      "max_derived_facts": 64,
+      "max_inference_depth": 4,
+      "max_plan_depth": 8,
+      "memory_candidate_ids": [],
+      "query": {
+        "kind": "location",
+        "object_id": "",
+        "polarity": "positive",
+        "predicate": "inside",
+        "subject_id": "key"
+      },
+      "rules": []
+    },
+    "intent": "habitat_query",
+    "original_text": "Where is the key?",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "Where is the key?",
+        "provenance_id": "prov:node_world_query_68c55a998a99",
+        "rule_id": "habitat.query.location",
+        "source_id": "node_world_query_68c55a998a99",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [],
+    "repair_actions": [],
+    "request_id": "request_32403505aa1afda1",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "80918b933403b4a9f7aa8d4d7392acd74867b0592d2e3135efdf3d9507ac6e4d",
+  "receipt_schema": "ts-turn-receipt-v2",
+  "repair_actions": [],
+  "repair_attempted": false,
+  "repair_result": null,
+  "replay": {
+    "deterministic_replay_hash": "08b00d81a44655f4ec29bfd2254dd67ca4a68737a1382ac054897983a69eb1a2",
+    "input_state_hash": "9e77595270fd549e0bb4459470ba6d0d853872980b4035007730314aa93a238f",
+    "output_state_hash": "68778ba1c6ca633b89a962f64bcd1f7ebfdd3faa3533521e2695ffad3946056c"
+  },
+  "response_template": "ACCEPT_LOCATION_CHAIN",
+  "semantic_merge": {
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [],
+    "observation_ids": [],
+    "staged_count": 0
+  },
+  "signed_world_state": {
+    "box|at|kitchen": {
+      "negative_support_ids": [],
+      "object_id": "kitchen",
+      "positive_support_ids": [
+        "sem_fact_869624f7207f8714"
+      ],
+      "predicate": "at",
+      "proposition_id": "box|at|kitchen",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "box"
+    },
+    "key|inside|box": {
+      "negative_support_ids": [],
+      "object_id": "box",
+      "positive_support_ids": [
+        "sem_fact_ad639da6c3fbc9e6"
+      ],
+      "predicate": "inside",
+      "proposition_id": "key|inside|box",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "key"
+    }
+  },
+  "state_hash": "68778ba1c6ca633b89a962f64bcd1f7ebfdd3faa3533521e2695ffad3946056c",
+  "state_transitions": [],
+  "turn_id": "turn_0003",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "containment_chain_supported",
+      "message": "Declared containment and location links support the answer.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_869624f7207f8714",
+        "sem_fact_ad639da6c3fbc9e6"
+      ]
+    },
+    {
+      "check_id": "renderer_support_available",
+      "message": "Approved structured answer has support IDs.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_869624f7207f8714",
+        "sem_fact_ad639da6c3fbc9e6"
+      ]
+    }
+  ],
+  "verifier_decision": "ACCEPT"
+}

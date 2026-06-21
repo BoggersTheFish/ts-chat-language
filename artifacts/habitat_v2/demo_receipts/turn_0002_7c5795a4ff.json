@@ -1,0 +1,238 @@
+{
+  "ambiguities": [],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "causal_derivations": [],
+  "cluster_activation": {
+    "activated_semantic_ids": [
+      "sem_fact_ee4027eed1615400"
+    ],
+    "activation_edges": [],
+    "dormant_semantic_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "max_depth": 4,
+    "seed_ids": [],
+    "truncated": false
+  },
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [],
+  "decision_subtype": "PREMISE_RECORDED",
+  "deterministic_replay_hash": "7c5795a4ffa36898b88eb88b9051475f4d8245eaae0c2d8c4af1a2b66267759c",
+  "events": [],
+  "final_response": "Recorded as a user-provided premise.",
+  "final_status": "ACCEPT",
+  "input_text": "The north door is locked.",
+  "meaning_graph": {
+    "edge_count": 1,
+    "edges": [
+      {
+        "edge_id": "edge_node_world_fact_43347ce2e0bf_expresses",
+        "provenance": {
+          "original_span": "The north door is locked.",
+          "rule_id": "habitat.fact.state",
+          "source_id": "node_world_fact_43347ce2e0bf",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_fact_43347ce2e0bf"
+      }
+    ],
+    "node_count": 2,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "The north door is locked."
+        }
+      },
+      {
+        "kind": "world_fact",
+        "label": "world fact",
+        "node_id": "node_world_fact_43347ce2e0bf",
+        "provenance": {
+          "original_span": "The north door is locked.",
+          "rule_id": "habitat.fact.state",
+          "source_id": "node_world_fact_43347ce2e0bf",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "object": "",
+          "polarity": "positive",
+          "predicate": "locked",
+          "subject": "north_door"
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "1 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "444d96ccf201222c99044dbe39533280eccd18af5bca610803c80137adabc303",
+  "meaning_graph_summary": {
+    "edge_count": 1,
+    "node_count": 2,
+    "summary": "1 bounded reasoning structures"
+  },
+  "memory_update": {
+    "added_semantic_ids": [
+      "sem_fact_ee4027eed1615400"
+    ],
+    "after_state_hash": "a087961c3a6a830ece594f6a5bd00d1600b3a28bc9d18077dcdce174372be78a",
+    "before_state_hash": "e6a3fa9097e31d11a802be2f81425a51e76ac35d32352195a6a359a9aa34497c",
+    "committed": true,
+    "merged_semantic_ids": [],
+    "superseded_semantic_ids": []
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "habitat.fact.state"
+  ],
+  "planning": {},
+  "reasoning_request": {
+    "ambiguities": [],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [],
+    "habitat": {
+      "activation": {
+        "activated_semantic_ids": [
+          "sem_fact_ee4027eed1615400"
+        ],
+        "activation_edges": [],
+        "dormant_semantic_ids": [
+          "sem_fact_5ff15daf3a78e83d"
+        ],
+        "max_depth": 4,
+        "seed_ids": [],
+        "truncated": false
+      },
+      "events": [],
+      "facts": [
+        {
+          "active": true,
+          "object_id": "",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "locked",
+          "semantic_id": "sem_fact_ee4027eed1615400",
+          "source_ids": [
+            "obs_0002_438560cea883"
+          ],
+          "subject_id": "north_door"
+        }
+      ],
+      "max_derived_facts": 64,
+      "max_inference_depth": 4,
+      "max_plan_depth": 8,
+      "memory_candidate_ids": [
+        "sem_fact_ee4027eed1615400"
+      ],
+      "query": {
+        "kind": "record"
+      },
+      "rules": []
+    },
+    "intent": "habitat_query",
+    "original_text": "The north door is locked.",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "The north door is locked.",
+        "provenance_id": "prov:node_world_fact_43347ce2e0bf",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_43347ce2e0bf",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [],
+    "repair_actions": [],
+    "request_id": "request_b05b01fe7a39c6eb",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "babf123f87def2b4d814718edf0765e6be5692eb923f9acb9a56961fde1803ce",
+  "receipt_schema": "ts-turn-receipt-v2",
+  "repair_actions": [],
+  "repair_attempted": false,
+  "repair_result": null,
+  "replay": {
+    "deterministic_replay_hash": "7c5795a4ffa36898b88eb88b9051475f4d8245eaae0c2d8c4af1a2b66267759c",
+    "input_state_hash": "e6a3fa9097e31d11a802be2f81425a51e76ac35d32352195a6a359a9aa34497c",
+    "output_state_hash": "3b2233935c55ab5ce8b35c2f15dbb6404dc07ab430305be386470af10d7f8aee"
+  },
+  "response_template": "ACCEPT_RECORDED",
+  "semantic_merge": {
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [
+      "sem_fact_ee4027eed1615400"
+    ],
+    "observation_ids": [
+      "obs_0002_438560cea883"
+    ],
+    "staged_count": 1
+  },
+  "signed_world_state": {
+    "north_door|locked|": {
+      "negative_support_ids": [],
+      "object_id": "",
+      "positive_support_ids": [
+        "sem_fact_ee4027eed1615400"
+      ],
+      "predicate": "locked",
+      "proposition_id": "north_door|locked|",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "north_door"
+    }
+  },
+  "state_hash": "3b2233935c55ab5ce8b35c2f15dbb6404dc07ab430305be386470af10d7f8aee",
+  "state_transitions": [],
+  "turn_id": "turn_0002",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "premises_representable",
+      "message": "Habitat premises and effects are structurally representable.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_ee4027eed1615400"
+      ]
+    },
+    {
+      "check_id": "renderer_support_available",
+      "message": "Approved structured answer has support IDs.",
+      "passed": true,
+      "support_ids": [
+        "sem_fact_ee4027eed1615400"
+      ]
+    }
+  ],
+  "verifier_decision": "ACCEPT"
+}

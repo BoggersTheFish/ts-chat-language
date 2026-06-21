@@ -1,0 +1,554 @@
+{
+  "ambiguities": [],
+  "bridge_status": "ok",
+  "bridge_warnings": [],
+  "causal_derivations": [],
+  "cluster_activation": {
+    "activated_semantic_ids": [
+      "sem_fact_0f4ebd3babf08a6b",
+      "sem_fact_448bbb0dbfddc3dc",
+      "sem_fact_5ff15daf3a78e83d",
+      "sem_fact_869624f7207f8714",
+      "sem_fact_ee4027eed1615400"
+    ],
+    "activation_edges": [
+      {
+        "depth": 1,
+        "from": "sem_fact_448bbb0dbfddc3dc",
+        "reason": "shared:red_key",
+        "to": "sem_fact_0f4ebd3babf08a6b"
+      },
+      {
+        "depth": 1,
+        "from": "sem_fact_5ff15daf3a78e83d",
+        "reason": "shared:at",
+        "to": "sem_fact_869624f7207f8714"
+      }
+    ],
+    "dormant_semantic_ids": [],
+    "max_depth": 4,
+    "seed_ids": [
+      "alice",
+      "north_door",
+      "open"
+    ],
+    "truncated": false
+  },
+  "component_versions": {
+    "ts-chat-language": "0.8.0",
+    "ts-reasoner-v0": "40.0.0",
+    "ts-vertical-slice": "1.0.0"
+  },
+  "contradictions": [],
+  "decision_subtype": "PLAN_VERIFIED",
+  "deterministic_replay_hash": "0809aa5985d2cb54504653538bbd05fbc31aa406f6adfa93ae1b9d4c4b1441e3",
+  "events": [],
+  "final_response": "1. Move alice from hall to kitchen.\n2. Take red_key from its container.\n3. Move alice from kitchen to north_door.\n4. Unlock north_door with red_key.\n5. Open north_door.",
+  "final_status": "ACCEPT",
+  "input_text": "How can Alice open the north door?",
+  "meaning_graph": {
+    "edge_count": 1,
+    "edges": [
+      {
+        "edge_id": "edge_node_world_query_acb13dbdba41_expresses",
+        "provenance": {
+          "original_span": "How can Alice open the north door?",
+          "rule_id": "habitat.query.plan",
+          "source_id": "node_world_query_acb13dbdba41",
+          "source_type": "deterministic_rule"
+        },
+        "relation": "expresses",
+        "source_id": "node_act_root",
+        "target_id": "node_world_query_acb13dbdba41"
+      }
+    ],
+    "node_count": 2,
+    "nodes": [
+      {
+        "kind": "dialogue_act",
+        "label": "reasoning_input",
+        "node_id": "node_act_root",
+        "provenance": {
+          "source_id": "turn",
+          "source_type": "user_input"
+        },
+        "slots": {
+          "raw": "How can Alice open the north door?"
+        }
+      },
+      {
+        "kind": "world_query",
+        "label": "world query",
+        "node_id": "node_world_query_acb13dbdba41",
+        "provenance": {
+          "original_span": "How can Alice open the north door?",
+          "rule_id": "habitat.query.plan",
+          "source_id": "node_world_query_acb13dbdba41",
+          "source_type": "deterministic_rule"
+        },
+        "slots": {
+          "kind": "plan",
+          "object_id": "north_door",
+          "polarity": "positive",
+          "predicate": "open",
+          "subject_id": "alice"
+        }
+      }
+    ],
+    "root_node_id": "node_act_root",
+    "summary": "1 bounded reasoning structures",
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "meaning_graph_hash": "320e328b75e508228af2b9ab8bef56338840ca21ff856df57e41cd4de89f044c",
+  "meaning_graph_summary": {
+    "edge_count": 1,
+    "node_count": 2,
+    "summary": "1 bounded reasoning structures"
+  },
+  "memory_update": {
+    "added_semantic_ids": [],
+    "after_state_hash": "cd7527a92d0e9959a9a243504b706b248b0c5e39707945cf4d89263aab19740a",
+    "before_state_hash": "cd7527a92d0e9959a9a243504b706b248b0c5e39707945cf4d89263aab19740a",
+    "committed": false,
+    "merged_semantic_ids": [],
+    "superseded_semantic_ids": []
+  },
+  "parse_status": "ok",
+  "parse_warnings": [],
+  "parser_rules_used": [
+    "habitat.query.plan"
+  ],
+  "planning": {
+    "chosen_plan": [
+      {
+        "action": "Move alice from hall to kitchen",
+        "effects": [
+          {
+            "object_id": "kitchen",
+            "polarity": "positive",
+            "predicate": "at",
+            "subject_id": "alice"
+          }
+        ],
+        "precondition_checks": [
+          {
+            "expected": "SUPPORTED_TRUE",
+            "observed": "SUPPORTED_TRUE",
+            "passed": true,
+            "proposition_id": "alice|at|hall",
+            "support_ids": [
+              "sem_fact_5ff15daf3a78e83d"
+            ]
+          }
+        ],
+        "resulting_state_hash": "87fb06468f80a50b4aa789b9e235a0819676e2d128481ae73ee0f60ff4f5f805",
+        "step_index": 1,
+        "support_ids": [
+          "sem_fact_5ff15daf3a78e83d"
+        ]
+      },
+      {
+        "action": "Take red_key from its container",
+        "effects": [
+          {
+            "object_id": "red_key",
+            "polarity": "positive",
+            "predicate": "carries",
+            "subject_id": "alice"
+          }
+        ],
+        "precondition_checks": [
+          {
+            "expected": "SUPPORTED_TRUE",
+            "observed": "SUPPORTED_TRUE",
+            "passed": true,
+            "proposition_id": "alice|at|kitchen",
+            "support_ids": [
+              "habitat_open_topology"
+            ]
+          },
+          {
+            "expected": "SUPPORTED_TRUE",
+            "observed": "SUPPORTED_TRUE",
+            "passed": true,
+            "proposition_id": "red_key|at|kitchen",
+            "support_ids": [
+              "sem_fact_0f4ebd3babf08a6b"
+            ]
+          }
+        ],
+        "resulting_state_hash": "46ed088a16b02661e17c89e9303f90cae1e30b6a24c4e8649ac8fafd5dc8f737",
+        "step_index": 2,
+        "support_ids": [
+          "habitat_open_topology",
+          "sem_fact_0f4ebd3babf08a6b"
+        ]
+      },
+      {
+        "action": "Move alice from kitchen to north_door",
+        "effects": [
+          {
+            "object_id": "north_door",
+            "polarity": "positive",
+            "predicate": "at",
+            "subject_id": "alice"
+          }
+        ],
+        "precondition_checks": [
+          {
+            "expected": "SUPPORTED_TRUE",
+            "observed": "SUPPORTED_TRUE",
+            "passed": true,
+            "proposition_id": "alice|at|kitchen",
+            "support_ids": [
+              "habitat_open_topology"
+            ]
+          }
+        ],
+        "resulting_state_hash": "771b312e9d4492d8edd8836b53dc68567eb3a9dfed814b854fc34e09daa0a2f2",
+        "step_index": 3,
+        "support_ids": [
+          "habitat_open_topology"
+        ]
+      },
+      {
+        "action": "Unlock north_door with red_key",
+        "effects": [
+          {
+            "object_id": "",
+            "polarity": "negative",
+            "predicate": "locked",
+            "subject_id": "north_door"
+          }
+        ],
+        "precondition_checks": [
+          {
+            "expected": "SUPPORTED_TRUE",
+            "observed": "SUPPORTED_TRUE",
+            "passed": true,
+            "proposition_id": "north_door|locked|",
+            "support_ids": [
+              "sem_fact_ee4027eed1615400"
+            ]
+          },
+          {
+            "expected": "SUPPORTED_TRUE",
+            "observed": "SUPPORTED_TRUE",
+            "passed": true,
+            "proposition_id": "alice|carries|red_key",
+            "support_ids": [
+              "sem_fact_448bbb0dbfddc3dc"
+            ]
+          }
+        ],
+        "resulting_state_hash": "597051143c0ae3708eb8544659e849dea08c3853002ee84b7c3442b61d2610d3",
+        "step_index": 4,
+        "support_ids": [
+          "sem_fact_448bbb0dbfddc3dc",
+          "sem_fact_ee4027eed1615400"
+        ]
+      },
+      {
+        "action": "Open north_door",
+        "effects": [
+          {
+            "object_id": "",
+            "polarity": "positive",
+            "predicate": "open",
+            "subject_id": "north_door"
+          }
+        ],
+        "precondition_checks": [
+          {
+            "expected": "SUPPORTED_FALSE",
+            "observed": "SUPPORTED_FALSE",
+            "passed": true,
+            "proposition_id": "north_door|locked|",
+            "support_ids": [
+              "verified_unlock_effect"
+            ]
+          },
+          {
+            "expected": "SUPPORTED_TRUE",
+            "observed": "SUPPORTED_TRUE",
+            "passed": true,
+            "proposition_id": "alice|at|north_door",
+            "support_ids": [
+              "verified_move_effect"
+            ]
+          }
+        ],
+        "resulting_state_hash": "744a39fce255b2f325f5c338f02281bb52bb29c37f5aa816ee93338af0d859cb",
+        "step_index": 5,
+        "support_ids": [
+          "verified_move_effect",
+          "verified_unlock_effect"
+        ]
+      }
+    ],
+    "explored_state_count": 10,
+    "final_state_hash": "744a39fce255b2f325f5c338f02281bb52bb29c37f5aa816ee93338af0d859cb",
+    "goal": "north_door|open|",
+    "initial_state_hash": "fc1b19ca258dce02d22ce53d50d6764547d311458494167561ba7af169daa941",
+    "max_depth": 8,
+    "rejected_alternatives": [
+      "open:target_locked"
+    ],
+    "replay_hash": "6dd1428d6a8b0b21d2055f8d3a281ea7e886e8c1226148c02d15491fcffbe9fc"
+  },
+  "reasoning_request": {
+    "ambiguities": [],
+    "bridge_warnings": [],
+    "claims": [],
+    "constraints": [],
+    "entities": [],
+    "habitat": {
+      "activation": {
+        "activated_semantic_ids": [
+          "sem_fact_0f4ebd3babf08a6b",
+          "sem_fact_448bbb0dbfddc3dc",
+          "sem_fact_5ff15daf3a78e83d",
+          "sem_fact_869624f7207f8714",
+          "sem_fact_ee4027eed1615400"
+        ],
+        "activation_edges": [
+          {
+            "depth": 1,
+            "from": "sem_fact_448bbb0dbfddc3dc",
+            "reason": "shared:red_key",
+            "to": "sem_fact_0f4ebd3babf08a6b"
+          },
+          {
+            "depth": 1,
+            "from": "sem_fact_5ff15daf3a78e83d",
+            "reason": "shared:at",
+            "to": "sem_fact_869624f7207f8714"
+          }
+        ],
+        "dormant_semantic_ids": [],
+        "max_depth": 4,
+        "seed_ids": [
+          "alice",
+          "north_door",
+          "open"
+        ],
+        "truncated": false
+      },
+      "events": [],
+      "facts": [
+        {
+          "active": true,
+          "object_id": "box",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "inside",
+          "semantic_id": "sem_fact_0f4ebd3babf08a6b",
+          "source_ids": [
+            "obs_0003_2b9ef2e3ab43"
+          ],
+          "subject_id": "red_key"
+        },
+        {
+          "active": true,
+          "object_id": "north_door",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "unlocks",
+          "semantic_id": "sem_fact_448bbb0dbfddc3dc",
+          "source_ids": [
+            "obs_0005_b573328fdcd7"
+          ],
+          "subject_id": "red_key"
+        },
+        {
+          "active": true,
+          "object_id": "hall",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "at",
+          "semantic_id": "sem_fact_5ff15daf3a78e83d",
+          "source_ids": [
+            "obs_0001_dfd5e4200085"
+          ],
+          "subject_id": "alice"
+        },
+        {
+          "active": true,
+          "object_id": "kitchen",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "at",
+          "semantic_id": "sem_fact_869624f7207f8714",
+          "source_ids": [
+            "obs_0002_b169b4487a8d"
+          ],
+          "subject_id": "box"
+        },
+        {
+          "active": true,
+          "object_id": "",
+          "origin": "user_premise",
+          "polarity": "positive",
+          "predicate": "locked",
+          "semantic_id": "sem_fact_ee4027eed1615400",
+          "source_ids": [
+            "obs_0004_438560cea883"
+          ],
+          "subject_id": "north_door"
+        }
+      ],
+      "max_derived_facts": 64,
+      "max_inference_depth": 4,
+      "max_plan_depth": 8,
+      "memory_candidate_ids": [],
+      "query": {
+        "kind": "plan",
+        "object_id": "north_door",
+        "polarity": "positive",
+        "predicate": "open",
+        "subject_id": "alice"
+      },
+      "rules": []
+    },
+    "intent": "habitat_query",
+    "original_text": "How can Alice open the north door?",
+    "provenance": [
+      {
+        "original_span": "",
+        "provenance_id": "prov:node_act_root",
+        "rule_id": "",
+        "source_id": "node_act_root",
+        "source_type": "user_input"
+      },
+      {
+        "original_span": "How can Alice open the north door?",
+        "provenance_id": "prov:node_world_query_acb13dbdba41",
+        "rule_id": "habitat.query.plan",
+        "source_id": "node_world_query_acb13dbdba41",
+        "source_type": "deterministic_rule"
+      }
+    ],
+    "relations": [],
+    "repair_actions": [],
+    "request_id": "request_a151451314503716",
+    "requested_output": "natural_language_response"
+  },
+  "reasoning_request_hash": "56643118ed19bb0391140cd60ed67576693e465083d752d6a6af89b8f34b2c23",
+  "receipt_schema": "ts-turn-receipt-v2",
+  "repair_actions": [],
+  "repair_attempted": false,
+  "repair_result": null,
+  "replay": {
+    "deterministic_replay_hash": "0809aa5985d2cb54504653538bbd05fbc31aa406f6adfa93ae1b9d4c4b1441e3",
+    "input_state_hash": "cd7527a92d0e9959a9a243504b706b248b0c5e39707945cf4d89263aab19740a",
+    "output_state_hash": "86c222e3cc28bce2b70ce2e6e84845c9736b612d392f4c8e41e5b8cba647d78d"
+  },
+  "response_template": "ACCEPT_VERIFIED_PLAN",
+  "semantic_merge": {
+    "merged_semantic_ids": [],
+    "new_semantic_ids": [],
+    "observation_ids": [],
+    "staged_count": 0
+  },
+  "signed_world_state": {
+    "alice|at|hall": {
+      "negative_support_ids": [],
+      "object_id": "hall",
+      "positive_support_ids": [
+        "sem_fact_5ff15daf3a78e83d"
+      ],
+      "predicate": "at",
+      "proposition_id": "alice|at|hall",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "alice"
+    },
+    "box|at|kitchen": {
+      "negative_support_ids": [],
+      "object_id": "kitchen",
+      "positive_support_ids": [
+        "sem_fact_869624f7207f8714"
+      ],
+      "predicate": "at",
+      "proposition_id": "box|at|kitchen",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "box"
+    },
+    "north_door|locked|": {
+      "negative_support_ids": [],
+      "object_id": "",
+      "positive_support_ids": [
+        "sem_fact_ee4027eed1615400"
+      ],
+      "predicate": "locked",
+      "proposition_id": "north_door|locked|",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "north_door"
+    },
+    "red_key|inside|box": {
+      "negative_support_ids": [],
+      "object_id": "box",
+      "positive_support_ids": [
+        "sem_fact_0f4ebd3babf08a6b"
+      ],
+      "predicate": "inside",
+      "proposition_id": "red_key|inside|box",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "red_key"
+    },
+    "red_key|unlocks|north_door": {
+      "negative_support_ids": [],
+      "object_id": "north_door",
+      "positive_support_ids": [
+        "sem_fact_448bbb0dbfddc3dc"
+      ],
+      "predicate": "unlocks",
+      "proposition_id": "red_key|unlocks|north_door",
+      "status": "SUPPORTED_TRUE",
+      "subject_id": "red_key"
+    }
+  },
+  "state_hash": "86c222e3cc28bce2b70ce2e6e84845c9736b612d392f4c8e41e5b8cba647d78d",
+  "state_transitions": [],
+  "turn_id": "turn_0006",
+  "unsupported_claims": [],
+  "verifier_checks": [
+    {
+      "check_id": "request_schema_valid",
+      "message": "Structured request loaded.",
+      "passed": true,
+      "support_ids": []
+    },
+    {
+      "check_id": "verified_plan_exists",
+      "message": "Every plan step has verified preconditions and declared effects.",
+      "passed": true,
+      "support_ids": [
+        "habitat_open_topology",
+        "sem_fact_0f4ebd3babf08a6b",
+        "sem_fact_448bbb0dbfddc3dc",
+        "sem_fact_5ff15daf3a78e83d",
+        "sem_fact_ee4027eed1615400",
+        "verified_move_effect",
+        "verified_unlock_effect"
+      ]
+    },
+    {
+      "check_id": "renderer_support_available",
+      "message": "Approved structured answer has support IDs.",
+      "passed": true,
+      "support_ids": [
+        "habitat_open_topology",
+        "sem_fact_0f4ebd3babf08a6b",
+        "sem_fact_448bbb0dbfddc3dc",
+        "sem_fact_5ff15daf3a78e83d",
+        "sem_fact_ee4027eed1615400",
+        "verified_move_effect",
+        "verified_unlock_effect"
+      ]
+    }
+  ],
+  "verifier_decision": "ACCEPT"
+}

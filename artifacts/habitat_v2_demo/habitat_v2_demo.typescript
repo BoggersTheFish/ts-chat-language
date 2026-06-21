@@ -1,0 +1,6079 @@
+Script started on 2026-06-21 14:14:56+01:00 [COMMAND="./scripts/habitat_v2_demo.sh" <not executed on terminal>]
+TS Chat — verifier-first vertical slice
+Bounded deterministic language and reasoning demo.
+Type /help for supported examples.
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0001_4a126799e0.json
+
+INPUT
+The door is not open.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_4d31c68c4136_expresses",
+      "provenance": {
+        "original_span": "The door is not open.",
+        "rule_id": "habitat.fact.negated_state",
+        "source_id": "node_world_fact_4d31c68c4136",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_4d31c68c4136"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "The door is not open."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_4d31c68c4136",
+      "provenance": {
+        "original_span": "The door is not open.",
+        "rule_id": "habitat.fact.negated_state",
+        "source_id": "node_world_fact_4d31c68c4136",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "",
+        "polarity": "negative",
+        "predicate": "open",
+        "subject": "door"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_d2e3f29d5e756351"
+  ],
+  "observation_ids": [
+    "obs_0001_f2d007d0ba37"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_d2e3f29d5e756351"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "door|open|": {
+    "negative_support_ids": [
+      "sem_fact_d2e3f29d5e756351"
+    ],
+    "object_id": "",
+    "positive_support_ids": [],
+    "predicate": "open",
+    "proposition_id": "door|open|",
+    "status": "SUPPORTED_FALSE",
+    "subject_id": "door"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_d2e3f29d5e756351"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "negative",
+        "predicate": "open",
+        "semantic_id": "sem_fact_d2e3f29d5e756351",
+        "source_ids": [
+          "obs_0001_f2d007d0ba37"
+        ],
+        "subject_id": "door"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_d2e3f29d5e756351"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "The door is not open.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "The door is not open.",
+      "provenance_id": "prov:node_world_fact_4d31c68c4136",
+      "rule_id": "habitat.fact.negated_state",
+      "source_id": "node_world_fact_4d31c68c4136",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_ac7f62ef7b8066f0",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_d2e3f29d5e756351"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_d2e3f29d5e756351"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+4a126799e09d79a921f7b427a7717de2ff26f27c0bd81b43a446dca853ec076d
+> [ACCEPT: CONCLUSION_VERIFIED] The door is not open.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0002_6b1ea30fa1.json
+
+INPUT
+Is the door open?
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_query_89372022869d_expresses",
+      "provenance": {
+        "original_span": "Is the door open?",
+        "rule_id": "habitat.query.state",
+        "source_id": "node_world_query_89372022869d",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_query_89372022869d"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "Is the door open?"
+      }
+    },
+    {
+      "kind": "world_query",
+      "label": "world query",
+      "node_id": "node_world_query_89372022869d",
+      "provenance": {
+        "original_span": "Is the door open?",
+        "rule_id": "habitat.query.state",
+        "source_id": "node_world_query_89372022869d",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "kind": "state",
+        "object_id": "",
+        "polarity": "positive",
+        "predicate": "open",
+        "subject_id": "door"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [],
+  "observation_ids": [],
+  "staged_count": 0
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_d2e3f29d5e756351"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [
+    "door",
+    "open"
+  ],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "door|open|": {
+    "negative_support_ids": [
+      "sem_fact_d2e3f29d5e756351"
+    ],
+    "object_id": "",
+    "positive_support_ids": [],
+    "predicate": "open",
+    "proposition_id": "door|open|",
+    "status": "SUPPORTED_FALSE",
+    "subject_id": "door"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_d2e3f29d5e756351"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [
+        "door",
+        "open"
+      ],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "negative",
+        "predicate": "open",
+        "semantic_id": "sem_fact_d2e3f29d5e756351",
+        "source_ids": [
+          "obs_0001_f2d007d0ba37"
+        ],
+        "subject_id": "door"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [],
+    "query": {
+      "kind": "state",
+      "object_id": "",
+      "polarity": "positive",
+      "predicate": "open",
+      "subject_id": "door"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "Is the door open?",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "Is the door open?",
+      "provenance_id": "prov:node_world_query_89372022869d",
+      "rule_id": "habitat.query.state",
+      "source_id": "node_world_query_89372022869d",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_4177b72b70ad4de0",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "signed_false_supported",
+    "message": "Explicit opposite-polarity evidence supports a false result.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_d2e3f29d5e756351"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_d2e3f29d5e756351"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+CONCLUSION_VERIFIED
+
+RESPONSE
+The door is not open.
+
+REPLAY HASH
+6b1ea30fa1cffdc8fcc1e4f4bd6e4a22bf8140598b5e72062dda20660ae97b6d
+> State reset: 3c6f3c40e6edcb1e14831a35c7e7f3f063b638c054fa54b02859532bb6dae04a
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0001_cd343c43a1.json
+
+INPUT
+The door is open.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_f166e719819f_expresses",
+      "provenance": {
+        "original_span": "The door is open.",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_f166e719819f",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_f166e719819f"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "The door is open."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_f166e719819f",
+      "provenance": {
+        "original_span": "The door is open.",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_f166e719819f",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "",
+        "polarity": "positive",
+        "predicate": "open",
+        "subject": "door"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_0c8c2e6723472377"
+  ],
+  "observation_ids": [
+    "obs_0001_bd7e595950c2"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_0c8c2e6723472377"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "door|open|": {
+    "negative_support_ids": [],
+    "object_id": "",
+    "positive_support_ids": [
+      "sem_fact_0c8c2e6723472377"
+    ],
+    "predicate": "open",
+    "proposition_id": "door|open|",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "door"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_0c8c2e6723472377"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "open",
+        "semantic_id": "sem_fact_0c8c2e6723472377",
+        "source_ids": [
+          "obs_0001_bd7e595950c2"
+        ],
+        "subject_id": "door"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_0c8c2e6723472377"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "The door is open.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "The door is open.",
+      "provenance_id": "prov:node_world_fact_f166e719819f",
+      "rule_id": "habitat.fact.state",
+      "source_id": "node_world_fact_f166e719819f",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_5c1ffdd95f6828e7",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_0c8c2e6723472377"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_0c8c2e6723472377"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+cd343c43a1822bbbf450c888a625bce50a09108121d3422e74a54d3d55192e93
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0002_35a26a9d92.json
+
+INPUT
+The door is not open.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_4d31c68c4136_expresses",
+      "provenance": {
+        "original_span": "The door is not open.",
+        "rule_id": "habitat.fact.negated_state",
+        "source_id": "node_world_fact_4d31c68c4136",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_4d31c68c4136"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "The door is not open."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_4d31c68c4136",
+      "provenance": {
+        "original_span": "The door is not open.",
+        "rule_id": "habitat.fact.negated_state",
+        "source_id": "node_world_fact_4d31c68c4136",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "",
+        "polarity": "negative",
+        "predicate": "open",
+        "subject": "door"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_d2e3f29d5e756351"
+  ],
+  "observation_ids": [
+    "obs_0002_f2d007d0ba37"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_0c8c2e6723472377",
+    "sem_fact_d2e3f29d5e756351"
+  ],
+  "activation_edges": [
+    {
+      "depth": 1,
+      "from": "sem_fact_d2e3f29d5e756351",
+      "reason": "shared:door",
+      "to": "sem_fact_0c8c2e6723472377"
+    }
+  ],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "door|open|": {
+    "negative_support_ids": [
+      "sem_fact_d2e3f29d5e756351"
+    ],
+    "object_id": "",
+    "positive_support_ids": [
+      "sem_fact_0c8c2e6723472377"
+    ],
+    "predicate": "open",
+    "proposition_id": "door|open|",
+    "status": "CONFLICTED",
+    "subject_id": "door"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_0c8c2e6723472377",
+        "sem_fact_d2e3f29d5e756351"
+      ],
+      "activation_edges": [
+        {
+          "depth": 1,
+          "from": "sem_fact_d2e3f29d5e756351",
+          "reason": "shared:door",
+          "to": "sem_fact_0c8c2e6723472377"
+        }
+      ],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "open",
+        "semantic_id": "sem_fact_0c8c2e6723472377",
+        "source_ids": [
+          "obs_0001_bd7e595950c2"
+        ],
+        "subject_id": "door"
+      },
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "negative",
+        "predicate": "open",
+        "semantic_id": "sem_fact_d2e3f29d5e756351",
+        "source_ids": [
+          "obs_0002_f2d007d0ba37"
+        ],
+        "subject_id": "door"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_d2e3f29d5e756351"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "The door is not open.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "The door is not open.",
+      "provenance_id": "prov:node_world_fact_4d31c68c4136",
+      "rule_id": "habitat.fact.negated_state",
+      "source_id": "node_world_fact_4d31c68c4136",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_ac7f62ef7b8066f0",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_0c8c2e6723472377",
+      "sem_fact_d2e3f29d5e756351"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_0c8c2e6723472377",
+      "sem_fact_d2e3f29d5e756351"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+35a26a9d9201b73b506c66b0ce275eac7970e5e0c87f59e734a46bce44faabf4
+> [REJECT: REJECT_CONFLICTED] I cannot provide a supported answer because the available statements conflict: door|open|
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0003_92d8b4ebd6.json
+
+INPUT
+Is the door open?
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_query_89372022869d_expresses",
+      "provenance": {
+        "original_span": "Is the door open?",
+        "rule_id": "habitat.query.state",
+        "source_id": "node_world_query_89372022869d",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_query_89372022869d"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "Is the door open?"
+      }
+    },
+    {
+      "kind": "world_query",
+      "label": "world query",
+      "node_id": "node_world_query_89372022869d",
+      "provenance": {
+        "original_span": "Is the door open?",
+        "rule_id": "habitat.query.state",
+        "source_id": "node_world_query_89372022869d",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "kind": "state",
+        "object_id": "",
+        "polarity": "positive",
+        "predicate": "open",
+        "subject_id": "door"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [],
+  "observation_ids": [],
+  "staged_count": 0
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_0c8c2e6723472377",
+    "sem_fact_d2e3f29d5e756351"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [
+    "door",
+    "open"
+  ],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "door|open|": {
+    "negative_support_ids": [
+      "sem_fact_d2e3f29d5e756351"
+    ],
+    "object_id": "",
+    "positive_support_ids": [
+      "sem_fact_0c8c2e6723472377"
+    ],
+    "predicate": "open",
+    "proposition_id": "door|open|",
+    "status": "CONFLICTED",
+    "subject_id": "door"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_0c8c2e6723472377",
+        "sem_fact_d2e3f29d5e756351"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [
+        "door",
+        "open"
+      ],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "open",
+        "semantic_id": "sem_fact_0c8c2e6723472377",
+        "source_ids": [
+          "obs_0001_bd7e595950c2"
+        ],
+        "subject_id": "door"
+      },
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "negative",
+        "predicate": "open",
+        "semantic_id": "sem_fact_d2e3f29d5e756351",
+        "source_ids": [
+          "obs_0002_f2d007d0ba37"
+        ],
+        "subject_id": "door"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [],
+    "query": {
+      "kind": "state",
+      "object_id": "",
+      "polarity": "positive",
+      "predicate": "open",
+      "subject_id": "door"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "Is the door open?",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "Is the door open?",
+      "provenance_id": "prov:node_world_query_89372022869d",
+      "rule_id": "habitat.query.state",
+      "source_id": "node_world_query_89372022869d",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_4177b72b70ad4de0",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "signed_state_unconflicted",
+    "message": "Both positive and negative evidence are active.",
+    "passed": false,
+    "support_ids": [
+      "sem_fact_0c8c2e6723472377",
+      "sem_fact_d2e3f29d5e756351"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+REJECT
+
+DECISION SUBTYPE
+REJECT_CONFLICTED
+
+RESPONSE
+I cannot provide a supported answer because the available statements conflict: door|open|
+
+REPLAY HASH
+92d8b4ebd63fd1d316ea219483afcbc65542e40ff201c8532cf198db1cea2ea0
+> State reset: 3c6f3c40e6edcb1e14831a35c7e7f3f063b638c054fa54b02859532bb6dae04a
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0001_52c857b7b3.json
+
+INPUT
+Alice owns the red key.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_b92f622d6fba_expresses",
+      "provenance": {
+        "original_span": "Alice owns the red key.",
+        "rule_id": "habitat.fact.possession",
+        "source_id": "node_world_fact_b92f622d6fba",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_b92f622d6fba"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "Alice owns the red key."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_b92f622d6fba",
+      "provenance": {
+        "original_span": "Alice owns the red key.",
+        "rule_id": "habitat.fact.possession",
+        "source_id": "node_world_fact_b92f622d6fba",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "red_key",
+        "polarity": "positive",
+        "predicate": "owns",
+        "subject": "alice"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_f5d72a87882a94ea"
+  ],
+  "observation_ids": [
+    "obs_0001_5c021c198c94"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_f5d72a87882a94ea"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "alice|owns|red_key": {
+    "negative_support_ids": [],
+    "object_id": "red_key",
+    "positive_support_ids": [
+      "sem_fact_f5d72a87882a94ea"
+    ],
+    "predicate": "owns",
+    "proposition_id": "alice|owns|red_key",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "alice"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_f5d72a87882a94ea"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "red_key",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "owns",
+        "semantic_id": "sem_fact_f5d72a87882a94ea",
+        "source_ids": [
+          "obs_0001_5c021c198c94"
+        ],
+        "subject_id": "alice"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_f5d72a87882a94ea"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "Alice owns the red key.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "Alice owns the red key.",
+      "provenance_id": "prov:node_world_fact_b92f622d6fba",
+      "rule_id": "habitat.fact.possession",
+      "source_id": "node_world_fact_b92f622d6fba",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_00ff70894b8f671e",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_f5d72a87882a94ea"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_f5d72a87882a94ea"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+52c857b7b331d7cfac95020f25e144d5dcf41d1ad6e9fbb89ee1c21690560bd0
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0002_30c884b759.json
+
+INPUT
+Alice gives the red key to Sarah.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_event_27e180d90890_expresses",
+      "provenance": {
+        "original_span": "Alice gives the red key to Sarah.",
+        "rule_id": "habitat.event.give",
+        "source_id": "node_world_event_27e180d90890",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_event_27e180d90890"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "Alice gives the red key to Sarah."
+      }
+    },
+    {
+      "kind": "world_event",
+      "label": "world event",
+      "node_id": "node_world_event_27e180d90890",
+      "provenance": {
+        "original_span": "Alice gives the red key to Sarah.",
+        "rule_id": "habitat.event.give",
+        "source_id": "node_world_event_27e180d90890",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "action": "gives",
+        "actor": "alice",
+        "object": "red_key",
+        "target": "sarah"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_event_effect_1cf65946d60630d8",
+    "sem_event_effect_74c10b67e30a5544"
+  ],
+  "observation_ids": [
+    "obs_0002_cfb8fc4b956d",
+    "obs_0002_cfb8fc4b956d"
+  ],
+  "staged_count": 2
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_event_effect_1cf65946d60630d8",
+    "sem_event_effect_74c10b67e30a5544",
+    "sem_fact_f5d72a87882a94ea"
+  ],
+  "activation_edges": [
+    {
+      "depth": 1,
+      "from": "sem_event_effect_74c10b67e30a5544",
+      "reason": "shared:alice",
+      "to": "sem_fact_f5d72a87882a94ea"
+    }
+  ],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "alice|owns|red_key": {
+    "negative_support_ids": [
+      "sem_event_effect_74c10b67e30a5544"
+    ],
+    "object_id": "red_key",
+    "positive_support_ids": [
+      "sem_fact_f5d72a87882a94ea"
+    ],
+    "predicate": "owns",
+    "proposition_id": "alice|owns|red_key",
+    "status": "CONFLICTED",
+    "subject_id": "alice"
+  },
+  "sarah|owns|red_key": {
+    "negative_support_ids": [],
+    "object_id": "red_key",
+    "positive_support_ids": [
+      "sem_event_effect_1cf65946d60630d8"
+    ],
+    "predicate": "owns",
+    "proposition_id": "sarah|owns|red_key",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "sarah"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_event_effect_1cf65946d60630d8",
+        "sem_event_effect_74c10b67e30a5544",
+        "sem_fact_f5d72a87882a94ea"
+      ],
+      "activation_edges": [
+        {
+          "depth": 1,
+          "from": "sem_event_effect_74c10b67e30a5544",
+          "reason": "shared:alice",
+          "to": "sem_fact_f5d72a87882a94ea"
+        }
+      ],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [
+      {
+        "action": "gives",
+        "actor_id": "alice",
+        "destination_location_id": "",
+        "effects": [
+          {
+            "object_id": "red_key",
+            "polarity": "negative",
+            "predicate": "owns",
+            "subject_id": "alice"
+          },
+          {
+            "object_id": "red_key",
+            "polarity": "positive",
+            "predicate": "owns",
+            "subject_id": "sarah"
+          }
+        ],
+        "event_id": "sem_event_b2ad049da8fc5416",
+        "object_id": "red_key",
+        "preconditions": [
+          {
+            "object_id": "red_key",
+            "polarity": "positive",
+            "predicate": "owns",
+            "subject_id": "alice"
+          }
+        ],
+        "source_ids": [
+          "obs_0002_cfb8fc4b956d"
+        ],
+        "supersedes": [
+          "*|owns|red_key"
+        ],
+        "target_id": "sarah",
+        "turn_index": 2
+      }
+    ],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "red_key",
+        "origin": "event_effect",
+        "polarity": "positive",
+        "predicate": "owns",
+        "semantic_id": "sem_event_effect_1cf65946d60630d8",
+        "source_ids": [
+          "obs_0002_cfb8fc4b956d"
+        ],
+        "subject_id": "sarah"
+      },
+      {
+        "active": true,
+        "object_id": "red_key",
+        "origin": "event_effect",
+        "polarity": "negative",
+        "predicate": "owns",
+        "semantic_id": "sem_event_effect_74c10b67e30a5544",
+        "source_ids": [
+          "obs_0002_cfb8fc4b956d"
+        ],
+        "subject_id": "alice"
+      },
+      {
+        "active": true,
+        "object_id": "red_key",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "owns",
+        "semantic_id": "sem_fact_f5d72a87882a94ea",
+        "source_ids": [
+          "obs_0001_5c021c198c94"
+        ],
+        "subject_id": "alice"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_event_effect_74c10b67e30a5544",
+      "sem_event_effect_1cf65946d60630d8"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "Alice gives the red key to Sarah.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "Alice gives the red key to Sarah.",
+      "provenance_id": "prov:node_world_event_27e180d90890",
+      "rule_id": "habitat.event.give",
+      "source_id": "node_world_event_27e180d90890",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_e3c2b3e1b18c05f1",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "event_precondition_supported",
+    "message": "Event precondition alice|owns|red_key is SUPPORTED_TRUE.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_f5d72a87882a94ea"
+    ]
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_event_effect_1cf65946d60630d8",
+      "sem_event_effect_74c10b67e30a5544",
+      "sem_fact_f5d72a87882a94ea"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_event_effect_1cf65946d60630d8",
+      "sem_event_effect_74c10b67e30a5544",
+      "sem_fact_f5d72a87882a94ea"
+    ]
+  }
+]
+
+EVENTS
+[
+  {
+    "action": "gives",
+    "actor_id": "alice",
+    "destination_location_id": "",
+    "effects": [
+      {
+        "object_id": "red_key",
+        "polarity": "negative",
+        "predicate": "owns",
+        "subject_id": "alice"
+      },
+      {
+        "object_id": "red_key",
+        "polarity": "positive",
+        "predicate": "owns",
+        "subject_id": "sarah"
+      }
+    ],
+    "event_id": "sem_event_b2ad049da8fc5416",
+    "object_id": "red_key",
+    "preconditions": [
+      {
+        "object_id": "red_key",
+        "polarity": "positive",
+        "predicate": "owns",
+        "subject_id": "alice"
+      }
+    ],
+    "source_ids": [
+      "obs_0002_cfb8fc4b956d"
+    ],
+    "supersedes": [
+      "*|owns|red_key"
+    ],
+    "target_id": "sarah",
+    "turn_index": 2
+  }
+]
+
+STATE TRANSITIONS
+[
+  {
+    "action": "gives",
+    "actor_id": "alice",
+    "destination_location_id": "",
+    "effects": [
+      {
+        "object_id": "red_key",
+        "polarity": "negative",
+        "predicate": "owns",
+        "subject_id": "alice"
+      },
+      {
+        "object_id": "red_key",
+        "polarity": "positive",
+        "predicate": "owns",
+        "subject_id": "sarah"
+      }
+    ],
+    "event_id": "sem_event_b2ad049da8fc5416",
+    "object_id": "red_key",
+    "preconditions": [
+      {
+        "object_id": "red_key",
+        "polarity": "positive",
+        "predicate": "owns",
+        "subject_id": "alice"
+      }
+    ],
+    "source_ids": [
+      "obs_0002_cfb8fc4b956d"
+    ],
+    "supersedes": [
+      "*|owns|red_key"
+    ],
+    "target_id": "sarah",
+    "turn_index": 2
+  }
+]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+30c884b759915aea66074ffa76d3652a535666c7321960cb8f0ede70b159c748
+> [ACCEPT: CONCLUSION_VERIFIED] Sarah owns the red key.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0003_a96c844873.json
+
+INPUT
+Who owns the red key?
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_query_050fd27c5ecd_expresses",
+      "provenance": {
+        "original_span": "Who owns the red key?",
+        "rule_id": "habitat.query.owner",
+        "source_id": "node_world_query_050fd27c5ecd",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_query_050fd27c5ecd"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "Who owns the red key?"
+      }
+    },
+    {
+      "kind": "world_query",
+      "label": "world query",
+      "node_id": "node_world_query_050fd27c5ecd",
+      "provenance": {
+        "original_span": "Who owns the red key?",
+        "rule_id": "habitat.query.owner",
+        "source_id": "node_world_query_050fd27c5ecd",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "kind": "owner",
+        "object_id": "red_key",
+        "polarity": "positive",
+        "predicate": "owns",
+        "subject_id": ""
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [],
+  "observation_ids": [],
+  "staged_count": 0
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_event_effect_1cf65946d60630d8",
+    "sem_event_effect_74c10b67e30a5544",
+    "sem_fact_f5d72a87882a94ea"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [
+    "owns",
+    "red_key"
+  ],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "alice|owns|red_key": {
+    "negative_support_ids": [
+      "sem_event_effect_74c10b67e30a5544"
+    ],
+    "object_id": "red_key",
+    "positive_support_ids": [],
+    "predicate": "owns",
+    "proposition_id": "alice|owns|red_key",
+    "status": "SUPPORTED_FALSE",
+    "subject_id": "alice"
+  },
+  "sarah|owns|red_key": {
+    "negative_support_ids": [],
+    "object_id": "red_key",
+    "positive_support_ids": [
+      "sem_event_effect_1cf65946d60630d8"
+    ],
+    "predicate": "owns",
+    "proposition_id": "sarah|owns|red_key",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "sarah"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_event_effect_1cf65946d60630d8",
+        "sem_event_effect_74c10b67e30a5544",
+        "sem_fact_f5d72a87882a94ea"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [
+        "owns",
+        "red_key"
+      ],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "red_key",
+        "origin": "event_effect",
+        "polarity": "positive",
+        "predicate": "owns",
+        "semantic_id": "sem_event_effect_1cf65946d60630d8",
+        "source_ids": [
+          "obs_0002_cfb8fc4b956d"
+        ],
+        "subject_id": "sarah"
+      },
+      {
+        "active": true,
+        "object_id": "red_key",
+        "origin": "event_effect",
+        "polarity": "negative",
+        "predicate": "owns",
+        "semantic_id": "sem_event_effect_74c10b67e30a5544",
+        "source_ids": [
+          "obs_0002_cfb8fc4b956d"
+        ],
+        "subject_id": "alice"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [],
+    "query": {
+      "kind": "owner",
+      "object_id": "red_key",
+      "polarity": "positive",
+      "predicate": "owns",
+      "subject_id": ""
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "Who owns the red key?",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "Who owns the red key?",
+      "provenance_id": "prov:node_world_query_050fd27c5ecd",
+      "rule_id": "habitat.query.owner",
+      "source_id": "node_world_query_050fd27c5ecd",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_95be24d47479f31b",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "direct_relation_supported",
+    "message": "One active owner is supported.",
+    "passed": true,
+    "support_ids": [
+      "sem_event_effect_1cf65946d60630d8"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_event_effect_1cf65946d60630d8"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+CONCLUSION_VERIFIED
+
+RESPONSE
+Sarah owns the red key.
+
+REPLAY HASH
+a96c844873ef83cc66f9019edd5df2f91b3b9c40f102f21e24eb27d5c6eeb1f5
+> State reset: 3c6f3c40e6edcb1e14831a35c7e7f3f063b638c054fa54b02859532bb6dae04a
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0001_32ad6095e5.json
+
+INPUT
+The key is inside the box.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_dea298947f1d_expresses",
+      "provenance": {
+        "original_span": "The key is inside the box.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_dea298947f1d",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_dea298947f1d"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "The key is inside the box."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_dea298947f1d",
+      "provenance": {
+        "original_span": "The key is inside the box.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_dea298947f1d",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "box",
+        "polarity": "positive",
+        "predicate": "inside",
+        "subject": "key"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_ad639da6c3fbc9e6"
+  ],
+  "observation_ids": [
+    "obs_0001_cc001c75b257"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_ad639da6c3fbc9e6"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "key|inside|box": {
+    "negative_support_ids": [],
+    "object_id": "box",
+    "positive_support_ids": [
+      "sem_fact_ad639da6c3fbc9e6"
+    ],
+    "predicate": "inside",
+    "proposition_id": "key|inside|box",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "key"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_ad639da6c3fbc9e6"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "box",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "inside",
+        "semantic_id": "sem_fact_ad639da6c3fbc9e6",
+        "source_ids": [
+          "obs_0001_cc001c75b257"
+        ],
+        "subject_id": "key"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_ad639da6c3fbc9e6"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "The key is inside the box.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "The key is inside the box.",
+      "provenance_id": "prov:node_world_fact_dea298947f1d",
+      "rule_id": "habitat.fact.location",
+      "source_id": "node_world_fact_dea298947f1d",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_f65a3f0f3a580988",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_ad639da6c3fbc9e6"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_ad639da6c3fbc9e6"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+32ad6095e52d249ed4f73c1d7a9d32db66e0ccb74c26a26f37269a1d605508f4
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0002_46da862cb4.json
+
+INPUT
+The box is in the kitchen.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_11747d59f651_expresses",
+      "provenance": {
+        "original_span": "The box is in the kitchen.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_11747d59f651",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_11747d59f651"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "The box is in the kitchen."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_11747d59f651",
+      "provenance": {
+        "original_span": "The box is in the kitchen.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_11747d59f651",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "kitchen",
+        "polarity": "positive",
+        "predicate": "at",
+        "subject": "box"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_869624f7207f8714"
+  ],
+  "observation_ids": [
+    "obs_0002_b169b4487a8d"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_869624f7207f8714",
+    "sem_fact_ad639da6c3fbc9e6"
+  ],
+  "activation_edges": [
+    {
+      "depth": 1,
+      "from": "sem_fact_869624f7207f8714",
+      "reason": "shared:box",
+      "to": "sem_fact_ad639da6c3fbc9e6"
+    }
+  ],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "box|at|kitchen": {
+    "negative_support_ids": [],
+    "object_id": "kitchen",
+    "positive_support_ids": [
+      "sem_fact_869624f7207f8714"
+    ],
+    "predicate": "at",
+    "proposition_id": "box|at|kitchen",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "box"
+  },
+  "key|inside|box": {
+    "negative_support_ids": [],
+    "object_id": "box",
+    "positive_support_ids": [
+      "sem_fact_ad639da6c3fbc9e6"
+    ],
+    "predicate": "inside",
+    "proposition_id": "key|inside|box",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "key"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_869624f7207f8714",
+        "sem_fact_ad639da6c3fbc9e6"
+      ],
+      "activation_edges": [
+        {
+          "depth": 1,
+          "from": "sem_fact_869624f7207f8714",
+          "reason": "shared:box",
+          "to": "sem_fact_ad639da6c3fbc9e6"
+        }
+      ],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "kitchen",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_869624f7207f8714",
+        "source_ids": [
+          "obs_0002_b169b4487a8d"
+        ],
+        "subject_id": "box"
+      },
+      {
+        "active": true,
+        "object_id": "box",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "inside",
+        "semantic_id": "sem_fact_ad639da6c3fbc9e6",
+        "source_ids": [
+          "obs_0001_cc001c75b257"
+        ],
+        "subject_id": "key"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_869624f7207f8714"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "The box is in the kitchen.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "The box is in the kitchen.",
+      "provenance_id": "prov:node_world_fact_11747d59f651",
+      "rule_id": "habitat.fact.location",
+      "source_id": "node_world_fact_11747d59f651",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_6c8acf8491a14f56",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_869624f7207f8714",
+      "sem_fact_ad639da6c3fbc9e6"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_869624f7207f8714",
+      "sem_fact_ad639da6c3fbc9e6"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+46da862cb4de449e8e6edc5664557e604da9a9e92a5d061233242dc25c7df658
+> [ACCEPT: CONCLUSION_VERIFIED] The key is inside the box, and the box is in the kitchen.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0003_08b00d81a4.json
+
+INPUT
+Where is the key?
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_query_68c55a998a99_expresses",
+      "provenance": {
+        "original_span": "Where is the key?",
+        "rule_id": "habitat.query.location",
+        "source_id": "node_world_query_68c55a998a99",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_query_68c55a998a99"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "Where is the key?"
+      }
+    },
+    {
+      "kind": "world_query",
+      "label": "world query",
+      "node_id": "node_world_query_68c55a998a99",
+      "provenance": {
+        "original_span": "Where is the key?",
+        "rule_id": "habitat.query.location",
+        "source_id": "node_world_query_68c55a998a99",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "kind": "location",
+        "object_id": "",
+        "polarity": "positive",
+        "predicate": "inside",
+        "subject_id": "key"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [],
+  "observation_ids": [],
+  "staged_count": 0
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_869624f7207f8714",
+    "sem_fact_ad639da6c3fbc9e6"
+  ],
+  "activation_edges": [
+    {
+      "depth": 1,
+      "from": "sem_fact_ad639da6c3fbc9e6",
+      "reason": "shared:box",
+      "to": "sem_fact_869624f7207f8714"
+    }
+  ],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [
+    "inside",
+    "key"
+  ],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "box|at|kitchen": {
+    "negative_support_ids": [],
+    "object_id": "kitchen",
+    "positive_support_ids": [
+      "sem_fact_869624f7207f8714"
+    ],
+    "predicate": "at",
+    "proposition_id": "box|at|kitchen",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "box"
+  },
+  "key|inside|box": {
+    "negative_support_ids": [],
+    "object_id": "box",
+    "positive_support_ids": [
+      "sem_fact_ad639da6c3fbc9e6"
+    ],
+    "predicate": "inside",
+    "proposition_id": "key|inside|box",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "key"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_869624f7207f8714",
+        "sem_fact_ad639da6c3fbc9e6"
+      ],
+      "activation_edges": [
+        {
+          "depth": 1,
+          "from": "sem_fact_ad639da6c3fbc9e6",
+          "reason": "shared:box",
+          "to": "sem_fact_869624f7207f8714"
+        }
+      ],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [
+        "inside",
+        "key"
+      ],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "kitchen",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_869624f7207f8714",
+        "source_ids": [
+          "obs_0002_b169b4487a8d"
+        ],
+        "subject_id": "box"
+      },
+      {
+        "active": true,
+        "object_id": "box",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "inside",
+        "semantic_id": "sem_fact_ad639da6c3fbc9e6",
+        "source_ids": [
+          "obs_0001_cc001c75b257"
+        ],
+        "subject_id": "key"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [],
+    "query": {
+      "kind": "location",
+      "object_id": "",
+      "polarity": "positive",
+      "predicate": "inside",
+      "subject_id": "key"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "Where is the key?",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "Where is the key?",
+      "provenance_id": "prov:node_world_query_68c55a998a99",
+      "rule_id": "habitat.query.location",
+      "source_id": "node_world_query_68c55a998a99",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_32403505aa1afda1",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "containment_chain_supported",
+    "message": "Declared containment and location links support the answer.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_869624f7207f8714",
+      "sem_fact_ad639da6c3fbc9e6"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_869624f7207f8714",
+      "sem_fact_ad639da6c3fbc9e6"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+CONCLUSION_VERIFIED
+
+RESPONSE
+The key is inside the box, and the box is in the kitchen.
+
+REPLAY HASH
+08b00d81a44655f4ec29bfd2254dd67ca4a68737a1382ac054897983a69eb1a2
+> State reset: 3c6f3c40e6edcb1e14831a35c7e7f3f063b638c054fa54b02859532bb6dae04a
+> [ACCEPT: CONCLUSION_VERIFIED] The alarm is active. This is derived through the verified causal chain.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0001_04b011672b.json
+
+INPUT
+If the door opens, the sensor activates. If the sensor activates and the system is armed, the alarm activates. The door opens. The system is armed. Is the alarm active?
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 5,
+  "edges": [
+    {
+      "edge_id": "edge_node_causal_rule_a55489f6032e_expresses",
+      "provenance": {
+        "original_span": "If the door opens, the sensor activates.",
+        "rule_id": "habitat.rule.single",
+        "source_id": "node_causal_rule_a55489f6032e",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_causal_rule_a55489f6032e"
+    },
+    {
+      "edge_id": "edge_node_causal_rule_e89699330df2_expresses",
+      "provenance": {
+        "original_span": "If the sensor activates and the system is armed, the alarm activates.",
+        "rule_id": "habitat.rule.conjunction",
+        "source_id": "node_causal_rule_e89699330df2",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_causal_rule_e89699330df2"
+    },
+    {
+      "edge_id": "edge_node_world_event_774626290f6e_expresses",
+      "provenance": {
+        "original_span": "The door opens.",
+        "rule_id": "habitat.event.trigger",
+        "source_id": "node_world_event_774626290f6e",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_event_774626290f6e"
+    },
+    {
+      "edge_id": "edge_node_world_fact_d0218cdf4dad_expresses",
+      "provenance": {
+        "original_span": "The system is armed.",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_d0218cdf4dad",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_d0218cdf4dad"
+    },
+    {
+      "edge_id": "edge_node_world_query_470aeb8e2e9c_expresses",
+      "provenance": {
+        "original_span": "Is the alarm active?",
+        "rule_id": "habitat.query.state",
+        "source_id": "node_world_query_470aeb8e2e9c",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_query_470aeb8e2e9c"
+    }
+  ],
+  "node_count": 6,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "If the door opens, the sensor activates. If the sensor activates and the system is armed, the alarm activates. The door opens. The system is armed. Is the alarm active?"
+      }
+    },
+    {
+      "kind": "causal_rule",
+      "label": "causal rule",
+      "node_id": "node_causal_rule_a55489f6032e",
+      "provenance": {
+        "original_span": "If the door opens, the sensor activates.",
+        "rule_id": "habitat.rule.single",
+        "source_id": "node_causal_rule_a55489f6032e",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "antecedents": [
+          "door|open|"
+        ],
+        "consequent": "sensor|active|"
+      }
+    },
+    {
+      "kind": "causal_rule",
+      "label": "causal rule",
+      "node_id": "node_causal_rule_e89699330df2",
+      "provenance": {
+        "original_span": "If the sensor activates and the system is armed, the alarm activates.",
+        "rule_id": "habitat.rule.conjunction",
+        "source_id": "node_causal_rule_e89699330df2",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "antecedents": [
+          "sensor|active|",
+          "system|armed|"
+        ],
+        "consequent": "alarm|active|"
+      }
+    },
+    {
+      "kind": "world_event",
+      "label": "world event",
+      "node_id": "node_world_event_774626290f6e",
+      "provenance": {
+        "original_span": "The door opens.",
+        "rule_id": "habitat.event.trigger",
+        "source_id": "node_world_event_774626290f6e",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "action": "opens",
+        "actor": "",
+        "target": "door"
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_d0218cdf4dad",
+      "provenance": {
+        "original_span": "The system is armed.",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_d0218cdf4dad",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "",
+        "polarity": "positive",
+        "predicate": "armed",
+        "subject": "system"
+      }
+    },
+    {
+      "kind": "world_query",
+      "label": "world query",
+      "node_id": "node_world_query_470aeb8e2e9c",
+      "provenance": {
+        "original_span": "Is the alarm active?",
+        "rule_id": "habitat.query.state",
+        "source_id": "node_world_query_470aeb8e2e9c",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "kind": "state",
+        "object_id": "",
+        "polarity": "positive",
+        "predicate": "active",
+        "subject_id": "alarm"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "5 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_event_effect_bffca385f3915c81",
+    "sem_fact_431c33580d94e5e5",
+    "sem_rule_627bf95bbd305ada",
+    "sem_rule_9612ac705b91cd83"
+  ],
+  "observation_ids": [
+    "obs_0001_4b0a204a191b",
+    "obs_0001_6ce47339ebbc",
+    "obs_0001_8b06fb342050",
+    "obs_0001_935be225e787"
+  ],
+  "staged_count": 4
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_event_effect_bffca385f3915c81",
+    "sem_fact_431c33580d94e5e5",
+    "sem_rule_627bf95bbd305ada",
+    "sem_rule_9612ac705b91cd83"
+  ],
+  "activation_edges": [
+    {
+      "depth": 1,
+      "from": "sem_rule_627bf95bbd305ada",
+      "reason": "shared:system|armed|",
+      "to": "sem_fact_431c33580d94e5e5"
+    },
+    {
+      "depth": 1,
+      "from": "sem_rule_9612ac705b91cd83",
+      "reason": "shared:door|open|",
+      "to": "sem_event_effect_bffca385f3915c81"
+    }
+  ],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [
+    "active",
+    "alarm"
+  ],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "door|open|": {
+    "negative_support_ids": [],
+    "object_id": "",
+    "positive_support_ids": [
+      "sem_event_effect_bffca385f3915c81"
+    ],
+    "predicate": "open",
+    "proposition_id": "door|open|",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "door"
+  },
+  "system|armed|": {
+    "negative_support_ids": [],
+    "object_id": "",
+    "positive_support_ids": [
+      "sem_fact_431c33580d94e5e5"
+    ],
+    "predicate": "armed",
+    "proposition_id": "system|armed|",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "system"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_event_effect_bffca385f3915c81",
+        "sem_fact_431c33580d94e5e5",
+        "sem_rule_627bf95bbd305ada",
+        "sem_rule_9612ac705b91cd83"
+      ],
+      "activation_edges": [
+        {
+          "depth": 1,
+          "from": "sem_rule_627bf95bbd305ada",
+          "reason": "shared:system|armed|",
+          "to": "sem_fact_431c33580d94e5e5"
+        },
+        {
+          "depth": 1,
+          "from": "sem_rule_9612ac705b91cd83",
+          "reason": "shared:door|open|",
+          "to": "sem_event_effect_bffca385f3915c81"
+        }
+      ],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [
+        "active",
+        "alarm"
+      ],
+      "truncated": false
+    },
+    "events": [
+      {
+        "action": "opens",
+        "actor_id": "",
+        "destination_location_id": "",
+        "effects": [
+          {
+            "object_id": "",
+            "polarity": "positive",
+            "predicate": "open",
+            "subject_id": "door"
+          }
+        ],
+        "event_id": "sem_event_371c8263b09129d5",
+        "object_id": "",
+        "preconditions": [],
+        "source_ids": [
+          "obs_0001_8b06fb342050"
+        ],
+        "supersedes": [
+          "door|open|"
+        ],
+        "target_id": "door",
+        "turn_index": 1
+      }
+    ],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "event_effect",
+        "polarity": "positive",
+        "predicate": "open",
+        "semantic_id": "sem_event_effect_bffca385f3915c81",
+        "source_ids": [
+          "obs_0001_8b06fb342050"
+        ],
+        "subject_id": "door"
+      },
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "armed",
+        "semantic_id": "sem_fact_431c33580d94e5e5",
+        "source_ids": [
+          "obs_0001_6ce47339ebbc"
+        ],
+        "subject_id": "system"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_rule_9612ac705b91cd83",
+      "sem_rule_627bf95bbd305ada",
+      "sem_event_effect_bffca385f3915c81",
+      "sem_fact_431c33580d94e5e5"
+    ],
+    "query": {
+      "kind": "state",
+      "object_id": "",
+      "polarity": "positive",
+      "predicate": "active",
+      "subject_id": "alarm"
+    },
+    "rules": [
+      {
+        "antecedents": [
+          "sensor|active|",
+          "system|armed|"
+        ],
+        "consequent": "alarm|active|",
+        "semantic_id": "sem_rule_627bf95bbd305ada",
+        "source_ids": [
+          "obs_0001_935be225e787"
+        ]
+      },
+      {
+        "antecedents": [
+          "door|open|"
+        ],
+        "consequent": "sensor|active|",
+        "semantic_id": "sem_rule_9612ac705b91cd83",
+        "source_ids": [
+          "obs_0001_4b0a204a191b"
+        ]
+      }
+    ]
+  },
+  "intent": "habitat_query",
+  "original_text": "If the door opens, the sensor activates. If the sensor activates and the system is armed, the alarm activates. The door opens. The system is armed. Is the alarm active?",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "If the door opens, the sensor activates.",
+      "provenance_id": "prov:node_causal_rule_a55489f6032e",
+      "rule_id": "habitat.rule.single",
+      "source_id": "node_causal_rule_a55489f6032e",
+      "source_type": "deterministic_rule"
+    },
+    {
+      "original_span": "If the sensor activates and the system is armed, the alarm activates.",
+      "provenance_id": "prov:node_causal_rule_e89699330df2",
+      "rule_id": "habitat.rule.conjunction",
+      "source_id": "node_causal_rule_e89699330df2",
+      "source_type": "deterministic_rule"
+    },
+    {
+      "original_span": "The door opens.",
+      "provenance_id": "prov:node_world_event_774626290f6e",
+      "rule_id": "habitat.event.trigger",
+      "source_id": "node_world_event_774626290f6e",
+      "source_type": "deterministic_rule"
+    },
+    {
+      "original_span": "The system is armed.",
+      "provenance_id": "prov:node_world_fact_d0218cdf4dad",
+      "rule_id": "habitat.fact.state",
+      "source_id": "node_world_fact_d0218cdf4dad",
+      "source_type": "deterministic_rule"
+    },
+    {
+      "original_span": "Is the alarm active?",
+      "provenance_id": "prov:node_world_query_470aeb8e2e9c",
+      "rule_id": "habitat.query.state",
+      "source_id": "node_world_query_470aeb8e2e9c",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_cc4347ab8bc4fbe5",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "boolean_rule_supported",
+    "message": "Bounded causal derivation supports the query.",
+    "passed": true,
+    "support_ids": [
+      "derived_18232c21c553726c"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "derived_18232c21c553726c"
+    ]
+  }
+]
+
+EVENTS
+[
+  {
+    "action": "opens",
+    "actor_id": "",
+    "destination_location_id": "",
+    "effects": [
+      {
+        "object_id": "",
+        "polarity": "positive",
+        "predicate": "open",
+        "subject_id": "door"
+      }
+    ],
+    "event_id": "sem_event_371c8263b09129d5",
+    "object_id": "",
+    "preconditions": [],
+    "source_ids": [
+      "obs_0001_8b06fb342050"
+    ],
+    "supersedes": [
+      "door|open|"
+    ],
+    "target_id": "door",
+    "turn_index": 1
+  }
+]
+
+STATE TRANSITIONS
+[
+  {
+    "action": "opens",
+    "actor_id": "",
+    "destination_location_id": "",
+    "effects": [
+      {
+        "object_id": "",
+        "polarity": "positive",
+        "predicate": "open",
+        "subject_id": "door"
+      }
+    ],
+    "event_id": "sem_event_371c8263b09129d5",
+    "object_id": "",
+    "preconditions": [],
+    "source_ids": [
+      "obs_0001_8b06fb342050"
+    ],
+    "supersedes": [
+      "door|open|"
+    ],
+    "target_id": "door",
+    "turn_index": 1
+  }
+]
+
+CAUSAL DERIVATIONS
+[
+  {
+    "antecedent_ids": [
+      "door|open|"
+    ],
+    "depth": 1,
+    "derived_id": "derived_78e486b3b952086b",
+    "proposition_id": "sensor|active|",
+    "rule_id": "sem_rule_9612ac705b91cd83",
+    "support_ids": [
+      "obs_0001_4b0a204a191b",
+      "sem_event_effect_bffca385f3915c81",
+      "sem_rule_9612ac705b91cd83"
+    ]
+  },
+  {
+    "antecedent_ids": [
+      "sensor|active|",
+      "system|armed|"
+    ],
+    "depth": 2,
+    "derived_id": "derived_18232c21c553726c",
+    "proposition_id": "alarm|active|",
+    "rule_id": "sem_rule_627bf95bbd305ada",
+    "support_ids": [
+      "derived_78e486b3b952086b",
+      "obs_0001_935be225e787",
+      "sem_fact_431c33580d94e5e5",
+      "sem_rule_627bf95bbd305ada"
+    ]
+  }
+]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+CONCLUSION_VERIFIED
+
+RESPONSE
+The alarm is active. This is derived through the verified causal chain.
+
+REPLAY HASH
+04b011672b500641393b87b1fe5ec1e47e5459fb614ff5bd7a47e96fb468f056
+> State reset: 3c6f3c40e6edcb1e14831a35c7e7f3f063b638c054fa54b02859532bb6dae04a
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0001_161c85f635.json
+
+INPUT
+Alice is in the hall.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_39c082033d6e_expresses",
+      "provenance": {
+        "original_span": "Alice is in the hall.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_39c082033d6e",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_39c082033d6e"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "Alice is in the hall."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_39c082033d6e",
+      "provenance": {
+        "original_span": "Alice is in the hall.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_39c082033d6e",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "hall",
+        "polarity": "positive",
+        "predicate": "at",
+        "subject": "alice"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_5ff15daf3a78e83d"
+  ],
+  "observation_ids": [
+    "obs_0001_dfd5e4200085"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_5ff15daf3a78e83d"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "alice|at|hall": {
+    "negative_support_ids": [],
+    "object_id": "hall",
+    "positive_support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "predicate": "at",
+    "proposition_id": "alice|at|hall",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "alice"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_5ff15daf3a78e83d"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "hall",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_5ff15daf3a78e83d",
+        "source_ids": [
+          "obs_0001_dfd5e4200085"
+        ],
+        "subject_id": "alice"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "Alice is in the hall.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "Alice is in the hall.",
+      "provenance_id": "prov:node_world_fact_39c082033d6e",
+      "rule_id": "habitat.fact.location",
+      "source_id": "node_world_fact_39c082033d6e",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_b31832054658d7d1",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+161c85f6350a263812c4d06b4efa714fdf5364e9f8b93160e014bfcd801f6265
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0002_015917bc21.json
+
+INPUT
+The box is in the kitchen.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_11747d59f651_expresses",
+      "provenance": {
+        "original_span": "The box is in the kitchen.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_11747d59f651",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_11747d59f651"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "The box is in the kitchen."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_11747d59f651",
+      "provenance": {
+        "original_span": "The box is in the kitchen.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_11747d59f651",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "kitchen",
+        "polarity": "positive",
+        "predicate": "at",
+        "subject": "box"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_869624f7207f8714"
+  ],
+  "observation_ids": [
+    "obs_0002_b169b4487a8d"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_5ff15daf3a78e83d",
+    "sem_fact_869624f7207f8714"
+  ],
+  "activation_edges": [
+    {
+      "depth": 1,
+      "from": "sem_fact_869624f7207f8714",
+      "reason": "shared:at",
+      "to": "sem_fact_5ff15daf3a78e83d"
+    }
+  ],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "alice|at|hall": {
+    "negative_support_ids": [],
+    "object_id": "hall",
+    "positive_support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "predicate": "at",
+    "proposition_id": "alice|at|hall",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "alice"
+  },
+  "box|at|kitchen": {
+    "negative_support_ids": [],
+    "object_id": "kitchen",
+    "positive_support_ids": [
+      "sem_fact_869624f7207f8714"
+    ],
+    "predicate": "at",
+    "proposition_id": "box|at|kitchen",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "box"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_5ff15daf3a78e83d",
+        "sem_fact_869624f7207f8714"
+      ],
+      "activation_edges": [
+        {
+          "depth": 1,
+          "from": "sem_fact_869624f7207f8714",
+          "reason": "shared:at",
+          "to": "sem_fact_5ff15daf3a78e83d"
+        }
+      ],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "hall",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_5ff15daf3a78e83d",
+        "source_ids": [
+          "obs_0001_dfd5e4200085"
+        ],
+        "subject_id": "alice"
+      },
+      {
+        "active": true,
+        "object_id": "kitchen",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_869624f7207f8714",
+        "source_ids": [
+          "obs_0002_b169b4487a8d"
+        ],
+        "subject_id": "box"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_869624f7207f8714"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "The box is in the kitchen.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "The box is in the kitchen.",
+      "provenance_id": "prov:node_world_fact_11747d59f651",
+      "rule_id": "habitat.fact.location",
+      "source_id": "node_world_fact_11747d59f651",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_6c8acf8491a14f56",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_5ff15daf3a78e83d",
+      "sem_fact_869624f7207f8714"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_5ff15daf3a78e83d",
+      "sem_fact_869624f7207f8714"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+015917bc2177c96adfb04e9dbfd74824b7e9ebc81a4a45c35f6352eeb1b30d20
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0003_d24462d7d6.json
+
+INPUT
+The red key is inside the box.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_2319a2eac222_expresses",
+      "provenance": {
+        "original_span": "The red key is inside the box.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_2319a2eac222",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_2319a2eac222"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "The red key is inside the box."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_2319a2eac222",
+      "provenance": {
+        "original_span": "The red key is inside the box.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_2319a2eac222",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "box",
+        "polarity": "positive",
+        "predicate": "inside",
+        "subject": "red_key"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_0f4ebd3babf08a6b"
+  ],
+  "observation_ids": [
+    "obs_0003_2b9ef2e3ab43"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_0f4ebd3babf08a6b",
+    "sem_fact_5ff15daf3a78e83d",
+    "sem_fact_869624f7207f8714"
+  ],
+  "activation_edges": [
+    {
+      "depth": 1,
+      "from": "sem_fact_0f4ebd3babf08a6b",
+      "reason": "shared:box",
+      "to": "sem_fact_869624f7207f8714"
+    },
+    {
+      "depth": 2,
+      "from": "sem_fact_869624f7207f8714",
+      "reason": "shared:at",
+      "to": "sem_fact_5ff15daf3a78e83d"
+    }
+  ],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "alice|at|hall": {
+    "negative_support_ids": [],
+    "object_id": "hall",
+    "positive_support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "predicate": "at",
+    "proposition_id": "alice|at|hall",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "alice"
+  },
+  "box|at|kitchen": {
+    "negative_support_ids": [],
+    "object_id": "kitchen",
+    "positive_support_ids": [
+      "sem_fact_869624f7207f8714"
+    ],
+    "predicate": "at",
+    "proposition_id": "box|at|kitchen",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "box"
+  },
+  "red_key|inside|box": {
+    "negative_support_ids": [],
+    "object_id": "box",
+    "positive_support_ids": [
+      "sem_fact_0f4ebd3babf08a6b"
+    ],
+    "predicate": "inside",
+    "proposition_id": "red_key|inside|box",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "red_key"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_0f4ebd3babf08a6b",
+        "sem_fact_5ff15daf3a78e83d",
+        "sem_fact_869624f7207f8714"
+      ],
+      "activation_edges": [
+        {
+          "depth": 1,
+          "from": "sem_fact_0f4ebd3babf08a6b",
+          "reason": "shared:box",
+          "to": "sem_fact_869624f7207f8714"
+        },
+        {
+          "depth": 2,
+          "from": "sem_fact_869624f7207f8714",
+          "reason": "shared:at",
+          "to": "sem_fact_5ff15daf3a78e83d"
+        }
+      ],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "box",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "inside",
+        "semantic_id": "sem_fact_0f4ebd3babf08a6b",
+        "source_ids": [
+          "obs_0003_2b9ef2e3ab43"
+        ],
+        "subject_id": "red_key"
+      },
+      {
+        "active": true,
+        "object_id": "hall",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_5ff15daf3a78e83d",
+        "source_ids": [
+          "obs_0001_dfd5e4200085"
+        ],
+        "subject_id": "alice"
+      },
+      {
+        "active": true,
+        "object_id": "kitchen",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_869624f7207f8714",
+        "source_ids": [
+          "obs_0002_b169b4487a8d"
+        ],
+        "subject_id": "box"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_0f4ebd3babf08a6b"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "The red key is inside the box.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "The red key is inside the box.",
+      "provenance_id": "prov:node_world_fact_2319a2eac222",
+      "rule_id": "habitat.fact.location",
+      "source_id": "node_world_fact_2319a2eac222",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_aeb5e62038342110",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_0f4ebd3babf08a6b",
+      "sem_fact_5ff15daf3a78e83d",
+      "sem_fact_869624f7207f8714"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_0f4ebd3babf08a6b",
+      "sem_fact_5ff15daf3a78e83d",
+      "sem_fact_869624f7207f8714"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+d24462d7d612b3c0cf7745d0e45e0cf24f44ae32bc9978394fd091bc85f1d93b
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0004_121e0400bf.json
+
+INPUT
+The north door is locked.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_43347ce2e0bf_expresses",
+      "provenance": {
+        "original_span": "The north door is locked.",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_43347ce2e0bf",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_43347ce2e0bf"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "The north door is locked."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_43347ce2e0bf",
+      "provenance": {
+        "original_span": "The north door is locked.",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_43347ce2e0bf",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "",
+        "polarity": "positive",
+        "predicate": "locked",
+        "subject": "north_door"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_ee4027eed1615400"
+  ],
+  "observation_ids": [
+    "obs_0004_438560cea883"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_ee4027eed1615400"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [
+    "sem_fact_0f4ebd3babf08a6b",
+    "sem_fact_5ff15daf3a78e83d",
+    "sem_fact_869624f7207f8714"
+  ],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "north_door|locked|": {
+    "negative_support_ids": [],
+    "object_id": "",
+    "positive_support_ids": [
+      "sem_fact_ee4027eed1615400"
+    ],
+    "predicate": "locked",
+    "proposition_id": "north_door|locked|",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "north_door"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_ee4027eed1615400"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [
+        "sem_fact_0f4ebd3babf08a6b",
+        "sem_fact_5ff15daf3a78e83d",
+        "sem_fact_869624f7207f8714"
+      ],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "locked",
+        "semantic_id": "sem_fact_ee4027eed1615400",
+        "source_ids": [
+          "obs_0004_438560cea883"
+        ],
+        "subject_id": "north_door"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_ee4027eed1615400"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "The north door is locked.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "The north door is locked.",
+      "provenance_id": "prov:node_world_fact_43347ce2e0bf",
+      "rule_id": "habitat.fact.state",
+      "source_id": "node_world_fact_43347ce2e0bf",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_b05b01fe7a39c6eb",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_ee4027eed1615400"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_ee4027eed1615400"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+121e0400bf1ea12b0abb83ed8dd2a6ba1f1f81d569778dfc7d1fb92a9feffb66
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0005_a8d3607d83.json
+
+INPUT
+The red key unlocks the north door.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_action_compatibility_58fce6818121_expresses",
+      "provenance": {
+        "original_span": "The red key unlocks the north door.",
+        "rule_id": "habitat.action.compatibility",
+        "source_id": "node_action_compatibility_58fce6818121",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_action_compatibility_58fce6818121"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "The red key unlocks the north door."
+      }
+    },
+    {
+      "kind": "action_compatibility",
+      "label": "action compatibility",
+      "node_id": "node_action_compatibility_58fce6818121",
+      "provenance": {
+        "original_span": "The red key unlocks the north door.",
+        "rule_id": "habitat.action.compatibility",
+        "source_id": "node_action_compatibility_58fce6818121",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "north_door",
+        "subject": "red_key"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_448bbb0dbfddc3dc"
+  ],
+  "observation_ids": [
+    "obs_0005_b573328fdcd7"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_0f4ebd3babf08a6b",
+    "sem_fact_448bbb0dbfddc3dc",
+    "sem_fact_5ff15daf3a78e83d",
+    "sem_fact_869624f7207f8714",
+    "sem_fact_ee4027eed1615400"
+  ],
+  "activation_edges": [
+    {
+      "depth": 1,
+      "from": "sem_fact_448bbb0dbfddc3dc",
+      "reason": "shared:red_key",
+      "to": "sem_fact_0f4ebd3babf08a6b"
+    },
+    {
+      "depth": 1,
+      "from": "sem_fact_448bbb0dbfddc3dc",
+      "reason": "shared:north_door",
+      "to": "sem_fact_ee4027eed1615400"
+    },
+    {
+      "depth": 2,
+      "from": "sem_fact_0f4ebd3babf08a6b",
+      "reason": "shared:box",
+      "to": "sem_fact_869624f7207f8714"
+    },
+    {
+      "depth": 3,
+      "from": "sem_fact_869624f7207f8714",
+      "reason": "shared:at",
+      "to": "sem_fact_5ff15daf3a78e83d"
+    }
+  ],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "alice|at|hall": {
+    "negative_support_ids": [],
+    "object_id": "hall",
+    "positive_support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "predicate": "at",
+    "proposition_id": "alice|at|hall",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "alice"
+  },
+  "box|at|kitchen": {
+    "negative_support_ids": [],
+    "object_id": "kitchen",
+    "positive_support_ids": [
+      "sem_fact_869624f7207f8714"
+    ],
+    "predicate": "at",
+    "proposition_id": "box|at|kitchen",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "box"
+  },
+  "north_door|locked|": {
+    "negative_support_ids": [],
+    "object_id": "",
+    "positive_support_ids": [
+      "sem_fact_ee4027eed1615400"
+    ],
+    "predicate": "locked",
+    "proposition_id": "north_door|locked|",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "north_door"
+  },
+  "red_key|inside|box": {
+    "negative_support_ids": [],
+    "object_id": "box",
+    "positive_support_ids": [
+      "sem_fact_0f4ebd3babf08a6b"
+    ],
+    "predicate": "inside",
+    "proposition_id": "red_key|inside|box",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "red_key"
+  },
+  "red_key|unlocks|north_door": {
+    "negative_support_ids": [],
+    "object_id": "north_door",
+    "positive_support_ids": [
+      "sem_fact_448bbb0dbfddc3dc"
+    ],
+    "predicate": "unlocks",
+    "proposition_id": "red_key|unlocks|north_door",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "red_key"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_0f4ebd3babf08a6b",
+        "sem_fact_448bbb0dbfddc3dc",
+        "sem_fact_5ff15daf3a78e83d",
+        "sem_fact_869624f7207f8714",
+        "sem_fact_ee4027eed1615400"
+      ],
+      "activation_edges": [
+        {
+          "depth": 1,
+          "from": "sem_fact_448bbb0dbfddc3dc",
+          "reason": "shared:red_key",
+          "to": "sem_fact_0f4ebd3babf08a6b"
+        },
+        {
+          "depth": 1,
+          "from": "sem_fact_448bbb0dbfddc3dc",
+          "reason": "shared:north_door",
+          "to": "sem_fact_ee4027eed1615400"
+        },
+        {
+          "depth": 2,
+          "from": "sem_fact_0f4ebd3babf08a6b",
+          "reason": "shared:box",
+          "to": "sem_fact_869624f7207f8714"
+        },
+        {
+          "depth": 3,
+          "from": "sem_fact_869624f7207f8714",
+          "reason": "shared:at",
+          "to": "sem_fact_5ff15daf3a78e83d"
+        }
+      ],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "box",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "inside",
+        "semantic_id": "sem_fact_0f4ebd3babf08a6b",
+        "source_ids": [
+          "obs_0003_2b9ef2e3ab43"
+        ],
+        "subject_id": "red_key"
+      },
+      {
+        "active": true,
+        "object_id": "north_door",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "unlocks",
+        "semantic_id": "sem_fact_448bbb0dbfddc3dc",
+        "source_ids": [
+          "obs_0005_b573328fdcd7"
+        ],
+        "subject_id": "red_key"
+      },
+      {
+        "active": true,
+        "object_id": "hall",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_5ff15daf3a78e83d",
+        "source_ids": [
+          "obs_0001_dfd5e4200085"
+        ],
+        "subject_id": "alice"
+      },
+      {
+        "active": true,
+        "object_id": "kitchen",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_869624f7207f8714",
+        "source_ids": [
+          "obs_0002_b169b4487a8d"
+        ],
+        "subject_id": "box"
+      },
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "locked",
+        "semantic_id": "sem_fact_ee4027eed1615400",
+        "source_ids": [
+          "obs_0004_438560cea883"
+        ],
+        "subject_id": "north_door"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_448bbb0dbfddc3dc"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "The red key unlocks the north door.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "The red key unlocks the north door.",
+      "provenance_id": "prov:node_action_compatibility_58fce6818121",
+      "rule_id": "habitat.action.compatibility",
+      "source_id": "node_action_compatibility_58fce6818121",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_d402d16dfa665329",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_0f4ebd3babf08a6b",
+      "sem_fact_448bbb0dbfddc3dc",
+      "sem_fact_5ff15daf3a78e83d",
+      "sem_fact_869624f7207f8714",
+      "sem_fact_ee4027eed1615400"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_0f4ebd3babf08a6b",
+      "sem_fact_448bbb0dbfddc3dc",
+      "sem_fact_5ff15daf3a78e83d",
+      "sem_fact_869624f7207f8714",
+      "sem_fact_ee4027eed1615400"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+a8d3607d838df9607743cceeafd2333abf337e4d2f106530fd67e7b4ea24fd23
+> [ACCEPT: PLAN_VERIFIED] 1. Move alice from hall to kitchen.
+2. Take red_key from its container.
+3. Move alice from kitchen to north_door.
+4. Unlock north_door with red_key.
+5. Open north_door.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0006_0809aa5985.json
+
+INPUT
+How can Alice open the north door?
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_query_acb13dbdba41_expresses",
+      "provenance": {
+        "original_span": "How can Alice open the north door?",
+        "rule_id": "habitat.query.plan",
+        "source_id": "node_world_query_acb13dbdba41",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_query_acb13dbdba41"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "How can Alice open the north door?"
+      }
+    },
+    {
+      "kind": "world_query",
+      "label": "world query",
+      "node_id": "node_world_query_acb13dbdba41",
+      "provenance": {
+        "original_span": "How can Alice open the north door?",
+        "rule_id": "habitat.query.plan",
+        "source_id": "node_world_query_acb13dbdba41",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "kind": "plan",
+        "object_id": "north_door",
+        "polarity": "positive",
+        "predicate": "open",
+        "subject_id": "alice"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [],
+  "observation_ids": [],
+  "staged_count": 0
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_0f4ebd3babf08a6b",
+    "sem_fact_448bbb0dbfddc3dc",
+    "sem_fact_5ff15daf3a78e83d",
+    "sem_fact_869624f7207f8714",
+    "sem_fact_ee4027eed1615400"
+  ],
+  "activation_edges": [
+    {
+      "depth": 1,
+      "from": "sem_fact_448bbb0dbfddc3dc",
+      "reason": "shared:red_key",
+      "to": "sem_fact_0f4ebd3babf08a6b"
+    },
+    {
+      "depth": 1,
+      "from": "sem_fact_5ff15daf3a78e83d",
+      "reason": "shared:at",
+      "to": "sem_fact_869624f7207f8714"
+    }
+  ],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [
+    "alice",
+    "north_door",
+    "open"
+  ],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "alice|at|hall": {
+    "negative_support_ids": [],
+    "object_id": "hall",
+    "positive_support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "predicate": "at",
+    "proposition_id": "alice|at|hall",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "alice"
+  },
+  "box|at|kitchen": {
+    "negative_support_ids": [],
+    "object_id": "kitchen",
+    "positive_support_ids": [
+      "sem_fact_869624f7207f8714"
+    ],
+    "predicate": "at",
+    "proposition_id": "box|at|kitchen",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "box"
+  },
+  "north_door|locked|": {
+    "negative_support_ids": [],
+    "object_id": "",
+    "positive_support_ids": [
+      "sem_fact_ee4027eed1615400"
+    ],
+    "predicate": "locked",
+    "proposition_id": "north_door|locked|",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "north_door"
+  },
+  "red_key|inside|box": {
+    "negative_support_ids": [],
+    "object_id": "box",
+    "positive_support_ids": [
+      "sem_fact_0f4ebd3babf08a6b"
+    ],
+    "predicate": "inside",
+    "proposition_id": "red_key|inside|box",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "red_key"
+  },
+  "red_key|unlocks|north_door": {
+    "negative_support_ids": [],
+    "object_id": "north_door",
+    "positive_support_ids": [
+      "sem_fact_448bbb0dbfddc3dc"
+    ],
+    "predicate": "unlocks",
+    "proposition_id": "red_key|unlocks|north_door",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "red_key"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_0f4ebd3babf08a6b",
+        "sem_fact_448bbb0dbfddc3dc",
+        "sem_fact_5ff15daf3a78e83d",
+        "sem_fact_869624f7207f8714",
+        "sem_fact_ee4027eed1615400"
+      ],
+      "activation_edges": [
+        {
+          "depth": 1,
+          "from": "sem_fact_448bbb0dbfddc3dc",
+          "reason": "shared:red_key",
+          "to": "sem_fact_0f4ebd3babf08a6b"
+        },
+        {
+          "depth": 1,
+          "from": "sem_fact_5ff15daf3a78e83d",
+          "reason": "shared:at",
+          "to": "sem_fact_869624f7207f8714"
+        }
+      ],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [
+        "alice",
+        "north_door",
+        "open"
+      ],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "box",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "inside",
+        "semantic_id": "sem_fact_0f4ebd3babf08a6b",
+        "source_ids": [
+          "obs_0003_2b9ef2e3ab43"
+        ],
+        "subject_id": "red_key"
+      },
+      {
+        "active": true,
+        "object_id": "north_door",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "unlocks",
+        "semantic_id": "sem_fact_448bbb0dbfddc3dc",
+        "source_ids": [
+          "obs_0005_b573328fdcd7"
+        ],
+        "subject_id": "red_key"
+      },
+      {
+        "active": true,
+        "object_id": "hall",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_5ff15daf3a78e83d",
+        "source_ids": [
+          "obs_0001_dfd5e4200085"
+        ],
+        "subject_id": "alice"
+      },
+      {
+        "active": true,
+        "object_id": "kitchen",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_869624f7207f8714",
+        "source_ids": [
+          "obs_0002_b169b4487a8d"
+        ],
+        "subject_id": "box"
+      },
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "locked",
+        "semantic_id": "sem_fact_ee4027eed1615400",
+        "source_ids": [
+          "obs_0004_438560cea883"
+        ],
+        "subject_id": "north_door"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [],
+    "query": {
+      "kind": "plan",
+      "object_id": "north_door",
+      "polarity": "positive",
+      "predicate": "open",
+      "subject_id": "alice"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "How can Alice open the north door?",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "How can Alice open the north door?",
+      "provenance_id": "prov:node_world_query_acb13dbdba41",
+      "rule_id": "habitat.query.plan",
+      "source_id": "node_world_query_acb13dbdba41",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_a151451314503716",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "verified_plan_exists",
+    "message": "Every plan step has verified preconditions and declared effects.",
+    "passed": true,
+    "support_ids": [
+      "habitat_open_topology",
+      "sem_fact_0f4ebd3babf08a6b",
+      "sem_fact_448bbb0dbfddc3dc",
+      "sem_fact_5ff15daf3a78e83d",
+      "sem_fact_ee4027eed1615400",
+      "verified_move_effect",
+      "verified_unlock_effect"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "habitat_open_topology",
+      "sem_fact_0f4ebd3babf08a6b",
+      "sem_fact_448bbb0dbfddc3dc",
+      "sem_fact_5ff15daf3a78e83d",
+      "sem_fact_ee4027eed1615400",
+      "verified_move_effect",
+      "verified_unlock_effect"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{
+  "chosen_plan": [
+    {
+      "action": "Move alice from hall to kitchen",
+      "effects": [
+        {
+          "object_id": "kitchen",
+          "polarity": "positive",
+          "predicate": "at",
+          "subject_id": "alice"
+        }
+      ],
+      "precondition_checks": [
+        {
+          "expected": "SUPPORTED_TRUE",
+          "observed": "SUPPORTED_TRUE",
+          "passed": true,
+          "proposition_id": "alice|at|hall",
+          "support_ids": [
+            "sem_fact_5ff15daf3a78e83d"
+          ]
+        }
+      ],
+      "resulting_state_hash": "87fb06468f80a50b4aa789b9e235a0819676e2d128481ae73ee0f60ff4f5f805",
+      "step_index": 1,
+      "support_ids": [
+        "sem_fact_5ff15daf3a78e83d"
+      ]
+    },
+    {
+      "action": "Take red_key from its container",
+      "effects": [
+        {
+          "object_id": "red_key",
+          "polarity": "positive",
+          "predicate": "carries",
+          "subject_id": "alice"
+        }
+      ],
+      "precondition_checks": [
+        {
+          "expected": "SUPPORTED_TRUE",
+          "observed": "SUPPORTED_TRUE",
+          "passed": true,
+          "proposition_id": "alice|at|kitchen",
+          "support_ids": [
+            "habitat_open_topology"
+          ]
+        },
+        {
+          "expected": "SUPPORTED_TRUE",
+          "observed": "SUPPORTED_TRUE",
+          "passed": true,
+          "proposition_id": "red_key|at|kitchen",
+          "support_ids": [
+            "sem_fact_0f4ebd3babf08a6b"
+          ]
+        }
+      ],
+      "resulting_state_hash": "46ed088a16b02661e17c89e9303f90cae1e30b6a24c4e8649ac8fafd5dc8f737",
+      "step_index": 2,
+      "support_ids": [
+        "habitat_open_topology",
+        "sem_fact_0f4ebd3babf08a6b"
+      ]
+    },
+    {
+      "action": "Move alice from kitchen to north_door",
+      "effects": [
+        {
+          "object_id": "north_door",
+          "polarity": "positive",
+          "predicate": "at",
+          "subject_id": "alice"
+        }
+      ],
+      "precondition_checks": [
+        {
+          "expected": "SUPPORTED_TRUE",
+          "observed": "SUPPORTED_TRUE",
+          "passed": true,
+          "proposition_id": "alice|at|kitchen",
+          "support_ids": [
+            "habitat_open_topology"
+          ]
+        }
+      ],
+      "resulting_state_hash": "771b312e9d4492d8edd8836b53dc68567eb3a9dfed814b854fc34e09daa0a2f2",
+      "step_index": 3,
+      "support_ids": [
+        "habitat_open_topology"
+      ]
+    },
+    {
+      "action": "Unlock north_door with red_key",
+      "effects": [
+        {
+          "object_id": "",
+          "polarity": "negative",
+          "predicate": "locked",
+          "subject_id": "north_door"
+        }
+      ],
+      "precondition_checks": [
+        {
+          "expected": "SUPPORTED_TRUE",
+          "observed": "SUPPORTED_TRUE",
+          "passed": true,
+          "proposition_id": "north_door|locked|",
+          "support_ids": [
+            "sem_fact_ee4027eed1615400"
+          ]
+        },
+        {
+          "expected": "SUPPORTED_TRUE",
+          "observed": "SUPPORTED_TRUE",
+          "passed": true,
+          "proposition_id": "alice|carries|red_key",
+          "support_ids": [
+            "sem_fact_448bbb0dbfddc3dc"
+          ]
+        }
+      ],
+      "resulting_state_hash": "597051143c0ae3708eb8544659e849dea08c3853002ee84b7c3442b61d2610d3",
+      "step_index": 4,
+      "support_ids": [
+        "sem_fact_448bbb0dbfddc3dc",
+        "sem_fact_ee4027eed1615400"
+      ]
+    },
+    {
+      "action": "Open north_door",
+      "effects": [
+        {
+          "object_id": "",
+          "polarity": "positive",
+          "predicate": "open",
+          "subject_id": "north_door"
+        }
+      ],
+      "precondition_checks": [
+        {
+          "expected": "SUPPORTED_FALSE",
+          "observed": "SUPPORTED_FALSE",
+          "passed": true,
+          "proposition_id": "north_door|locked|",
+          "support_ids": [
+            "verified_unlock_effect"
+          ]
+        },
+        {
+          "expected": "SUPPORTED_TRUE",
+          "observed": "SUPPORTED_TRUE",
+          "passed": true,
+          "proposition_id": "alice|at|north_door",
+          "support_ids": [
+            "verified_move_effect"
+          ]
+        }
+      ],
+      "resulting_state_hash": "744a39fce255b2f325f5c338f02281bb52bb29c37f5aa816ee93338af0d859cb",
+      "step_index": 5,
+      "support_ids": [
+        "verified_move_effect",
+        "verified_unlock_effect"
+      ]
+    }
+  ],
+  "explored_state_count": 10,
+  "final_state_hash": "744a39fce255b2f325f5c338f02281bb52bb29c37f5aa816ee93338af0d859cb",
+  "goal": "north_door|open|",
+  "initial_state_hash": "fc1b19ca258dce02d22ce53d50d6764547d311458494167561ba7af169daa941",
+  "max_depth": 8,
+  "rejected_alternatives": [
+    "open:target_locked"
+  ],
+  "replay_hash": "6dd1428d6a8b0b21d2055f8d3a281ea7e886e8c1226148c02d15491fcffbe9fc"
+}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PLAN_VERIFIED
+
+RESPONSE
+1. Move alice from hall to kitchen.
+2. Take red_key from its container.
+3. Move alice from kitchen to north_door.
+4. Unlock north_door with red_key.
+5. Open north_door.
+
+REPLAY HASH
+0809aa5985d2cb54504653538bbd05fbc31aa406f6adfa93ae1b9d4c4b1441e3
+> State reset: 3c6f3c40e6edcb1e14831a35c7e7f3f063b638c054fa54b02859532bb6dae04a
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0001_161c85f635.json
+
+INPUT
+Alice is in the hall.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_39c082033d6e_expresses",
+      "provenance": {
+        "original_span": "Alice is in the hall.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_39c082033d6e",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_39c082033d6e"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "Alice is in the hall."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_39c082033d6e",
+      "provenance": {
+        "original_span": "Alice is in the hall.",
+        "rule_id": "habitat.fact.location",
+        "source_id": "node_world_fact_39c082033d6e",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "hall",
+        "polarity": "positive",
+        "predicate": "at",
+        "subject": "alice"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_5ff15daf3a78e83d"
+  ],
+  "observation_ids": [
+    "obs_0001_dfd5e4200085"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_5ff15daf3a78e83d"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "alice|at|hall": {
+    "negative_support_ids": [],
+    "object_id": "hall",
+    "positive_support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "predicate": "at",
+    "proposition_id": "alice|at|hall",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "alice"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_5ff15daf3a78e83d"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "hall",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_5ff15daf3a78e83d",
+        "source_ids": [
+          "obs_0001_dfd5e4200085"
+        ],
+        "subject_id": "alice"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "Alice is in the hall.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "Alice is in the hall.",
+      "provenance_id": "prov:node_world_fact_39c082033d6e",
+      "rule_id": "habitat.fact.location",
+      "source_id": "node_world_fact_39c082033d6e",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_b31832054658d7d1",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+161c85f6350a263812c4d06b4efa714fdf5364e9f8b93160e014bfcd801f6265
+> [ACCEPT: PREMISE_RECORDED] Recorded as a user-provided premise.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0002_7c5795a4ff.json
+
+INPUT
+The north door is locked.
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_fact_43347ce2e0bf_expresses",
+      "provenance": {
+        "original_span": "The north door is locked.",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_43347ce2e0bf",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_fact_43347ce2e0bf"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "The north door is locked."
+      }
+    },
+    {
+      "kind": "world_fact",
+      "label": "world fact",
+      "node_id": "node_world_fact_43347ce2e0bf",
+      "provenance": {
+        "original_span": "The north door is locked.",
+        "rule_id": "habitat.fact.state",
+        "source_id": "node_world_fact_43347ce2e0bf",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "object": "",
+        "polarity": "positive",
+        "predicate": "locked",
+        "subject": "north_door"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [
+    "sem_fact_ee4027eed1615400"
+  ],
+  "observation_ids": [
+    "obs_0002_438560cea883"
+  ],
+  "staged_count": 1
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_ee4027eed1615400"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [
+    "sem_fact_5ff15daf3a78e83d"
+  ],
+  "max_depth": 4,
+  "seed_ids": [],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "north_door|locked|": {
+    "negative_support_ids": [],
+    "object_id": "",
+    "positive_support_ids": [
+      "sem_fact_ee4027eed1615400"
+    ],
+    "predicate": "locked",
+    "proposition_id": "north_door|locked|",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "north_door"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_ee4027eed1615400"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [
+        "sem_fact_5ff15daf3a78e83d"
+      ],
+      "max_depth": 4,
+      "seed_ids": [],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "locked",
+        "semantic_id": "sem_fact_ee4027eed1615400",
+        "source_ids": [
+          "obs_0002_438560cea883"
+        ],
+        "subject_id": "north_door"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [
+      "sem_fact_ee4027eed1615400"
+    ],
+    "query": {
+      "kind": "record"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "The north door is locked.",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "The north door is locked.",
+      "provenance_id": "prov:node_world_fact_43347ce2e0bf",
+      "rule_id": "habitat.fact.state",
+      "source_id": "node_world_fact_43347ce2e0bf",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_b05b01fe7a39c6eb",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "premises_representable",
+    "message": "Habitat premises and effects are structurally representable.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_ee4027eed1615400"
+    ]
+  },
+  {
+    "check_id": "renderer_support_available",
+    "message": "Approved structured answer has support IDs.",
+    "passed": true,
+    "support_ids": [
+      "sem_fact_ee4027eed1615400"
+    ]
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+ACCEPT
+
+DECISION SUBTYPE
+PREMISE_RECORDED
+
+RESPONSE
+Recorded as a user-provided premise.
+
+REPLAY HASH
+7c5795a4ffa36898b88eb88b9051475f4d8245eaae0c2d8c4af1a2b66267759c
+> [REJECT: REJECT_UNREACHABLE] I cannot construct a supported plan within the bounded habitat because required preconditions are missing.
+Receipt: artifacts/habitat_v2/demo_receipts/turn_0003_689cd0ce47.json
+
+INPUT
+How can Alice open the north door?
+
+PARSE
+ok
+
+MEANING GRAPH
+{
+  "edge_count": 1,
+  "edges": [
+    {
+      "edge_id": "edge_node_world_query_acb13dbdba41_expresses",
+      "provenance": {
+        "original_span": "How can Alice open the north door?",
+        "rule_id": "habitat.query.plan",
+        "source_id": "node_world_query_acb13dbdba41",
+        "source_type": "deterministic_rule"
+      },
+      "relation": "expresses",
+      "source_id": "node_act_root",
+      "target_id": "node_world_query_acb13dbdba41"
+    }
+  ],
+  "node_count": 2,
+  "nodes": [
+    {
+      "kind": "dialogue_act",
+      "label": "reasoning_input",
+      "node_id": "node_act_root",
+      "provenance": {
+        "source_id": "turn",
+        "source_type": "user_input"
+      },
+      "slots": {
+        "raw": "How can Alice open the north door?"
+      }
+    },
+    {
+      "kind": "world_query",
+      "label": "world query",
+      "node_id": "node_world_query_acb13dbdba41",
+      "provenance": {
+        "original_span": "How can Alice open the north door?",
+        "rule_id": "habitat.query.plan",
+        "source_id": "node_world_query_acb13dbdba41",
+        "source_type": "deterministic_rule"
+      },
+      "slots": {
+        "kind": "plan",
+        "object_id": "north_door",
+        "polarity": "positive",
+        "predicate": "open",
+        "subject_id": "alice"
+      }
+    }
+  ],
+  "root_node_id": "node_act_root",
+  "summary": "1 bounded reasoning structures",
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}
+
+SEMANTIC MERGE
+{
+  "merged_semantic_ids": [],
+  "new_semantic_ids": [],
+  "observation_ids": [],
+  "staged_count": 0
+}
+
+CLUSTER ACTIVATION
+{
+  "activated_semantic_ids": [
+    "sem_fact_5ff15daf3a78e83d",
+    "sem_fact_ee4027eed1615400"
+  ],
+  "activation_edges": [],
+  "dormant_semantic_ids": [],
+  "max_depth": 4,
+  "seed_ids": [
+    "alice",
+    "north_door",
+    "open"
+  ],
+  "truncated": false
+}
+
+SIGNED WORLD STATE
+{
+  "alice|at|hall": {
+    "negative_support_ids": [],
+    "object_id": "hall",
+    "positive_support_ids": [
+      "sem_fact_5ff15daf3a78e83d"
+    ],
+    "predicate": "at",
+    "proposition_id": "alice|at|hall",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "alice"
+  },
+  "north_door|locked|": {
+    "negative_support_ids": [],
+    "object_id": "",
+    "positive_support_ids": [
+      "sem_fact_ee4027eed1615400"
+    ],
+    "predicate": "locked",
+    "proposition_id": "north_door|locked|",
+    "status": "SUPPORTED_TRUE",
+    "subject_id": "north_door"
+  }
+}
+
+BRIDGE
+{
+  "ambiguities": [],
+  "bridge_warnings": [],
+  "claims": [],
+  "constraints": [],
+  "entities": [],
+  "habitat": {
+    "activation": {
+      "activated_semantic_ids": [
+        "sem_fact_5ff15daf3a78e83d",
+        "sem_fact_ee4027eed1615400"
+      ],
+      "activation_edges": [],
+      "dormant_semantic_ids": [],
+      "max_depth": 4,
+      "seed_ids": [
+        "alice",
+        "north_door",
+        "open"
+      ],
+      "truncated": false
+    },
+    "events": [],
+    "facts": [
+      {
+        "active": true,
+        "object_id": "hall",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "at",
+        "semantic_id": "sem_fact_5ff15daf3a78e83d",
+        "source_ids": [
+          "obs_0001_dfd5e4200085"
+        ],
+        "subject_id": "alice"
+      },
+      {
+        "active": true,
+        "object_id": "",
+        "origin": "user_premise",
+        "polarity": "positive",
+        "predicate": "locked",
+        "semantic_id": "sem_fact_ee4027eed1615400",
+        "source_ids": [
+          "obs_0002_438560cea883"
+        ],
+        "subject_id": "north_door"
+      }
+    ],
+    "max_derived_facts": 64,
+    "max_inference_depth": 4,
+    "max_plan_depth": 8,
+    "memory_candidate_ids": [],
+    "query": {
+      "kind": "plan",
+      "object_id": "north_door",
+      "polarity": "positive",
+      "predicate": "open",
+      "subject_id": "alice"
+    },
+    "rules": []
+  },
+  "intent": "habitat_query",
+  "original_text": "How can Alice open the north door?",
+  "provenance": [
+    {
+      "original_span": "",
+      "provenance_id": "prov:node_act_root",
+      "rule_id": "",
+      "source_id": "node_act_root",
+      "source_type": "user_input"
+    },
+    {
+      "original_span": "How can Alice open the north door?",
+      "provenance_id": "prov:node_world_query_acb13dbdba41",
+      "rule_id": "habitat.query.plan",
+      "source_id": "node_world_query_acb13dbdba41",
+      "source_type": "deterministic_rule"
+    }
+  ],
+  "relations": [],
+  "repair_actions": [],
+  "request_id": "request_a151451314503716",
+  "requested_output": "natural_language_response"
+}
+
+VERIFIER CHECKS
+[
+  {
+    "check_id": "request_schema_valid",
+    "message": "Structured request loaded.",
+    "passed": true,
+    "support_ids": []
+  },
+  {
+    "check_id": "verified_plan_exists",
+    "message": "No bounded plan satisfies every precondition.",
+    "passed": false,
+    "support_ids": []
+  }
+]
+
+EVENTS
+[]
+
+STATE TRANSITIONS
+[]
+
+CAUSAL DERIVATIONS
+[]
+
+PLANNING
+{}
+
+REPAIR
+None
+
+FINAL DECISION
+REJECT
+
+DECISION SUBTYPE
+REJECT_UNREACHABLE
+
+RESPONSE
+I cannot construct a supported plan within the bounded habitat because required preconditions are missing.
+
+REPLAY HASH
+689cd0ce476ecec418f74ecbff90d6713aeb8ef9161f541b7f637aa5f155b8cd
+> 
+Script done on 2026-06-21 14:14:56+01:00 [COMMAND_EXIT_CODE="0"]
