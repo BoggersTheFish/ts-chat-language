@@ -1,0 +1,2585 @@
+{
+  "average_probe_time_ms": 0.4235,
+  "case_count": 165,
+  "decision_distribution": {
+    "ACCEPT": 48,
+    "REJECT": 81,
+    "REPAIR": 36
+  },
+  "execution_errors": 0,
+  "failure_distribution": {
+    "contamination_attempt": {
+      "REJECT": 15,
+      "cases": 15,
+      "contamination": 0,
+      "unsupported_accepts": 0
+    },
+    "contradiction": {
+      "REJECT": 15,
+      "cases": 15,
+      "contamination": 0,
+      "unsupported_accepts": 0
+    },
+    "malformed_input": {
+      "REPAIR": 15,
+      "cases": 15,
+      "contamination": 0,
+      "unsupported_accepts": 0
+    },
+    "misleading_universal": {
+      "REJECT": 15,
+      "cases": 15,
+      "contamination": 0,
+      "unsupported_accepts": 0
+    },
+    "multiple_names": {
+      "REJECT": 15,
+      "cases": 15,
+      "contamination": 0,
+      "unsupported_accepts": 0
+    },
+    "negation": {
+      "ACCEPT": 9,
+      "REJECT": 6,
+      "cases": 15,
+      "contamination": 9,
+      "unsupported_accepts": 9
+    },
+    "paraphrase": {
+      "ACCEPT": 9,
+      "REPAIR": 6,
+      "cases": 15,
+      "contamination": 0,
+      "unsupported_accepts": 0
+    },
+    "pronoun_ambiguity": {
+      "REPAIR": 15,
+      "cases": 15,
+      "contamination": 0,
+      "unsupported_accepts": 0
+    },
+    "reordered_clauses": {
+      "ACCEPT": 15,
+      "cases": 15,
+      "contamination": 0,
+      "unsupported_accepts": 0
+    },
+    "strange_punctuation": {
+      "ACCEPT": 15,
+      "cases": 15,
+      "contamination": 0,
+      "unsupported_accepts": 0
+    },
+    "unsupported_causal_jump": {
+      "REJECT": 15,
+      "cases": 15,
+      "contamination": 0,
+      "unsupported_accepts": 0
+    }
+  },
+  "method": "first-run adversarial boundary characterization; no case-specific tuning",
+  "rejected_claim_contamination": 9,
+  "results": [
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_001",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "83b514a3c3fd58dc01ab089f56cf0646a0adf7672ac1028bbda8e6db731a658e",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_002",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "8e4da0f3f5b91782bb6dcadc9d8c5ea29bddecebc527a6cfdf2696130ef50295",
+      "response": "Alice is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_003",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "20ed10e4e585e01b709ef7fae9aa4e60895467d9fa3c911cf8a29ca19b4ab6d2",
+      "response": "Alice is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_004",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "574b39581ab506014492f062b389343d9390042de072ef18cf94eb05829bec85",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_005",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "53a0ca9d527817533e48a54cd4b0a8eb9c1713c21aea3bae738d953dc81ac640",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_006",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "b0d9065eef81c9ff2867eeb3a2a5155a188b007c390b48b6524a591d20384879",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_007",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "73cb4b6d4b4b6dc99ffcdddf1a6683e9776d49d7d6f0372c147a65704ddbeb2a",
+      "response": "Mina is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_008",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "52fd9d68230256759cd6e370e67fdb2d58fb8d4449c86631d9bc6d56a053eb5c",
+      "response": "Mina is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_009",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "a1a0deeafacc04990a9f969a42f16db69b13fbb2eb01fc2b660b84a185e373c8",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_010",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "fd97c0809188d92678f7c2160485c9aacb678ecd9f2b2cb5d6ba180385c27fb6",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_011",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "977be40ca109fe52bb9dddfb165d37e42ba3e2606566013ad82665c700a9842e",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_012",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "0a25f620fd8f6c9847d5cb29c653fc15ccc940434b26c2cae11ab98e81a2a114",
+      "response": "Priya is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_013",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "1079cb9252b8d78865d06efc1f44e5c022980abf540e5531f2f6d1bbf1babc49",
+      "response": "Priya is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_014",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "155ca6a3e8012f67e62d294635279c19a2f2ca6e0c6c4cec23fc787978b6db35",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "paraphrase",
+      "id": "paraphrase_015",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "0cd2a6ce86dbbf9bcb26a236ce0037fc91bfafc89d2696798ff6f814e0f1f12c",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_001",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "14b0b8828725bba0d8f8f1c5214f8300421609f15ed8475a613f6678b5d3e5f0",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_002",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "d8d254ddf266771a67efd3ac79ea47a39c4336f14cd0c6323c1a568a902c7240",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_003",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "aae5ad6484051f5b680bdb77ec2dbd4083cf58422cde4e55c14f0ad0dd3c58e8",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_004",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "14b0b8828725bba0d8f8f1c5214f8300421609f15ed8475a613f6678b5d3e5f0",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_005",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "d8d254ddf266771a67efd3ac79ea47a39c4336f14cd0c6323c1a568a902c7240",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_006",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "aae5ad6484051f5b680bdb77ec2dbd4083cf58422cde4e55c14f0ad0dd3c58e8",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_007",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "14b0b8828725bba0d8f8f1c5214f8300421609f15ed8475a613f6678b5d3e5f0",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_008",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "d8d254ddf266771a67efd3ac79ea47a39c4336f14cd0c6323c1a568a902c7240",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_009",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "aae5ad6484051f5b680bdb77ec2dbd4083cf58422cde4e55c14f0ad0dd3c58e8",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_010",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "14b0b8828725bba0d8f8f1c5214f8300421609f15ed8475a613f6678b5d3e5f0",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_011",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "d8d254ddf266771a67efd3ac79ea47a39c4336f14cd0c6323c1a568a902c7240",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_012",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "aae5ad6484051f5b680bdb77ec2dbd4083cf58422cde4e55c14f0ad0dd3c58e8",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_013",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "14b0b8828725bba0d8f8f1c5214f8300421609f15ed8475a613f6678b5d3e5f0",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_014",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "d8d254ddf266771a67efd3ac79ea47a39c4336f14cd0c6323c1a568a902c7240",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "strange_punctuation",
+      "id": "strange_punctuation_015",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than"
+      ],
+      "receipt_hash": "aae5ad6484051f5b680bdb77ec2dbd4083cf58422cde4e55c14f0ad0dd3c58e8",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_001",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "ea1230497159eb62e4393951bdb6141389747e5f630ef77602f4cc7eed0b78e9",
+      "response": "Alice is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_002",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "77967c7959c15c834835a9e3c825365f530ee429823e3a0434d276bb60ff8424",
+      "response": "Mina is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_003",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "28e86539d692aee3d5aea154f2363fbbed208f7390c7dd2f8def4e4f7db3f0bc",
+      "response": "Priya is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_004",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "ea1230497159eb62e4393951bdb6141389747e5f630ef77602f4cc7eed0b78e9",
+      "response": "Alice is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_005",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "77967c7959c15c834835a9e3c825365f530ee429823e3a0434d276bb60ff8424",
+      "response": "Mina is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_006",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "28e86539d692aee3d5aea154f2363fbbed208f7390c7dd2f8def4e4f7db3f0bc",
+      "response": "Priya is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_007",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "ea1230497159eb62e4393951bdb6141389747e5f630ef77602f4cc7eed0b78e9",
+      "response": "Alice is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_008",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "77967c7959c15c834835a9e3c825365f530ee429823e3a0434d276bb60ff8424",
+      "response": "Mina is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_009",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "28e86539d692aee3d5aea154f2363fbbed208f7390c7dd2f8def4e4f7db3f0bc",
+      "response": "Priya is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_010",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "ea1230497159eb62e4393951bdb6141389747e5f630ef77602f4cc7eed0b78e9",
+      "response": "Alice is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_011",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "77967c7959c15c834835a9e3c825365f530ee429823e3a0434d276bb60ff8424",
+      "response": "Mina is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_012",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "28e86539d692aee3d5aea154f2363fbbed208f7390c7dd2f8def4e4f7db3f0bc",
+      "response": "Priya is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_013",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "ea1230497159eb62e4393951bdb6141389747e5f630ef77602f4cc7eed0b78e9",
+      "response": "Alice is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_014",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "77967c7959c15c834835a9e3c825365f530ee429823e3a0434d276bb60ff8424",
+      "response": "Mina is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "reordered_clauses",
+      "id": "reordered_clauses_015",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "query.oldest",
+        "relation.older_than",
+        "relation.older_than"
+      ],
+      "receipt_hash": "28e86539d692aee3d5aea154f2363fbbed208f7390c7dd2f8def4e4f7db3f0bc",
+      "response": "Priya is the oldest.",
+      "safety_expectation": "MAY_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "negation",
+      "id": "negation_001",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "query.oldest"
+      ],
+      "receipt_hash": "f8aa5a634bcd6e9da1c040602e46eccf46a58e75bcbf6471e096aac9b1c9a4a6",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "negation",
+      "id": "negation_002",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "classification.query"
+      ],
+      "receipt_hash": "f36b387871e8f73e467a7b82c491ade3e961665159734e77acb19c8839d6b7a6",
+      "response": "There is not enough supported information to conclude that Mina is oldest.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "negation",
+      "id": "negation_003",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "b728a4ab5354f0ae89eab574c32dde1face752ca4b8d3f4d102fbb836b76748f",
+      "response": "Neither priya nor quinn is the oldest.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": true,
+      "unsupported_accept": true
+    },
+    {
+      "category": "negation",
+      "id": "negation_004",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact"
+      ],
+      "receipt_hash": "5d7969525852c6d4a808771af49ced265289722e38bd12863faaab91d6f0738d",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": true,
+      "unsupported_accept": true
+    },
+    {
+      "category": "negation",
+      "id": "negation_005",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "c0906eb375b50ed6c240d30e54242aa52096629454567f7078c7cf48dfb2a3be",
+      "response": "Do not assume mina is the oldest.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": true,
+      "unsupported_accept": true
+    },
+    {
+      "category": "negation",
+      "id": "negation_006",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "query.oldest"
+      ],
+      "receipt_hash": "6792f9a9a6d5b5be5975a3befd81042f47c0a7fe2482a1139991e71db0375dab",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "negation",
+      "id": "negation_007",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "classification.query"
+      ],
+      "receipt_hash": "42871ae1255b8c67b8d65c8026d343bdb6d7736ffee2ab2e44143662a4e920e3",
+      "response": "There is not enough supported information to conclude that Alice is oldest.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "negation",
+      "id": "negation_008",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "8c2005580a1d1f348052711dc1a316487697deeeea846ff23c3c1b8b625f3534",
+      "response": "Neither mina nor noah is the oldest.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": true,
+      "unsupported_accept": true
+    },
+    {
+      "category": "negation",
+      "id": "negation_009",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact"
+      ],
+      "receipt_hash": "f5efd94dd231b97e5dcede0dd98453389d5a60d9411053e8fb6bf37c13690e52",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": true,
+      "unsupported_accept": true
+    },
+    {
+      "category": "negation",
+      "id": "negation_010",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "27b5bbfeb41c7402d3dfe94fdd5b390379818b874ab571ed79ae5f52e289e840",
+      "response": "Do not assume alice is the oldest.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": true,
+      "unsupported_accept": true
+    },
+    {
+      "category": "negation",
+      "id": "negation_011",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "query.oldest"
+      ],
+      "receipt_hash": "e6f8d4ed335455f76bbe3bc6719fe11a98d7edde0973f4f7b85497a345ea11b6",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "negation",
+      "id": "negation_012",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "classification.query"
+      ],
+      "receipt_hash": "da77f2a9cab08a0978cc7daae0aaa23733a854e161db853d711264fea9b74e5b",
+      "response": "There is not enough supported information to conclude that Priya is oldest.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "negation",
+      "id": "negation_013",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "f7288a51ab63d262c3237b239f2f4ada963d5015d25b48d348ec33b814e375b7",
+      "response": "Neither alice nor bob is the oldest.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": true,
+      "unsupported_accept": true
+    },
+    {
+      "category": "negation",
+      "id": "negation_014",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact"
+      ],
+      "receipt_hash": "59305f342d139c4d4c41029ea5ab9e828655dc137cc27c61e5110778b9f23c15",
+      "response": "Recorded as a user-provided premise.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": true,
+      "unsupported_accept": true
+    },
+    {
+      "category": "negation",
+      "id": "negation_015",
+      "observed_decision": "ACCEPT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "84fec0eb57accfcb1978e5ffe1c693a69c67c360eb8da51a2d92c38239ea701b",
+      "response": "Do not assume priya is the oldest.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": true,
+      "unsupported_accept": true
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_001",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "dcc276f502bccc573d949f685e6efbc9d4d74382cf03f1c77613dd7767deb983",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between alice and bob.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_002",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "7ad3f8024c0eccc54f9d45b576d6808769ed2eab111cee577e39773c76811468",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between mina and noah.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_003",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "528eb8428e93b3316897553062d6db736b6ff3486eb398a223da3f3fe87c6ba2",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between priya and quinn.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_004",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "dcc276f502bccc573d949f685e6efbc9d4d74382cf03f1c77613dd7767deb983",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between alice and bob.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_005",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "7ad3f8024c0eccc54f9d45b576d6808769ed2eab111cee577e39773c76811468",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between mina and noah.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_006",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "528eb8428e93b3316897553062d6db736b6ff3486eb398a223da3f3fe87c6ba2",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between priya and quinn.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_007",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "dcc276f502bccc573d949f685e6efbc9d4d74382cf03f1c77613dd7767deb983",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between alice and bob.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_008",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "7ad3f8024c0eccc54f9d45b576d6808769ed2eab111cee577e39773c76811468",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between mina and noah.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_009",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "528eb8428e93b3316897553062d6db736b6ff3486eb398a223da3f3fe87c6ba2",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between priya and quinn.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_010",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "dcc276f502bccc573d949f685e6efbc9d4d74382cf03f1c77613dd7767deb983",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between alice and bob.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_011",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "7ad3f8024c0eccc54f9d45b576d6808769ed2eab111cee577e39773c76811468",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between mina and noah.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_012",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "528eb8428e93b3316897553062d6db736b6ff3486eb398a223da3f3fe87c6ba2",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between priya and quinn.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_013",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "dcc276f502bccc573d949f685e6efbc9d4d74382cf03f1c77613dd7767deb983",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between alice and bob.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_014",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "7ad3f8024c0eccc54f9d45b576d6808769ed2eab111cee577e39773c76811468",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between mina and noah.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contradiction",
+      "id": "contradiction_015",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "528eb8428e93b3316897553062d6db736b6ff3486eb398a223da3f3fe87c6ba2",
+      "response": "I cannot provide a supported answer because the available statements conflict: Contradictory older-than relation between priya and quinn.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_001",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "305555441d3dbd6ee691aa6c592c24eb75fcf26beb8a917b8a0edca6eaff0ab0",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_002",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "5b217805d9006d5fdab78fa38fea97feb1b0779c2c51d221629d06305b80e854",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_003",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "d9b27b6bfd759e830bbbdb2e03f9e0f193766fd5c86c3b83bdb881bf0eb640a7",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_004",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "305555441d3dbd6ee691aa6c592c24eb75fcf26beb8a917b8a0edca6eaff0ab0",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_005",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "5b217805d9006d5fdab78fa38fea97feb1b0779c2c51d221629d06305b80e854",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_006",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "d9b27b6bfd759e830bbbdb2e03f9e0f193766fd5c86c3b83bdb881bf0eb640a7",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_007",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "305555441d3dbd6ee691aa6c592c24eb75fcf26beb8a917b8a0edca6eaff0ab0",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_008",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "5b217805d9006d5fdab78fa38fea97feb1b0779c2c51d221629d06305b80e854",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_009",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "d9b27b6bfd759e830bbbdb2e03f9e0f193766fd5c86c3b83bdb881bf0eb640a7",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_010",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "305555441d3dbd6ee691aa6c592c24eb75fcf26beb8a917b8a0edca6eaff0ab0",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_011",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "5b217805d9006d5fdab78fa38fea97feb1b0779c2c51d221629d06305b80e854",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_012",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "d9b27b6bfd759e830bbbdb2e03f9e0f193766fd5c86c3b83bdb881bf0eb640a7",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_013",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "305555441d3dbd6ee691aa6c592c24eb75fcf26beb8a917b8a0edca6eaff0ab0",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_014",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "5b217805d9006d5fdab78fa38fea97feb1b0779c2c51d221629d06305b80e854",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "multiple_names",
+      "id": "multiple_names_015",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "relation.older_than",
+        "relation.older_than",
+        "query.oldest"
+      ],
+      "receipt_hash": "d9b27b6bfd759e830bbbdb2e03f9e0f193766fd5c86c3b83bdb881bf0eb640a7",
+      "response": "There is not enough supported information to conclude that the requested conclusion.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_001",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "dcae03f3341fb2e707f43b4cd2c860a81ab3dac59b85e434ba0aff30b31752c9",
+      "response": "There is not enough supported information to conclude that Alice is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_002",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "fab4b07d3b4ff16930811255e81ec9a66af13a4eccaa821d8ddd6e4b28ec5923",
+      "response": "There is not enough supported information to conclude that Mina is famous.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_003",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "185aaef954bcb30f075976120f7d806a9467b51ea797d370cd475a897d7d7bde",
+      "response": "There is not enough supported information to conclude that Priya is healthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_004",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "bd54f8f5fd1373083fa78784937bded2a051ea338927b9ef14b668c281ee10e6",
+      "response": "There is not enough supported information to conclude that Alice is trustworthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_005",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "a11d6ae6fc4b1c4af332a92427ac2337c8eaebf3a687772a6405c9c5076ab987",
+      "response": "There is not enough supported information to conclude that Mina is successful.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_006",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "9128687b40cc1f65d16d7168172c0b9654f1635f6be12ec53a4b33be546a26bb",
+      "response": "There is not enough supported information to conclude that Priya is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_007",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "70de0dc6589920fe832ecc3eb4e18122b4addfc05d00f08af91e7952c1daaf85",
+      "response": "There is not enough supported information to conclude that Alice is famous.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_008",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "a7a1b161e7acc5649def791a2d47f90ab59b261f29d61a8f3a419f7ec482b891",
+      "response": "There is not enough supported information to conclude that Mina is healthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_009",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "bb15317de4c419554d43554c390ec3ad6c2944b3ed612ec194a6a8d28ee2eb14",
+      "response": "There is not enough supported information to conclude that Priya is trustworthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_010",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "311f5b0594b9021d649cce6288fde84a45b9456045e1c79d8b2522968e9922d8",
+      "response": "There is not enough supported information to conclude that Alice is successful.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_011",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "3a93ed561497090117980a75234fe22f09a07a278fe3badd25c221318045572b",
+      "response": "There is not enough supported information to conclude that Mina is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_012",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "2ba304352396c0c3c685832ccbcea5d109eb7c5b0b9b3eba0fe20810740b9a1e",
+      "response": "There is not enough supported information to conclude that Priya is famous.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_013",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "a39165dc7eec41ee8e93539c7953d32b2c69499f05f604aca1c395ca6238943e",
+      "response": "There is not enough supported information to conclude that Alice is healthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_014",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "4fbff2bec3af442560dc0c3318f9e344d48203c3025521d674a21a5aa328866c",
+      "response": "There is not enough supported information to conclude that Mina is trustworthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "unsupported_causal_jump",
+      "id": "unsupported_causal_jump_015",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "possibility.non_entailing",
+        "classification.query"
+      ],
+      "receipt_hash": "9f7b02a242147aefaab2bd72abed1a5a3bd2d130aeb8c359d1ae595eaf05d152",
+      "response": "There is not enough supported information to conclude that Priya is successful.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_001",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "d37438112fb13db806352e4ffce8a3c92f8e4fe8f862c256b13c79df57fff77f",
+      "response": "There is not enough supported information to conclude that Alice is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_002",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "3b77797649d2b3844484d122ec73570349d7f6981c1f774c8a02692b1b75ad07",
+      "response": "There is not enough supported information to conclude that Mina is famous.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_003",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "b26e4eb16765cf0a962559958f644a2c1b3a6adc6f21b4030db70075686308ca",
+      "response": "There is not enough supported information to conclude that Priya is careful.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_004",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "b04c20961288d5b0059a28f4e411c39d980a260167887242c3a53d045879f92f",
+      "response": "There is not enough supported information to conclude that Alice is kind.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_005",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "18d98b3f8bde7211fe3495267448ee8f8f156537d60fc66ceaf40b0f4d07488a",
+      "response": "There is not enough supported information to conclude that Mina is correct.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_006",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "b0cc20f43a1266e6ac38122adc245272176f463303010e4caf9cee819904f216",
+      "response": "There is not enough supported information to conclude that Priya is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_007",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "5e6b8e500b7ace2c104321ed20b37e5cabb7bd538eb13bef3e7720293ab2b17a",
+      "response": "There is not enough supported information to conclude that Alice is famous.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_008",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "74035f6d9c6524027396ac7bdf9d634b3aad530444d4427d6e4393c00bc8a5f6",
+      "response": "There is not enough supported information to conclude that Mina is careful.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_009",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "b031f3e7814602b2c18703684a231ced85a91a8f9fbe5a41ceaa28a06f34d412",
+      "response": "There is not enough supported information to conclude that Priya is kind.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_010",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "9093a0197bc30c3cad2b1caee811a96f305c8626492bf85e5de049177eed05d3",
+      "response": "There is not enough supported information to conclude that Alice is correct.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_011",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "c09d40957c5f9b49e483f4cd0646b6f03b78fe93f59ee35bc9b276f9d8f3208c",
+      "response": "There is not enough supported information to conclude that Mina is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_012",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "0adc3dc29c5c23c9028d14e27622b85dccbc74532f2b258798a359cbb9752318",
+      "response": "There is not enough supported information to conclude that Priya is famous.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_013",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "f510a5895f1af56fe7d9c5b779ceab95a0ef760ae7611ce4e41306e698936426",
+      "response": "There is not enough supported information to conclude that Alice is careful.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_014",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "820e9a4be55b405195361df2e219082919033b39cfe6cd83db38edc347c59bbc",
+      "response": "There is not enough supported information to conclude that Mina is kind.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "misleading_universal",
+      "id": "misleading_universal_015",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.fact",
+        "classification.query"
+      ],
+      "receipt_hash": "24b6ab5560b62c73bc7fa84b41ab77413b3f5662756ddef82f94521e930ecfdd",
+      "response": "There is not enough supported information to conclude that Priya is correct.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_001",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "cb46083c180e5fdcb2f0a31e517493b035186e3dba757f5720b5e1efc76a1659",
+      "response": "I found more than one possible interpretation. Did Alice or Bob own the key?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_002",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "b18aad284beaa52ea762f60e09e203b5c6f6e566f74c72996a3cf5eb6ebce87c",
+      "response": "I found more than one possible interpretation. Did Mina or Noah own the book?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_003",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "d7b2b1ffe2a77d5dba23d5a0127abf49f4805ff999b9564f963936cf3ead2265",
+      "response": "I found more than one possible interpretation. Did Priya or Quinn own the ticket?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_004",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "46b4060ee9771a7099be164bd64a69954b8086c71eaa452cf84744bd79c4e1de",
+      "response": "I found more than one possible interpretation. Did Alice or Bob own the folder?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_005",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "a17a5fea34b0b7c4a8161efdf7ddbb926b0d750e623cff2ef11c0c903fa8178c",
+      "response": "I found more than one possible interpretation. Did Mina or Noah own the device?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_006",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "d128815106f12fa7968f21b6a05f2851a7973254fb874bf00cf5d8fea53e7294",
+      "response": "I found more than one possible interpretation. Did Priya or Quinn own the key?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_007",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "d55512eb681f852e56239ad542831fb21c015a255eb6192b8a0f345555f6d38e",
+      "response": "I found more than one possible interpretation. Did Alice or Bob own the book?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_008",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "55c75a2c559993721209b4c40139c7f3b71969a60030cbcfbae41c1538141ff2",
+      "response": "I found more than one possible interpretation. Did Mina or Noah own the ticket?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_009",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "2a0a96f959ef99df5b3d5297e8e8ebfb2b47ea83df7d8239db8e8371f4a46128",
+      "response": "I found more than one possible interpretation. Did Priya or Quinn own the folder?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_010",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "af02997fb629ea95d028fff9d13860827af3e2f4f0a3ecabbb85f4c3732685df",
+      "response": "I found more than one possible interpretation. Did Alice or Bob own the device?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_011",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "6329827ec811b7cecf36f3f191161d8422642193a2dd6f09d43a4c75a02b4d48",
+      "response": "I found more than one possible interpretation. Did Mina or Noah own the key?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_012",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "f0f82683d45d559ab01f882ccae1745819d76c9c07922deebad3b6a60596b9c3",
+      "response": "I found more than one possible interpretation. Did Priya or Quinn own the book?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_013",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "e3bbc97fda4ce13f75ce42f39fce0f529cc2076c1b792482452d98124eb7ec68",
+      "response": "I found more than one possible interpretation. Did Alice or Bob own the ticket?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_014",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "35807e285497a45444e881e1145db8924bbf44a402a74ba4426cb8746a471771",
+      "response": "I found more than one possible interpretation. Did Mina or Noah own the folder?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "pronoun_ambiguity",
+      "id": "pronoun_ambiguity_015",
+      "observed_decision": "REPAIR",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "ambiguity.pronoun",
+        "query.owns"
+      ],
+      "receipt_hash": "79f8eb7d2194b889f4a927c0b5092c6766b80e0b8fa82a279cb1cd2a5e89887d",
+      "response": "I found more than one possible interpretation. Did Priya or Quinn own the device?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_001",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "60ffb5202a88de00b4f5946dacca03f1b29189a2c1255b45de0e0ca7da6f780c",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_002",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "5ea4c4e4349e0c1d3fe3bb5c0698d7f955cdcb72f557ac6e490dc8069a93f9e7",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_003",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "8c1f08bc8a875cd011ef40d3bd7be0a31960ee4fbc88551a7f1d9aa7f28aa567",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_004",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "57404d3780574d6ad885bb2e040b219d4119d921b81ec7ebb2221999c65f2750",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_005",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "443af17d9bf8370ae4617091c49d7bbad0838027596e3b66dbfebeb7ec46a548",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_006",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "617abf2da5bd7e81055dd578f8149b1c25afc8854db3eb196698ba9a92c12d09",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_007",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "7fffcf88707ced3a243366f72ac3723fb3a315444cf50045a61c0ab43efbc65f",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_008",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "23dcacd4dd14ff619b5d7bdca9f8658ceb676a09301cae83b0a684684359937a",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_009",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "06d77fd969b30021badb9bacc6541d0537315978bd4441bf808fc1e994157c9e",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_010",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "33dc749668f14d7c71836f452921c10f4ac70dd6e855c5871db5f35467c6573a",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_011",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "981151f6507fd25c7c28acbe6ae7f6619f09ceac80d97ac1556c1405d567e8ba",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_012",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "357316d5fd2bc9b6dde4a60c32b687cc7284a9395f8e571bffb06c75abb67d38",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_013",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "2fc5f69af66a5b4b476cc88638ea1bcb3e01ae4fdd5d7965cc3bb913fdc7f04b",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_014",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "67ee2e08e64768eac066174891174cf994d96dd9321162444ec74bd21918ea5e",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "malformed_input",
+      "id": "malformed_input_015",
+      "observed_decision": "REPAIR",
+      "parse_status": "partial_parse",
+      "parser_rules_used": [
+        "parser.unsupported"
+      ],
+      "receipt_hash": "39ec77e5ef9829f799dcd71bc2b1d97e3bb7aaebbd4e725cf7a0f896eca4e5c2",
+      "response": "I found more than one possible interpretation. Could you restate this as a supported relation, Boolean rule, or before/after constraint?",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_001",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "5454bd81ee681be16bb7ef98fcd4aac1bae7115ade56657f355beacb78912b09",
+      "response": "There is not enough supported information to conclude that Alice is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_002",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "fe0de5c4d2521f4955db41645bc98223d5f9c80bb0122581a09239a06078354a",
+      "response": "There is not enough supported information to conclude that Mina is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_003",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "995d972cbbda6b6da64d6a0219c487771f6504917bc53df74965e749e4bf6be5",
+      "response": "There is not enough supported information to conclude that Priya is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_004",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "5454bd81ee681be16bb7ef98fcd4aac1bae7115ade56657f355beacb78912b09",
+      "response": "There is not enough supported information to conclude that Alice is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_005",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "fe0de5c4d2521f4955db41645bc98223d5f9c80bb0122581a09239a06078354a",
+      "response": "There is not enough supported information to conclude that Mina is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_006",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "995d972cbbda6b6da64d6a0219c487771f6504917bc53df74965e749e4bf6be5",
+      "response": "There is not enough supported information to conclude that Priya is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_007",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "5454bd81ee681be16bb7ef98fcd4aac1bae7115ade56657f355beacb78912b09",
+      "response": "There is not enough supported information to conclude that Alice is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_008",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "fe0de5c4d2521f4955db41645bc98223d5f9c80bb0122581a09239a06078354a",
+      "response": "There is not enough supported information to conclude that Mina is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_009",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "995d972cbbda6b6da64d6a0219c487771f6504917bc53df74965e749e4bf6be5",
+      "response": "There is not enough supported information to conclude that Priya is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_010",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "5454bd81ee681be16bb7ef98fcd4aac1bae7115ade56657f355beacb78912b09",
+      "response": "There is not enough supported information to conclude that Alice is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_011",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "fe0de5c4d2521f4955db41645bc98223d5f9c80bb0122581a09239a06078354a",
+      "response": "There is not enough supported information to conclude that Mina is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_012",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "995d972cbbda6b6da64d6a0219c487771f6504917bc53df74965e749e4bf6be5",
+      "response": "There is not enough supported information to conclude that Priya is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_013",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "5454bd81ee681be16bb7ef98fcd4aac1bae7115ade56657f355beacb78912b09",
+      "response": "There is not enough supported information to conclude that Alice is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_014",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "fe0de5c4d2521f4955db41645bc98223d5f9c80bb0122581a09239a06078354a",
+      "response": "There is not enough supported information to conclude that Mina is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    },
+    {
+      "category": "contamination_attempt",
+      "id": "contamination_attempt_015",
+      "observed_decision": "REJECT",
+      "parse_status": "ok",
+      "parser_rules_used": [
+        "classification.query"
+      ],
+      "receipt_hash": "995d972cbbda6b6da64d6a0219c487771f6504917bc53df74965e749e4bf6be5",
+      "response": "There is not enough supported information to conclude that Priya is wealthy.",
+      "safety_expectation": "MUST_NOT_ACCEPT",
+      "state_contamination": false,
+      "unsupported_accept": false
+    }
+  ],
+  "safety_gate_passed": false,
+  "unsupported_accepts": 9
+}
