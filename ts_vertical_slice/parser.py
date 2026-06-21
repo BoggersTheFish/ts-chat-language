@@ -94,6 +94,9 @@ def parse_to_meaning_graph(text: str) -> ParseResult:
         if match:
             add("causal_rule",{"antecedents":[_prop(match[2],match[3]),_prop(match[4],match[5])],"consequent":_prop(match[1],"active")},"boolean.conjunction",sentence);consumed+=1;continue
 
+        if re.fullmatch(r"[A-Z][\w-]*\s+(?:opens|closes|locks|unlocks|gives|takes|moves|puts|removes)\s+.*\b(?:opens|closes|locks|unlocks|gives|takes|moves|puts|removes)\b.*",plain,re.I):
+            add("ambiguity",{"code":"malformed_event","message":"More than one event verb appears in one bounded event clause.","options":[],"question":"Could you state one event at a time with one actor, action, and target?"},"habitat.event.malformed",sentence);consumed+=1;continue
+
         match = re.fullmatch(r"([A-Z][\w-]*)\s+(opens|closes|locks|unlocks)\s+(?:the\s+)?(.+)", plain)
         if match:
             add("world_event",{"actor":_entity(match[1]),"action":match[2].lower(),"target":_entity(match[3])},"habitat.event.state",sentence);consumed+=1;continue
