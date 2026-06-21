@@ -89,7 +89,8 @@ class HabitatV3Session:
 
     def _refresh_environment(self)->None:
         old=self.environment.snapshot();snapshot=EnvironmentSnapshot(tuple(self.facts.values()),tuple(self.topology.values()),tuple(self.agents.values()),old.step,tuple(self.events.values()),old.fired_event_ids,old.forced_mismatch_action_types);self.environment.restore_for_replay(snapshot)
-        if self.loop is None:self.loop=HabitatAgentLoop(self.environment,self.goals,limits=self.limits,repository_shas=self.repository_shas)
+        if self.loop is None or (self.loop.iterations==0 and not self.loop.run.action_transactions):
+            self.loop=HabitatAgentLoop(self.environment,self.goals,limits=self.limits,repository_shas=self.repository_shas)
 
     def _answer_query(self,directive:AgentDirective)->None:
         if directive.data["kind"]=="active_goal":goals=[g.goal_id for g in self.goals.goals.values() if g.status==GoalStatus.ACTIVE];text=goals[0] if goals else "No goal is active."
