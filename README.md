@@ -1,5 +1,11 @@
 # TS-Chat Language / TSLC v0.8
 
+## Habitat v3
+
+Habitat v3 adds the complete verifier-first symbolic agent cycle: declared topology, persistent goals, deterministic tension allocation, verified planning, one-action environment execution, independently observed effects, transactional commits, stale-plan replanning, structured reflection, approval-gated lessons, deterministic multi-agent scheduling and `ts-turn-receipt-v3` replay.
+
+Run `scripts/run_habitat_v3.sh` for ten scenarios or `python3 -m ts_vertical_slice.chat --habitat-v3` for the bounded CLI. See [the architecture](docs/habitat_v3.md) and [limitations](docs/habitat_v3_limitations.md).
+
 **TSLC** — Thinking System Language Compiler (language compiler core).
 
 **DDS** — Deterministic Dialogue Substrate (in progress): language compiled into inspectable TS state.
